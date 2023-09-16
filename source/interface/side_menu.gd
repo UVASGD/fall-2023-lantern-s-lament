@@ -1,6 +1,6 @@
 extends ColorRect
 
-@onready var towerhull = get_tree().get_root().get_node("MainScene/TowerHull")
+@onready var player = get_tree().get_root().get_node("MainScene/Player")
 
 @onready var property_label = $PropertyLabel
 @onready var value_label = $ValueLabel
@@ -30,6 +30,6 @@ func _physics_process(delta):
 	
 	property_label.text = ""
 	value_label.text = ""
-	write("Lamp Oil", str(towerhull.cur_hp) + " / " + str(towerhull.max_hp))
+	write("Lamp Oil", str(player.cur_hp) + " / " + str(player.max_hp))
 	
-	flame_sprite.scale = Vector2(3.4 * (towerhull.cur_hp / 100.0), 3.4 * (towerhull.cur_hp / 100.0))
+	flame_sprite.scale = Vector2(3.4 * (player.cur_hp / 100.0), 3.4 * (player.cur_hp / 100.0))

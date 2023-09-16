@@ -2,7 +2,7 @@
 
 [ext_resource type="PackedScene" uid="uid://byurxh2xitstp" path="res://source/interface/side_menu.tscn" id="2_opm2i"]
 [ext_resource type="Texture2D" uid="uid://clfryshg6q8ju" path="res://assets/levelTileMap.png" id="3_ll2j8"]
-[ext_resource type="PackedScene" uid="uid://dchsg1xrq75kp" path="res://source/entities/towers/tower_hull.tscn" id="3_mwcfu"]
+[ext_resource type="PackedScene" uid="uid://dlbg8myhg31ys" path="res://source/entities/player/player.tscn" id="3_mwcfu"]
 [ext_resource type="Texture2D" uid="uid://nnkf6uinjgkp" path="res://assets/lightTexture.png" id="4_fovat"]
 [ext_resource type="PackedScene" uid="uid://bmcrw2hbt2gdo" path="res://source/entities/enemies/enemy_test.tscn" id="5_jrp8l"]
 
@@ -50,8 +50,7 @@ layer_1/tile_data = PackedInt32Array(-196609, 65536, 0, -262144, 65536, 0, -2621
 [node name="CanvasModulate" type="CanvasModulate" parent="."]
 color = Color(0, 0, 0, 1)
 
-[node name="TowerHull" parent="." instance=ExtResource("3_mwcfu")]
-position = Vector2(576, 324)
+[node name="Player" parent="." instance=ExtResource("3_mwcfu")]
 
 [node name="EnemyTest" parent="." instance=ExtResource("5_jrp8l")]
 position = Vector2(1423, 532)

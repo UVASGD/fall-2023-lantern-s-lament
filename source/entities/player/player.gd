@@ -1,5 +1,5 @@
 extends EntityBase
-class_name TowerHull
+class_name Player
 
 @onready var hitbox = $Hitbox
 @onready var camera = $Camera2D

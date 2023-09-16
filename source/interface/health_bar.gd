@@ -1,8 +1,8 @@
 extends TextureProgressBar
 class_name HealthBar
 
-@onready var towerhull = get_tree().get_root().get_node("MainScene/TowerHull")
+@onready var player = get_tree().get_root().get_node("MainScene/Player")
 
 func _physics_process(_delta):
-	max_value = towerhull.max_hp
-	value = towerhull.cur_hp
+	max_value = player.max_hp
+	value = player.cur_hp

@@ -16,7 +16,7 @@ func _ready():
 func _physics_process(_delta):
 	in_aim_area = enemy_in_area()
 	
-	target_pos = (towerhull.global_position - global_position).normalized()
+	target_pos = (player.global_position - global_position).normalized()
 	super.move(target_pos * speed)
 
 func die():
@@ -44,10 +44,10 @@ func angle_in_range(alpha, lower, upper):
 	return alpha > lower and alpha < upper
 
 func enemy_in_area():
-	var upper_angle : float = rad_to_deg(atan2(towerhull.man_aim_left.y - towerhull.CENTER.y, towerhull.man_aim_left.x - towerhull.CENTER.x))
-	var lower_angle : float = rad_to_deg(atan2(towerhull.man_aim_right.y - towerhull.CENTER.y, towerhull.man_aim_right.x - towerhull.CENTER.x))
+	var upper_angle : float = rad_to_deg(atan2(player.man_aim_left.y - player.CENTER.y, player.man_aim_left.x - player.CENTER.x))
+	var lower_angle : float = rad_to_deg(atan2(player.man_aim_right.y - player.CENTER.y, player.man_aim_right.x - player.CENTER.x))
 	
-	var angle = rad_to_deg(atan2(global_position.y - towerhull.CENTER.y, global_position.x - towerhull.CENTER.x))
-	var distance_to_hull = (global_position.distance_to(towerhull.CENTER))
+	var angle = rad_to_deg(atan2(global_position.y - player.CENTER.y, global_position.x - player.CENTER.x))
+	var distance_to_hull = (global_position.distance_to(player.CENTER))
 	
-	return angle_in_range(angle, lower_angle + 1, upper_angle - 1) and distance_to_hull <= towerhull.man_cur_range
+	return angle_in_range(angle, lower_angle + 1, upper_angle - 1) and distance_to_hull <= player.man_cur_range
