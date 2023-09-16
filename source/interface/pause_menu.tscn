@@ -1,0 +1,29 @@
+[gd_scene load_steps=2 format=3 uid="uid://c6612map8ntad"]
+
+[ext_resource type="Script" path="res://source/interface/pause_menu.gd" id="1_1xwka"]
+
+[node name="PauseMenu" type="ColorRect"]
+offset_left = 256.0
+offset_right = 1152.0
+offset_bottom = 648.0
+color = Color(0, 0, 0, 0.282353)
+script = ExtResource("1_1xwka")
+
+[node name="Label" type="Label" parent="."]
+layout_mode = 0
+offset_left = 192.0
+offset_top = 96.0
+offset_right = 704.0
+offset_bottom = 160.0
+text = "Paused"
+horizontal_alignment = 1
+
+[node name="Button" type="Button" parent="."]
+layout_mode = 2
+offset_left = 256.0
+offset_top = 208.0
+offset_right = 640.0
+offset_bottom = 304.0
+text = "Resume"
+
+[connection signal="pressed" from="Button" to="." method="_on_button_pressed"]

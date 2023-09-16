@@ -1,0 +1,27 @@
+[gd_scene load_steps=3 format=3 uid="uid://b76iovfwu8nl8"]
+
+[ext_resource type="PackedScene" uid="uid://bhx0hcjgqq0j7" path="res://source/interface/main_menu_buttons.tscn" id="1_vd7b6"]
+[ext_resource type="Texture2D" uid="uid://da41xvjske7ic" path="res://assets/logo.png" id="1_x2wsk"]
+
+[node name="MainMenu" type="Node2D"]
+
+[node name="GameLogo" type="Sprite2D" parent="."]
+position = Vector2(574, 192)
+scale = Vector2(0.547, 0.547)
+texture = ExtResource("1_x2wsk")
+
+[node name="MainMenuButtons" parent="." instance=ExtResource("1_vd7b6")]
+custom_minimum_size = Vector2(50, 0)
+anchors_preset = 0
+anchor_right = 0.0
+anchor_bottom = 0.0
+offset_left = 472.0
+offset_top = 339.0
+offset_right = 522.0
+offset_bottom = 339.0
+grow_horizontal = 1
+grow_vertical = 1
+scale = Vector2(2.776, 2.776)
+
+[node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2(575, 325)

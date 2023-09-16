@@ -1,0 +1,16 @@
+[remap]
+
+importer="bitmap"
+type="BitMap"
+uid="uid://cfnqw7wp7jc26"
+path="res://.godot/imported/hullMask.bmp-562a489cc09598c96075f769c417af21.res"
+
+[deps]
+
+source_file="res://assets/hullMask.bmp"
+dest_files=["res://.godot/imported/hullMask.bmp-562a489cc09598c96075f769c417af21.res"]
+
+[params]
+
+create_from=0
+threshold=0.5
