@@ -1,0 +1,99 @@
+[gd_scene load_steps=13 format=3 uid="uid://byurxh2xitstp"]
+
+[ext_resource type="Texture2D" uid="uid://btv8u76n6u0ia" path="res://assets/towerhull3.png" id="1_0wonw"]
+[ext_resource type="Script" path="res://source/interface/side_menu.gd" id="1_ie6r4"]
+[ext_resource type="PackedScene" uid="uid://c0o0wepqnbyue" path="res://source/interface/health_bar.tscn" id="2_bmqgy"]
+[ext_resource type="Texture2D" uid="uid://ch64jpicnerlm" path="res://assets/flame_animation/flame1.png" id="5_n7wrr"]
+[ext_resource type="Texture2D" uid="uid://bpauxhngacy6v" path="res://assets/flame_animation/flame2.png" id="6_di7eh"]
+[ext_resource type="Texture2D" uid="uid://b81j1uapv1y7a" path="res://assets/flame_animation/flame3.png" id="7_u864c"]
+[ext_resource type="Texture2D" uid="uid://bse4mhtxb2bwc" path="res://assets/flame_animation/flame4.png" id="8_b6djh"]
+[ext_resource type="Texture2D" uid="uid://rhhtfioxd772" path="res://assets/flame_animation/flame5.png" id="9_dq4gn"]
+[ext_resource type="Texture2D" uid="uid://7lm7f3kflga0" path="res://assets/flame_animation/flame6.png" id="10_x4uq0"]
+
+[sub_resource type="Animation" id="Animation_7n6m0"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Flame:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [ExtResource("5_n7wrr")]
+}
+
+[sub_resource type="Animation" id="Animation_vtess"]
+resource_name = "flame_animation"
+length = 0.5
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Flame:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.1, 0.2, 0.3, 0.4, 0.5),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1),
+"update": 1,
+"values": [ExtResource("5_n7wrr"), ExtResource("6_di7eh"), ExtResource("7_u864c"), ExtResource("8_b6djh"), ExtResource("9_dq4gn"), ExtResource("10_x4uq0")]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_x5erp"]
+_data = {
+"RESET": SubResource("Animation_7n6m0"),
+"flame_animation": SubResource("Animation_vtess")
+}
+
+[node name="SideMenu" type="ColorRect"]
+offset_right = 256.0
+offset_bottom = 648.0
+color = Color(0.141176, 0.141176, 0.141176, 1)
+script = ExtResource("1_ie6r4")
+
+[node name="HealthBar" parent="." instance=ExtResource("2_bmqgy")]
+layout_mode = 0
+offset_left = 16.0
+offset_top = 20.0
+offset_right = 240.0
+offset_bottom = 52.0
+
+[node name="PropertyLabel" type="RichTextLabel" parent="."]
+layout_mode = 0
+offset_left = 24.0
+offset_top = 24.0
+offset_right = 232.0
+offset_bottom = 218.0
+bbcode_enabled = true
+text = "test"
+fit_content = true
+autowrap_mode = 0
+
+[node name="ValueLabel" type="RichTextLabel" parent="."]
+layout_mode = 0
+offset_left = 24.0
+offset_top = 24.0
+offset_right = 232.0
+offset_bottom = 218.0
+bbcode_enabled = true
+text = "test"
+fit_content = true
+autowrap_mode = 0
+
+[node name="Flame" type="Sprite2D" parent="."]
+position = Vector2(160, 285)
+scale = Vector2(4.018, 3.4)
+texture = ExtResource("5_n7wrr")
+
+[node name="FlameAnimator" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_x5erp")
+}
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(128, 208)
+scale = Vector2(2.5, 2.5)
+texture = ExtResource("1_0wonw")

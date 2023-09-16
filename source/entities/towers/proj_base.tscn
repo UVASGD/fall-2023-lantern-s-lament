@@ -1,0 +1,21 @@
+[gd_scene load_steps=3 format=3 uid="uid://v7w2gn61tgb"]
+
+[ext_resource type="Script" path="res://source/entities/towers/proj_base.gd" id="1_ulhwq"]
+[ext_resource type="PackedScene" uid="uid://dgnquwxw3gnyx" path="res://source/entities/entity_base/hitbox.tscn" id="2_3x6ds"]
+
+[node name="ProjBase" instance=ExtResource("2_3x6ds")]
+modulate = Color(1, 1, 1, 1)
+collision_layer = 8
+collision_mask = 4
+monitoring = true
+script = ExtResource("1_ulhwq")
+
+[node name="Sprite2D" type="Sprite2D" parent="." index="0"]
+
+[node name="CollisionShape2D" parent="." index="1"]
+modulate = Color(1, 0, 0, 1)
+
+[node name="Lifespan" type="Timer" parent="." index="2"]
+one_shot = true
+
+[connection signal="area_entered" from="." to="." method="_on_area_entered"]

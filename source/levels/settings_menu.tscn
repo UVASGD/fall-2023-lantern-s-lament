@@ -1,0 +1,15 @@
+[gd_scene load_steps=2 format=3 uid="uid://cqgkrfmquwqgk"]
+
+[ext_resource type="PackedScene" uid="uid://cqvhn76u02ecf" path="res://source/interface/settings_buttons.tscn" id="1_iixiv"]
+
+[node name="SettingsMenu" type="Node2D"]
+
+[node name="SettingsButtons" parent="." instance=ExtResource("1_iixiv")]
+offset_left = 450.0
+offset_top = 270.0
+offset_right = 450.0
+offset_bottom = 270.0
+scale = Vector2(2, 2)
+
+[node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2(575, 325)
