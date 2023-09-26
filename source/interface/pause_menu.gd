@@ -1,10 +1,10 @@
 extends ColorRect
 
-@onready var towerhull = get_tree().get_root().get_node("MainScene/TowerHull")
+@onready var player = get_tree().get_root().get_node("MainScene/Player")
 @onready var label = $Label
 
-func resume_game():
-	if towerhull.game_start:
+func resume_game():	
+	if player.game_start:
 		get_tree().paused = false
 		self.queue_free()
 
