@@ -78,33 +78,35 @@ func _physics_process(delta):
 	
 	man_aim_back = Vector2(sin(back_angle) * man_cur_range, cos(back_angle) * man_cur_range)
 	
-	var tweenA1 = create_tween()
-	var tweenA2 = create_tween()
-	var tweenA3 = create_tween()
-	var tweenA4 = create_tween()
-	var tweenA5 = create_tween()
-	var tweenB1 = create_tween()
-	
 	if light_inhibited:
-		tweenB1.tween_property(self, "inner_light_scale", 0, 0.4)
-		tweenA4.tween_property(self, "point_light_scale", 3, 0.4)
+		var tween1 = create_tween()
+		var tween2 = create_tween()
+		tween1.tween_property(self, "inner_light_scale", 0, 0.4)
+		tween2.tween_property(self, "point_light_scale", 3, 0.4)
 		light_inhibited = false
 	else:
-		tweenB1.tween_property(self, "inner_light_scale", 1.71*light_strength, 0.4)
+		var tween1 = create_tween()
+		var tween2 = create_tween()
+		var tween3 = create_tween()
+		var tween4 = create_tween()
+		var tween5 = create_tween()
+		var tween6 = create_tween()
+		
+		tween6.tween_property(self, "inner_light_scale", 1.71*light_strength, 0.4)
 		if Input.is_action_pressed("space_bar"):
-			tweenA1.tween_property(self, "move_angle", PI - man_max_width, 0.3)
-			tweenA1.tween_property(self, "man_cur_range", man_max_range, 0.1)
-			tweenA2.tween_property(self, "cur_zoom", min_zoom, 0.4)
-			tweenA3.tween_property(self, "turn_rate", 1.0, 0.4)
-			tweenA4.tween_property(self, "point_light_scale", 20*light_strength, 0.4)
-			tweenA5.tween_property(self, "point_light_offset", 75.0, 0.4)
+			tween1.tween_property(self, "move_angle", PI - man_max_width, 0.3)
+			tween1.tween_property(self, "man_cur_range", man_max_range, 0.1)
+			tween2.tween_property(self, "cur_zoom", min_zoom, 0.4)
+			tween3.tween_property(self, "turn_rate", 1.0, 0.4)
+			tween4.tween_property(self, "point_light_scale", 20*light_strength, 0.4)
+			tween5.tween_property(self, "point_light_offset", 75.0, 0.4)
 		else:
-			tweenA1.tween_property(self, "man_cur_range", man_base_range, 0.2)
-			tweenA1.tween_property(self, "move_angle", 0, 0.3)
-			tweenA2.tween_property(self, "cur_zoom", max_zoom, 0.4)
-			tweenA3.tween_property(self, "turn_rate", 1.5, 0.4)
-			tweenA4.tween_property(self, "point_light_scale", 8*light_strength, 0.4)
-			tweenA5.tween_property(self, "point_light_offset", 0.0, 0.4)
+			tween1.tween_property(self, "man_cur_range", man_base_range, 0.2)
+			tween1.tween_property(self, "move_angle", 0, 0.3)
+			tween2.tween_property(self, "cur_zoom", max_zoom, 0.4)
+			tween3.tween_property(self, "turn_rate", 1.5, 0.4)
+			tween4.tween_property(self, "point_light_scale", 8*light_strength, 0.4)
+			tween5.tween_property(self, "point_light_offset", 0.0, 0.4)
 	
 	shake_strength = lerp(shake_strength, 0, 5.0 * delta) #delta is multiplied by decay rate of shake, set to 5.0 for now
 	
