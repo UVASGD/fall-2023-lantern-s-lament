@@ -1,0 +1,51 @@
+[gd_scene load_steps=6 format=3 uid="uid://dgxn40gmubttr"]
+
+[ext_resource type="Texture2D" uid="uid://lx31rjd1dx1c" path="res://assets/dartShooter.png" id="1_nfbho"]
+[ext_resource type="Script" path="res://source/obstacles/traps/dart_trap.gd" id="1_s15hd"]
+[ext_resource type="Texture2D" uid="uid://d12gjhsclloe5" path="res://assets/lightMask2.png" id="2_403dk"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_1gl5g"]
+size = Vector2(16, 16)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_wo3rl"]
+
+[node name="Dart Trap" type="Area2D"]
+scale = Vector2(3, 3)
+script = ExtResource("1_s15hd")
+
+[node name="Shooter Sprite 1" type="Sprite2D" parent="."]
+position = Vector2(-56, 0)
+scale = Vector2(2, 2)
+texture = ExtResource("1_nfbho")
+
+[node name="Shooter Hitbox 1" type="CollisionShape2D" parent="."]
+visible = false
+position = Vector2(-56, 0)
+scale = Vector2(2, 2)
+shape = SubResource("RectangleShape2D_1gl5g")
+
+[node name="Shooter Sprite 2" type="Sprite2D" parent="."]
+position = Vector2(56, 0)
+scale = Vector2(2, 2)
+texture = ExtResource("1_nfbho")
+
+[node name="Shooter Hitbox 2" type="CollisionShape2D" parent="."]
+visible = false
+position = Vector2(56, 0)
+scale = Vector2(2, 2)
+shape = SubResource("RectangleShape2D_1gl5g")
+
+[node name="Warning Light" type="PointLight2D" parent="."]
+visible = false
+enabled = false
+texture = ExtResource("2_403dk")
+
+[node name="Trigger Box" type="Area2D" parent="."]
+visible = false
+
+[node name="Trigger Shape" type="CollisionShape2D" parent="Trigger Box"]
+scale = Vector2(4, 2)
+shape = SubResource("RectangleShape2D_wo3rl")
+
+[connection signal="area_entered" from="Trigger Box" to="." method="_on_trigger_box_area_entered"]
+[connection signal="body_entered" from="Trigger Box" to="." method="_on_trigger_box_body_entered"]
