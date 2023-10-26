@@ -3,3 +3,5 @@ res://source/entities/player/player.tscn
 res://source/interface/side_menu.tscn
 res://source/entities/enemies/enemy_base.tscn
 res://source/entities/enemies/enemy_test.tscn
+res://source/entities/enemies/enemy_test_h.tscn
+res://source/entities/player/player.gd
