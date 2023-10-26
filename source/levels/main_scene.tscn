@@ -1,10 +1,11 @@
-[gd_scene load_steps=9 format=3 uid="uid://f1fs2p77wh2q"]
+[gd_scene load_steps=10 format=3 uid="uid://f1fs2p77wh2q"]
 
 [ext_resource type="PackedScene" uid="uid://byurxh2xitstp" path="res://source/interface/side_menu.tscn" id="2_opm2i"]
 [ext_resource type="Texture2D" uid="uid://clfryshg6q8ju" path="res://assets/levelTileMap.png" id="3_ll2j8"]
 [ext_resource type="PackedScene" uid="uid://dlbg8myhg31ys" path="res://source/entities/player/player.tscn" id="3_mwcfu"]
 [ext_resource type="Texture2D" uid="uid://nnkf6uinjgkp" path="res://assets/lightTexture.png" id="4_fovat"]
 [ext_resource type="PackedScene" uid="uid://bmcrw2hbt2gdo" path="res://source/entities/enemies/enemy_test.tscn" id="5_jrp8l"]
+[ext_resource type="PackedScene" uid="uid://ots7hvuv3jgc" path="res://source/entities/enemies/enemy_test_h.tscn" id="6_j5sao"]
 
 [sub_resource type="OccluderPolygon2D" id="OccluderPolygon2D_fq83y"]
 polygon = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
@@ -83,3 +84,6 @@ position = Vector2(266, 2839)
 
 [node name="EnemyTest4" parent="." instance=ExtResource("5_jrp8l")]
 position = Vector2(5150, -121)
+
+[node name="EnemyTestH" parent="." instance=ExtResource("6_j5sao")]
+position = Vector2(1000, 1000)

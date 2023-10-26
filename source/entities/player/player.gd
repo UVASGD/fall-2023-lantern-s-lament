@@ -5,6 +5,8 @@ class_name Player
 @onready var camera = $Camera2D
 @onready var light_occluder = $LightOccluder2D
 @onready var point_light = $PointLight2D
+@onready var inner_light = $InnerLight
+@onready var animation_tree = $AnimationTree
 
 @onready var side_menu = get_tree().get_root().get_node("MainScene/Menu/SideMenu")
 
@@ -29,8 +31,9 @@ const CENTER = Vector2(0.0, 0.0)
 
 #GAME STATE AND PLAYER STATS
 @onready var game_start : bool = false
-
 @onready var speed : Vector2  = Vector2(0, 0)
+@onready var direction : Vector2 = Vector2(0, 0)
+@onready var state_machine = animation_tree.get("parameters/playback")
 
 #CAMERA VARIABLES
 @onready var max_zoom : Vector2 = Vector2(0.5, 0.5) #0.4
@@ -42,28 +45,30 @@ const CENTER = Vector2(0.0, 0.0)
 #LIGHT VARIABLES
 @onready var point_light_scale : float = 0.0 #the size of the point light
 @onready var point_light_offset : float = 0.0
+@onready var inner_light_scale : float = 0.0
+@onready var light_strength : float = 0.0
+@onready var light_inhibited : bool = false
 
 func _ready():
 	setup_stats()
+	animation_tree.set("parameters/Idle/blend_position", Vector2(0, 1))
 	game_start = true
 
 func _physics_process(delta):
 	back_angle = man_aim_angle + PI
+	light_strength = 0.5+cur_hp/100.0
 	
 	queue_redraw()
 	
-	if Input.is_action_pressed("move_up") and !Input.is_action_pressed("move_down"):
-		speed += Vector2(0, -50)
-	elif Input.is_action_pressed("move_down") and !Input.is_action_pressed("move_up"):
-		speed += Vector2(0, 50)
-
+	direction = Vector2(
+		Input.get_action_strength("rotate_right") - Input.get_action_strength("rotate_left"),
+		Input.get_action_strength("move_down") - Input.get_action_strength("move_up")
+	)
+	
+	speed += direction*50
 	speed *= 0.9
 	move(speed)
-
-	if Input.is_action_pressed("rotate_left") and !Input.is_action_pressed("rotate_right"):
-		speed += Vector2(-50, 0)
-	elif Input.is_action_pressed("rotate_right") and !Input.is_action_pressed("rotate_left"):
-		speed += Vector2(50, 0)
+	update_animation()
 
 	looker2(get_global_mouse_position(), delta)
 
@@ -73,30 +78,46 @@ func _physics_process(delta):
 	
 	man_aim_back = Vector2(sin(back_angle) * man_cur_range, cos(back_angle) * man_cur_range)
 	
-	if Input.is_action_pressed("space_bar"):
-		var tween = create_tween()
+	if light_inhibited:
+		var tween1 = create_tween()
 		var tween2 = create_tween()
 		var tween3 = create_tween()
 		var tween4 = create_tween()
 		var tween5 = create_tween()
-		tween.tween_property(self, "move_angle", PI - man_max_width, 0.3)
-		tween.tween_property(self, "man_cur_range", man_max_range, 0.1)
-		tween2.tween_property(self, "cur_zoom", min_zoom, 0.4)
-		tween3.tween_property(self, "turn_rate", 1.0, 0.4)
-		tween4.tween_property(self, "point_light_scale", 20, 0.4)
-		tween5.tween_property(self, "point_light_offset", 75.0, 0.4)
-	else:
-		var tween = create_tween()
-		var tween2 = create_tween()
-		var tween3 = create_tween()
-		var tween4 = create_tween()
-		var tween5 = create_tween()
-		tween.tween_property(self, "man_cur_range", man_base_range, 0.2)
-		tween.tween_property(self, "move_angle", 0, 0.3)
+		var tween6 = create_tween()
+		
+		tween1.tween_property(self, "man_cur_range", man_base_range, 0.2)
+		tween1.tween_property(self, "move_angle", 0, 0.3)
 		tween2.tween_property(self, "cur_zoom", max_zoom, 0.4)
 		tween3.tween_property(self, "turn_rate", 1.5, 0.4)
-		tween4.tween_property(self, "point_light_scale", 8, 0.4)
+		tween4.tween_property(self, "point_light_scale", 3, 0.4)
 		tween5.tween_property(self, "point_light_offset", 0.0, 0.4)
+		tween6.tween_property(self, "inner_light_scale", 0, 0.4)
+		
+		light_inhibited = false
+	else:
+		var tween1 = create_tween()
+		var tween2 = create_tween()
+		var tween3 = create_tween()
+		var tween4 = create_tween()
+		var tween5 = create_tween()
+		var tween6 = create_tween()
+		
+		tween6.tween_property(self, "inner_light_scale", 1.71*light_strength, 0.4)
+		if Input.is_action_pressed("space_bar"):
+			tween1.tween_property(self, "move_angle", PI - man_max_width, 0.3)
+			tween1.tween_property(self, "man_cur_range", man_max_range, 0.1)
+			tween2.tween_property(self, "cur_zoom", min_zoom, 0.4)
+			tween3.tween_property(self, "turn_rate", 1.0, 0.4)
+			tween4.tween_property(self, "point_light_scale", 20*light_strength, 0.4)
+			tween5.tween_property(self, "point_light_offset", 75.0, 0.4)
+		else:
+			tween1.tween_property(self, "man_cur_range", man_base_range, 0.2)
+			tween1.tween_property(self, "move_angle", 0, 0.3)
+			tween2.tween_property(self, "cur_zoom", max_zoom, 0.4)
+			tween3.tween_property(self, "turn_rate", 1.5, 0.4)
+			tween4.tween_property(self, "point_light_scale", 8*light_strength, 0.4)
+			tween5.tween_property(self, "point_light_offset", 0.0, 0.4)
 	
 	shake_strength = lerp(shake_strength, 0, 5.0 * delta) #delta is multiplied by decay rate of shake, set to 5.0 for now
 	
@@ -106,6 +127,7 @@ func _physics_process(delta):
 	
 	point_light.global_position = global_position + Vector2(sin(man_aim_angle) * point_light_offset, cos(man_aim_angle) * point_light_offset)
 	point_light.texture_scale = point_light_scale
+	inner_light.texture_scale = inner_light_scale
 
 func _input(event):
 	if game_start and event.is_action_pressed("pause_menu"):
@@ -172,6 +194,13 @@ func _draw():
 	light_occluder.occluder.polygon = occ_points
 	#print(move_angle)
 	#draw_colored_polygon(occ_points, BLUE)
+
+func update_animation():
+	if(direction != Vector2.ZERO):
+		animation_tree.set("parameters/Idle/blend_position", direction)
+		animation_tree.set("parameters/Move/blend_position", direction)
+		state_machine.travel("Move")
+	else: state_machine.travel("Idle")
 
 #func _input(event):
 #	if event is InputEventMouseButton:
