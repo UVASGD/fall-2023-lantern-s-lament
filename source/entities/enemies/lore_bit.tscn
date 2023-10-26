@@ -1,0 +1,30 @@
+[gd_scene load_steps=5 format=3 uid="uid://btgm6lqt7vde8"]
+
+[ext_resource type="PackedScene" uid="uid://dgnquwxw3gnyx" path="res://source/entities/entity_base/hitbox.tscn" id="1_8tbjx"]
+[ext_resource type="Script" path="res://source/entities/enemies/lore_bit.gd" id="2_r6ckp"]
+[ext_resource type="Texture2D" uid="uid://csu6rmdlcy77o" path="res://assets/pixel-oil-droplet-isolated-vector-36623654.jpg" id="3_qpm1e"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_n1sxp"]
+size = Vector2(296, 283)
+
+[node name="LoreBit" instance=ExtResource("1_8tbjx")]
+modulate = Color(1, 1, 1, 1)
+collision_layer = 16
+collision_mask = 2
+monitoring = true
+monitorable = false
+script = ExtResource("2_r6ckp")
+heal_amount = 0
+
+[node name="CollisionShape2D" parent="." index="0"]
+position = Vector2(69, 68.5)
+shape = SubResource("RectangleShape2D_n1sxp")
+
+[node name="Sprite" type="Sprite2D" parent="." index="1"]
+position = Vector2(72, 75)
+scale = Vector2(0.136555, 0.131482)
+texture = ExtResource("3_qpm1e")
+
+[connection signal="area_entered" from="." to="." method="_on_area_entered"]
+[connection signal="area_exited" from="." to="." method="_on_area_exited"]
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
