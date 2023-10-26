@@ -52,18 +52,16 @@ func _physics_process(delta):
 	
 	queue_redraw()
 	
-	if Input.is_action_pressed("move_up") and !Input.is_action_pressed("move_down"):
-		speed += Vector2(0, -50)
-	elif Input.is_action_pressed("move_down") and !Input.is_action_pressed("move_up"):
-		speed += Vector2(0, 50)
-
+	# this can be edited to use a difference and then a scaled difference...
+	var x_input = Input.get_action_strength("rotate_right") - Input.get_action_strength("rotate_left")
+	var y_input = Input.get_action_strength("move_down") - Input.get_action_strength("move_up")
+		
+	speed += Vector2(x_input, y_input) * 50
+	
 	speed *= 0.9
 	move(speed)
-
-	if Input.is_action_pressed("rotate_left") and !Input.is_action_pressed("rotate_right"):
-		speed += Vector2(-50, 0)
-	elif Input.is_action_pressed("rotate_right") and !Input.is_action_pressed("rotate_left"):
-		speed += Vector2(50, 0)
+		
+	# writing a script into a two-dimensional way of doing this
 
 	looker2(get_global_mouse_position(), delta)
 
