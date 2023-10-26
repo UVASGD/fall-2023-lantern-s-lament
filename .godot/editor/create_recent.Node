@@ -1,8 +1,11 @@
+AnimationTree
+Area2D
+StaticBody2D
+CollisionShape2D
+Sprite2D
 PointLight2D
 LightOccluder2D
 TileMap
-CollisionShape2D
-Sprite2D
 CharacterBody2D
 DirectionalLight2D
 ColorRect
@@ -11,10 +14,8 @@ AnimationPlayer
 Button
 VBoxContainer
 Label
-StaticBody2D
 Timer
 RichTextLabel
-Area2D
 CanvasLayer
 Node
 OptionButton

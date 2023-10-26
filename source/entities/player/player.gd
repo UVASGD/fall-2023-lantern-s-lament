@@ -6,6 +6,7 @@ class_name Player
 @onready var light_occluder = $LightOccluder2D
 @onready var point_light = $PointLight2D
 @onready var inner_light = $InnerLight
+@onready var animation_tree = $AnimationTree
 
 @onready var side_menu = get_tree().get_root().get_node("MainScene/Menu/SideMenu")
 
@@ -30,8 +31,9 @@ const CENTER = Vector2(0.0, 0.0)
 
 #GAME STATE AND PLAYER STATS
 @onready var game_start : bool = false
-
 @onready var speed : Vector2  = Vector2(0, 0)
+@onready var direction : Vector2 = Vector2(0, 0)
+@onready var state_machine = animation_tree.get("parameters/playback")
 
 #CAMERA VARIABLES
 @onready var max_zoom : Vector2 = Vector2(0.5, 0.5) #0.4
@@ -49,6 +51,7 @@ const CENTER = Vector2(0.0, 0.0)
 
 func _ready():
 	setup_stats()
+	animation_tree.set("parameters/Idle/blend_position", Vector2(0, 1))
 	game_start = true
 
 func _physics_process(delta):
@@ -57,18 +60,15 @@ func _physics_process(delta):
 	
 	queue_redraw()
 	
-	if Input.is_action_pressed("move_up") and !Input.is_action_pressed("move_down"):
-		speed += Vector2(0, -50)
-	elif Input.is_action_pressed("move_down") and !Input.is_action_pressed("move_up"):
-		speed += Vector2(0, 50)
-
+	direction = Vector2(
+		Input.get_action_strength("rotate_right") - Input.get_action_strength("rotate_left"),
+		Input.get_action_strength("move_down") - Input.get_action_strength("move_up")
+	)
+	
+	speed += direction*50
 	speed *= 0.9
 	move(speed)
-
-	if Input.is_action_pressed("rotate_left") and !Input.is_action_pressed("rotate_right"):
-		speed += Vector2(-50, 0)
-	elif Input.is_action_pressed("rotate_right") and !Input.is_action_pressed("rotate_left"):
-		speed += Vector2(50, 0)
+	update_animation()
 
 	looker2(get_global_mouse_position(), delta)
 
@@ -194,6 +194,13 @@ func _draw():
 	light_occluder.occluder.polygon = occ_points
 	#print(move_angle)
 	#draw_colored_polygon(occ_points, BLUE)
+
+func update_animation():
+	if(direction != Vector2.ZERO):
+		animation_tree.set("parameters/Idle/blend_position", direction)
+		animation_tree.set("parameters/Move/blend_position", direction)
+		state_machine.travel("Move")
+	else: state_machine.travel("Idle")
 
 #func _input(event):
 #	if event is InputEventMouseButton:
