@@ -8,6 +8,7 @@
 [ext_resource type="PackedScene" uid="uid://d3ym8acbmohqx" path="res://source/entities/enemies/oil_pickup.tscn" id="6_2iv33"]
 [ext_resource type="PackedScene" uid="uid://btgm6lqt7vde8" path="res://source/entities/enemies/lore_bit.tscn" id="7_ld556"]
 [ext_resource type="PackedScene" uid="uid://dd6xb02k621ou" path="res://source/entities/enemies/moth.tscn" id="8_wsbaj"]
+[ext_resource type="PackedScene" uid="uid://ots7hvuv3jgc" path="res://source/entities/enemies/enemy_test_h.tscn" id="6_j5sao"]
 
 [sub_resource type="OccluderPolygon2D" id="OccluderPolygon2D_fq83y"]
 polygon = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
@@ -96,3 +97,6 @@ scale = Vector2(0.5, 0.5)
 
 [node name="Moth" parent="." instance=ExtResource("8_wsbaj")]
 position = Vector2(113, 943)
+
+[node name="EnemyTestH" parent="." instance=ExtResource("6_j5sao")]
+position = Vector2(1000, 1000)
