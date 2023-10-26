@@ -1,0 +1,15 @@
+[gd_scene load_steps=2 format=3 uid="uid://dvipfoy7aje7u"]
+
+[ext_resource type="Texture2D" uid="uid://cwwgiy2mrp70o" path="res://assets/water_sprinkler.drawio.png" id="1_lldxk"]
+
+[node name="SprinklerWater" type="Area2D"]
+
+[node name="SprinklerWater" type="Sprite2D" parent="."]
+position = Vector2(-192, -1)
+scale = Vector2(1.10411, 1.37654)
+texture = ExtResource("1_lldxk")
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
+position = Vector2(-2, -2.00001)
+scale = Vector2(0.999637, 0.989969)
+polygon = PackedVector2Array(-378.137, -54.5471, 1, 0, -378.137, 57.5776)

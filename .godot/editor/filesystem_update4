@@ -1,5 +1,9 @@
+res://source/entities/enemies/enemy_test.tscn
+res://Sprinkler_trap.tscn
+res://Sprinkler_Water.gd
 res://source/levels/main_scene.tscn
 res://source/entities/player/player.tscn
 res://source/interface/side_menu.tscn
 res://source/entities/enemies/enemy_base.tscn
-res://source/entities/enemies/enemy_test.tscn
+res://Sprinkler_Water.tscn
+res://Sprinkler_trap.gd
