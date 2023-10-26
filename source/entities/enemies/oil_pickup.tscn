@@ -1,0 +1,27 @@
+[gd_scene load_steps=5 format=3 uid="uid://d3ym8acbmohqx"]
+
+[ext_resource type="PackedScene" uid="uid://b5nwx7lojc88" path="res://source/entities/entity_base/hurtbox.tscn" id="1_8n0ds"]
+[ext_resource type="Script" path="res://source/entities/enemies/oil_pickup.gd" id="2_8drmo"]
+[ext_resource type="Texture2D" uid="uid://csu6rmdlcy77o" path="res://assets/pixel-oil-droplet-isolated-vector-36623654.jpg" id="2_r4lol"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_slnq7"]
+size = Vector2(942.501, 1172.5)
+
+[node name="OilPickup" instance=ExtResource("1_8n0ds")]
+modulate = Color(0.831373, 0.827451, 0.811765, 1)
+scale = Vector2(0.1, 0.1)
+collision_layer = 16
+collision_mask = 2
+script = ExtResource("2_8drmo")
+
+[node name="CollisionShape2D" parent="." index="0"]
+position = Vector2(-4.50015e-05, -4.50015e-05)
+scale = Vector2(0.999998, 0.999998)
+shape = SubResource("RectangleShape2D_slnq7")
+debug_color = Color(0.972549, 0, 0.443137, 0.419608)
+
+[node name="Sprite2D" type="Sprite2D" parent="." index="1"]
+texture = ExtResource("2_r4lol")
+
+[connection signal="area_entered" from="." to="." method="_on_area_entered"]
+[connection signal="body_entered" from="." to="." method="_on_area_entered"]
