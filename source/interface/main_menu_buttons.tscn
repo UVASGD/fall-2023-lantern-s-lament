@@ -1,6 +1,7 @@
-[gd_scene load_steps=2 format=3 uid="uid://bhx0hcjgqq0j7"]
+[gd_scene load_steps=3 format=3 uid="uid://bhx0hcjgqq0j7"]
 
 [ext_resource type="Script" path="res://source/interface/main_menu_buttons.gd" id="1_8jhjy"]
+[ext_resource type="FontFile" uid="uid://bq2bth53eqerg" path="res://source/interface/IMFellEnglishSC-Regular.ttf" id="2_tp32v"]
 
 [node name="MainMenuButtons" type="Control"]
 layout_mode = 3
@@ -21,14 +22,19 @@ layout_mode = 2
 
 [node name="Play" type="Button" parent="MarginContainer/VBoxContainer"]
 layout_mode = 2
+theme_override_fonts/font = ExtResource("2_tp32v")
 text = "Play"
 
 [node name="Settings" type="Button" parent="MarginContainer/VBoxContainer"]
 layout_mode = 2
+tooltip_text = "Configure your Latern's Lament Experience "
+theme_override_fonts/font = ExtResource("2_tp32v")
 text = "Settings"
 
 [node name="Quit" type="Button" parent="MarginContainer/VBoxContainer"]
 layout_mode = 2
+tooltip_text = "We are so sorry to see you go!"
+theme_override_fonts/font = ExtResource("2_tp32v")
 text = "Quit"
 
 [connection signal="pressed" from="MarginContainer/VBoxContainer/Play" to="." method="_on_play_pressed"]

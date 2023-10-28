@@ -56,7 +56,11 @@ func _ready():
 
 func _physics_process(delta):
 	back_angle = man_aim_angle + PI
+<<<<<<< Updated upstream
 	light_strength = 0.5+cur_hp/100.0
+=======
+<<<<<<< Updated upstream
+>>>>>>> Stashed changes
 	
 	queue_redraw()
 	
@@ -68,7 +72,33 @@ func _physics_process(delta):
 	speed += direction*50
 	speed *= 0.9
 	move(speed)
+<<<<<<< Updated upstream
 	update_animation()
+=======
+
+	if Input.is_action_pressed("rotate_left") and !Input.is_action_pressed("rotate_right"):
+		speed += Vector2(-50, 0)
+	elif Input.is_action_pressed("rotate_right") and !Input.is_action_pressed("rotate_left"):
+		speed += Vector2(50, 0)
+=======
+	light_strength = 0.5+cur_hp/200.0
+	
+	queue_redraw()
+	
+	# this can be edited to use a difference and then a scaled difference...
+	direction = Vector2(
+		Input.get_action_strength("rotate_right") - Input.get_action_strength("rotate_left"),
+		Input.get_action_strength("move_down") - Input.get_action_strength("move_up")
+	)
+	
+	speed += direction*50
+	speed *= 0.875
+	move(speed)
+	update_animation()
+	
+	# writing a script into a two-dimensional way of doing this
+>>>>>>> Stashed changes
+>>>>>>> Stashed changes
 
 	looker2(get_global_mouse_position(), delta)
 
