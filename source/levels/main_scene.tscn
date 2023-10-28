@@ -6,6 +6,7 @@
 [ext_resource type="Texture2D" uid="uid://nnkf6uinjgkp" path="res://assets/lightTexture.png" id="4_fovat"]
 [ext_resource type="PackedScene" uid="uid://bmcrw2hbt2gdo" path="res://source/entities/enemies/enemy_test.tscn" id="5_jrp8l"]
 [ext_resource type="PackedScene" uid="uid://d3ym8acbmohqx" path="res://source/entities/enemies/oil_pickup.tscn" id="6_2iv33"]
+[ext_resource type="PackedScene" uid="uid://ots7hvuv3jgc" path="res://source/entities/enemies/enemy_test_h.tscn" id="6_j5sao"]
 [ext_resource type="PackedScene" uid="uid://btgm6lqt7vde8" path="res://source/entities/enemies/lore_bit.tscn" id="7_ld556"]
 [ext_resource type="PackedScene" uid="uid://dd6xb02k621ou" path="res://source/entities/enemies/moth.tscn" id="8_wsbaj"]
 [ext_resource type="PackedScene" uid="uid://bp4hmkkancdb0" path="res://source/entities/enemies/eol_monster.tscn" id="9_53g4d"]
@@ -103,3 +104,6 @@ position = Vector2(113, 943)
 [node name="eolMonster" parent="." instance=ExtResource("9_53g4d")]
 position = Vector2(-730, -156)
 scale = Vector2(15, 15)
+
+[node name="EnemyTestH" parent="." instance=ExtResource("6_j5sao")]
+position = Vector2(1000, 1000)
