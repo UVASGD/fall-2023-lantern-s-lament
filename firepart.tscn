@@ -1,0 +1,19 @@
+[gd_scene load_steps=3 format=3 uid="uid://c3330mx4qqdym"]
+
+[ext_resource type="Texture2D" uid="uid://ejsxd8kyx7kb" path="res://assets/fireball.png" id="1_psxir"]
+
+[sub_resource type="SegmentShape2D" id="SegmentShape2D_ll0dj"]
+a = Vector2(319, 183)
+b = Vector2(-112, -70)
+
+[node name="Firepart" type="Area2D"]
+
+[node name="SprinklerSprite" type="Sprite2D" parent="."]
+position = Vector2(-222, -132)
+scale = Vector2(3.00773, 1.88707)
+texture = ExtResource("1_psxir")
+
+[node name="CollisionPolygon2D" type="CollisionShape2D" parent="."]
+position = Vector2(-314, -179)
+shape = SubResource("SegmentShape2D_ll0dj")
+one_way_collision_margin = 0.0

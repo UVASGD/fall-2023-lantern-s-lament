@@ -5,7 +5,11 @@
 [ext_resource type="PackedScene" uid="uid://dlbg8myhg31ys" path="res://source/entities/player/player.tscn" id="3_mwcfu"]
 [ext_resource type="Texture2D" uid="uid://nnkf6uinjgkp" path="res://assets/lightTexture.png" id="4_fovat"]
 [ext_resource type="PackedScene" uid="uid://bmcrw2hbt2gdo" path="res://source/entities/enemies/enemy_test.tscn" id="5_jrp8l"]
+<<<<<<< Updated upstream
 [ext_resource type="PackedScene" uid="uid://bkijtrst1sd2p" path="res://Sprinkler_trap.tscn" id="6_mpgvx"]
+=======
+[ext_resource type="PackedScene" uid="uid://d4klkhfd2ioq6" path="res://sprinklerbox.tscn" id="6_fsme1"]
+>>>>>>> Stashed changes
 
 [sub_resource type="OccluderPolygon2D" id="OccluderPolygon2D_fq83y"]
 polygon = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
@@ -53,6 +57,7 @@ visible = false
 color = Color(0, 0, 0, 1)
 
 [node name="Player" parent="." instance=ExtResource("3_mwcfu")]
+position = Vector2(69, 159)
 
 [node name="EnemyTest" parent="." instance=ExtResource("5_jrp8l")]
 position = Vector2(1423, 532)
@@ -86,5 +91,10 @@ position = Vector2(266, 2839)
 [node name="EnemyTest4" parent="." instance=ExtResource("5_jrp8l")]
 position = Vector2(5150, -121)
 
+<<<<<<< Updated upstream
 [node name="Area2D" parent="." instance=ExtResource("6_mpgvx")]
 position = Vector2(900, 491)
+=======
+[node name="Sprinkler" parent="." instance=ExtResource("6_fsme1")]
+position = Vector2(-321, 192)
+>>>>>>> Stashed changes

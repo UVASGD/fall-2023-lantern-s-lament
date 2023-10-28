@@ -1,6 +1,11 @@
 res://
+<<<<<<< Updated upstream
 C:/Users/Public/Downloads/demo folder
 res://assets
+=======
+res://assets
+C:/Users/Public/Downloads/demo folder
+>>>>>>> Stashed changes
 res://source/entities/enemies
 res://assets/flame_animation
 res://source/interface

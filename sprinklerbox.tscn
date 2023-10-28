@@ -1,0 +1,31 @@
+[gd_scene load_steps=5 format=3 uid="uid://d4klkhfd2ioq6"]
+
+[ext_resource type="PackedScene" uid="uid://c3330mx4qqdym" path="res://firepart.tscn" id="2_nc4ww"]
+[ext_resource type="Texture2D" uid="uid://b4dcmvi0e6lgu" path="res://assets/Box.jpeg" id="2_omc07"]
+
+[sub_resource type="GDScript" id="GDScript_hqgbq"]
+script/source = "extends Area2D
+
+@onready var firepart = $Firepart
+
+func _physics_process(delta):
+	firepart.rotation_degrees += .5
+"
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ioyq0"]
+size = Vector2(431, 391)
+
+[node name="Sprinklerbox" type="Area2D"]
+script = SubResource("GDScript_hqgbq")
+
+[node name="Box" type="Sprite2D" parent="."]
+position = Vector2(-1, 5.72205e-06)
+scale = Vector2(2.04278, 1.83667)
+texture = ExtResource("2_omc07")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(-0.5, 0.500004)
+scale = Vector2(1, 1)
+shape = SubResource("RectangleShape2D_ioyq0")
+
+[node name="Firepart" parent="." instance=ExtResource("2_nc4ww")]
