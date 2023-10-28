@@ -1,4 +1,5 @@
 res://source/levels/main_scene.tscn
+res://source/entities/enemies/eol_monster.gd
 res://source/entities/player/player.tscn
 res://source/interface/side_menu.tscn
 res://source/entities/enemies/enemy_base.tscn
@@ -7,4 +8,4 @@ res://source/entities/enemies/oil_pickup.tscn
 res://source/entities/enemies/lore_bit.tscn
 res://source/interface/lore_menu.tscn
 res://source/entities/enemies/moth.tscn
-res://source/entities/enemies/enemy_base.gd
+res://source/entities/enemies/eol_monster.tscn
