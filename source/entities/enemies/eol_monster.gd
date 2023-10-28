@@ -10,7 +10,7 @@ func _ready():
 
 func _process(delta):
 	var target_position = (player.global_position - global_position).normalized()
-	#global_position += target_position * (speed + boost) 
+	global_position += target_position * (speed + boost) 
 	boost *= 0.95
 
 func _on_area_entered(area):
