@@ -1,4 +1,4 @@
-[gd_scene load_steps=12 format=3 uid="uid://bq1vjkl6o4vr"]
+[gd_scene load_steps=13 format=3 uid="uid://bq1vjkl6o4vr"]
 
 [ext_resource type="PackedScene" uid="uid://byurxh2xitstp" path="res://source/interface/side_menu.tscn" id="2_opm2i"]
 [ext_resource type="Texture2D" uid="uid://clfryshg6q8ju" path="res://assets/levelTileMap.png" id="3_ll2j8"]
@@ -6,9 +6,9 @@
 [ext_resource type="Texture2D" uid="uid://nnkf6uinjgkp" path="res://assets/lightTexture.png" id="4_fovat"]
 [ext_resource type="PackedScene" uid="uid://bmcrw2hbt2gdo" path="res://source/entities/enemies/enemy_test.tscn" id="5_jrp8l"]
 [ext_resource type="PackedScene" uid="uid://d3ym8acbmohqx" path="res://source/entities/enemies/oil_pickup.tscn" id="6_2iv33"]
+[ext_resource type="PackedScene" uid="uid://ots7hvuv3jgc" path="res://source/entities/enemies/enemy_test_h.tscn" id="6_j5sao"]
 [ext_resource type="PackedScene" uid="uid://btgm6lqt7vde8" path="res://source/entities/enemies/lore_bit.tscn" id="7_ld556"]
 [ext_resource type="PackedScene" uid="uid://dd6xb02k621ou" path="res://source/entities/enemies/moth.tscn" id="8_wsbaj"]
-[ext_resource type="PackedScene" uid="uid://ots7hvuv3jgc" path="res://source/entities/enemies/enemy_test_h.tscn" id="6_j5sao"]
 
 [sub_resource type="OccluderPolygon2D" id="OccluderPolygon2D_fq83y"]
 polygon = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
