@@ -14,9 +14,9 @@ CanvasModulate
 AnimationPlayer
 VBoxContainer
 StaticBody2D
-Label
 Timer
 RichTextLabel
+Area2D
 CanvasLayer
 Node
 OptionButton
