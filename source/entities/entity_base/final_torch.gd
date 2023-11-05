@@ -24,7 +24,7 @@ func _on_area_entered(area):
 			lit = true
 			sprite.frame += 1
 			var monster_inst = monster.instantiate()
-			get_tree().current_scene.add_child(monster_inst)
+			get_tree().current_scene.call_deferred("add_child", monster_inst)
 			monster_inst.scale = Vector2(15, 15)
 			monster_inst.global_position = self.global_position - 2*player.speed
 
