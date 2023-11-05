@@ -1,3 +1,5 @@
+Timer
+NavigationAgent2D
 Button
 Label
 ColorRect
@@ -14,7 +16,6 @@ CanvasModulate
 AnimationPlayer
 VBoxContainer
 StaticBody2D
-Timer
 RichTextLabel
 Area2D
 CanvasLayer

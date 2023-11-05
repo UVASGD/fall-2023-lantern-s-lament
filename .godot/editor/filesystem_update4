@@ -5,3 +5,4 @@ res://source/entities/enemies/enemy_base.tscn
 res://source/entities/enemies/enemy_test.tscn
 res://source/entities/enemies/enemy_test_h.tscn
 res://source/entities/enemies/lore_bit.tscn
+res://source/entities/enemies/enemy_test.gd
