@@ -1,5 +1,9 @@
 2a60927148abd1d33b818b535e306557
+<<<<<<< Updated upstream
 ::res://::1699217843
+=======
+::res://::1699221121
+>>>>>>> Stashed changes
 cc-by-nc-sa-4.0.txt::TextFile::-1::1694978867::0::1::::<><>::
 icon.svg::CompressedTexture2D::42030989769038341::1694978867::1694978867::1::::<><>::
 README.md::TextFile::-1::1698514465::0::1::::<><>::
@@ -38,36 +42,58 @@ flame5.png::CompressedTexture2D::1208120210800700963::1694978867::1694978867::1:
 flame6.png::CompressedTexture2D::2269537207362597657::1694978867::1694978867::1::::<><>::
 ::res://source/::1694978867
 ::res://source/entities/::1694978867
+<<<<<<< Updated upstream
 ::res://source/entities/enemies/::1698962140
+=======
+::res://source/entities/enemies/::1699220754
+>>>>>>> Stashed changes
 enemy_base.gd::GDScript::-1::1698514465::0::1::::EnemyBase<>EntityBase<>::
 enemy_base.tscn::PackedScene::65503733522352153::1698515157::0::1::::<><>::uid://d4a6jpppso0p4<>res://source/entities/enemies/enemy_base.gd<>uid://dgnquwxw3gnyx
 enemy_test.gd::GDScript::-1::1696939692::0::1::::<>EnemyBase<>::
 enemy_test.tscn::PackedScene::3233888468216525684::1698515157::0::1::::<><>::uid://6y3pqlr36j2<>res://source/entities/enemies/enemy_test.gd<>uid://dlt1ce4ltukp7
 enemy_test_h.gd::GDScript::-1::1698514465::0::1::::<>EnemyBase<>::
 enemy_test_h.tscn::PackedScene::1023017440576568546::1698514465::0::1::::<><>::uid://6y3pqlr36j2<>res://source/entities/enemies/enemy_test_h.gd<>uid://dlt1ce4ltukp7
+<<<<<<< Updated upstream
 eol_monster.gd::GDScript::-1::1698961109::0::1::::<>Area2D<>::
 eol_monster.tscn::PackedScene::3499567282306544423::1698962139::0::1::::<><>::res://source/entities/enemies/eol_monster.gd
+=======
+eol_monster.tscn::PackedScene::965995067861292760::1699220754::0::1::::<><>::res://source/entities/enemies/eol_monster.gd
+>>>>>>> Stashed changes
 lore_bit.gd::GDScript::-1::1698514465::0::1::::<>Area2D<>::
 lore_bit.tscn::PackedScene::3733179546244911421::1698515157::0::1::::<><>::uid://dgnquwxw3gnyx<>res://source/entities/enemies/lore_bit.gd<>uid://csu6rmdlcy77o
 moth.gd::GDScript::-1::1698519329::0::1::::<>EnemyBase<>::
-moth.tscn::PackedScene::7435223924287132192::1698962140::0::1::::<><>::uid://6y3pqlr36j2<>uid://dlt1ce4ltukp7<>res://source/entities/enemies/moth.gd
+moth.tscn::PackedScene::7435223924287132192::1699219814::0::1::::<><>::uid://6y3pqlr36j2<>uid://dlt1ce4ltukp7<>res://source/entities/enemies/moth.gd
 oil_pickup.gd::GDScript::-1::1698514465::0::1::::<>Area2D<>::
 oil_pickup.tscn::PackedScene::9174882277305342883::1698515157::0::1::::<><>::uid://b5nwx7lojc88<>res://source/entities/enemies/oil_pickup.gd<>uid://csu6rmdlcy77o
+<<<<<<< Updated upstream
 ::res://source/entities/entity_base/::1698962139
 entity_base.gd::GDScript::-1::1694978867::0::1::::EntityBase<>CharacterBody2D<>::
 entity_base.tscn::PackedScene::9196637627231630255::1694978867::0::1::::<><>::res://source/entities/entity_base/entity_base.gd<>uid://b5nwx7lojc88
 final_torch.gd::GDScript::-1::1698959650::0::1::::<>Area2D<>::
 final_torch.tscn::PackedScene::6979780896172703616::1698962139::0::1::::<><>::uid://b5nwx7lojc88<>res://source/entities/entity_base/final_torch.gd<>uid://dto5ktnsb72i0
+=======
+::res://source/entities/entity_base/::1699220757
+entity_base.gd::GDScript::-1::1694978867::0::1::::EntityBase<>CharacterBody2D<>::
+entity_base.tscn::PackedScene::9196637627231630255::1694978867::0::1::::<><>::res://source/entities/entity_base/entity_base.gd<>uid://b5nwx7lojc88
+final_torch.tscn::PackedScene::6116177528804690187::1699220757::0::1::::<><>::uid://b5nwx7lojc88<>res://source/entities/entity_base/final_torch.gd<>uid://d0d4n1q2c51nq
+>>>>>>> Stashed changes
 hitbox.gd::GDScript::-1::1694978867::0::1::::HitboxClass<>Area2D<>::
 hitbox.tscn::PackedScene::7608240403554089067::1694978867::0::1::::<><>::res://source/entities/entity_base/hitbox.gd
 hurtbox.tscn::PackedScene::132950042621347603::1694978867::0::1::::<><>::
 proj_base.gd::GDScript::-1::1694978867::0::1::::ProjBase<>HitboxClass<>::
 proj_base.tscn::PackedScene::45335592102101241::1694978867::0::1::::<><>::res://source/entities/entity_base/proj_base.gd<>uid://dgnquwxw3gnyx
+<<<<<<< Updated upstream
 torch.gd::GDScript::-1::1698518438::0::1::::<>Area2D<>::
 torch.tscn::PackedScene::2629136818375025768::1698962139::0::1::::<><>::uid://b5nwx7lojc88<>res://source/entities/entity_base/torch.gd<>uid://dto5ktnsb72i0
 ::res://source/entities/player/::1698962198
 player.gd::GDScript::-1::1698962137::0::1::::Player<>EntityBase<>::
 player.tscn::PackedScene::7933827609689884618::1698962198::0::1::::<><>::res://source/entities/player/player.gd<>uid://g51ghhlpdxm6<>uid://b5nwx7lojc88<>uid://dgnquwxw3gnyx<>uid://d12gjhsclloe5
+=======
+torch.tscn::PackedScene::6293028826292216377::1699220757::0::1::::<><>::uid://b5nwx7lojc88<>res://source/entities/entity_base/torch.gd<>uid://d0d4n1q2c51nq
+::res://source/entities/player/::1699219814
+player.gd::GDScript::-1::1699218412::0::1::::Player<>EntityBase<>::
+player.tscn::PackedScene::7933827609689884618::1699219814::0::1::::<><>::res://source/entities/player/player.gd<>uid://g51ghhlpdxm6<>uid://b5nwx7lojc88<>uid://dgnquwxw3gnyx<>uid://d12gjhsclloe5
+>>>>>>> Stashed changes
 ::res://source/interface/::1698515157
 health_bar.gd::GDScript::-1::1694978867::0::1::::HealthBar<>TextureProgressBar<>::
 health_bar.tscn::PackedScene::6558021193188791588::1694978867::0::1::::<><>::uid://0ghgf5ho0w8m<>uid://48iuie6mxkrw<>res://source/interface/health_bar.gd
@@ -84,7 +110,13 @@ settings_buttons.gd::GDScript::-1::1694978867::0::1::::<>Control<>::
 settings_buttons.tscn::PackedScene::5939664762279428737::1694978867::0::1::::<><>::res://source/interface/settings_buttons.gd
 side_menu.gd::GDScript::-1::1698514465::0::1::::<>ColorRect<>::
 side_menu.tscn::PackedScene::4113314158653560213::1698515157::0::1::::<><>::uid://btv8u76n6u0ia<>res://source/interface/side_menu.gd<>uid://c0o0wepqnbyue<>uid://ch64jpicnerlm<>uid://bpauxhngacy6v<>uid://b81j1uapv1y7a<>uid://bse4mhtxb2bwc<>uid://rhhtfioxd772<>uid://7lm7f3kflga0
+<<<<<<< Updated upstream
 ::res://source/levels/::1698962139
 main_menu.tscn::PackedScene::4696971239284784275::1694978867::0::1::::<><>::uid://bhx0hcjgqq0j7<>uid://da41xvjske7ic
 main_scene.tscn::PackedScene::104835519886915727::1698962139::0::1::::<><>::uid://byurxh2xitstp<>uid://dsjr5ebfaj3xs<>uid://clfryshg6q8ju<>uid://dlbg8myhg31ys<>uid://nnkf6uinjgkp<>uid://qp1bc42bp288<>uid://boxhf5e38w71a<>uid://bmcrw2hbt2gdo<>uid://d3ym8acbmohqx<>uid://ots7hvuv3jgc<>uid://btgm6lqt7vde8<>uid://dd6xb02k621ou<>uid://bdptq8ft0qci7<>uid://c6pb8bf2xc05a
+=======
+::res://source/levels/::1699220757
+main_menu.tscn::PackedScene::4696971239284784275::1694978867::0::1::::<><>::uid://bhx0hcjgqq0j7<>uid://da41xvjske7ic
+main_scene.tscn::PackedScene::104835519886915727::1699220757::0::1::::<><>::uid://byurxh2xitstp<>uid://clfryshg6q8ju<>uid://dlbg8myhg31ys<>uid://nnkf6uinjgkp<>uid://bmcrw2hbt2gdo<>uid://d3ym8acbmohqx<>uid://ots7hvuv3jgc<>uid://btgm6lqt7vde8<>uid://dd6xb02k621ou<>uid://cvwnja0foxjmf<>uid://cteysyftlobu6
+>>>>>>> Stashed changes
 settings_menu.tscn::PackedScene::5908886942452107398::1694978867::0::1::::<><>::uid://cqvhn76u02ecf
