@@ -51,24 +51,26 @@ const CENTER = Vector2(0.0, 0.0)
 
 func _ready():
 	setup_stats()
-	animation_tree.set("parameters/Idle/blend_position", Vector2(0, 1))
 	game_start = true
 
 func _physics_process(delta):
 	back_angle = man_aim_angle + PI
-	light_strength = 0.5+cur_hp/100.0
+	light_strength = 0.5+cur_hp/200.0
 	
 	queue_redraw()
 	
+	# this can be edited to use a difference and then a scaled difference...
 	direction = Vector2(
 		Input.get_action_strength("rotate_right") - Input.get_action_strength("rotate_left"),
 		Input.get_action_strength("move_down") - Input.get_action_strength("move_up")
 	)
 	
 	speed += direction*50
-	speed *= 0.9
+	speed *= 0.875
 	move(speed)
 	update_animation()
+	
+	# writing a script into a two-dimensional way of doing this
 
 	looker2(get_global_mouse_position(), delta)
 
