@@ -12,7 +12,7 @@ func write(prop : String):
 	interact.text = prop + "\n"
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta):
+func _process(_delta):
 	if nearby:
 		interact.text = ""
 		write("Press X to interact")
@@ -27,5 +27,5 @@ func _input(event):
 func _on_area_entered(_area):
 	nearby = true
 
-func _on_area_exited(area):
+func _on_area_exited(_area):
 	nearby = false

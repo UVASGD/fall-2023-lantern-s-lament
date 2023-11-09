@@ -35,7 +35,7 @@ func space(val):
 		property_label.text += "\n"
 		value_label.text += "\n"
 
-func _physics_process(delta):
+func _physics_process(_delta):
 	flame_animator.play("flame_animation")
 	
 	property_label.text = ""

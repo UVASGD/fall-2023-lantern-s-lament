@@ -58,7 +58,7 @@ func _physics_process(delta):
 	queue_redraw()
 	
 	# this can be edited to use a difference and then a scaled difference...
-	direction = Vector2(
+	var direction = Vector2(
 		Input.get_action_strength("rotate_right") - Input.get_action_strength("rotate_left"),
 		Input.get_action_strength("move_down") - Input.get_action_strength("move_up")
 	)
@@ -66,7 +66,7 @@ func _physics_process(delta):
 	speed += direction*50
 	speed *= 0.875
 	move(speed)
-	update_animation()
+	#update_animation()
 	
 	# writing a script into a two-dimensional way of doing this
 
@@ -128,7 +128,7 @@ func _physics_process(delta):
 	point_light.global_position = global_position + Vector2(sin(man_aim_angle) * point_light_offset, cos(man_aim_angle) * point_light_offset)
 	point_light.texture_scale = point_light_scale
 	#print(str(point_light_scale) + " " + str(inner_light_scale))
-	print(light_strength)
+	#print(light_strength)
 	inner_light.texture_scale = inner_light_scale
 
 func _input(event):
@@ -153,7 +153,7 @@ func setup_stats():
 	super._ready()
 	hitbox.damage = 999
 	global_position = CENTER
-	hitbox.add_to_group("hull")
+	hitbox.add_to_group("player")
 
 func receive_damage(base_damage : int):
 	super.receive_damage(base_damage)
@@ -165,9 +165,9 @@ func die():
 
 func _draw():
 	const WHITE = Color(1, 1, 1, 1)
-	const BLUE = Color(0, 0, 1, 1)
-	const GRAY = Color(0.80, 0.80, 0.80, 1)
-	const DGRAY = Color(0.20, 0.20, 0.20, 1)
+	#const BLUE = Color(0, 0, 1, 1)
+	#const GRAY = Color(0.80, 0.80, 0.80, 1)
+	#const DGRAY = Color(0.20, 0.20, 0.20, 1)
 	if man_aim_angle > TAU:
 		man_aim_angle -= TAU
 	elif man_aim_angle < 0:

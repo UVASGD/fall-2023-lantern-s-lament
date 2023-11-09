@@ -10,10 +10,10 @@ func _ready():
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta):
+func _process(_delta):
 	pass
 
-func _on_area_entered(area):
+func _on_area_entered(_area):
 	if !lit:
 		lit = true
 		sprite.frame += 1
