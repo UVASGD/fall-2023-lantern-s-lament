@@ -20,9 +20,9 @@ const CENTER = Vector2(0.0, 0.0)
 
 @onready var man_aim_back : Vector2 = CENTER
 
-@onready var man_base_range : float = 400
+@onready var man_base_range : float = 60
 @onready var man_cur_range : float = 0 #the range that man aim stretches out to. set this to the highest range of your towers
-@onready var man_max_range : float = 1000
+#@onready var man_max_range : float = 1000
 
 @onready var move_angle : float = 0
 @onready var back_angle : float = man_aim_angle + PI
@@ -106,18 +106,18 @@ func _physics_process(delta):
 		tween6.tween_property(self, "inner_light_scale", 1.71*light_strength, 0.4)
 		if Input.is_action_pressed("space_bar"):
 			tween1.tween_property(self, "move_angle", PI - man_max_width, 0.3)
-			tween1.tween_property(self, "man_cur_range", man_max_range, 0.1)
 			tween2.tween_property(self, "cur_zoom", min_zoom, 0.4)
 			tween3.tween_property(self, "turn_rate", 1.0, 0.4)
 			tween4.tween_property(self, "point_light_scale", 20*light_strength, 0.4)
 			tween5.tween_property(self, "point_light_offset", 75.0, 0.4)
+			tween6.tween_property(self, "man_cur_range", man_base_range*point_light_scale, 0.2)
 		else:
-			tween1.tween_property(self, "man_cur_range", man_base_range, 0.2)
 			tween1.tween_property(self, "move_angle", 0, 0.3)
 			tween2.tween_property(self, "cur_zoom", max_zoom, 0.4)
 			tween3.tween_property(self, "turn_rate", 1.5, 0.4)
 			tween4.tween_property(self, "point_light_scale", 8*light_strength, 0.4)
 			tween5.tween_property(self, "point_light_offset", 0.0, 0.4)
+			tween6.tween_property(self, "man_cur_range", man_base_range*point_light_scale, 0.2)
 	
 	shake_strength = lerp(shake_strength, 0, 5.0 * delta) #delta is multiplied by decay rate of shake, set to 5.0 for now
 	
