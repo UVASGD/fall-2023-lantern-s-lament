@@ -53,7 +53,7 @@ func _ready():
 
 func _physics_process(delta):
 	back_angle = man_aim_angle + PI
-	light_strength = 0.5+cur_hp/200.0
+	light_strength = (cur_hp/500.0) + 0.8
 	
 	queue_redraw()
 	
@@ -127,6 +127,8 @@ func _physics_process(delta):
 	
 	point_light.global_position = global_position + Vector2(sin(man_aim_angle) * point_light_offset, cos(man_aim_angle) * point_light_offset)
 	point_light.texture_scale = point_light_scale
+	#print(str(point_light_scale) + " " + str(inner_light_scale))
+	print(light_strength)
 	inner_light.texture_scale = inner_light_scale
 
 func _input(event):

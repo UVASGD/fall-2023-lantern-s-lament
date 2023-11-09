@@ -1,4 +1,7 @@
 res://source/levels/main_scene.tscn
+res://source/entities/enemies/eol_monster.tscn
+res://source/entities/entity_base/torch.tscn
+res://source/entities/entity_base/final_torch.tscn
 res://source/entities/player/player.tscn
 res://source/interface/side_menu.tscn
 res://source/entities/enemies/enemy_base.tscn
@@ -6,4 +9,3 @@ res://source/entities/enemies/enemy_test.tscn
 res://source/entities/enemies/enemy_test_h.tscn
 res://source/entities/enemies/lore_bit.tscn
 res://source/interface/scene_transition.tscn
-

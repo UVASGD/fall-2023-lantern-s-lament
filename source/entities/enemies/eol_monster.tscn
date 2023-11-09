@@ -1,0 +1,22 @@
+[gd_scene load_steps=4 format=3 uid="uid://bp4hmkkancdb0"]
+
+[ext_resource type="Script" path="res://source/entities/enemies/eol_monster.gd" id="1_7ni65"]
+
+[sub_resource type="CanvasTexture" id="CanvasTexture_m1oeo"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_vfvul"]
+
+[node name="eolMonster" type="Area2D"]
+collision_layer = 4
+collision_mask = 2
+script = ExtResource("1_7ni65")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+scale = Vector2(30, 30)
+texture = SubResource("CanvasTexture_m1oeo")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+scale = Vector2(1.5, 1.5)
+shape = SubResource("RectangleShape2D_vfvul")
+
+[connection signal="area_entered" from="." to="." method="_on_area_entered"]
