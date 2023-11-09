@@ -4,6 +4,6 @@ res://source/interface/side_menu.tscn
 res://source/entities/enemies/enemy_base.tscn
 res://source/entities/enemies/enemy_test.tscn
 res://source/entities/enemies/enemy_test_h.tscn
-res://source/levels/main_scene.tscn
 res://source/entities/enemies/lore_bit.tscn
 res://source/interface/scene_transition.tscn
+
