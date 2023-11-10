@@ -4,3 +4,8 @@ res://source/entities/player/player.tscn
 res://source/entities/player/player.gd
 res://source/entities/enemies/eol_monster.tscn
 res://source/entities/enemies/eol_monster.gd
+res://source/entities/enemies/lore_bit.tscn
+res://source/entities/entity_base/torch.tscn
+res://source/entities/entity_base/final_torch.tscn
+res://source/interface/side_menu.tscn
+res://source/entities/entity_base/entity_base.gd

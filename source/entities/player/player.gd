@@ -2,7 +2,7 @@ extends EntityBase
 class_name Player
 
 @onready var hitbox = $Hitbox
-@onready var camera = $Camera2D
+@onready var camera = $Camera2
 @onready var light_occluder = $LightOccluder2D
 @onready var point_light = $PointLight2D
 @onready var inner_light = $InnerLight
@@ -47,6 +47,12 @@ const CENTER = Vector2(0.0, 0.0)
 @onready var light_strength : float = 0.0
 @onready var light_inhibited : bool = false
 
+#ANIMATION VARIABLES
+@onready var direction : int = 0
+@onready var frame_offset : int = 10
+@onready var frame_count : int = 0
+@onready var cur_frame : int = 0
+
 func _ready():
 	setup_stats()
 	game_start = true
@@ -66,7 +72,7 @@ func _physics_process(delta):
 	speed += direction*50
 	speed *= 0.875
 	move(speed)
-	#update_animation()
+	update_animation()
 	
 	# writing a script into a two-dimensional way of doing this
 
@@ -134,7 +140,7 @@ func _physics_process(delta):
 func _input(event):
 	if game_start and event.is_action_pressed("pause_menu"):
 		side_menu.pause_game()
-
+	
 func looker(angle, delta):
 	var angle_to = transform.x.angle_to(Vector2(sin(angle), cos(angle)))
 	man_aim_angle -= (sign(angle_to) * min(delta * (PI), abs(angle_to)))
@@ -202,3 +208,23 @@ func _draw():
 #		if event.is_pressed():
 #			if event.button_index == MOUSE_BUTTON_WHEEL_DOWN:
 #				pass
+
+func update_animation():
+	if abs(velocity.y) > abs(velocity.x):
+		if velocity.y > 0: direction = 0
+		else: direction = 8
+	else: 
+		if velocity.x < 0: direction = 12
+		else: direction = 4
+	
+	if (velocity.x > 15 or velocity.x < -15) or (velocity.y > 15 or velocity.y < -15) or (cur_frame != 0 and cur_frame != 2):
+		frame_count += 1
+		print(sprite.frame)
+		if frame_count == frame_offset:
+			frame_count = 0
+			if cur_frame == 3: 
+				sprite.frame = direction
+				cur_frame = 0
+			else : 
+				cur_frame += 1
+				sprite.frame = direction + cur_frame
