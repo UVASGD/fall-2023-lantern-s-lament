@@ -1,6 +1,7 @@
-res://source/entities/enemies
-res://source/interface
-res://source/entities/entity_base
+res://source/levels
+res://
 C:/Users/Public/Downloads/demo folder
 res://assets
-res://
+res://source/entities/enemies
+res://assets/flame_animation
+res://source/interface

@@ -12,7 +12,7 @@ config_version=5
 
 config/name="Lantern's Lament"
 config/description="A fuel-based survival game for forest explorers"
-run/main_scene="res://source/levels/main_menu.tscn"
+run/main_scene="res://source/levels/spencer_scene.tscn"
 config/features=PackedStringArray("4.0", "Forward Plus")
 config/icon="res://icon.svg"
 
@@ -23,6 +23,10 @@ SceneTransition="*res://source/interface/scene_transition.tscn"
 [display]
 
 window/stretch/mode="canvas_items"
+
+[dotnet]
+
+project/assembly_name="Lantern's Lament"
 
 [editor]
 
@@ -86,11 +90,12 @@ interact={
 2d_physics/layer_3="Enemy"
 2d_physics/layer_4="Projectile"
 2d_physics/layer_5="Pickup"
+2d_physics/layer_6="Traps"
 
 [rendering]
 
-textures/canvas_textures/default_texture_filter=0
 anti_aliasing/quality/msaa_2d=1
 anti_aliasing/quality/msaa_3d=1
 anti_aliasing/quality/screen_space_aa=1
 anti_aliasing/quality/use_taa=true
+textures/canvas_textures/default_texture_filter=0

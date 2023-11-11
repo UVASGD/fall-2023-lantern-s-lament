@@ -149,7 +149,7 @@ func setup_stats():
 	super._ready()
 	hitbox.damage = 999
 	global_position = CENTER
-	hitbox.add_to_group("hull")
+	hurtbox.add_to_group("player")
 
 func receive_damage(base_damage : int):
 	super.receive_damage(base_damage)
@@ -198,3 +198,4 @@ func _draw():
 #		if event.is_pressed():
 #			if event.button_index == MOUSE_BUTTON_WHEEL_DOWN:
 #				pass
+

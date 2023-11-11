@@ -1,8 +1,7 @@
 res://source/levels/main_scene.tscn
+res://source/entities/entity_base/hitbox.gd
+res://source/entities/enemies/spikes.tscn
+res://source/levels/spencer_scene.tscn
 res://source/entities/player/player.tscn
-res://source/interface/side_menu.tscn
-res://source/entities/enemies/enemy_base.tscn
-res://source/entities/enemies/enemy_test.tscn
-res://source/entities/enemies/enemy_test_h.tscn
-res://source/entities/enemies/enemy_test_h.gd
-res://source/entities/enemies/lore_bit.tscn
+res://source/entities/enemies/spike.gd
+res://source/entities/player/player.gd
