@@ -38,3 +38,4 @@ func _on_hurtbox_area_entered(hitbox):
 func set_cur_hp(value):
 	if value != cur_hp:
 		cur_hp = clamp(value, 0, max_hp)
+		
