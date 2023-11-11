@@ -2,7 +2,7 @@
 
 [ext_resource type="PackedScene" uid="uid://dgnquwxw3gnyx" path="res://source/entities/entity_base/hitbox.tscn" id="1_8tbjx"]
 [ext_resource type="Script" path="res://source/entities/enemies/lore_bit.gd" id="2_r6ckp"]
-[ext_resource type="Texture2D" uid="uid://csu6rmdlcy77o" path="res://assets/pixel-oil-droplet-isolated-vector-36623654.jpg" id="3_qpm1e"]
+[ext_resource type="Texture2D" uid="uid://dobi6y3urx8q1" path="res://assets/sign.png" id="3_v6l3m"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_n1sxp"]
 size = Vector2(296, 283)
@@ -18,12 +18,12 @@ heal_amount = 0
 
 [node name="CollisionShape2D" parent="." index="0"]
 position = Vector2(69, 68.5)
+scale = Vector2(1.25, 1.25)
 shape = SubResource("RectangleShape2D_n1sxp")
 
 [node name="Sprite" type="Sprite2D" parent="." index="1"]
-position = Vector2(72, 75)
-scale = Vector2(0.136555, 0.131482)
-texture = ExtResource("3_qpm1e")
+position = Vector2(59, 108)
+texture = ExtResource("3_v6l3m")
 
 [connection signal="area_entered" from="." to="." method="_on_area_entered"]
 [connection signal="area_exited" from="." to="." method="_on_area_exited"]

@@ -2,7 +2,7 @@ extends EntityBase
 class_name Player
 
 @onready var hitbox = $Hitbox
-@onready var camera = $Camera2D
+@onready var camera = $Camera2
 @onready var light_occluder = $LightOccluder2D
 @onready var point_light = $PointLight2D
 @onready var inner_light = $InnerLight
@@ -20,9 +20,9 @@ const CENTER = Vector2(0.0, 0.0)
 
 @onready var man_aim_back : Vector2 = CENTER
 
-@onready var man_base_range : float = 400
+@onready var man_base_range : float = 60
 @onready var man_cur_range : float = 0 #the range that man aim stretches out to. set this to the highest range of your towers
-@onready var man_max_range : float = 1000
+#@onready var man_max_range : float = 1000
 
 @onready var move_angle : float = 0
 @onready var back_angle : float = man_aim_angle + PI
@@ -47,25 +47,33 @@ const CENTER = Vector2(0.0, 0.0)
 @onready var light_strength : float = 0.0
 @onready var light_inhibited : bool = false
 
+#ANIMATION VARIABLES
+@onready var direction : int = 0
+@onready var frame_offset : int = 10
+@onready var frame_count : int = 0
+@onready var cur_frame : int = 0
+
 func _ready():
 	setup_stats()
 	game_start = true
 
 func _physics_process(delta):
 	back_angle = man_aim_angle + PI
-	light_strength = 0.5+cur_hp/100.0
+	light_strength = (cur_hp/500.0) + 0.8
 	
 	queue_redraw()
 	
 	# this can be edited to use a difference and then a scaled difference...
-	var x_input = Input.get_action_strength("rotate_right") - Input.get_action_strength("rotate_left")
-	var y_input = Input.get_action_strength("move_down") - Input.get_action_strength("move_up")
-		
-	speed += Vector2(x_input, y_input) * 50
+	var direction = Vector2(
+		Input.get_action_strength("rotate_right") - Input.get_action_strength("rotate_left"),
+		Input.get_action_strength("move_down") - Input.get_action_strength("move_up")
+	)
 	
-	speed *= 0.9
+	speed += direction*50
+	speed *= 0.875
 	move(speed)
-		
+	update_animation()
+	
 	# writing a script into a two-dimensional way of doing this
 
 	looker2(get_global_mouse_position(), delta)
@@ -104,18 +112,18 @@ func _physics_process(delta):
 		tween6.tween_property(self, "inner_light_scale", 1.71*light_strength, 0.4)
 		if Input.is_action_pressed("space_bar"):
 			tween1.tween_property(self, "move_angle", PI - man_max_width, 0.3)
-			tween1.tween_property(self, "man_cur_range", man_max_range, 0.1)
 			tween2.tween_property(self, "cur_zoom", min_zoom, 0.4)
 			tween3.tween_property(self, "turn_rate", 1.0, 0.4)
 			tween4.tween_property(self, "point_light_scale", 20*light_strength, 0.4)
 			tween5.tween_property(self, "point_light_offset", 75.0, 0.4)
+			tween6.tween_property(self, "man_cur_range", man_base_range*point_light_scale, 0.2)
 		else:
-			tween1.tween_property(self, "man_cur_range", man_base_range, 0.2)
 			tween1.tween_property(self, "move_angle", 0, 0.3)
 			tween2.tween_property(self, "cur_zoom", max_zoom, 0.4)
 			tween3.tween_property(self, "turn_rate", 1.5, 0.4)
 			tween4.tween_property(self, "point_light_scale", 8*light_strength, 0.4)
 			tween5.tween_property(self, "point_light_offset", 0.0, 0.4)
+			tween6.tween_property(self, "man_cur_range", man_base_range*point_light_scale, 0.2)
 	
 	shake_strength = lerp(shake_strength, 0, 5.0 * delta) #delta is multiplied by decay rate of shake, set to 5.0 for now
 	
@@ -125,12 +133,14 @@ func _physics_process(delta):
 	
 	point_light.global_position = global_position + Vector2(sin(man_aim_angle) * point_light_offset, cos(man_aim_angle) * point_light_offset)
 	point_light.texture_scale = point_light_scale
+	#print(str(point_light_scale) + " " + str(inner_light_scale))
+	#print(light_strength)
 	inner_light.texture_scale = inner_light_scale
 
 func _input(event):
 	if game_start and event.is_action_pressed("pause_menu"):
 		side_menu.pause_game()
-
+	
 func looker(angle, delta):
 	var angle_to = transform.x.angle_to(Vector2(sin(angle), cos(angle)))
 	man_aim_angle -= (sign(angle_to) * min(delta * (PI), abs(angle_to)))
@@ -150,6 +160,7 @@ func setup_stats():
 	hitbox.damage = 999
 	global_position = CENTER
 	hurtbox.add_to_group("player")
+	hitbox.add_to_group("player")
 
 func receive_damage(base_damage : int):
 	super.receive_damage(base_damage)
@@ -161,9 +172,9 @@ func die():
 
 func _draw():
 	const WHITE = Color(1, 1, 1, 1)
-	const BLUE = Color(0, 0, 1, 1)
-	const GRAY = Color(0.80, 0.80, 0.80, 1)
-	const DGRAY = Color(0.20, 0.20, 0.20, 1)
+	#const BLUE = Color(0, 0, 1, 1)
+	#const GRAY = Color(0.80, 0.80, 0.80, 1)
+	#const DGRAY = Color(0.20, 0.20, 0.20, 1)
 	if man_aim_angle > TAU:
 		man_aim_angle -= TAU
 	elif man_aim_angle < 0:
@@ -199,3 +210,22 @@ func _draw():
 #			if event.button_index == MOUSE_BUTTON_WHEEL_DOWN:
 #				pass
 
+func update_animation():
+	if abs(velocity.y) > abs(velocity.x):
+		if velocity.y > 0: direction = 0
+		else: direction = 8
+	else: 
+		if velocity.x < 0: direction = 12
+		else: direction = 4
+	
+	if (velocity.x > 15 or velocity.x < -15) or (velocity.y > 15 or velocity.y < -15) or (cur_frame != 0 and cur_frame != 2):
+		frame_count += 1
+		print(sprite.frame)
+		if frame_count == frame_offset:
+			frame_count = 0
+			if cur_frame == 3: 
+				sprite.frame = direction
+				cur_frame = 0
+			else : 
+				cur_frame += 1
+				sprite.frame = direction + cur_frame

@@ -4,6 +4,7 @@ StaticBody2D
 HitboxClass
 Node2D
 Sprite2D
+Node
 Button
 Label
 ColorRect
@@ -20,7 +21,6 @@ VBoxContainer
 Timer
 RichTextLabel
 CanvasLayer
-Node
 OptionButton
 Control
 HBoxContainer

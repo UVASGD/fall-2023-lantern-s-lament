@@ -6,7 +6,7 @@ func _ready():
 	max_hp = 40
 	super._ready()
 
-func _physics_process(delta):
+func _physics_process(_delta):
 	#super._physics_process(delta)
 	in_aim_area = enemy_in_area()
 	target_pos = (player.global_position - global_position).normalized()
