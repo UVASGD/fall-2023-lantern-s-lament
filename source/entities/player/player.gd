@@ -2,7 +2,7 @@ extends EntityBase
 class_name Player
 
 @onready var hitbox = $Hitbox
-@onready var camera = $Camera2
+@onready var camera = $Camera2D
 @onready var light_occluder = $LightOccluder2D
 @onready var point_light = $PointLight2D
 @onready var inner_light = $InnerLight
