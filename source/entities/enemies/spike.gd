@@ -6,12 +6,11 @@ extends StaticBody2D
 @onready var playerOver = false
 @onready var timer_running = false
 @onready var spikes_down = load("res://assets/Spikes down.png")
-@onready var spikes_up = load("res://assets/Spikes up.png")
+@onready var spikes_up = load("res://assets/spikes up.png")
 @onready var spikesActive = true
 
 @export var cycleDuration = 0 #set to 0 if you don't want it
 
-# Called when the node enters the scene tree for the first time.
 func _ready():
 	hitbox.damage = 5
 	
@@ -34,8 +33,7 @@ func spike_cycle():
 		sprite.texture = spikes_up
 		spikesActive = true
 
-# Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta):
+func _process(_delta):
 	if playerOver and not timer_running:
 		timer_running = true
 		collider.disabled = true
@@ -43,16 +41,13 @@ func _process(delta):
 		timer_running = false
 		if spikesActive:
 			collider.disabled = false
-	
-	
 
-
-func _on_hitbox_area_entered(area):
+func _on_hitbox_area_entered(_area):
 	#assuming the only thing that overlaps is the player
 	#if area.is_in_group("player"):
 	playerOver = true
 
-func _on_hitbox_area_exited(area):
+func _on_hitbox_area_exited(_area):
 	#assuming the only thing that overlaps is the player
 	#if area.is_in_group("player"):
 	playerOver = false
