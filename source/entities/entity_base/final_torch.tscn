@@ -8,7 +8,7 @@
 size = Vector2(120, 96)
 
 [node name="FinalTorch" instance=ExtResource("1_s6k7o")]
-modulate = Color(0.352941, 0.352941, 0.352941, 1)
+modulate = Color(1, 1, 1, 1)
 collision_layer = 16
 collision_mask = 2
 script = ExtResource("2_24mbv")
