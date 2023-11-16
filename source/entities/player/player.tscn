@@ -1,4 +1,4 @@
-[gd_scene load_steps=10 format=3 uid="uid://dlbg8myhg31ys"]
+[gd_scene load_steps=35 format=3 uid="uid://dlbg8myhg31ys"]
 
 [ext_resource type="Script" path="res://source/entities/player/player.gd" id="1_ekmf0"]
 [ext_resource type="Texture2D" uid="uid://bcoxeak4h8moi" path="res://assets/player.png" id="2_j4nc6"]
@@ -7,15 +7,15 @@
 [ext_resource type="Texture2D" uid="uid://d12gjhsclloe5" path="res://assets/lightMask2.png" id="5_gcsun"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_7f1jp"]
-size = Vector2(235, 139)
+size = Vector2(227, 138)
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_3pykv"]
 radius = 88.0
-height = 242.0
+height = 176.0
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_qgl3e"]
-radius = 89.0
-height = 244.0
+radius = 88.0
+height = 176.0
 
 [sub_resource type="OccluderPolygon2D" id="OccluderPolygon2D_25lge"]
 
@@ -30,18 +30,21 @@ hframes = 4
 vframes = 4
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(11.5, 2.5)
+position = Vector2(-13, -1.50013)
 rotation = 1.5708
 shape = SubResource("RectangleShape2D_7f1jp")
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_xnwkh")
+}
 
 [node name="Hurtbox" parent="." instance=ExtResource("3_fxgss")]
 collision_layer = 2
 collision_mask = 4
 
 [node name="CollisionShape2D" parent="Hurtbox" index="0"]
-position = Vector2(9, -2)
+position = Vector2(-5, 2.08165e-12)
 rotation = 1.5708
 shape = SubResource("CapsuleShape2D_3pykv")
 
@@ -50,7 +53,7 @@ collision_layer = 2
 collision_mask = 4
 
 [node name="CollisionShape2D" parent="Hitbox" index="0"]
-position = Vector2(9, -2)
+position = Vector2(-5, 2.08165e-12)
 rotation = 1.5708
 shape = SubResource("CapsuleShape2D_qgl3e")
 
@@ -75,6 +78,14 @@ occluder = SubResource("OccluderPolygon2D_25lge")
 [node name="RollTimer" type="Timer" parent="."]
 wait_time = 2.0
 one_shot = true
+
+[node name="AnimationTree" type="AnimationTree" parent="."]
+tree_root = SubResource("AnimationNodeStateMachine_enxu5")
+anim_player = NodePath("../AnimationPlayer")
+active = true
+parameters/playback = SubResource("AnimationNodeStateMachinePlayback_1i2eb")
+parameters/Idle/blend_position = Vector2(0.00137925, -0.00239658)
+parameters/Move/blend_position = Vector2(0, 0)
 
 [connection signal="area_entered" from="Hurtbox" to="." method="_on_hurtbox_area_entered"]
 [connection signal="area_exited" from="Hurtbox" to="." method="_on_hurtbox_area_exited"]

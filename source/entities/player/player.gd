@@ -7,6 +7,7 @@ class_name Player
 @onready var point_light = $PointLight2D
 @onready var inner_light = $InnerLight
 @onready var timer = $RollTimer
+@onready var animation_tree = $AnimationTree
 
 @onready var side_menu = get_tree().get_root().get_node("MainScene/Menu/SideMenu")
 
@@ -31,10 +32,10 @@ const CENTER = Vector2(0.0, 0.0)
 
 #GAME STATE AND PLAYER STATS
 @onready var game_start : bool = false
-
 @onready var speed : Vector2  = Vector2(0, 0)
-@onready var direction: Vector2 = Vector2(0, 0)
+@onready var direction : Vector2 = Vector2(0, 0)
 @onready var boost = 0.0
+@onready var state_machine = animation_tree.get("parameters/playback")
 
 #CAMERA VARIABLES
 @onready var max_zoom : Vector2 = Vector2(0.5, 0.5) #0.4
@@ -116,6 +117,7 @@ func _physics_process(delta):
 		var tween4 = create_tween()
 		var tween5 = create_tween()
 		var tween6 = create_tween()
+		var tween7 = create_tween()
 		
 		tween6.tween_property(self, "inner_light_scale", 1.71*light_strength, 0.4)
 		if Input.is_action_pressed("space_bar"):
@@ -124,14 +126,14 @@ func _physics_process(delta):
 			tween3.tween_property(self, "turn_rate", 1.0, 0.4)
 			tween4.tween_property(self, "point_light_scale", 20*light_strength, 0.4)
 			tween5.tween_property(self, "point_light_offset", 75.0, 0.4)
-			tween6.tween_property(self, "man_cur_range", man_base_range*point_light_scale, 0.2)
+			tween7.tween_property(self, "man_cur_range", man_base_range*point_light_scale, 0.2)
 		else:
 			tween1.tween_property(self, "move_angle", 0, 0.3)
 			tween2.tween_property(self, "cur_zoom", max_zoom, 0.4)
 			tween3.tween_property(self, "turn_rate", 1.5, 0.4)
 			tween4.tween_property(self, "point_light_scale", 8*light_strength, 0.4)
 			tween5.tween_property(self, "point_light_offset", 0.0, 0.4)
-			tween6.tween_property(self, "man_cur_range", man_base_range*point_light_scale, 0.2)
+			tween7.tween_property(self, "man_cur_range", man_base_range*point_light_scale, 0.2)
 	
 	shake_strength = lerp(shake_strength, 0, 5.0 * delta) #delta is multiplied by decay rate of shake, set to 5.0 for now
 	
@@ -228,6 +230,13 @@ func _draw():
 	light_occluder.occluder.polygon = occ_points
 	#print(move_angle)
 	#draw_colored_polygon(occ_points, BLUE)
+
+func update_animation():
+	if(direction != Vector2.ZERO):
+		animation_tree.set("parameters/Idle/blend_position", direction)
+		animation_tree.set("parameters/Move/blend_position", direction)
+		state_machine.travel("Move")
+	else: state_machine.travel("Idle")
 
 #func _input(event):
 #	if event is InputEventMouseButton:
