@@ -1,0 +1,31 @@
+[gd_scene load_steps=4 format=3 uid="uid://d3ym8acbmohqx"]
+
+[ext_resource type="Script" path="res://source/entities/enemies/oil_pickup.gd" id="2_8drmo"]
+[ext_resource type="Texture2D" uid="uid://bwo1sg3swugjf" path="res://assets/LampPickupSprite.png" id="3_8dnw7"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_slnq7"]
+size = Vector2(841.251, 940.002)
+
+[node name="OilPickup" type="StaticBody2D"]
+modulate = Color(0.831373, 0.827451, 0.811765, 1)
+scale = Vector2(0.1, 0.1)
+collision_layer = 0
+collision_mask = 0
+script = ExtResource("2_8drmo")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(110, -20.0001)
+scale = Vector2(6.05, 6.05)
+texture = ExtResource("3_8dnw7")
+
+[node name="Area2D" type="Area2D" parent="."]
+collision_layer = 16
+collision_mask = 2
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+position = Vector2(50.6247, -10)
+scale = Vector2(0.999998, 0.999998)
+shape = SubResource("RectangleShape2D_slnq7")
+debug_color = Color(0.972549, 0, 0.443137, 0.419608)
+
+[connection signal="area_entered" from="Area2D" to="." method="_on_area_2d_area_entered"]

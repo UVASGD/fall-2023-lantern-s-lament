@@ -3,7 +3,7 @@ extends ColorRect
 @onready var player = get_tree().get_root().get_node("MainScene/Player")
 @onready var label = $Label
 
-func resume_game():	
+func resume_game():
 	if player.game_start:
 		get_tree().paused = false
 		self.queue_free()

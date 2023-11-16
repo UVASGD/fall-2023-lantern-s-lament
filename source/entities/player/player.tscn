@@ -1,7 +1,7 @@
-[gd_scene load_steps=10 format=3 uid="uid://dlbg8myhg31ys"]
+[gd_scene load_steps=14 format=3 uid="uid://dlbg8myhg31ys"]
 
 [ext_resource type="Script" path="res://source/entities/player/player.gd" id="1_ekmf0"]
-[ext_resource type="Texture2D" uid="uid://g51ghhlpdxm6" path="res://assets/playerSprite.png" id="2_nr4oa"]
+[ext_resource type="Texture2D" uid="uid://bcoxeak4h8moi" path="res://assets/player.png" id="2_j4nc6"]
 [ext_resource type="PackedScene" uid="uid://b5nwx7lojc88" path="res://source/entities/entity_base/hurtbox.tscn" id="3_fxgss"]
 [ext_resource type="PackedScene" uid="uid://dgnquwxw3gnyx" path="res://source/entities/entity_base/hitbox.tscn" id="4_ce4gw"]
 [ext_resource type="Texture2D" uid="uid://d12gjhsclloe5" path="res://assets/lightMask2.png" id="5_gcsun"]
@@ -19,25 +19,37 @@ height = 244.0
 
 [sub_resource type="OccluderPolygon2D" id="OccluderPolygon2D_25lge"]
 
+[sub_resource type="AnimationNodeBlendSpace2D" id="AnimationNodeBlendSpace2D_l06xd"]
+
+[sub_resource type="AnimationNodeBlendSpace2D" id="AnimationNodeBlendSpace2D_y2on0"]
+
+[sub_resource type="AnimationNodeStateMachine" id="AnimationNodeStateMachine_yhru6"]
+states/Idle/node = SubResource("AnimationNodeBlendSpace2D_l06xd")
+states/Idle/position = Vector2(418, 71)
+states/Move/node = SubResource("AnimationNodeBlendSpace2D_y2on0")
+states/Move/position = Vector2(645, 76)
+graph_offset = Vector2(-149, -31)
+
+[sub_resource type="AnimationNodeStateMachinePlayback" id="AnimationNodeStateMachinePlayback_rsxsg"]
+
 [node name="Player" type="CharacterBody2D"]
 collision_layer = 2
 script = ExtResource("1_ekmf0")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 position = Vector2(10, 0)
-scale = Vector2(2.25, 2.25)
-texture = ExtResource("2_nr4oa")
+texture = ExtResource("2_j4nc6")
+hframes = 4
+vframes = 4
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(11.5, 2.5)
 rotation = 1.5708
 shape = SubResource("RectangleShape2D_7f1jp")
 
-[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
-
 [node name="Hurtbox" parent="." instance=ExtResource("3_fxgss")]
 collision_layer = 2
-collision_mask = 4
+collision_mask = 36
 
 [node name="CollisionShape2D" parent="Hurtbox" index="0"]
 position = Vector2(9, -2)
@@ -56,22 +68,38 @@ shape = SubResource("CapsuleShape2D_qgl3e")
 [node name="Camera2D" type="Camera2D" parent="."]
 
 [node name="PointLight2D" type="PointLight2D" parent="."]
-energy = 2.0
+blend_mode = 2
 shadow_enabled = true
 texture = ExtResource("5_gcsun")
 texture_scale = 10.0
 
 [node name="InnerLight" type="PointLight2D" parent="."]
+z_index = -4
 position = Vector2(8, -0.999998)
 scale = Vector2(1.60156, 1.60156)
-energy = 2.0
+blend_mode = 2
 texture = ExtResource("5_gcsun")
 texture_scale = 1.71
 
 [node name="LightOccluder2D" type="LightOccluder2D" parent="."]
 occluder = SubResource("OccluderPolygon2D_25lge")
 
+[node name="RollTimer" type="Timer" parent="."]
+wait_time = 2.0
+one_shot = true
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+
+[node name="AnimationTree" type="AnimationTree" parent="."]
+tree_root = SubResource("AnimationNodeStateMachine_yhru6")
+anim_player = NodePath("../AnimationPlayer")
+active = true
+parameters/playback = SubResource("AnimationNodeStateMachinePlayback_rsxsg")
+parameters/Idle/blend_position = Vector2(0, 0)
+parameters/Move/blend_position = Vector2(0, 0)
+
 [connection signal="area_entered" from="Hurtbox" to="." method="_on_hurtbox_area_entered"]
+[connection signal="area_exited" from="Hurtbox" to="." method="_on_hurtbox_area_exited"]
 
 [editable path="Hurtbox"]
 [editable path="Hitbox"]
