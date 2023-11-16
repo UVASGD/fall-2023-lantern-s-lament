@@ -1,0 +1,30 @@
+[gd_scene load_steps=5 format=3 uid="uid://dxyvkmxfplod5"]
+
+[ext_resource type="Script" path="res://source/entities/enemies/spike.gd" id="1_3mnhf"]
+[ext_resource type="Texture2D" uid="uid://drsa4hymjj86r" path="res://assets/spikes up.png" id="2_jwjw6"]
+[ext_resource type="PackedScene" uid="uid://dgnquwxw3gnyx" path="res://source/entities/entity_base/hitbox.tscn" id="2_ku6et"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_flkpc"]
+size = Vector2(163, 123)
+
+[node name="Spikes" type="StaticBody2D"]
+collision_layer = 4
+collision_mask = 2
+script = ExtResource("1_3mnhf")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("2_jwjw6")
+
+[node name="Hitbox" parent="." instance=ExtResource("2_ku6et")]
+collision_layer = 36
+collision_mask = 2
+monitoring = true
+
+[node name="CollisionShape2D" parent="Hitbox" index="0"]
+position = Vector2(0.5, 0.5)
+shape = SubResource("RectangleShape2D_flkpc")
+
+[connection signal="area_entered" from="Hitbox" to="." method="_on_hitbox_area_entered"]
+[connection signal="area_exited" from="Hitbox" to="." method="_on_hitbox_area_exited"]
+
+[editable path="Hitbox"]

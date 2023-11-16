@@ -14,7 +14,7 @@ func _process(_delta):
 #		player.set_cur_hp(player.cur_hp + heal_amount)
 #		queue_free()
 
-func _on_area_2d_area_entered(area):
+func _on_area_2d_area_entered(_area):
 	if player.cur_hp != player.max_hp:
 		player.set_cur_hp(player.cur_hp + heal_amount)
 		queue_free()
