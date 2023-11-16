@@ -1,10 +1,12 @@
-[gd_scene load_steps=23 format=3 uid="uid://bq1vjkl6o4vr"]
+[gd_scene load_steps=24 format=3 uid="uid://bq1vjkl6o4vr"]
 
 [ext_resource type="PackedScene" uid="uid://byurxh2xitstp" path="res://source/interface/side_menu.tscn" id="2_opm2i"]
 [ext_resource type="Texture2D" uid="uid://dsjr5ebfaj3xs" path="res://assets/blankIsoBox.png" id="3_207d2"]
 [ext_resource type="Texture2D" uid="uid://clfryshg6q8ju" path="res://assets/levelTileMap.png" id="3_ll2j8"]
+[ext_resource type="PackedScene" uid="uid://dlbg8myhg31ys" path="res://source/entities/player/player.tscn" id="3_mwcfu"]
 [ext_resource type="Texture2D" uid="uid://qp1bc42bp288" path="res://assets/blankIsoBox2.png" id="4_h7m7e"]
 [ext_resource type="Texture2D" uid="uid://boxhf5e38w71a" path="res://assets/blankIsoBox3.png" id="5_gsyu8"]
+[ext_resource type="PackedScene" uid="uid://bmcrw2hbt2gdo" path="res://source/entities/enemies/enemy_test.tscn" id="5_jrp8l"]
 [ext_resource type="PackedScene" uid="uid://d3ym8acbmohqx" path="res://source/entities/enemies/oil_pickup.tscn" id="6_2iv33"]
 [ext_resource type="Texture2D" uid="uid://e6y50ici7qog" path="res://assets/blankIsoBox4.png" id="6_71s3x"]
 [ext_resource type="PackedScene" uid="uid://ots7hvuv3jgc" path="res://source/entities/enemies/enemy_test_h.tscn" id="6_j5sao"]
@@ -12,7 +14,6 @@
 [ext_resource type="PackedScene" uid="uid://dd6xb02k621ou" path="res://source/entities/enemies/moth.tscn" id="8_wsbaj"]
 [ext_resource type="PackedScene" uid="uid://bdptq8ft0qci7" path="res://source/entities/entity_base/torch.tscn" id="11_flp10"]
 [ext_resource type="PackedScene" uid="uid://c6pb8bf2xc05a" path="res://source/entities/entity_base/final_torch.tscn" id="11_ybhu0"]
-[ext_resource type="PackedScene" uid="uid://dxyvkmxfplod5" path="res://source/entities/enemies/spikes.tscn" id="14_3viij"]
 
 [sub_resource type="NavigationPolygon" id="NavigationPolygon_7oxnf"]
 vertices = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
@@ -114,8 +115,12 @@ layer_1/z_index = 0
 layer_1/tile_data = PackedInt32Array(-1179662, 1, 0, -1179661, 1, 0, -1179660, 1, 0, -1179659, 1, 0, -1179658, 1, 0, -1179657, 1, 0, -1179656, 1, 0, -1179655, 1, 0, -1179654, 1, 0, -1179653, 1, 0, -1179652, 1, 0, -1179651, 1, 0, -1179650, 1, 0, -1179649, 1, 0, -1245184, 1, 0, -1245183, 1, 0, -1245182, 1, 0, -1245181, 1, 0, -1245180, 1, 0, -1245179, 1, 0, -1245178, 1, 0, -1245177, 1, 0, -1245176, 1, 0, -1245175, 1, 0, -1245174, 1, 0, -1245173, 1, 0, -1245172, 1, 0, -1245171, 1, 0, -1245170, 1, 0, -1245169, 1, 0, -1245168, 1, 0, -1245167, 1, 0, -1245166, 1, 0, -1114126, 1, 0, -1048590, 1, 0, -983054, 1, 0, -917518, 1, 0, -851982, 1, 0, -786446, 1, 0, -720910, 1, 0, -655374, 1, 0, -589838, 1, 0, -524302, 1, 0, -458766, 1, 0, -393230, 1, 0, -327694, 1, 0, -262158, 1, 0, -196622, 1, 0, -131086, 1, 0, -65550, 1, 0, -14, 1, 0, 65522, 1, 0, 131058, 1, 0, 196594, 1, 0, 262130, 1, 0, 327666, 1, 0, 393202, 1, 0, 458738, 1, 0, 524274, 1, 0, 589810, 1, 0, 655346, 1, 0, 720882, 1, 0, 786418, 1, 0, 851954, 1, 0, 917490, 1, 0, 983026, 1, 0, 1048562, 1, 0, 1114098, 1, 0, 1179634, 1, 0, 1245170, 1, 0, 1310706, 1, 0, 1376242, 1, 0, 1441778, 1, 0, 1507314, 1, 0, 1572850, 1, 0, 1638386, 1, 0, 1703922, 1, 0, 1769458, 1, 0, 1834994, 1, 0, 1900530, 1, 0, 1966066, 1, 0, 2031602, 1, 0, 2097138, 1, 0, 2162674, 1, 0, 2228210, 1, 0, 2293746, 1, 0, 2359282, 1, 0, 2424818, 1, 0, 2490354, 1, 0, 2555890, 1, 0, 2621426, 1, 0, 2686962, 1, 0, 2752498, 1, 0, 2818034, 1, 0, 2883570, 1, 0, 2949106, 1, 0, 3014642, 1, 0, 3080178, 1, 0, 3145714, 1, 0, 3211250, 1, 0, 3276786, 1, 0, 3342322, 1, 0, 3407858, 1, 0, 3473394, 1, 0, 3538930, 1, 0, 3604466, 1, 0, 3670002, 1, 0, 3735538, 1, 0, 3801074, 1, 0, 3866610, 1, 0, 3932146, 1, 0, 3997682, 1, 0, 4063218, 1, 0, 4128754, 1, 0, 4194290, 1, 0, 4259826, 1, 0, 4325362, 1, 0, 4390898, 1, 0, 4456434, 1, 0, 4521970, 1, 0, 4587506, 1, 0, 4653042, 1, 0, 4718578, 1, 0, 4784114, 1, 0, 4849650, 1, 0, 4915186, 1, 0, 4980722, 1, 0, 5046258, 1, 0, 5046259, 1, 0, 5046260, 1, 0, 5046261, 1, 0, 5046262, 1, 0, 5046263, 1, 0, 5046264, 1, 0, 5046265, 1, 0, 5046266, 1, 0, 5046267, 1, 0, 5046268, 1, 0, 5046269, 1, 0, 5046270, 1, 0, 5046271, 1, 0, 4980736, 1, 0, 4980737, 1, 0, 4980738, 1, 0, 4980739, 1, 0, 4980740, 1, 0, 4980741, 1, 0, 4980742, 1, 0, 4980743, 1, 0, 4980744, 1, 0, 4980745, 1, 0, 4980746, 1, 0, 4980747, 1, 0, 4980748, 1, 0, 4980749, 1, 0, 4980750, 1, 0, 4980751, 1, 0, 4980752, 1, 0, 4980753, 1, 0, 4980754, 1, 0, 4980755, 1, 0, 4915218, 1, 0, 4849683, 1, 0, 4784146, 1, 0, 4718611, 1, 0, 4653074, 1, 0, 4587539, 1, 0, 4522002, 1, 0, 4456467, 1, 0, 4390930, 1, 0, 4325395, 1, 0, 4259858, 1, 0, 4194323, 1, 0, 4128786, 1, 0, 4063251, 1, 0, 3997714, 1, 0, 3932179, 1, 0, 3866642, 1, 0, 3801107, 1, 0, 3735570, 1, 0, 3670035, 1, 0, 3604498, 1, 0, 3538963, 1, 0, 3473426, 1, 0, 3407891, 1, 0, 3342354, 1, 0, 3276819, 1, 0, 3211282, 1, 0, 3145747, 1, 0, 3080210, 1, 0, 3014675, 1, 0, 2949138, 1, 0, 2883603, 1, 0, 2818066, 1, 0, 2752531, 1, 0, 2686994, 1, 0, 2621459, 1, 0, 2555922, 1, 0, 2490387, 1, 0, 2424850, 1, 0, 2359315, 1, 0, 2293778, 1, 0, 2228243, 1, 0, 2162706, 1, 0, 2097171, 1, 0, 2031634, 1, 0, 1966099, 1, 0, 1900562, 1, 0, 1835027, 1, 0, 1769490, 1, 0, 1703955, 1, 0, 1638418, 1, 0, 1572883, 1, 0, 1507346, 1, 0, 1441811, 1, 0, 1376274, 1, 0, 1310739, 1, 0, 1245202, 1, 0, 1179667, 1, 0, 1114130, 1, 0, 1048595, 1, 0, 983058, 1, 0, 917523, 1, 0, 851986, 1, 0, 786451, 1, 0, 720914, 1, 0, 655379, 1, 0, 589842, 1, 0, 524307, 1, 0, 458770, 1, 0, 393235, 1, 0, 327698, 1, 0, 262163, 1, 0, 196626, 1, 0, 131091, 1, 0, 65554, 1, 0, 19, 1, 0, -65518, 1, 0, -131053, 1, 0, -196590, 1, 0, -262125, 1, 0, -327662, 1, 0, -393197, 1, 0, -458734, 1, 0, -524269, 1, 0, -589806, 1, 0, -655341, 1, 0, -720878, 1, 0, -786413, 1, 0, -851950, 1, 0, -917485, 1, 0, -983022, 1, 0, -1048557, 1, 0, -1114094, 1, 0, -1179629, 1, 0)
 
 [node name="CanvasModulate" type="CanvasModulate" parent="."]
-visible = false
 color = Color(0, 0, 0, 1)
+
+[node name="Player" parent="." instance=ExtResource("3_mwcfu")]
+
+[node name="EnemyTest" parent="." instance=ExtResource("5_jrp8l")]
+position = Vector2(1379, 541)
 
 [node name="OilPickup" parent="." instance=ExtResource("6_2iv33")]
 position = Vector2(-339, -4)
@@ -138,19 +143,3 @@ position = Vector2(360, 202)
 
 [node name="torch2" parent="." groups=["torches"] instance=ExtResource("11_flp10")]
 position = Vector2(4, 428)
-
-[node name="Spikes" parent="." instance=ExtResource("14_3viij")]
-position = Vector2(98, -384)
-cycleDuration = 2
-
-[node name="Spikes2" parent="." instance=ExtResource("14_3viij")]
-position = Vector2(-387, -390)
-cycleDuration = 2
-
-[node name="Spikes4" parent="." instance=ExtResource("14_3viij")]
-position = Vector2(-60, -386)
-cycleDuration = 2
-
-[node name="Spikes3" parent="." instance=ExtResource("14_3viij")]
-position = Vector2(-225, -388)
-cycleDuration = 2

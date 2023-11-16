@@ -33,7 +33,6 @@ const CENTER = Vector2(0.0, 0.0)
 @onready var game_start : bool = false
 @onready var speed : Vector2  = Vector2(0, 0)
 @onready var direction : Vector2 = Vector2(0, 0)
-@onready var boost = 0.0
 @onready var state_machine = animation_tree.get("parameters/playback")
 
 #CAMERA VARIABLES
@@ -157,8 +156,7 @@ func setup_stats():
 	super._ready()
 	hitbox.damage = 999
 	global_position = CENTER
-	hurtbox.add_to_group("player")
-	hitbox.add_to_group("player")
+	hitbox.add_to_group("hull")
 
 func receive_damage(base_damage : int):
 	super.receive_damage(base_damage)
@@ -214,22 +212,3 @@ func update_animation():
 #		if event.is_pressed():
 #			if event.button_index == MOUSE_BUTTON_WHEEL_DOWN:
 #				pass
-
-#func update_animation():
-#	if abs(velocity.y) > abs(velocity.x):
-#		if velocity.y > 0: Adirection = 0
-#		else: Adirection = 8
-#	else: 
-#		if velocity.x < 0: Adirection = 12
-#		else: Adirection = 4
-#
-#	if (velocity.x > 15 or velocity.x < -15) or (velocity.y > 15 or velocity.y < -15) or (cur_frame != 0 and cur_frame != 2):
-#		frame_count += 1
-#		if frame_count == frame_offset:
-#			frame_count = 0
-#			if cur_frame == 3: 
-#				sprite.frame = Adirection
-#				cur_frame = 0
-#			else : 
-#				cur_frame += 1
-#				sprite.frame = Adirection + cur_frame
