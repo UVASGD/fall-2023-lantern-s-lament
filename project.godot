@@ -24,6 +24,10 @@ SceneTransition="*res://source/interface/scene_transition.tscn"
 
 window/stretch/mode="canvas_items"
 
+[dotnet]
+
+project/assembly_name="Lantern's Lament"
+
 [editor]
 
 movie_writer/movie_file="C:/Users/Public/Downloads/demo folder/demo.avi"
@@ -91,6 +95,7 @@ roll={
 2d_physics/layer_3="Enemy"
 2d_physics/layer_4="Projectile"
 2d_physics/layer_5="Pickup"
+2d_physics/layer_6="Traps"
 
 [rendering]
 

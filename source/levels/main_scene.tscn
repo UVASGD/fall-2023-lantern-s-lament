@@ -14,6 +14,7 @@
 [ext_resource type="PackedScene" uid="uid://dd6xb02k621ou" path="res://source/entities/enemies/moth.tscn" id="8_wsbaj"]
 [ext_resource type="PackedScene" uid="uid://bdptq8ft0qci7" path="res://source/entities/entity_base/torch.tscn" id="11_flp10"]
 [ext_resource type="PackedScene" uid="uid://c6pb8bf2xc05a" path="res://source/entities/entity_base/final_torch.tscn" id="11_ybhu0"]
+[ext_resource type="PackedScene" uid="uid://dxyvkmxfplod5" path="res://source/entities/enemies/spikes.tscn" id="14_3viij"]
 
 [sub_resource type="NavigationPolygon" id="NavigationPolygon_7oxnf"]
 vertices = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
@@ -144,3 +145,19 @@ position = Vector2(360, 202)
 
 [node name="torch2" parent="." groups=["torches"] instance=ExtResource("11_flp10")]
 position = Vector2(4, 428)
+
+[node name="Spikes" parent="." instance=ExtResource("14_3viij")]
+position = Vector2(98, -384)
+cycleDuration = 2
+
+[node name="Spikes2" parent="." instance=ExtResource("14_3viij")]
+position = Vector2(-387, -390)
+cycleDuration = 2
+
+[node name="Spikes4" parent="." instance=ExtResource("14_3viij")]
+position = Vector2(-60, -386)
+cycleDuration = 2
+
+[node name="Spikes3" parent="." instance=ExtResource("14_3viij")]
+position = Vector2(-225, -388)
+cycleDuration = 2

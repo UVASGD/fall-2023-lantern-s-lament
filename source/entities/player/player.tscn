@@ -49,7 +49,7 @@ shape = SubResource("RectangleShape2D_7f1jp")
 
 [node name="Hurtbox" parent="." instance=ExtResource("3_fxgss")]
 collision_layer = 2
-collision_mask = 4
+collision_mask = 36
 
 [node name="CollisionShape2D" parent="Hurtbox" index="0"]
 position = Vector2(9, -2)
@@ -74,6 +74,7 @@ texture = ExtResource("5_gcsun")
 texture_scale = 10.0
 
 [node name="InnerLight" type="PointLight2D" parent="."]
+z_index = -4
 position = Vector2(8, -0.999998)
 scale = Vector2(1.60156, 1.60156)
 blend_mode = 2
