@@ -35,7 +35,7 @@ const CENTER = Vector2(0.0, 0.0)
 @onready var speed : Vector2  = Vector2(0, 0)
 @onready var direction : Vector2 = Vector2(0, 0)
 @onready var boost = 0.0
-@onready var state_machine = animation_tree.get("parameters/playback")
+#@onready var state_machine = animation_tree.get("parameters/playback")
 
 #CAMERA VARIABLES
 @onready var max_zoom : Vector2 = Vector2(0.5, 0.5) #0.4
@@ -231,12 +231,12 @@ func _draw():
 	#print(move_angle)
 	#draw_colored_polygon(occ_points, BLUE)
 
-func update_animation():
-	if(direction != Vector2.ZERO):
-		animation_tree.set("parameters/Idle/blend_position", direction)
-		animation_tree.set("parameters/Move/blend_position", direction)
-		state_machine.travel("Move")
-	else: state_machine.travel("Idle")
+#func update_animation():
+#	if(direction != Vector2.ZERO):
+#		animation_tree.set("parameters/Idle/blend_position", direction)
+#		animation_tree.set("parameters/Move/blend_position", direction)
+#		state_machine.travel("Move")
+#	else: state_machine.travel("Idle")
 
 #func _input(event):
 #	if event is InputEventMouseButton:
@@ -251,7 +251,7 @@ func update_animation():
 	else: 
 		if velocity.x < 0: Adirection = 12
 		else: Adirection = 4
-	
+
 	if (velocity.x > 15 or velocity.x < -15) or (velocity.y > 15 or velocity.y < -15) or (cur_frame != 0 and cur_frame != 2):
 		frame_count += 1
 		if frame_count == frame_offset:
