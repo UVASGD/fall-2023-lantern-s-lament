@@ -1,19 +1,20 @@
-[gd_scene load_steps=24 format=3 uid="uid://bq1vjkl6o4vr"]
+[gd_scene load_steps=25 format=3 uid="uid://bq1vjkl6o4vr"]
 
 [ext_resource type="PackedScene" uid="uid://byurxh2xitstp" path="res://source/interface/side_menu.tscn" id="2_opm2i"]
 [ext_resource type="Texture2D" uid="uid://dsjr5ebfaj3xs" path="res://assets/blankIsoBox.png" id="3_207d2"]
 [ext_resource type="Texture2D" uid="uid://clfryshg6q8ju" path="res://assets/levelTileMap.png" id="3_ll2j8"]
-[ext_resource type="PackedScene" uid="uid://dlbg8myhg31ys" path="res://source/entities/player/player.tscn" id="3_mwcfu"]
 [ext_resource type="Texture2D" uid="uid://qp1bc42bp288" path="res://assets/blankIsoBox2.png" id="4_h7m7e"]
 [ext_resource type="Texture2D" uid="uid://boxhf5e38w71a" path="res://assets/blankIsoBox3.png" id="5_gsyu8"]
 [ext_resource type="PackedScene" uid="uid://bmcrw2hbt2gdo" path="res://source/entities/enemies/enemy_test.tscn" id="5_jrp8l"]
 [ext_resource type="PackedScene" uid="uid://d3ym8acbmohqx" path="res://source/entities/enemies/oil_pickup.tscn" id="6_2iv33"]
 [ext_resource type="Texture2D" uid="uid://e6y50ici7qog" path="res://assets/blankIsoBox4.png" id="6_71s3x"]
 [ext_resource type="PackedScene" uid="uid://ots7hvuv3jgc" path="res://source/entities/enemies/enemy_test_h.tscn" id="6_j5sao"]
+[ext_resource type="PackedScene" uid="uid://dlbg8myhg31ys" path="res://source/entities/player/player.tscn" id="7_72r31"]
 [ext_resource type="PackedScene" uid="uid://btgm6lqt7vde8" path="res://source/entities/enemies/lore_bit.tscn" id="7_ld556"]
 [ext_resource type="PackedScene" uid="uid://dd6xb02k621ou" path="res://source/entities/enemies/moth.tscn" id="8_wsbaj"]
 [ext_resource type="PackedScene" uid="uid://bdptq8ft0qci7" path="res://source/entities/entity_base/torch.tscn" id="11_flp10"]
 [ext_resource type="PackedScene" uid="uid://c6pb8bf2xc05a" path="res://source/entities/entity_base/final_torch.tscn" id="11_ybhu0"]
+[ext_resource type="PackedScene" uid="uid://dxyvkmxfplod5" path="res://source/entities/enemies/spikes.tscn" id="14_3viij"]
 
 [sub_resource type="NavigationPolygon" id="NavigationPolygon_7oxnf"]
 vertices = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
@@ -117,7 +118,7 @@ layer_1/tile_data = PackedInt32Array(-1179662, 1, 0, -1179661, 1, 0, -1179660, 1
 [node name="CanvasModulate" type="CanvasModulate" parent="."]
 color = Color(0, 0, 0, 1)
 
-[node name="Player" parent="." instance=ExtResource("3_mwcfu")]
+[node name="Player" parent="." instance=ExtResource("7_72r31")]
 
 [node name="EnemyTest" parent="." instance=ExtResource("5_jrp8l")]
 position = Vector2(1379, 541)
@@ -143,3 +144,19 @@ position = Vector2(360, 202)
 
 [node name="torch2" parent="." groups=["torches"] instance=ExtResource("11_flp10")]
 position = Vector2(4, 428)
+
+[node name="Spikes" parent="." instance=ExtResource("14_3viij")]
+position = Vector2(98, -384)
+cycleDuration = 2
+
+[node name="Spikes2" parent="." instance=ExtResource("14_3viij")]
+position = Vector2(-387, -390)
+cycleDuration = 2
+
+[node name="Spikes4" parent="." instance=ExtResource("14_3viij")]
+position = Vector2(-60, -386)
+cycleDuration = 2
+
+[node name="Spikes3" parent="." instance=ExtResource("14_3viij")]
+position = Vector2(-225, -388)
+cycleDuration = 2

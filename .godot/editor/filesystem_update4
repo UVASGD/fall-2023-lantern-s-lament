@@ -1,4 +1,5 @@
 res://source/levels/main_scene.tscn
+res://source/entities/entity_base/hitbox.gd
 res://source/entities/enemies/enemy_test.tscn
 res://source/entities/enemies/oil_pickup.tscn
 res://source/entities/player/player.tscn
