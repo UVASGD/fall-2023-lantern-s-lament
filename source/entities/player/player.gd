@@ -6,6 +6,8 @@ class_name Player
 @onready var light_occluder = $LightOccluder2D
 @onready var point_light = $PointLight2D
 @onready var inner_light = $InnerLight
+@onready var timer = $RollTimer
+@onready var animation_tree = $AnimationTree
 
 @onready var side_menu = get_tree().get_root().get_node("MainScene/Menu/SideMenu")
 
@@ -30,8 +32,10 @@ const CENTER = Vector2(0.0, 0.0)
 
 #GAME STATE AND PLAYER STATS
 @onready var game_start : bool = false
-
 @onready var speed : Vector2  = Vector2(0, 0)
+@onready var direction : Vector2 = Vector2(0, 0)
+@onready var boost = 0.0
+@onready var state_machine = animation_tree.get("parameters/playback")
 
 #CAMERA VARIABLES
 @onready var max_zoom : Vector2 = Vector2(0.5, 0.5) #0.4
@@ -47,12 +51,6 @@ const CENTER = Vector2(0.0, 0.0)
 @onready var light_strength : float = 0.0
 @onready var light_inhibited : bool = false
 
-#ANIMATION VARIABLES
-@onready var direction : int = 0
-@onready var frame_offset : int = 10
-@onready var frame_count : int = 0
-@onready var cur_frame : int = 0
-
 func _ready():
 	setup_stats()
 	game_start = true
@@ -64,13 +62,18 @@ func _physics_process(delta):
 	queue_redraw()
 	
 	# this can be edited to use a difference and then a scaled difference...
-	var direction = Vector2(
-		Input.get_action_strength("rotate_right") - Input.get_action_strength("rotate_left"),
-		Input.get_action_strength("move_down") - Input.get_action_strength("move_up")
-	)
+	if !invulnerable:
+		direction = Vector2(
+			Input.get_action_strength("rotate_right") - Input.get_action_strength("rotate_left"),
+			Input.get_action_strength("move_down") - Input.get_action_strength("move_up")
+		)
 	
-	speed += direction*50
+	speed += direction*(50+boost)
 	speed *= 0.875
+	boost *= 0.9
+	if hitbox.damage == 0 and boost < 25:
+		invulnerable = false
+		hitbox.damage = 999
 	move(speed)
 	update_animation()
 	
@@ -108,6 +111,7 @@ func _physics_process(delta):
 		var tween4 = create_tween()
 		var tween5 = create_tween()
 		var tween6 = create_tween()
+		var tween7 = create_tween()
 		
 		tween6.tween_property(self, "inner_light_scale", 1.71*light_strength, 0.4)
 		if Input.is_action_pressed("space_bar"):
@@ -116,14 +120,14 @@ func _physics_process(delta):
 			tween3.tween_property(self, "turn_rate", 1.0, 0.4)
 			tween4.tween_property(self, "point_light_scale", 20*light_strength, 0.4)
 			tween5.tween_property(self, "point_light_offset", 75.0, 0.4)
-			tween6.tween_property(self, "man_cur_range", man_base_range*point_light_scale, 0.2)
+			tween7.tween_property(self, "man_cur_range", man_base_range*point_light_scale, 0.2)
 		else:
 			tween1.tween_property(self, "move_angle", 0, 0.3)
 			tween2.tween_property(self, "cur_zoom", max_zoom, 0.4)
 			tween3.tween_property(self, "turn_rate", 1.5, 0.4)
 			tween4.tween_property(self, "point_light_scale", 8*light_strength, 0.4)
 			tween5.tween_property(self, "point_light_offset", 0.0, 0.4)
-			tween6.tween_property(self, "man_cur_range", man_base_range*point_light_scale, 0.2)
+			tween7.tween_property(self, "man_cur_range", man_base_range*point_light_scale, 0.2)
 	
 	shake_strength = lerp(shake_strength, 0, 5.0 * delta) #delta is multiplied by decay rate of shake, set to 5.0 for now
 	
@@ -140,6 +144,23 @@ func _physics_process(delta):
 func _input(event):
 	if game_start and event.is_action_pressed("pause_menu"):
 		side_menu.pause_game()
+		
+	if game_start and timer.is_stopped() and event.is_action_pressed("roll"):
+		timer.start()
+		boost = 150
+		#make so that it rolls when stationary
+		if direction.x == 0 and direction.y == 0:
+			if sprite.frame < 4:
+				direction = Vector2(0, 1)
+			elif sprite.frame < 8:
+				direction = Vector2(1, 0)
+			elif sprite.frame < 12:
+				direction = Vector2(0, -1)
+			elif sprite.frame < 16:
+				direction = Vector2(-1, 0)
+		
+		invulnerable = true
+		hitbox.damage = 0
 	
 func looker(angle, delta):
 	var angle_to = transform.x.angle_to(Vector2(sin(angle), cos(angle)))
@@ -159,11 +180,13 @@ func setup_stats():
 	super._ready()
 	hitbox.damage = 999
 	global_position = CENTER
+	hurtbox.add_to_group("player")
 	hitbox.add_to_group("player")
 
 func receive_damage(base_damage : int):
 	super.receive_damage(base_damage)
-	shake_strength = clamp(base_damage / 2.0, 5, 25) #shakes the camera on taking damage
+	if !invulnerable:
+		shake_strength = clamp(base_damage / 2.0, 5, 25) #shakes the camera on taking damage
 
 func die():
 	print("game over")
@@ -203,28 +226,15 @@ func _draw():
 	#print(move_angle)
 	#draw_colored_polygon(occ_points, BLUE)
 
+func update_animation():
+	if(direction != Vector2.ZERO):
+		animation_tree.set("parameters/Idle/blend_position", direction)
+		animation_tree.set("parameters/Move/blend_position", direction)
+		state_machine.travel("Move")
+	else: state_machine.travel("Idle")
+
 #func _input(event):
 #	if event is InputEventMouseButton:
 #		if event.is_pressed():
 #			if event.button_index == MOUSE_BUTTON_WHEEL_DOWN:
 #				pass
-
-func update_animation():
-	if abs(velocity.y) > abs(velocity.x):
-		if velocity.y > 0: direction = 0
-		else: direction = 8
-	else: 
-		if velocity.x < 0: direction = 12
-		else: direction = 4
-	
-	if (velocity.x > 15 or velocity.x < -15) or (velocity.y > 15 or velocity.y < -15) or (cur_frame != 0 and cur_frame != 2):
-		frame_count += 1
-		print(sprite.frame)
-		if frame_count == frame_offset:
-			frame_count = 0
-			if cur_frame == 3: 
-				sprite.frame = direction
-				cur_frame = 0
-			else : 
-				cur_frame += 1
-				sprite.frame = direction + cur_frame
