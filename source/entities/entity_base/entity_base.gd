@@ -7,6 +7,9 @@ class_name EntityBase
 @onready var cur_hp : int = 0 : set = set_cur_hp
 @onready var defense : int = 0
 @onready var has_died : bool = false
+@onready var invulnerable: bool = false
+@onready var knock_back: bool = false
+@onready var back_speed: Vector2 = Vector2(0, 0)
 
 @onready var sprite = $Sprite2D
 @onready var collision_shape = $CollisionShape2D
@@ -17,7 +20,12 @@ func _ready():
 	set_cur_hp(max_hp)
 
 func move(vel):
-	set_velocity(vel)
+	if !knock_back: set_velocity(vel)
+	else:
+		set_velocity(back_speed)
+		print(back_speed)
+		back_speed *= 0.95
+		if abs(back_speed.x) < 10 and abs(back_speed.y) < 10: knock_back = false
 	move_and_slide()
 
 func die():
@@ -25,12 +33,16 @@ func die():
 
 func receive_damage(base_damage : int):
 	var actual_damage = base_damage - defense
-	cur_hp -= actual_damage
-	print(name + " received " + str(actual_damage) + " damage and has " + str(cur_hp) + " health remaining ")
-	if cur_hp <= 0 and !has_died:
-		print(name + " has died! ")
-		has_died = true
-		die()
+	if !invulnerable:
+		cur_hp -= actual_damage
+		print(name + " received " + str(actual_damage) + " damage and has " + str(cur_hp) + " health remaining ")
+		if base_damage == 0: 
+			knock_back = true
+			back_speed = player.direction*-750
+		if cur_hp <= 0 and !has_died:
+			print(name + " has died! ")
+			has_died = true
+			die()
 
 func _on_hurtbox_area_entered(hitbox):
 	receive_damage(hitbox.damage)

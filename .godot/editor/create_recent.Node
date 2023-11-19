@@ -20,7 +20,6 @@ DirectionalLight2D
 CanvasModulate
 AnimationPlayer
 VBoxContainer
-Timer
 RichTextLabel
 CanvasLayer
 OptionButton
