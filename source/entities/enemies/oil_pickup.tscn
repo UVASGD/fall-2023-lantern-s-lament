@@ -8,6 +8,7 @@ size = Vector2(841.251, 940.002)
 
 [node name="OilPickup" type="StaticBody2D"]
 modulate = Color(0.831373, 0.827451, 0.811765, 1)
+y_sort_enabled = true
 scale = Vector2(0.1, 0.1)
 collision_layer = 0
 collision_mask = 0
