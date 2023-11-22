@@ -9,6 +9,7 @@ size = Vector2(296, 283)
 
 [node name="LoreBit" instance=ExtResource("1_8tbjx")]
 modulate = Color(1, 1, 1, 1)
+y_sort_enabled = true
 collision_layer = 16
 collision_mask = 2
 monitoring = true

@@ -1,6 +1,7 @@
-AnimationTree
+PointLight2D
 Timer
 Area2D
+AnimationTree
 CollisionShape2D
 StaticBody2D
 HitboxClass
@@ -13,7 +14,6 @@ ColorRect
 Window
 TextEdit
 CharacterBody2D
-PointLight2D
 LightOccluder2D
 TileMap
 DirectionalLight2D

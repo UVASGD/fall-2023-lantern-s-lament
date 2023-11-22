@@ -1,14 +1,19 @@
 extends EnemyBase
 
+@onready var nav_agent := $NavigationAgent2D as NavigationAgent2D
+
 func _ready():
 	speed = 100
 	hitbox.damage = 15
 	max_hp = 40
+	nav_agent.target_position = player.global_position
 	super._ready()
 
-func _physics_process(_delta):
-	#super._physics_process(delta)
+func _physics_process(delta):
+	super._physics_process(delta)
+	var dir = to_local(nav_agent.get_next_path_position()).normalized()
 	in_aim_area = enemy_in_area()
-	target_pos = (player.global_position - global_position).normalized()
-	#global_position = get_global_mouse_position()
-	if in_aim_area: super.move(target_pos * speed)
+	if in_aim_area: move(speed * dir)
+
+func _on_timer_timeout():
+	nav_agent.target_position = player.global_position
