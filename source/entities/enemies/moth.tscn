@@ -1,4 +1,4 @@
-[gd_scene load_steps=4 format=3 uid="uid://dd6xb02k621ou"]
+[gd_scene load_steps=4 format=3 uid="uid://01st82yffc8u"]
 
 [ext_resource type="PackedScene" uid="uid://6y3pqlr36j2" path="res://source/entities/enemies/enemy_base.tscn" id="1_pfu3g"]
 [ext_resource type="Texture2D" uid="uid://dlt1ce4ltukp7" path="res://assets/testEnemy.png" id="2_dglwj"]

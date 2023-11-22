@@ -1,4 +1,4 @@
-[gd_scene load_steps=5 format=3 uid="uid://btgm6lqt7vde8"]
+[gd_scene load_steps=5 format=3 uid="uid://cbvj386ytvmhv"]
 
 [ext_resource type="PackedScene" uid="uid://dgnquwxw3gnyx" path="res://source/entities/entity_base/hitbox.tscn" id="1_8tbjx"]
 [ext_resource type="Script" path="res://source/entities/enemies/lore_bit.gd" id="2_r6ckp"]

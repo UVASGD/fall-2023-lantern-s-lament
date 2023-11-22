@@ -1,8 +1,9 @@
-Area2D
-StaticBody2D
-Node2D
 Sprite2D
+Area2D
 CollisionShape2D
+StaticBody2D
+Timer
+Node2D
 Node
 Button
 Label
@@ -17,7 +18,6 @@ DirectionalLight2D
 CanvasModulate
 AnimationPlayer
 VBoxContainer
-Timer
 RichTextLabel
 CanvasLayer
 OptionButton
