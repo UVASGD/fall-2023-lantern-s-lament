@@ -95,7 +95,6 @@ sources/6 = SubResource("TileSetAtlasSource_gfocc")
 sources/1 = SubResource("TileSetAtlasSource_1srpv")
 
 [node name="MainScene" type="Node2D"]
-y_sort_enabled = true
 
 [node name="Menu" type="CanvasLayer" parent="."]
 process_mode = 3
