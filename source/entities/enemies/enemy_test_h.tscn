@@ -157,13 +157,13 @@ _data = {
 "move_up": SubResource("Animation_0sxeo")
 }
 
-[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_vbobm"]
-radius = 31.0
-height = 120.0
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_ad47w"]
+radius = 58.0
+height = 210.0
 
-[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_2fupq"]
-radius = 31.0
-height = 118.0
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_5jhkq"]
+radius = 58.0
+height = 218.0
 
 [sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_rrc0q"]
 animation = &"idle_down"
@@ -255,22 +255,20 @@ libraries = {
 }
 
 [node name="Hurtbox" parent="." instance=ExtResource("3_1lr3f")]
-collision_layer = 2
-collision_mask = 4
+collision_layer = 6
+collision_mask = 2
 
 [node name="CollisionShape2D" parent="Hurtbox" index="0"]
-position = Vector2(2, 83)
-rotation = 1.5708
-shape = SubResource("CapsuleShape2D_vbobm")
+position = Vector2(2.08165e-12, 2.08165e-12)
+shape = SubResource("CapsuleShape2D_ad47w")
 
 [node name="Hitbox" parent="." instance=ExtResource("4_hgkoe")]
-collision_layer = 2
-collision_mask = 4
+collision_layer = 6
+collision_mask = 2
 
 [node name="CollisionShape2D" parent="Hitbox" index="0"]
-position = Vector2(3, 83)
-rotation = 1.5708
-shape = SubResource("CapsuleShape2D_2fupq")
+position = Vector2(2.08165e-12, 2.08165e-12)
+shape = SubResource("CapsuleShape2D_5jhkq")
 
 [node name="PointLight2D" type="PointLight2D" parent="."]
 blend_mode = 2
