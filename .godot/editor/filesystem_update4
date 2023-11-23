@@ -1,9 +1,8 @@
-res://source/entities/player/player.tscn
-res://source/entities/entity_base/hitbox.gd
-res://source/entities/player/player.gd
 res://source/levels/main_scene.tscn
-res://source/entities/enemies/enemy_test.tscn
+res://source/entities/entity_base/hitbox.gd
+res://source/entities/player/player.tscn
 res://source/entities/enemies/enemy_test_h.tscn
+res://source/entities/enemies/enemy_test.tscn
 res://source/entities/enemies/moth.tscn
 res://source/entities/enemies/oil_pickup.tscn
 res://source/entities/enemies/eol_monster.tscn

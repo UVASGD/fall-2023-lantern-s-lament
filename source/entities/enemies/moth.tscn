@@ -13,7 +13,6 @@ position = Vector2(0, 1)
 texture = ExtResource("2_dglwj")
 
 [node name="NavigationAgent2D" type="NavigationAgent2D" parent="." index="6"]
-debug_enabled = true
 debug_path_custom_line_width = 4.0
 
 [node name="Timer" type="Timer" parent="." index="7"]
