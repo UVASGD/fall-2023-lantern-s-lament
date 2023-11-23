@@ -124,7 +124,7 @@ func _physics_process(delta):
 		tween2.tween_property(self, "cur_zoom", max_zoom, 0.4)
 		tween3.tween_property(self, "turn_rate", 1.5, 0.4)
 		tween4.tween_property(self, "inner_light_scale", 8*light_strength*flicker_scale*pow(0.3, light_dim), 0.4)
-		tween5.tween_property(self, "point_light_scale", 0*light_strength*flicker_scale*pow(0.3, light_dim), 0.4)
+		tween5.tween_property(self, "point_light_scale", 1*light_strength*flicker_scale*pow(0.3, light_dim), 0.4)
 		tween6.tween_property(self, "point_light_offset", 0.0, 0.4)
 		tween7.tween_property(self, "man_cur_range", man_base_range*point_light_scale, 0.2)
 		tween8.tween_property(self, "light_energy", pow(0.5, light_dim)*light_strength*flicker_scale, 0.4)
