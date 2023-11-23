@@ -1,8 +1,8 @@
-AnimationTree
-PointLight2D
-Timer
 Area2D
 CollisionShape2D
+Timer
+PointLight2D
+AnimationTree
 StaticBody2D
 HitboxClass
 Node2D

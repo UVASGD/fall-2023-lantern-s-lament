@@ -127,7 +127,7 @@ func _physics_process(delta):
 		tween5.tween_property(self, "point_light_scale", 0*light_strength*flicker_scale*pow(0.3, light_dim), 0.4)
 		tween6.tween_property(self, "point_light_offset", 0.0, 0.4)
 		tween7.tween_property(self, "man_cur_range", man_base_range*point_light_scale, 0.2)
-		tween8.tween_property(self, "light_energy", pow(0.5, light_dim)*flicker_scale, 0.4)
+		tween8.tween_property(self, "light_energy", pow(0.5, light_dim)*light_strength*flicker_scale, 0.4)
 
 	shake_strength = lerp(shake_strength, 0, 5.0 * delta) #delta is multiplied by decay rate of shake, set to 5.0 for now
 	
