@@ -1,29 +1,14 @@
-[gd_scene load_steps=13 format=3 uid="uid://byurxh2xitstp"]
+[gd_scene load_steps=10 format=3 uid="uid://byurxh2xitstp"]
 
-[ext_resource type="Texture2D" uid="uid://btv8u76n6u0ia" path="res://assets/towerhull3.png" id="1_0wonw"]
 [ext_resource type="Script" path="res://source/interface/side_menu.gd" id="1_ie6r4"]
 [ext_resource type="PackedScene" uid="uid://c0o0wepqnbyue" path="res://source/interface/health_bar.tscn" id="2_bmqgy"]
-[ext_resource type="Texture2D" uid="uid://ch64jpicnerlm" path="res://assets/flame_animation/flame1.png" id="5_n7wrr"]
-[ext_resource type="Texture2D" uid="uid://bpauxhngacy6v" path="res://assets/flame_animation/flame2.png" id="6_di7eh"]
-[ext_resource type="Texture2D" uid="uid://b81j1uapv1y7a" path="res://assets/flame_animation/flame3.png" id="7_u864c"]
-[ext_resource type="Texture2D" uid="uid://bse4mhtxb2bwc" path="res://assets/flame_animation/flame4.png" id="8_b6djh"]
-[ext_resource type="Texture2D" uid="uid://rhhtfioxd772" path="res://assets/flame_animation/flame5.png" id="9_dq4gn"]
-[ext_resource type="Texture2D" uid="uid://7lm7f3kflga0" path="res://assets/flame_animation/flame6.png" id="10_x4uq0"]
+[ext_resource type="Texture2D" uid="uid://dqtth52tl2t3i" path="res://assets/sidemenu.png" id="2_ki3hs"]
+[ext_resource type="Texture2D" uid="uid://difjv5811v0na" path="res://assets/sidemenu_flame.png" id="4_lmwrv"]
+[ext_resource type="Texture2D" uid="uid://cm1lw34mqlv28" path="res://assets/sidemenu_hinge.png" id="6_q8rvq"]
+[ext_resource type="Texture2D" uid="uid://64g0qmnhsd6w" path="res://assets/sidemenu_lamp.png" id="11_snmjm"]
 
 [sub_resource type="Animation" id="Animation_7n6m0"]
 length = 0.001
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("Flame:texture")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 1,
-"values": [ExtResource("5_n7wrr")]
-}
 
 [sub_resource type="Animation" id="Animation_vtess"]
 resource_name = "flame_animation"
@@ -32,14 +17,14 @@ loop_mode = 1
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
-tracks/0/path = NodePath("Flame:texture")
+tracks/0/path = NodePath("Flame:frame")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
-"times": PackedFloat32Array(0, 0.1, 0.2, 0.3, 0.4, 0.5),
-"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1),
+"times": PackedFloat32Array(0, 0.17, 0.33),
+"transitions": PackedFloat32Array(1, 1, 1),
 "update": 1,
-"values": [ExtResource("5_n7wrr"), ExtResource("6_di7eh"), ExtResource("7_u864c"), ExtResource("8_b6djh"), ExtResource("9_dq4gn"), ExtResource("10_x4uq0")]
+"values": [0, 1, 2]
 }
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_x5erp"]
@@ -53,6 +38,11 @@ offset_right = 256.0
 offset_bottom = 648.0
 color = Color(0.141176, 0.141176, 0.141176, 1)
 script = ExtResource("1_ie6r4")
+
+[node name="Background" type="Sprite2D" parent="."]
+position = Vector2(128, 324)
+scale = Vector2(0.2, 0.2)
+texture = ExtResource("2_ki3hs")
 
 [node name="HealthBar" parent="." instance=ExtResource("2_bmqgy")]
 layout_mode = 0
@@ -95,16 +85,22 @@ fit_content = true
 autowrap_mode = 0
 
 [node name="Flame" type="Sprite2D" parent="."]
-position = Vector2(160, 285)
-scale = Vector2(4.018, 3.4)
-texture = ExtResource("5_n7wrr")
+position = Vector2(128, 320)
+scale = Vector2(0.2, 0.2)
+texture = ExtResource("4_lmwrv")
+hframes = 3
 
 [node name="FlameAnimator" type="AnimationPlayer" parent="."]
 libraries = {
 "": SubResource("AnimationLibrary_x5erp")
 }
 
-[node name="Sprite2D" type="Sprite2D" parent="."]
-position = Vector2(128, 208)
-scale = Vector2(2.5, 2.5)
-texture = ExtResource("1_0wonw")
+[node name="Lamp" type="Sprite2D" parent="."]
+position = Vector2(128, 320)
+scale = Vector2(0.2, 0.2)
+texture = ExtResource("11_snmjm")
+
+[node name="Hinge" type="Sprite2D" parent="."]
+position = Vector2(128, 320)
+scale = Vector2(0.2, 0.2)
+texture = ExtResource("6_q8rvq")

@@ -1,12 +1,12 @@
+Sprite2D
+HitboxClass
 Area2D
 CollisionShape2D
 Timer
 PointLight2D
 AnimationTree
 StaticBody2D
-HitboxClass
 Node2D
-Sprite2D
 Node
 Button
 Label

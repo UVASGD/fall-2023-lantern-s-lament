@@ -17,3 +17,4 @@ res://source/entities/entity_base/torch.gd
 res://source/entities/player/player.gd
 res://source/entities/entity_base/entity_base.gd
 res://source/entities/entity_base/final_torch.gd
+res://source/interface/side_menu.gd

@@ -12,7 +12,7 @@ size = Vector2(99, 347.5)
 modulate = Color(1, 1, 1, 1)
 y_sort_enabled = true
 collision_layer = 16
-collision_mask = 2
+collision_mask = 6
 script = ExtResource("2_slwni")
 
 [node name="CollisionShape2D" parent="." index="0"]

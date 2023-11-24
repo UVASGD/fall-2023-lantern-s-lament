@@ -157,11 +157,11 @@ _data = {
 "move_up": SubResource("Animation_0sxeo")
 }
 
-[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_ad47w"]
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_o75h6"]
 radius = 58.0
 height = 210.0
 
-[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_5jhkq"]
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_qvqtq"]
 radius = 58.0
 height = 218.0
 
@@ -255,20 +255,20 @@ libraries = {
 }
 
 [node name="Hurtbox" parent="." instance=ExtResource("3_1lr3f")]
-collision_layer = 6
+collision_layer = 4
 collision_mask = 2
 
 [node name="CollisionShape2D" parent="Hurtbox" index="0"]
 position = Vector2(2.08165e-12, 2.08165e-12)
-shape = SubResource("CapsuleShape2D_ad47w")
+shape = SubResource("CapsuleShape2D_o75h6")
 
 [node name="Hitbox" parent="." instance=ExtResource("4_hgkoe")]
-collision_layer = 6
+collision_layer = 4
 collision_mask = 2
 
 [node name="CollisionShape2D" parent="Hitbox" index="0"]
 position = Vector2(2.08165e-12, 2.08165e-12)
-shape = SubResource("CapsuleShape2D_5jhkq")
+shape = SubResource("CapsuleShape2D_qvqtq")
 
 [node name="PointLight2D" type="PointLight2D" parent="."]
 blend_mode = 2
@@ -289,6 +289,7 @@ debug_path_custom_line_width = 4.0
 wait_time = 0.1
 autostart = true
 
+[connection signal="area_entered" from="Hurtbox" to="." method="_on_hurtbox_area_entered"]
 [connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
 
 [editable path="Hurtbox"]
