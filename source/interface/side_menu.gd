@@ -13,6 +13,9 @@ extends ColorRect
 @onready var lore_menu : PackedScene = preload("res://source/interface/lore_menu.tscn")
 
 @onready var angle = 0.0
+@onready var swing_velocity = 0.2
+@onready var swing_acceleration : float
+@onready var swing_boost : float
 @onready var pos_translation_lamp = Vector2.ZERO
 @onready var pos_translation_flame = Vector2.ZERO
 
@@ -40,15 +43,21 @@ func space(val):
 		property_label.text += "\n"
 		value_label.text += "\n"
 
-func _physics_process(_delta):
+func _physics_process(delta):
 	flame_animator.play("flame_animation")
 	
 	property_label.text = ""
 	value_label.text = ""
 	write("Lamp Oil", str(player.cur_hp) + " / " + str(player.max_hp))
 	
-	var tween = create_tween()
-	tween.tween_property(self, "angle", player.direction.x * PI/12, 0.4)
+	if(player.direction == Vector2.ZERO): swing_boost = 1.0
+	else: swing_boost = 2.0
+	swing_acceleration = -5.0 * angle * swing_boost
+	swing_velocity += swing_acceleration * delta
+	angle += swing_velocity * delta
+	
+#	var tween = create_tween()
+#	tween.tween_property(self, "angle", player.direction.x * PI/12, 0.4)
 	
 	pos_translation_lamp = Vector2((-128*sin(angle)),(-128*sin(angle)*sin(angle/2)/sin((PI-angle)/2)))
 	pos_translation_flame = Vector2(((192 - flame_sprite.global_position.y)*sin(angle)),((192 - flame_sprite.global_position.y)*sin(angle)*sin(angle/2)/sin((PI-angle)/2)))
