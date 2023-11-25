@@ -1,0 +1,21 @@
+[gd_scene load_steps=5 format=3 uid="uid://b8ycn3jyuosn3"]
+
+[ext_resource type="PackedScene" uid="uid://dgnquwxw3gnyx" path="res://source/entities/entity_base/hitbox.tscn" id="1_mjq24"]
+[ext_resource type="Script" path="res://source/entities/traps/dart_new.gd" id="2_06qjq"]
+[ext_resource type="Texture2D" uid="uid://dlt1ce4ltukp7" path="res://assets/testEnemy.png" id="3_x5ljx"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_08c68"]
+size = Vector2(41, 46)
+
+[node name="Dart" instance=ExtResource("1_mjq24")]
+collision_layer = 4
+collision_mask = 2
+script = ExtResource("2_06qjq")
+speed = 1000.0
+
+[node name="CollisionShape2D" parent="." index="0"]
+position = Vector2(-1.5, 0)
+shape = SubResource("RectangleShape2D_08c68")
+
+[node name="Sprite2D" type="Sprite2D" parent="." index="1"]
+texture = ExtResource("3_x5ljx")

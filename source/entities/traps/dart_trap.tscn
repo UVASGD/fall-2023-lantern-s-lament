@@ -1,0 +1,43 @@
+[gd_scene load_steps=6 format=3 uid="uid://ddomnqqnj7o6o"]
+
+[ext_resource type="Texture2D" uid="uid://dsjr5ebfaj3xs" path="res://assets/blankIsoBox.png" id="1_ai4dw"]
+[ext_resource type="Script" path="res://source/entities/traps/dart_trap.gd" id="1_vxq32"]
+[ext_resource type="PackedScene" uid="uid://b8ycn3jyuosn3" path="res://source/entities/traps/dart_new.tscn" id="2_w5of2"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_8l218"]
+size = Vector2(33.6, 19.4)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_031lg"]
+size = Vector2(28, 30)
+
+[node name="DartTrap" type="StaticBody2D"]
+scale = Vector2(5, 5)
+collision_mask = 2
+script = ExtResource("1_vxq32")
+dart = ExtResource("2_w5of2")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("1_ai4dw")
+
+[node name="DetectionArea" type="Area2D" parent="."]
+collision_layer = 0
+collision_mask = 2
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="DetectionArea"]
+position = Vector2(31.2, -0.0999994)
+shape = SubResource("RectangleShape2D_8l218")
+debug_color = Color(0.960784, 0, 0.517647, 0.419608)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(4.76837e-07, 5.24521e-07)
+shape = SubResource("RectangleShape2D_031lg")
+
+[node name="Outlet" type="Node2D" parent="."]
+position = Vector2(13.2, 0.2)
+
+[node name="Timer" type="Timer" parent="."]
+wait_time = 0.75
+
+[connection signal="body_entered" from="DetectionArea" to="." method="_on_detection_area_body_entered"]
+[connection signal="body_exited" from="DetectionArea" to="." method="_on_detection_area_body_exited"]
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
