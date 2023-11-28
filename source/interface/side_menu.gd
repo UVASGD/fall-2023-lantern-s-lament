@@ -55,8 +55,8 @@ func _physics_process(delta):
 	swing_acceleration = -5.0 * angle * swing_boost
 	swing_velocity += swing_acceleration * delta
 	angle += swing_velocity * delta
-	if(angle > PI/4): angle = PI/4
-	if(angle < PI/-4): angle = PI/-4
+	if(angle > PI/6): angle = PI/6
+	if(angle < PI/-6): angle = PI/-6
 	
 #	var tween = create_tween()
 #	tween.tween_property(self, "angle", player.direction.x * PI/12, 0.4)
