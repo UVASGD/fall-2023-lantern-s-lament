@@ -6,6 +6,8 @@
 
 [node name="Moth" instance=ExtResource("1_pfu3g")]
 script = ExtResource("2_nagws")
+tetherCords = Vector2(0, 0)
+range = 2000.0
 
 [node name="TestEnemy" type="Sprite2D" parent="." index="5"]
 modulate = Color(0, 0.623529, 0.74902, 1)

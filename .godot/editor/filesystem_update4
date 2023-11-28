@@ -12,3 +12,8 @@ res://source/entities/enemies/eol_monster.tscn
 res://source/entities/enemies/lore_bit.tscn
 res://source/entities/enemies/enemy_base.tscn
 res://source/entities/enemies/spikes.tscn
+res://source/entities/enemies/eol_monster.gd
+res://source/entities/enemies/enemy_test.gd
+res://source/interface/side_menu.gd
+res://source/entities/enemies/enemy_test_h.gd
+res://source/entities/enemies/moth.gd

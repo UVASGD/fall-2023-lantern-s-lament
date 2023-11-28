@@ -138,6 +138,7 @@ scale = Vector2(0.5, 0.5)
 [node name="Moth" parent="." instance=ExtResource("8_wsbaj")]
 y_sort_enabled = false
 position = Vector2(113, 943)
+tetherCords = Vector2(0, 0)
 
 [node name="torch" parent="." groups=["torches"] instance=ExtResource("11_flp10")]
 position = Vector2(-275, 225)

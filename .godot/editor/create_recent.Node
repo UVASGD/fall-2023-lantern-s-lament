@@ -1,8 +1,8 @@
+Timer
 Sprite2D
 HitboxClass
 Area2D
 CollisionShape2D
-Timer
 PointLight2D
 AnimationTree
 StaticBody2D

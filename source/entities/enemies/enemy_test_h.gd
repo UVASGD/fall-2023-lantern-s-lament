@@ -4,11 +4,15 @@ extends EnemyBase
 @onready var point_light = $PointLight2D
 @onready var animation_tree = $AnimationTree
 
-@onready var dir : Vector2 = Vector2(0, 0)
+@onready var dir : Vector2 = Vector2.ZERO
 @onready var point_light_scale : float = 0.0 #the size of the point light
 @onready var glow : float = 0.0
 @onready var transparency : float = 0.0
 @onready var state_machine = animation_tree.get("parameters/playback")
+
+@export var tetherCords : Vector2 = Vector2.ZERO
+@export var range : float = 2000.0
+@onready var randomCords : Vector2 = Vector2.ZERO
 
 func _ready():
 	speed = 100
@@ -58,4 +62,11 @@ func update_animation():
 	else: state_machine.travel("Idle")
 
 func _on_timer_timeout():
-	nav_agent.target_position = player.global_position
+	if(self.global_position.distance_to(player.global_position) <= range): 
+		nav_agent.target_position = player.global_position
+	elif(self.global_position.distance_to(tetherCords) >= range):
+		nav_agent.target_position = tetherCords
+	else:
+		if(self.global_position.distance_to(randomCords) <= 100):
+			randomCords = self.global_position + Vector2(400*(randf()-0.5), 400*(randf()-0.5))
+		nav_agent.target_position = randomCords
