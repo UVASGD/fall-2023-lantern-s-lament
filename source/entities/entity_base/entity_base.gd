@@ -1,7 +1,7 @@
 extends CharacterBody2D
 class_name EntityBase
 
-@onready var player = get_tree().get_root().get_node("MainScene/Player")
+@onready var player = get_parent().get_node("Player")
 
 @onready var max_hp : int = 100
 @onready var cur_hp : int = 0 : set = set_cur_hp
