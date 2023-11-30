@@ -13,7 +13,7 @@ func _ready():
 	self.z_index = 2
 	self.scale = Vector2(2, 2)
 
-func _physics_process(_delta):
+func _physics_process(delta):
 	#in_aim_area = enemy_in_area()
 	
 	#target_pos = (player.global_position - global_position).normalized()

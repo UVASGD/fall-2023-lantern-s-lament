@@ -12,3 +12,5 @@ res://source/entities/enemies/lore_bit.tscn
 res://source/entities/enemies/enemy_base.tscn
 res://source/entities/enemies/spikes.tscn
 res://source/levels/main_scene.tscn
+res://source/entities/enemies/moth.gd
+res://source/entities/entity_base/final_torch.gd

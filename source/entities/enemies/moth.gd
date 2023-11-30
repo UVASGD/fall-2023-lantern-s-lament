@@ -5,6 +5,7 @@ extends EnemyBase
 @export var tetherCords : Vector2 = Vector2.ZERO
 @export var range : float = 2000.0
 @onready var randomCords : Vector2 = Vector2.ZERO
+@onready var player_angle
 
 func _ready():
 	speed = 100
@@ -14,9 +15,13 @@ func _ready():
 	super._ready()
 
 func _physics_process(delta):
-	super._physics_process(delta)
-	dir = to_local(nav_agent.get_next_path_position()).normalized()
-	move(speed * dir)
+	in_aim_area = enemy_in_area()
+	target_pos = (player.global_position - global_position).normalized()
+	#player_angle = atan2(-(global_position.y - player.global_position.y), global_position.x - player.global_position.x)
+	#target_pos = Vector2(delta*cos(player_angle)-(0.5*sin(delta)+sin(player_angle)), delta*sin(player_angle)+(0.5*sin(delta)*cos(player_angle))).normalized()
+	if in_aim_area: super.move(target_pos * speed)
+	super.move(Vector2(0, sin(delta)) * 1000)
+	print(delta)
 
 func _on_timer_timeout():
 	if(enemy_in_area()): 

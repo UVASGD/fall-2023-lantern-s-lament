@@ -23,7 +23,6 @@ func move(vel):
 	if !knock_back: set_velocity(vel)
 	else:
 		set_velocity(back_speed)
-		print(back_speed)
 		back_speed *= 0.95
 		if abs(back_speed.x) < 10 and abs(back_speed.y) < 10: knock_back = false
 	move_and_slide()
