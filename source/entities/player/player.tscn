@@ -170,12 +170,12 @@ _data = {
 }
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_3pykv"]
-radius = 31.0
-height = 120.0
+radius = 58.0
+height = 210.0
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_qgl3e"]
-radius = 31.0
-height = 118.0
+radius = 58.0
+height = 218.0
 
 [sub_resource type="OccluderPolygon2D" id="OccluderPolygon2D_25lge"]
 
@@ -272,8 +272,7 @@ collision_layer = 2
 collision_mask = 4
 
 [node name="CollisionShape2D" parent="Hurtbox" index="0"]
-position = Vector2(2, 83)
-rotation = 1.5708
+position = Vector2(2.08165e-12, 2.08165e-12)
 shape = SubResource("CapsuleShape2D_3pykv")
 
 [node name="Hitbox" parent="." instance=ExtResource("4_ce4gw")]
@@ -281,8 +280,7 @@ collision_layer = 2
 collision_mask = 4
 
 [node name="CollisionShape2D" parent="Hitbox" index="0"]
-position = Vector2(3, 83)
-rotation = 1.5708
+position = Vector2(2.08165e-12, 2.08165e-12)
 shape = SubResource("CapsuleShape2D_qgl3e")
 
 [node name="Camera2D" type="Camera2D" parent="."]
@@ -291,14 +289,19 @@ shape = SubResource("CapsuleShape2D_qgl3e")
 blend_mode = 2
 shadow_enabled = true
 texture = ExtResource("5_gcsun")
-texture_scale = 10.0
 
 [node name="InnerLight" type="PointLight2D" parent="."]
-position = Vector2(8, -0.999998)
-scale = Vector2(1.60156, 1.60156)
+position = Vector2(2.08165e-12, 2.08165e-12)
+blend_mode = 2
+shadow_enabled = true
+shadow_item_cull_mask = 2
+texture = ExtResource("5_gcsun")
+
+[node name="InnermostLight" type="PointLight2D" parent="."]
+position = Vector2(2.08165e-12, 2.08165e-12)
 blend_mode = 2
 texture = ExtResource("5_gcsun")
-texture_scale = 1.71
+texture_scale = 0.4
 
 [node name="LightOccluder2D" type="LightOccluder2D" parent="."]
 occluder = SubResource("OccluderPolygon2D_25lge")
@@ -315,7 +318,12 @@ parameters/Move/blend_position = Vector2(0, 0)
 wait_time = 2.0
 one_shot = true
 
+[node name="FlickerTimer" type="Timer" parent="."]
+wait_time = 0.2
+autostart = true
+
 [connection signal="area_entered" from="Hurtbox" to="." method="_on_hurtbox_area_entered"]
+[connection signal="timeout" from="FlickerTimer" to="." method="_on_flicker_timer_timeout"]
 
 [editable path="Hurtbox"]
 [editable path="Hitbox"]
