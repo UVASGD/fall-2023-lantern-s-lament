@@ -1,9 +1,9 @@
 2a60927148abd1d33b818b535e306557
-::res://::1700173562
+::res://::1701385265
 cc-by-nc-sa-4.0.txt::TextFile::-1::1697142839::0::1::::<><>::
 icon.svg::CompressedTexture2D::42030989769038341::1697142839::1697142839::1::::<><>::
 README.md::TextFile::-1::1700173236::0::1::::<><>::
-::res://assets/::1700173265
+::res://assets/::1700173564
 bitmap2.bmp::BitMap::2210287496238220738::1697142839::1697142839::1::::<><>::
 blankIsoBox2.png::CompressedTexture2D::1155567743199990807::1700173265::1700173563::1::::<><>::
 blankIsoBox3.png::CompressedTexture2D::3416980714084734516::1700173265::1700173563::1::::<><>::
@@ -38,7 +38,7 @@ flame5.png::CompressedTexture2D::1208120210800700963::1697142839::1697142839::1:
 flame6.png::CompressedTexture2D::2269537207362597657::1697142839::1697142839::1::::<><>::
 ::res://source/::1698352113
 ::res://source/entities/::1697142839
-::res://source/entities/enemies/::1700173265
+::res://source/entities/enemies/::1700175466
 enemy_base.gd::GDScript::-1::1700173265::0::1::::EnemyBase<>EntityBase<>::
 enemy_base.tscn::PackedScene::65503733522352153::1698357095::0::1::::<><>::uid://d4a6jpppso0p4<>res://source/entities/enemies/enemy_base.gd<>uid://dgnquwxw3gnyx
 enemy_test.gd::GDScript::-1::1700173265::0::1::::<>EnemyBase<>::
@@ -54,13 +54,13 @@ moth.tscn::PackedScene::7435223924287132192::1700173265::0::1::::<><>::uid://6y3
 oil_pickup.gd::GDScript::-1::1700173265::0::1::::<>StaticBody2D<>::
 oil_pickup.tscn::PackedScene::9174882277305342883::1700173265::0::1::::<><>::res://source/entities/enemies/oil_pickup.gd<>uid://bwo1sg3swugjf
 spike.gd::GDScript::-1::1700173265::0::1::::<>StaticBody2D<>::
-spikes.tscn::PackedScene::8824444101697001444::1700173265::0::1::::<><>::res://source/entities/enemies/spike.gd<>uid://drsa4hymjj86r<>uid://dgnquwxw3gnyx
-::res://source/entities/entity_base/::1700173265
+spikes.tscn::PackedScene::8824444101697001444::1700175466::0::1::::<><>::res://source/entities/enemies/spike.gd<>uid://drsa4hymjj86r<>uid://dgnquwxw3gnyx
+::res://source/entities/entity_base/::1700174595
 entity_base.gd::GDScript::-1::1700173265::0::1::::EntityBase<>CharacterBody2D<>::
 entity_base.tscn::PackedScene::9196637627231630255::1697142839::0::1::::<><>::res://source/entities/entity_base/entity_base.gd<>uid://b5nwx7lojc88
 final_torch.gd::GDScript::-1::1700173265::0::1::::<>Area2D<>::
 final_torch.tscn::PackedScene::6979780896172703616::1700173265::0::1::::<><>::uid://b5nwx7lojc88<>res://source/entities/entity_base/final_torch.gd<>uid://dfrfd7ilpoyg5
-hitbox.gd::GDScript::-1::1698356164::0::1::::HitboxClass<>Area2D<>::
+hitbox.gd::GDScript::-1::1700174595::0::1::::HitboxClass<>Area2D<>::
 hitbox.tscn::PackedScene::7608240403554089067::1697142839::0::1::::<><>::res://source/entities/entity_base/hitbox.gd
 hurtbox.tscn::PackedScene::132950042621347603::1697142839::0::1::::<><>::
 proj_base.gd::GDScript::-1::1698356164::0::1::::ProjBase<>HitboxClass<>::
@@ -86,7 +86,7 @@ settings_buttons.gd::GDScript::-1::1697142839::0::1::::<>Control<>::
 settings_buttons.tscn::PackedScene::5939664762279428737::1697142839::0::1::::<><>::res://source/interface/settings_buttons.gd
 side_menu.gd::GDScript::-1::1700173265::0::1::::<>ColorRect<>::
 side_menu.tscn::PackedScene::4113314158653560213::1700173265::0::1::::<><>::uid://btv8u76n6u0ia<>res://source/interface/side_menu.gd<>uid://c0o0wepqnbyue<>uid://ch64jpicnerlm<>uid://bpauxhngacy6v<>uid://b81j1uapv1y7a<>uid://bse4mhtxb2bwc<>uid://rhhtfioxd772<>uid://7lm7f3kflga0
-::res://source/levels/::1700173265
+::res://source/levels/::1700176188
 main_menu.tscn::PackedScene::4696971239284784275::1697142839::0::1::::<><>::uid://bhx0hcjgqq0j7<>uid://da41xvjske7ic
-main_scene.tscn::PackedScene::104835519886915727::1700173265::0::1::::<><>::uid://byurxh2xitstp<>uid://dsjr5ebfaj3xs<>uid://clfryshg6q8ju<>uid://qp1bc42bp288<>uid://boxhf5e38w71a<>uid://bmcrw2hbt2gdo<>uid://d3ym8acbmohqx<>uid://e6y50ici7qog<>uid://ots7hvuv3jgc<>uid://dlbg8myhg31ys<>uid://btgm6lqt7vde8<>uid://dd6xb02k621ou<>uid://bdptq8ft0qci7<>uid://c6pb8bf2xc05a<>uid://dxyvkmxfplod5
+main_scene.tscn::PackedScene::104835519886915727::1700176188::0::1::::<><>::uid://byurxh2xitstp<>uid://dsjr5ebfaj3xs<>uid://clfryshg6q8ju<>uid://qp1bc42bp288<>uid://boxhf5e38w71a<>uid://bmcrw2hbt2gdo<>uid://d3ym8acbmohqx<>uid://e6y50ici7qog<>uid://ots7hvuv3jgc<>uid://dlbg8myhg31ys<>uid://btgm6lqt7vde8<>uid://dd6xb02k621ou<>uid://bdptq8ft0qci7<>uid://c6pb8bf2xc05a<>uid://dxyvkmxfplod5
 settings_menu.tscn::PackedScene::5908886942452107398::1697142839::0::1::::<><>::uid://cqvhn76u02ecf

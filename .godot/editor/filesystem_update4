@@ -1,3 +1,2 @@
 res://source/levels/main_scene.tscn
 res://source/entities/entity_base/hitbox.gd
-res://source/entities/enemies/spikes.tscn
