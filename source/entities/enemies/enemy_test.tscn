@@ -7,13 +7,14 @@
 [node name="EnemyTest" instance=ExtResource("1_qbq22")]
 wall_min_slide_angle = 0.0
 script = ExtResource("2_dbfv1")
+tetherCords = Vector2(0, 0)
+range = 2000.0
 
 [node name="Sprite2D" parent="." index="0"]
 texture = ExtResource("2_qytnj")
 
 [node name="NavigationAgent2D" type="NavigationAgent2D" parent="." index="5"]
-debug_enabled = true
-debug_path_custom_line_width = 1.0
+debug_path_custom_line_width = 4.0
 
 [node name="Timer" type="Timer" parent="." index="6"]
 wait_time = 0.1

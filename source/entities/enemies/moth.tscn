@@ -6,11 +6,22 @@
 
 [node name="Moth" instance=ExtResource("1_pfu3g")]
 script = ExtResource("2_nagws")
+tetherCords = Vector2(0, 0)
+range = 2000.0
 
 [node name="TestEnemy" type="Sprite2D" parent="." index="5"]
 modulate = Color(0, 0.623529, 0.74902, 1)
 position = Vector2(0, 1)
 texture = ExtResource("2_dglwj")
+
+[node name="NavigationAgent2D" type="NavigationAgent2D" parent="." index="6"]
+debug_path_custom_line_width = 4.0
+
+[node name="Timer" type="Timer" parent="." index="7"]
+wait_time = 0.1
+autostart = true
+
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
 
 [editable path="Hurtbox"]
 [editable path="Hitbox"]

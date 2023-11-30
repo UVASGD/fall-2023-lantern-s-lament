@@ -8,6 +8,7 @@
 size = Vector2(93.6777, 98.0073)
 
 [node name="Spikes" type="StaticBody2D"]
+y_sort_enabled = true
 collision_layer = 4
 collision_mask = 2
 script = ExtResource("1_3mnhf")
