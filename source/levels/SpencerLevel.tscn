@@ -1,19 +1,19 @@
-[gd_scene load_steps=22 format=3 uid="uid://bq1vjkl6o4vr"]
+[gd_scene load_steps=23 format=3 uid="uid://b245kb5omw8bn"]
 
-[ext_resource type="PackedScene" uid="uid://byurxh2xitstp" path="res://source/interface/side_menu.tscn" id="2_opm2i"]
-[ext_resource type="Texture2D" uid="uid://clfryshg6q8ju" path="res://assets/levelTileMap.png" id="3_ll2j8"]
-[ext_resource type="Texture2D" uid="uid://boxhf5e38w71a" path="res://assets/blankIsoBox3.png" id="5_gsyu8"]
-[ext_resource type="PackedScene" uid="uid://bmcrw2hbt2gdo" path="res://source/entities/enemies/enemy_test.tscn" id="5_jrp8l"]
-[ext_resource type="PackedScene" uid="uid://d3ym8acbmohqx" path="res://source/entities/enemies/oil_pickup.tscn" id="6_2iv33"]
-[ext_resource type="Texture2D" uid="uid://e6y50ici7qog" path="res://assets/blankIsoBox4.png" id="6_71s3x"]
-[ext_resource type="PackedScene" uid="uid://ots7hvuv3jgc" path="res://source/entities/enemies/enemy_test_h.tscn" id="6_j5sao"]
-[ext_resource type="PackedScene" uid="uid://dlbg8myhg31ys" path="res://source/entities/player/player.tscn" id="7_72r31"]
-[ext_resource type="PackedScene" uid="uid://btgm6lqt7vde8" path="res://source/entities/enemies/lore_bit.tscn" id="7_ld556"]
-[ext_resource type="PackedScene" uid="uid://dd6xb02k621ou" path="res://source/entities/enemies/moth.tscn" id="8_wsbaj"]
-[ext_resource type="PackedScene" uid="uid://bdptq8ft0qci7" path="res://source/entities/entity_base/torch.tscn" id="11_flp10"]
-[ext_resource type="PackedScene" uid="uid://c6pb8bf2xc05a" path="res://source/entities/entity_base/final_torch.tscn" id="11_ybhu0"]
-[ext_resource type="PackedScene" uid="uid://dxyvkmxfplod5" path="res://source/entities/enemies/spikes.tscn" id="14_3viij"]
-[ext_resource type="PackedScene" uid="uid://crd1g0g5yq3bm" path="res://source/entities/enemies/enemy_caster.tscn" id="16_53x3a"]
+[ext_resource type="PackedScene" uid="uid://byurxh2xitstp" path="res://source/interface/side_menu.tscn" id="1_seus1"]
+[ext_resource type="Texture2D" uid="uid://clfryshg6q8ju" path="res://assets/levelTileMap.png" id="2_1ypl2"]
+[ext_resource type="Texture2D" uid="uid://boxhf5e38w71a" path="res://assets/blankIsoBox3.png" id="3_3k2ca"]
+[ext_resource type="Texture2D" uid="uid://e6y50ici7qog" path="res://assets/blankIsoBox4.png" id="4_byugp"]
+[ext_resource type="PackedScene" uid="uid://dlbg8myhg31ys" path="res://source/entities/player/player.tscn" id="5_sewgx"]
+[ext_resource type="PackedScene" uid="uid://bmcrw2hbt2gdo" path="res://source/entities/enemies/enemy_test.tscn" id="6_mwmpc"]
+[ext_resource type="PackedScene" uid="uid://d3ym8acbmohqx" path="res://source/entities/enemies/oil_pickup.tscn" id="7_sbq3n"]
+[ext_resource type="PackedScene" uid="uid://btgm6lqt7vde8" path="res://source/entities/enemies/lore_bit.tscn" id="8_u815n"]
+[ext_resource type="PackedScene" uid="uid://dd6xb02k621ou" path="res://source/entities/enemies/moth.tscn" id="9_jrwya"]
+[ext_resource type="PackedScene" uid="uid://ots7hvuv3jgc" path="res://source/entities/enemies/enemy_test_h.tscn" id="10_k1srm"]
+[ext_resource type="PackedScene" uid="uid://bdptq8ft0qci7" path="res://source/entities/entity_base/torch.tscn" id="11_x3jaj"]
+[ext_resource type="PackedScene" uid="uid://c6pb8bf2xc05a" path="res://source/entities/entity_base/final_torch.tscn" id="12_tgfvv"]
+[ext_resource type="PackedScene" uid="uid://dxyvkmxfplod5" path="res://source/entities/enemies/spikes.tscn" id="13_arp2w"]
+[ext_resource type="PackedScene" uid="uid://crd1g0g5yq3bm" path="res://source/entities/enemies/enemy_caster.tscn" id="14_co2iw"]
 
 [sub_resource type="NavigationPolygon" id="NavigationPolygon_7oxnf"]
 vertices = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
@@ -24,7 +24,7 @@ outlines = Array[PackedVector2Array]([PackedVector2Array(-8, -8, 8, -8, 8, 8, -8
 polygon = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_ktvy2"]
-texture = ExtResource("3_ll2j8")
+texture = ExtResource("2_1ypl2")
 0:0/0 = 0
 0:0/0/physics_layer_0/linear_velocity = Vector2(0, 0)
 0:0/0/physics_layer_0/angular_velocity = 0.0
@@ -38,11 +38,15 @@ texture = ExtResource("3_ll2j8")
 0:1/0/physics_layer_0/linear_velocity = Vector2(0, 0)
 0:1/0/physics_layer_0/angular_velocity = 0.0
 
+[sub_resource type="OccluderPolygon2D" id="OccluderPolygon2D_p5mu1"]
+polygon = PackedVector2Array(-13.5, -16, -14, 0, 0, 7, 14, 0, 14, -15.5, 0.5, -22)
+
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_r0wh7"]
-texture = ExtResource("5_gsyu8")
+texture = ExtResource("3_3k2ca")
 texture_region_size = Vector2i(32, 16)
 0:0/size_in_atlas = Vector2i(1, 3)
 0:0/0 = 0
+0:0/0/occlusion_layer_0/polygon = SubResource("OccluderPolygon2D_p5mu1")
 0:0/0/physics_layer_0/linear_velocity = Vector2(0, 0)
 0:0/0/physics_layer_0/angular_velocity = 0.0
 0:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(0, -7, -14, 0, 0, 7, 14, 0)
@@ -53,7 +57,7 @@ polygons = Array[PackedInt32Array]([PackedInt32Array(0, 1, 2, 3)])
 outlines = Array[PackedVector2Array]([PackedVector2Array(0, -7, -14, 0, 0, 7, 14, 0)])
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_gfocc"]
-texture = ExtResource("6_71s3x")
+texture = ExtResource("4_byugp")
 texture_region_size = Vector2i(32, 16)
 0:0/size_in_atlas = Vector2i(1, 3)
 0:0/0 = 0
@@ -77,10 +81,11 @@ sources/6 = SubResource("TileSetAtlasSource_gfocc")
 [node name="Menu" type="CanvasLayer" parent="."]
 process_mode = 3
 
-[node name="SideMenu" parent="Menu" instance=ExtResource("2_opm2i")]
+[node name="SideMenu" parent="Menu" instance=ExtResource("1_seus1")]
 
 [node name="TileMap" type="TileMap" parent="."]
 y_sort_enabled = true
+position = Vector2(-152, 146)
 scale = Vector2(5.5, 5.5)
 tile_set = SubResource("TileSet_y4rry")
 format = 2
@@ -93,58 +98,59 @@ layer_1/modulate = Color(1, 1, 1, 1)
 layer_1/y_sort_enabled = true
 layer_1/y_sort_origin = 2
 layer_1/z_index = 0
-layer_1/tile_data = PackedInt32Array(-1179662, 3, 0, -1179661, 3, 0, -1179660, 3, 0, -1179659, 3, 0, -1179658, 3, 0, -1179657, 3, 0, -1179656, 3, 0, -1179655, 3, 0, -1179654, 3, 0, -1179653, 3, 0, -1179652, 3, 0, -1179651, 3, 0, -1179650, 3, 0, -1179649, 3, 0, -1245184, 3, 0, -1245183, 3, 0, -1245182, 3, 0, -1245181, 3, 0, -1245180, 3, 0, -1245179, 3, 0, -1245178, 3, 0, -1245177, 3, 0, -1245176, 3, 0, -1245175, 3, 0, -1245174, 3, 0, -1245173, 3, 0, -1245172, 3, 0, -1245171, 3, 0, -1245170, 3, 0, -1245169, 3, 0, -1245168, 3, 0, -1245167, 3, 0, -1245166, 3, 0, -1114126, 3, 0, -1048590, 3, 0, -983054, 3, 0, -917518, 3, 0, -851982, 3, 0, -786446, 3, 0, -720910, 3, 0, -655374, 3, 0, -589838, 3, 0, -524302, 3, 0, -458766, 3, 0, -393230, 3, 0, -327694, 3, 0, -262158, 3, 0, -196622, 3, 0, -131086, 3, 0, -65550, 3, 0, -14, 3, 0, 65522, 3, 0, 131058, 3, 0, 196594, 3, 0, 262130, 3, 0, 327666, 3, 0, 393202, 3, 0, 458738, 3, 0, 524274, 3, 0, 589810, 3, 0, 655346, 3, 0, 720882, 3, 0, 786418, 3, 0, 851954, 3, 0, 917490, 3, 0, 983026, 3, 0, 1048562, 3, 0, 1114098, 3, 0, 1179634, 3, 0, 1245170, 3, 0, 1310706, 3, 0, 1376242, 3, 0, 1441778, 3, 0, 1507314, 3, 0, 1572850, 3, 0, 1638386, 3, 0, 1703922, 3, 0, 1769458, 3, 0, 1834994, 3, 0, 1900530, 3, 0, 1966066, 3, 0, 2031602, 3, 0, 2097138, 3, 0, 2162674, 3, 0, 2228210, 3, 0, 2293746, 3, 0, 2359282, 3, 0, 2424818, 3, 0, 2490354, 3, 0, 2555890, 3, 0, 2621426, 3, 0, 2686962, 3, 0, 2752498, 3, 0, 2818034, 3, 0, 2883570, 3, 0, 2949106, 3, 0, 3014642, 3, 0, 3080178, 3, 0, 3145714, 3, 0, 3211250, 3, 0, 3276786, 3, 0, 3407858, 3, 0, 3473394, 3, 0, 3538930, 3, 0, 3604466, 3, 0, 3670002, 3, 0, 3735538, 3, 0, 3801074, 3, 0, 3866610, 3, 0, 3932146, 3, 0, 3997682, 3, 0, 4063218, 3, 0, 4128754, 3, 0, 4194290, 3, 0, 4259826, 3, 0, 4325362, 3, 0, 4390898, 3, 0, 4456434, 3, 0, 4521970, 3, 0, 4587506, 3, 0, 4653042, 3, 0, 4718578, 3, 0, 4784114, 3, 0, 4849650, 3, 0, 4915186, 3, 0, 4980722, 3, 0, 5046258, 3, 0, 5046259, 3, 0, 5046260, 3, 0, 5046261, 3, 0, 5046262, 3, 0, 5046263, 3, 0, 5046264, 3, 0, 5046265, 3, 0, 5046266, 3, 0, 5046267, 3, 0, 5046268, 3, 0, 5046269, 3, 0, 5046270, 3, 0, 5046271, 3, 0, 4980736, 3, 0, 4980737, 3, 0, 4980738, 3, 0, 4980739, 3, 0, 4980740, 3, 0, 4980741, 3, 0, 4980742, 3, 0, 4980743, 3, 0, 4980744, 3, 0, 4980745, 3, 0, 4980746, 3, 0, 4980747, 3, 0, 4980748, 3, 0, 4980749, 3, 0, 4980750, 3, 0, 4980751, 3, 0, 4980752, 3, 0, 4980753, 3, 0, 4980754, 3, 0, 4980755, 3, 0, 4915218, 3, 0, 4849683, 3, 0, 4784146, 3, 0, 4718611, 3, 0, 4653074, 3, 0, 4587539, 3, 0, 4522002, 3, 0, 4456467, 3, 0, 4390930, 3, 0, 4325395, 3, 0, 4259858, 3, 0, 4194323, 3, 0, 4128786, 3, 0, 4063251, 3, 0, 3997714, 3, 0, 3932179, 3, 0, 3866642, 3, 0, 3801107, 3, 0, 3735570, 3, 0, 3670035, 3, 0, 3604498, 3, 0, 3538963, 3, 0, 3473426, 3, 0, 3407891, 3, 0, 3342354, 3, 0, 3276819, 3, 0, 3211282, 3, 0, 3145747, 3, 0, 3080210, 3, 0, 3014675, 3, 0, 2949138, 3, 0, 2883603, 3, 0, 2818066, 3, 0, 2752531, 3, 0, 2686994, 3, 0, 2621459, 3, 0, 2555922, 3, 0, 2490387, 3, 0, 2424850, 3, 0, 2359315, 3, 0, 2293778, 3, 0, 2228243, 3, 0, 2162706, 3, 0, 2097171, 3, 0, 2031634, 3, 0, 1966099, 3, 0, 1900562, 3, 0, 1835027, 3, 0, 1769490, 3, 0, 1703955, 3, 0, 1638418, 3, 0, 1572883, 3, 0, 1507346, 3, 0, 1441811, 3, 0, 1376274, 3, 0, 1310739, 3, 0, 1245202, 3, 0, 1179667, 3, 0, 1114130, 3, 0, 1048595, 3, 0, 983058, 3, 0, 917523, 3, 0, 851986, 3, 0, 786451, 3, 0, 720914, 3, 0, 655379, 3, 0, 589842, 3, 0, 524307, 3, 0, 458770, 3, 0, 393235, 3, 0, 327698, 3, 0, 262163, 3, 0, 196626, 3, 0, 131091, 3, 0, 65554, 3, 0, 19, 3, 0, -65518, 3, 0, -131053, 3, 0, -196590, 3, 0, -262125, 3, 0, -327662, 3, 0, -393197, 3, 0, -458734, 3, 0, -524269, 3, 0, -589806, 3, 0, -655341, 3, 0, -720878, 3, 0, -786413, 3, 0, -851950, 3, 0, -917485, 3, 0, -983022, 3, 0, -1048557, 3, 0, -1114094, 3, 0, -1179629, 3, 0, 3342322, 3, 0)
+layer_1/tile_data = PackedInt32Array(4784114, 3, 0, 4718578, 3, 0, 4653043, 3, 0, 4587507, 3, 0, 4521972, 3, 0, 4456436, 3, 0, 5111796, 3, 0, 5046261, 3, 0, 4980725, 3, 0, 4915190, 3, 0, 4849654, 3, 0, 4784119, 3, 0, 4849655, 3, 0, 4915192, 3, 0, 4980728, 3, 0, 5046265, 3, 0, 5111801, 3, 0, 5177338, 3, 0, 5242874, 3, 0, 5308411, 3, 0, 5373947, 3, 0, 4390900, 3, 0, 4325363, 3, 0, 4259827, 3, 0, 4194290, 3, 0, 3997681, 3, 0, 4063217, 3, 0, 4128754, 3, 0, 4063222, 3, 0, 4128759, 3, 0, 4194295, 3, 0, 4259832, 3, 0, 4325368, 3, 0, 4390905, 3, 0, 4456441, 3, 0, 4521978, 3, 0, 4587514, 3, 0, 5308412, 3, 0, 5242876, 3, 0, 5177341, 3, 0, 5111805, 3, 0, 5046270, 3, 0, 4980734, 3, 0, 4915199, 3, 0, 4849663, 3, 0, 4718592, 3, 0, 4653056, 3, 0, 4521985, 3, 0, 4587521, 3, 0, 3997686, 3, 0, 3932144, 3, 0, 3866608, 3, 0, 3801072, 3, 0, 3735537, 3, 0, 3670001, 3, 0, 3604466, 3, 0, 3538930, 3, 0, 3473395, 3, 0, 3407859, 3, 0, 3342324, 3, 0, 3276788, 3, 0, 3211253, 3, 0, 3145717, 3, 0, 3080182, 3, 0, 3932149, 3, 0, 3866613, 3, 0, 4653051, 3, 0, 4718587, 3, 0, 4456449, 3, 0, 4390912, 3, 0, 4325376, 3, 0, 4325375, 3, 0, 4259839, 3, 0, 4194302, 3, 0, 4063229, 3, 0, 3145718, 3, 0, 3211255, 3, 0, 3276791, 3, 0, 3342328, 3, 0, 3407864, 3, 0, 3473401, 3, 0, 3538937, 3, 0, 3604474, 3, 0, 4325373, 3, 0, 4390910, 3, 0, 4456446, 3, 0, 4521983, 3, 0, 4587519, 3, 0, 4587520, 3, 0, 3670009, 3, 0, 3735545, 3, 0, 3670008, 3, 0, 3604472, 3, 0, 3538935, 3, 0, 3473399, 3, 0, 3407862, 3, 0, 3342326, 3, 0, 3276789, 3, 0, 3211254, 3, 0, 3276790, 3, 0, 3342327, 3, 0, 3538936, 3, 0, 3473400, 3, 0, 3407863, 3, 0, 3604473, 3, 0, 4128765, 3, 0, 4259838, 3, 0, 4325374, 3, 0, 4456448, 3, 0, 4456447, 3, 0, 4390911, 3, 0, 4521984, 3, 0, 3014646, 3, 0, 2949111, 3, 0, 2883575, 3, 0, 2818040, 3, 0, 2752504, 3, 0, 4456450, 3, 0, 4390914, 3, 0, 4259843, 3, 0, 4325379, 3, 0, 4194308, 3, 0, 3276796, 3, 0, 3342333, 3, 0, 3407869, 3, 0, 3473406, 3, 0, 3538942, 3, 0, 3604479, 3, 0, 3670015, 3, 0, 2686969, 3, 0, 2621433, 3, 0, 2555898, 3, 0, 2490362, 3, 0, 2424827, 3, 0, 2359291, 3, 0, 2424828, 3, 0, 2490364, 3, 0, 2555901, 3, 0, 2621437, 3, 0, 2686974, 3, 0, 2752510, 3, 0, 2818047, 3, 0, 3276803, 3, 0, 3342339, 3, 0, 3407876, 3, 0, 3473412, 3, 0, 3538949, 3, 0, 3604485, 3, 0, 3670022, 3, 0, 3735558, 3, 0, 3801095, 3, 0, 3866630, 3, 0, 3932166, 3, 0, 3997701, 3, 0, 4063237, 3, 0, 4128772, 3, 0, 2883583, 3, 0, 3670016, 3, 0, 4128766, 3, 0, 4194301, 3, 0, 4259837, 3, 0, 4194300, 3, 0)
 
 [node name="CanvasModulate" type="CanvasModulate" parent="."]
 visible = false
 color = Color(0, 0, 0, 1)
 
-[node name="Player" parent="." instance=ExtResource("7_72r31")]
+[node name="Player" parent="." instance=ExtResource("5_sewgx")]
+position = Vector2(-2017, 2959)
 
-[node name="EnemyTest" parent="." instance=ExtResource("5_jrp8l")]
+[node name="EnemyTest" parent="." instance=ExtResource("6_mwmpc")]
 y_sort_enabled = false
 position = Vector2(1379, 541)
 
-[node name="OilPickup" parent="." instance=ExtResource("6_2iv33")]
+[node name="OilPickup" parent="." instance=ExtResource("7_sbq3n")]
 position = Vector2(-339, -4)
 
-[node name="LoreBit" parent="." instance=ExtResource("7_ld556")]
+[node name="LoreBit" parent="." instance=ExtResource("8_u815n")]
 position = Vector2(321, -116)
 scale = Vector2(0.5, 0.5)
 
-[node name="Moth" parent="." instance=ExtResource("8_wsbaj")]
+[node name="Moth" parent="." instance=ExtResource("9_jrwya")]
 y_sort_enabled = false
 position = Vector2(113, 943)
 
-[node name="EnemyTestH" parent="." instance=ExtResource("6_j5sao")]
+[node name="EnemyTestH" parent="." instance=ExtResource("10_k1srm")]
 y_sort_enabled = false
 position = Vector2(1000, 1000)
 
-[node name="torch" parent="." groups=["torches"] instance=ExtResource("11_flp10")]
+[node name="torch" parent="." groups=["torches"] instance=ExtResource("11_x3jaj")]
 position = Vector2(-275, 225)
 
-[node name="FinalTorch" parent="." instance=ExtResource("11_ybhu0")]
+[node name="FinalTorch" parent="." instance=ExtResource("12_tgfvv")]
 position = Vector2(360, 202)
 
-[node name="torch2" parent="." groups=["torches"] instance=ExtResource("11_flp10")]
+[node name="torch2" parent="." groups=["torches"] instance=ExtResource("11_x3jaj")]
 position = Vector2(4, 428)
 
-[node name="Spikes" parent="." instance=ExtResource("14_3viij")]
+[node name="Spikes" parent="." instance=ExtResource("13_arp2w")]
 position = Vector2(98, -384)
 cycleDuration = 2
 
-[node name="Spikes2" parent="." instance=ExtResource("14_3viij")]
+[node name="Spikes2" parent="." instance=ExtResource("13_arp2w")]
 position = Vector2(-387, -390)
 cycleDuration = 2
 
-[node name="Spikes4" parent="." instance=ExtResource("14_3viij")]
+[node name="Spikes4" parent="." instance=ExtResource("13_arp2w")]
 position = Vector2(-60, -386)
 cycleDuration = 2
 
-[node name="Spikes3" parent="." instance=ExtResource("14_3viij")]
+[node name="Spikes3" parent="." instance=ExtResource("13_arp2w")]
 position = Vector2(-225, -388)
 cycleDuration = 2
 
-[node name="EnemyCaster" parent="." instance=ExtResource("16_53x3a")]
+[node name="EnemyCaster" parent="." instance=ExtResource("14_co2iw")]
 y_sort_enabled = false
 position = Vector2(2255, 1648)
