@@ -4,3 +4,4 @@ res://source/levels/SpencerLevel.tscn
 res://source/entities/player/player.tscn
 res://source/entities/enemies/spikes.tscn
 res://source/entities/traps/dart_trap.tscn
+res://source/entities/traps/dart_new.tscn
