@@ -9,11 +9,16 @@ size = Vector2(163, 123)
 
 [node name="Spikes" type="StaticBody2D"]
 y_sort_enabled = true
+position = Vector2(-0.218, 12.136)
+rotation = 0.392699
+scale = Vector2(0.557, 0.746385)
+skew = 0.785398
 collision_layer = 4
 collision_mask = 2
 script = ExtResource("1_3mnhf")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(1, 1)
 texture = ExtResource("2_jwjw6")
 
 [node name="Hitbox" parent="." instance=ExtResource("2_ku6et")]

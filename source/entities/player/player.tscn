@@ -256,7 +256,6 @@ position = Vector2(10, 0)
 texture = ExtResource("2_j4nc6")
 hframes = 4
 vframes = 4
-frame = 4
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(-0.49999, 86.5)
@@ -297,9 +296,8 @@ texture_scale = 10.0
 
 [node name="InnermostLight" type="PointLight2D" parent="."]
 blend_mode = 2
-shadow_enabled = true
 texture = ExtResource("5_gcsun")
-texture_scale = 10.0
+texture_scale = 0.4
 
 [node name="InnerLight" type="PointLight2D" parent="."]
 position = Vector2(8, -0.999998)
