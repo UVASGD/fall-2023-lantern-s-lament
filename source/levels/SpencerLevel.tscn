@@ -1,4 +1,4 @@
-[gd_scene load_steps=22 format=3 uid="uid://lxourdw3iqnr"]
+[gd_scene load_steps=23 format=3 uid="uid://lxourdw3iqnr"]
 
 [ext_resource type="PackedScene" uid="uid://byurxh2xitstp" path="res://source/interface/side_menu.tscn" id="1_seus1"]
 [ext_resource type="Texture2D" uid="uid://clfryshg6q8ju" path="res://assets/levelTileMap.png" id="2_1ypl2"]
@@ -38,11 +38,15 @@ texture = ExtResource("2_1ypl2")
 0:1/0/physics_layer_0/linear_velocity = Vector2(0, 0)
 0:1/0/physics_layer_0/angular_velocity = 0.0
 
+[sub_resource type="OccluderPolygon2D" id="OccluderPolygon2D_cgumc"]
+polygon = PackedVector2Array(0, 7, 14, 0, 14, -16, 0, -23, -13.5, -16.5, -14, 0)
+
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_r0wh7"]
 texture = ExtResource("3_3k2ca")
 texture_region_size = Vector2i(32, 16)
 0:0/size_in_atlas = Vector2i(1, 3)
 0:0/0 = 0
+0:0/0/occlusion_layer_0/polygon = SubResource("OccluderPolygon2D_cgumc")
 0:0/0/physics_layer_0/linear_velocity = Vector2(0, 0)
 0:0/0/physics_layer_0/angular_velocity = 0.0
 0:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(0, -7, -14, 0, 0, 7, 14, 0)
@@ -142,625 +146,500 @@ position = Vector2(-5, -9)
 
 [node name="Spike13" parent="AllSpikes" instance=ExtResource("13_arp2w")]
 position = Vector2(4174, 1687)
-scale = Vector2(0.557, 0.746385)
 cycleDuration = 2
 
 [node name="Spike14" parent="AllSpikes" instance=ExtResource("13_arp2w")]
 position = Vector2(4327, 1618)
-scale = Vector2(0.557, 0.746385)
 cycleDuration = 2
 
 [node name="Spike15" parent="AllSpikes" instance=ExtResource("13_arp2w")]
 position = Vector2(4253, 1652)
-scale = Vector2(0.557, 0.746385)
 cycleDuration = 2
 
 [node name="Spike16" parent="AllSpikes" instance=ExtResource("13_arp2w")]
 position = Vector2(4408, 1580)
-scale = Vector2(0.557, 0.746385)
 cycleDuration = 2
 
 [node name="Spike17" parent="AllSpikes" instance=ExtResource("13_arp2w")]
 position = Vector2(4014, 1765)
-scale = Vector2(0.557, 0.746385)
 cycleDuration = 2
 
 [node name="Spike18" parent="AllSpikes" instance=ExtResource("13_arp2w")]
 position = Vector2(4092, 1724)
-scale = Vector2(0.557, 0.746385)
 cycleDuration = 2
 
 [node name="Spike19" parent="AllSpikes" instance=ExtResource("13_arp2w")]
 position = Vector2(3940, 1803)
-scale = Vector2(0.557, 0.746385)
 cycleDuration = 2
 
 [node name="Spike20" parent="AllSpikes" instance=ExtResource("13_arp2w")]
 position = Vector2(3864, 1840)
-scale = Vector2(0.557, 0.746385)
 cycleDuration = 2
 
 [node name="Spike21" parent="AllSpikes" instance=ExtResource("13_arp2w")]
 position = Vector2(3708, 1916)
-scale = Vector2(0.557, 0.746385)
 cycleDuration = 2
 
 [node name="Spike22" parent="AllSpikes" instance=ExtResource("13_arp2w")]
 position = Vector2(3633, 1956)
-scale = Vector2(0.557, 0.746385)
 cycleDuration = 2
 
 [node name="Spike23" parent="AllSpikes" instance=ExtResource("13_arp2w")]
 position = Vector2(3547, 1992)
-scale = Vector2(0.557, 0.746385)
 cycleDuration = 2
 
 [node name="Spike24" parent="AllSpikes" instance=ExtResource("13_arp2w")]
 position = Vector2(3785, 1880)
-scale = Vector2(0.557, 0.746385)
 cycleDuration = 2
 
 [node name="Spike" parent="AllSpikes" instance=ExtResource("13_arp2w")]
 position = Vector2(4088, 1651)
-scale = Vector2(0.557, 0.746385)
 cycleDuration = 2
 
 [node name="Spike2" parent="AllSpikes" instance=ExtResource("13_arp2w")]
 position = Vector2(4241, 1582)
-scale = Vector2(0.557, 0.746385)
 cycleDuration = 2
 
 [node name="Spike3" parent="AllSpikes" instance=ExtResource("13_arp2w")]
 position = Vector2(4167, 1616)
-scale = Vector2(0.557, 0.746385)
 cycleDuration = 2
 
 [node name="Spike4" parent="AllSpikes" instance=ExtResource("13_arp2w")]
 position = Vector2(4322, 1544)
-scale = Vector2(0.557, 0.746385)
 cycleDuration = 2
 
 [node name="Spike5" parent="AllSpikes" instance=ExtResource("13_arp2w")]
 position = Vector2(3928, 1729)
-scale = Vector2(0.557, 0.746385)
 cycleDuration = 2
 
 [node name="Spike6" parent="AllSpikes" instance=ExtResource("13_arp2w")]
 position = Vector2(4006, 1688)
-scale = Vector2(0.557, 0.746385)
 cycleDuration = 2
 
 [node name="Spike7" parent="AllSpikes" instance=ExtResource("13_arp2w")]
 position = Vector2(3854, 1767)
-scale = Vector2(0.557, 0.746385)
 cycleDuration = 2
 
 [node name="Spike8" parent="AllSpikes" instance=ExtResource("13_arp2w")]
 position = Vector2(3778, 1804)
-scale = Vector2(0.557, 0.746385)
 cycleDuration = 2
 
 [node name="Spike10" parent="AllSpikes" instance=ExtResource("13_arp2w")]
 position = Vector2(3622, 1880)
-scale = Vector2(0.557, 0.746385)
 cycleDuration = 2
 
 [node name="Spike11" parent="AllSpikes" instance=ExtResource("13_arp2w")]
 position = Vector2(3547, 1920)
-scale = Vector2(0.557, 0.746385)
 cycleDuration = 2
 
 [node name="Spike12" parent="AllSpikes" instance=ExtResource("13_arp2w")]
 position = Vector2(3461, 1956)
-scale = Vector2(0.557, 0.746385)
 cycleDuration = 2
 
 [node name="Spike9" parent="AllSpikes" instance=ExtResource("13_arp2w")]
 position = Vector2(3699, 1844)
-scale = Vector2(0.557, 0.746385)
 cycleDuration = 2
 
 [node name="Spike25" parent="AllSpikes" instance=ExtResource("13_arp2w")]
 position = Vector2(4781, 1990)
-scale = Vector2(0.557, 0.746385)
 cycleDuration = 4
 
 [node name="Spike26" parent="AllSpikes" instance=ExtResource("13_arp2w")]
 position = Vector2(4934, 1921)
-scale = Vector2(0.557, 0.746385)
 cycleDuration = 4
 
 [node name="Spike27" parent="AllSpikes" instance=ExtResource("13_arp2w")]
 position = Vector2(4860, 1955)
-scale = Vector2(0.557, 0.746385)
 cycleDuration = 4
 
 [node name="Spike28" parent="AllSpikes" instance=ExtResource("13_arp2w")]
 position = Vector2(5015, 1883)
-scale = Vector2(0.557, 0.746385)
 cycleDuration = 4
 
 [node name="Spike29" parent="AllSpikes" instance=ExtResource("13_arp2w")]
 position = Vector2(4621, 2068)
-scale = Vector2(0.557, 0.746385)
 cycleDuration = 4
 
 [node name="Spike30" parent="AllSpikes" instance=ExtResource("13_arp2w")]
 position = Vector2(4699, 2027)
-scale = Vector2(0.557, 0.746385)
 cycleDuration = 4
 
 [node name="Spike31" parent="AllSpikes" instance=ExtResource("13_arp2w")]
 position = Vector2(4547, 2106)
-scale = Vector2(0.557, 0.746385)
 cycleDuration = 4
 
 [node name="Spike32" parent="AllSpikes" instance=ExtResource("13_arp2w")]
 position = Vector2(4471, 2143)
-scale = Vector2(0.557, 0.746385)
 cycleDuration = 4
 
 [node name="Spike33" parent="AllSpikes" instance=ExtResource("13_arp2w")]
 position = Vector2(4315, 2219)
-scale = Vector2(0.557, 0.746385)
 cycleDuration = 4
 
 [node name="Spike34" parent="AllSpikes" instance=ExtResource("13_arp2w")]
 position = Vector2(4240, 2259)
-scale = Vector2(0.557, 0.746385)
 cycleDuration = 4
 
 [node name="Spike35" parent="AllSpikes" instance=ExtResource("13_arp2w")]
 position = Vector2(4154, 2295)
-scale = Vector2(0.557, 0.746385)
 cycleDuration = 4
 
 [node name="Spike36" parent="AllSpikes" instance=ExtResource("13_arp2w")]
 position = Vector2(4392, 2183)
-scale = Vector2(0.557, 0.746385)
 cycleDuration = 4
 
 [node name="Spike37" parent="AllSpikes" instance=ExtResource("13_arp2w")]
 position = Vector2(4695, 1954)
-scale = Vector2(0.557, 0.746385)
 cycleDuration = 4
 
 [node name="Spike38" parent="AllSpikes" instance=ExtResource("13_arp2w")]
 position = Vector2(4848, 1885)
-scale = Vector2(0.557, 0.746385)
 cycleDuration = 4
 
 [node name="Spike39" parent="AllSpikes" instance=ExtResource("13_arp2w")]
 position = Vector2(4774, 1919)
-scale = Vector2(0.557, 0.746385)
 cycleDuration = 4
 
 [node name="Spike40" parent="AllSpikes" instance=ExtResource("13_arp2w")]
 position = Vector2(4929, 1847)
-scale = Vector2(0.557, 0.746385)
 cycleDuration = 4
 
 [node name="Spike41" parent="AllSpikes" instance=ExtResource("13_arp2w")]
 position = Vector2(4535, 2032)
-scale = Vector2(0.557, 0.746385)
 cycleDuration = 4
 
 [node name="Spike42" parent="AllSpikes" instance=ExtResource("13_arp2w")]
 position = Vector2(4613, 1991)
-scale = Vector2(0.557, 0.746385)
 cycleDuration = 4
 
 [node name="Spike43" parent="AllSpikes" instance=ExtResource("13_arp2w")]
 position = Vector2(4461, 2070)
-scale = Vector2(0.557, 0.746385)
 cycleDuration = 4
 
 [node name="Spike44" parent="AllSpikes" instance=ExtResource("13_arp2w")]
 position = Vector2(4385, 2107)
-scale = Vector2(0.557, 0.746385)
 cycleDuration = 4
 
 [node name="Spike45" parent="AllSpikes" instance=ExtResource("13_arp2w")]
 position = Vector2(4229, 2183)
-scale = Vector2(0.557, 0.746385)
 cycleDuration = 4
 
 [node name="Spike46" parent="AllSpikes" instance=ExtResource("13_arp2w")]
 position = Vector2(4154, 2223)
-scale = Vector2(0.557, 0.746385)
 cycleDuration = 4
 
 [node name="Spike47" parent="AllSpikes" instance=ExtResource("13_arp2w")]
 position = Vector2(4068, 2259)
-scale = Vector2(0.557, 0.746385)
 cycleDuration = 4
 
 [node name="Spike48" parent="AllSpikes" instance=ExtResource("13_arp2w")]
 position = Vector2(4306, 2147)
-scale = Vector2(0.557, 0.746385)
 cycleDuration = 4
 
 [node name="Spike49" parent="AllSpikes" instance=ExtResource("13_arp2w")]
 position = Vector2(4951, 2066)
-scale = Vector2(0.557, 0.746385)
 cycleDuration = 4
 
 [node name="Spike50" parent="AllSpikes" instance=ExtResource("13_arp2w")]
 position = Vector2(5104, 1997)
-scale = Vector2(0.557, 0.746385)
 cycleDuration = 4
 
 [node name="Spike51" parent="AllSpikes" instance=ExtResource("13_arp2w")]
 position = Vector2(5030, 2031)
-scale = Vector2(0.557, 0.746385)
 cycleDuration = 4
 
 [node name="Spike52" parent="AllSpikes" instance=ExtResource("13_arp2w")]
 position = Vector2(5185, 1959)
-scale = Vector2(0.557, 0.746385)
 cycleDuration = 4
 
 [node name="Spike53" parent="AllSpikes" instance=ExtResource("13_arp2w")]
 position = Vector2(4791, 2144)
-scale = Vector2(0.557, 0.746385)
 cycleDuration = 4
 
 [node name="Spike54" parent="AllSpikes" instance=ExtResource("13_arp2w")]
 position = Vector2(4869, 2103)
-scale = Vector2(0.557, 0.746385)
 cycleDuration = 4
 
 [node name="Spike55" parent="AllSpikes" instance=ExtResource("13_arp2w")]
 position = Vector2(4717, 2182)
-scale = Vector2(0.557, 0.746385)
 cycleDuration = 4
 
 [node name="Spike56" parent="AllSpikes" instance=ExtResource("13_arp2w")]
 position = Vector2(4641, 2219)
-scale = Vector2(0.557, 0.746385)
 cycleDuration = 4
 
 [node name="Spike57" parent="AllSpikes" instance=ExtResource("13_arp2w")]
 position = Vector2(4485, 2295)
-scale = Vector2(0.557, 0.746385)
 cycleDuration = 4
 
 [node name="Spike58" parent="AllSpikes" instance=ExtResource("13_arp2w")]
 position = Vector2(4410, 2335)
-scale = Vector2(0.557, 0.746385)
 cycleDuration = 4
 
 [node name="Spike59" parent="AllSpikes" instance=ExtResource("13_arp2w")]
 position = Vector2(4324, 2371)
-scale = Vector2(0.557, 0.746385)
 cycleDuration = 4
 
 [node name="Spike60" parent="AllSpikes" instance=ExtResource("13_arp2w")]
 position = Vector2(4562, 2259)
-scale = Vector2(0.557, 0.746385)
 cycleDuration = 4
 
 [node name="Spike61" parent="AllSpikes" instance=ExtResource("13_arp2w")]
 position = Vector2(4865, 2030)
-scale = Vector2(0.557, 0.746385)
 cycleDuration = 4
 
 [node name="Spike62" parent="AllSpikes" instance=ExtResource("13_arp2w")]
 position = Vector2(5018, 1961)
-scale = Vector2(0.557, 0.746385)
 cycleDuration = 4
 
 [node name="Spike63" parent="AllSpikes" instance=ExtResource("13_arp2w")]
 position = Vector2(4944, 1995)
-scale = Vector2(0.557, 0.746385)
 cycleDuration = 4
 
 [node name="Spike64" parent="AllSpikes" instance=ExtResource("13_arp2w")]
 position = Vector2(5099, 1923)
-scale = Vector2(0.557, 0.746385)
 cycleDuration = 4
 
 [node name="Spike65" parent="AllSpikes" instance=ExtResource("13_arp2w")]
 position = Vector2(4705, 2108)
-scale = Vector2(0.557, 0.746385)
 cycleDuration = 4
 
 [node name="Spike66" parent="AllSpikes" instance=ExtResource("13_arp2w")]
 position = Vector2(4783, 2067)
-scale = Vector2(0.557, 0.746385)
 cycleDuration = 4
 
 [node name="Spike67" parent="AllSpikes" instance=ExtResource("13_arp2w")]
 position = Vector2(4631, 2146)
-scale = Vector2(0.557, 0.746385)
 cycleDuration = 4
 
 [node name="Spike68" parent="AllSpikes" instance=ExtResource("13_arp2w")]
 position = Vector2(4555, 2183)
-scale = Vector2(0.557, 0.746385)
 cycleDuration = 4
 
 [node name="Spike69" parent="AllSpikes" instance=ExtResource("13_arp2w")]
 position = Vector2(4399, 2259)
-scale = Vector2(0.557, 0.746385)
 cycleDuration = 4
 
 [node name="Spike70" parent="AllSpikes" instance=ExtResource("13_arp2w")]
 position = Vector2(4324, 2299)
-scale = Vector2(0.557, 0.746385)
 cycleDuration = 4
 
 [node name="Spike71" parent="AllSpikes" instance=ExtResource("13_arp2w")]
 position = Vector2(4238, 2335)
-scale = Vector2(0.557, 0.746385)
 cycleDuration = 4
 
 [node name="Spike72" parent="AllSpikes" instance=ExtResource("13_arp2w")]
 position = Vector2(4476, 2223)
-scale = Vector2(0.557, 0.746385)
 cycleDuration = 4
 
 [node name="Spike73" parent="AllSpikes" instance=ExtResource("13_arp2w")]
 position = Vector2(5616, 2416)
-scale = Vector2(0.557, 0.746385)
 cycleDuration = 3
 
 [node name="Spike74" parent="AllSpikes" instance=ExtResource("13_arp2w")]
 position = Vector2(5769, 2347)
-scale = Vector2(0.557, 0.746385)
 cycleDuration = 3
 
 [node name="Spike75" parent="AllSpikes" instance=ExtResource("13_arp2w")]
 position = Vector2(5695, 2381)
-scale = Vector2(0.557, 0.746385)
 cycleDuration = 3
 
 [node name="Spike76" parent="AllSpikes" instance=ExtResource("13_arp2w")]
 position = Vector2(5850, 2309)
-scale = Vector2(0.557, 0.746385)
 cycleDuration = 3
 
 [node name="Spike77" parent="AllSpikes" instance=ExtResource("13_arp2w")]
 position = Vector2(5456, 2494)
-scale = Vector2(0.557, 0.746385)
 cycleDuration = 3
 
 [node name="Spike78" parent="AllSpikes" instance=ExtResource("13_arp2w")]
 position = Vector2(5534, 2453)
-scale = Vector2(0.557, 0.746385)
 cycleDuration = 3
 
 [node name="Spike79" parent="AllSpikes" instance=ExtResource("13_arp2w")]
 position = Vector2(5382, 2532)
-scale = Vector2(0.557, 0.746385)
 cycleDuration = 3
 
 [node name="Spike80" parent="AllSpikes" instance=ExtResource("13_arp2w")]
 position = Vector2(5306, 2569)
-scale = Vector2(0.557, 0.746385)
 cycleDuration = 3
 
 [node name="Spike81" parent="AllSpikes" instance=ExtResource("13_arp2w")]
 position = Vector2(5150, 2645)
-scale = Vector2(0.557, 0.746385)
 cycleDuration = 3
 
 [node name="Spike82" parent="AllSpikes" instance=ExtResource("13_arp2w")]
 position = Vector2(5075, 2685)
-scale = Vector2(0.557, 0.746385)
 cycleDuration = 3
 
 [node name="Spike83" parent="AllSpikes" instance=ExtResource("13_arp2w")]
 position = Vector2(4989, 2721)
-scale = Vector2(0.557, 0.746385)
 cycleDuration = 3
 
 [node name="Spike84" parent="AllSpikes" instance=ExtResource("13_arp2w")]
 position = Vector2(5227, 2609)
-scale = Vector2(0.557, 0.746385)
 cycleDuration = 3
 
 [node name="Spike85" parent="AllSpikes" instance=ExtResource("13_arp2w")]
 position = Vector2(5530, 2380)
-scale = Vector2(0.557, 0.746385)
 cycleDuration = 3
 
 [node name="Spike86" parent="AllSpikes" instance=ExtResource("13_arp2w")]
 position = Vector2(5683, 2311)
-scale = Vector2(0.557, 0.746385)
 cycleDuration = 3
 
 [node name="Spike87" parent="AllSpikes" instance=ExtResource("13_arp2w")]
 position = Vector2(5609, 2345)
-scale = Vector2(0.557, 0.746385)
 cycleDuration = 3
 
 [node name="Spike88" parent="AllSpikes" instance=ExtResource("13_arp2w")]
 position = Vector2(5764, 2273)
-scale = Vector2(0.557, 0.746385)
 cycleDuration = 3
 
 [node name="Spike89" parent="AllSpikes" instance=ExtResource("13_arp2w")]
 position = Vector2(5370, 2458)
-scale = Vector2(0.557, 0.746385)
 cycleDuration = 3
 
 [node name="Spike90" parent="AllSpikes" instance=ExtResource("13_arp2w")]
 position = Vector2(5448, 2417)
-scale = Vector2(0.557, 0.746385)
 cycleDuration = 3
 
 [node name="Spike91" parent="AllSpikes" instance=ExtResource("13_arp2w")]
 position = Vector2(5296, 2496)
-scale = Vector2(0.557, 0.746385)
 cycleDuration = 3
 
 [node name="Spike92" parent="AllSpikes" instance=ExtResource("13_arp2w")]
 position = Vector2(5220, 2533)
-scale = Vector2(0.557, 0.746385)
 cycleDuration = 3
 
 [node name="Spike93" parent="AllSpikes" instance=ExtResource("13_arp2w")]
 position = Vector2(5064, 2609)
-scale = Vector2(0.557, 0.746385)
 cycleDuration = 3
 
 [node name="Spike94" parent="AllSpikes" instance=ExtResource("13_arp2w")]
 position = Vector2(4989, 2649)
-scale = Vector2(0.557, 0.746385)
 cycleDuration = 3
 
 [node name="Spike95" parent="AllSpikes" instance=ExtResource("13_arp2w")]
 position = Vector2(4903, 2685)
-scale = Vector2(0.557, 0.746385)
 cycleDuration = 3
 
 [node name="Spike96" parent="AllSpikes" instance=ExtResource("13_arp2w")]
 position = Vector2(5141, 2573)
-scale = Vector2(0.557, 0.746385)
 cycleDuration = 3
 
 [node name="Spike97" parent="AllSpikes" instance=ExtResource("13_arp2w")]
 position = Vector2(5786, 2492)
-scale = Vector2(0.557, 0.746385)
 cycleDuration = 3
 
 [node name="Spike98" parent="AllSpikes" instance=ExtResource("13_arp2w")]
 position = Vector2(5939, 2423)
-scale = Vector2(0.557, 0.746385)
 cycleDuration = 3
 
 [node name="Spike99" parent="AllSpikes" instance=ExtResource("13_arp2w")]
 position = Vector2(5865, 2457)
-scale = Vector2(0.557, 0.746385)
 cycleDuration = 3
 
 [node name="Spike100" parent="AllSpikes" instance=ExtResource("13_arp2w")]
 position = Vector2(6020, 2385)
-scale = Vector2(0.557, 0.746385)
 cycleDuration = 3
 
 [node name="Spike101" parent="AllSpikes" instance=ExtResource("13_arp2w")]
 position = Vector2(5626, 2570)
-scale = Vector2(0.557, 0.746385)
 cycleDuration = 3
 
 [node name="Spike102" parent="AllSpikes" instance=ExtResource("13_arp2w")]
 position = Vector2(5704, 2529)
-scale = Vector2(0.557, 0.746385)
 cycleDuration = 3
 
 [node name="Spike103" parent="AllSpikes" instance=ExtResource("13_arp2w")]
 position = Vector2(5552, 2608)
-scale = Vector2(0.557, 0.746385)
 cycleDuration = 3
 
 [node name="Spike104" parent="AllSpikes" instance=ExtResource("13_arp2w")]
 position = Vector2(5476, 2645)
-scale = Vector2(0.557, 0.746385)
 cycleDuration = 3
 
 [node name="Spike105" parent="AllSpikes" instance=ExtResource("13_arp2w")]
 position = Vector2(5320, 2721)
-scale = Vector2(0.557, 0.746385)
 cycleDuration = 3
 
 [node name="Spike106" parent="AllSpikes" instance=ExtResource("13_arp2w")]
 position = Vector2(5245, 2761)
-scale = Vector2(0.557, 0.746385)
 cycleDuration = 3
 
 [node name="Spike107" parent="AllSpikes" instance=ExtResource("13_arp2w")]
 position = Vector2(5159, 2797)
-scale = Vector2(0.557, 0.746385)
 cycleDuration = 3
 
 [node name="Spike108" parent="AllSpikes" instance=ExtResource("13_arp2w")]
 position = Vector2(5397, 2685)
-scale = Vector2(0.557, 0.746385)
 cycleDuration = 3
 
 [node name="Spike109" parent="AllSpikes" instance=ExtResource("13_arp2w")]
 position = Vector2(5700, 2456)
-scale = Vector2(0.557, 0.746385)
 cycleDuration = 3
 
 [node name="Spike110" parent="AllSpikes" instance=ExtResource("13_arp2w")]
 position = Vector2(5853, 2387)
-scale = Vector2(0.557, 0.746385)
 cycleDuration = 3
 
 [node name="Spike111" parent="AllSpikes" instance=ExtResource("13_arp2w")]
 position = Vector2(5779, 2421)
-scale = Vector2(0.557, 0.746385)
 cycleDuration = 3
 
 [node name="Spike112" parent="AllSpikes" instance=ExtResource("13_arp2w")]
 position = Vector2(5934, 2349)
-scale = Vector2(0.557, 0.746385)
 cycleDuration = 3
 
 [node name="Spike113" parent="AllSpikes" instance=ExtResource("13_arp2w")]
 position = Vector2(5540, 2534)
-scale = Vector2(0.557, 0.746385)
 cycleDuration = 3
 
 [node name="Spike114" parent="AllSpikes" instance=ExtResource("13_arp2w")]
 position = Vector2(5618, 2493)
-scale = Vector2(0.557, 0.746385)
 cycleDuration = 3
 
 [node name="Spike115" parent="AllSpikes" instance=ExtResource("13_arp2w")]
 position = Vector2(5466, 2572)
-scale = Vector2(0.557, 0.746385)
 cycleDuration = 3
 
 [node name="Spike116" parent="AllSpikes" instance=ExtResource("13_arp2w")]
 position = Vector2(5390, 2609)
-scale = Vector2(0.557, 0.746385)
 cycleDuration = 3
 
 [node name="Spike117" parent="AllSpikes" instance=ExtResource("13_arp2w")]
 position = Vector2(5234, 2685)
-scale = Vector2(0.557, 0.746385)
 cycleDuration = 3
 
 [node name="Spike118" parent="AllSpikes" instance=ExtResource("13_arp2w")]
 position = Vector2(5159, 2725)
-scale = Vector2(0.557, 0.746385)
 cycleDuration = 3
 
 [node name="Spike119" parent="AllSpikes" instance=ExtResource("13_arp2w")]
 position = Vector2(5073, 2761)
-scale = Vector2(0.557, 0.746385)
 cycleDuration = 3
 
 [node name="Spike121" parent="AllSpikes" instance=ExtResource("13_arp2w")]
 position = Vector2(5321, 2959)
-scale = Vector2(0.557, 0.746385)
 cycleDuration = 1
 
 [node name="Spike122" parent="AllSpikes" instance=ExtResource("13_arp2w")]
 position = Vector2(5399, 2997)
-scale = Vector2(0.557, 0.746385)
 cycleDuration = 1
 
 [node name="Spike123" parent="AllSpikes" instance=ExtResource("13_arp2w")]
 position = Vector2(5482, 3035)
-scale = Vector2(0.557, 0.746385)
 cycleDuration = 1
 
 [node name="Spike124" parent="AllSpikes" instance=ExtResource("13_arp2w")]
 position = Vector2(5557, 3077)
-scale = Vector2(0.557, 0.746385)
 cycleDuration = 1
 
 [node name="Spike125" parent="AllSpikes" instance=ExtResource("13_arp2w")]
 position = Vector2(5633, 3108)
-scale = Vector2(0.557, 0.746385)
 cycleDuration = 1
 
 [node name="Spike120" parent="AllSpikes" instance=ExtResource("13_arp2w")]
 position = Vector2(5311, 2649)
-scale = Vector2(0.557, 0.746385)
 cycleDuration = 3
