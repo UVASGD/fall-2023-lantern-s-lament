@@ -28,7 +28,6 @@ monitoring = true
 [node name="CollisionShape2D" parent="Hitbox" index="0"]
 position = Vector2(-7.62939e-06, 11.6773)
 rotation = 0.392699
-scale = Vector2(1, 1)
 skew = 0.785398
 shape = SubResource("RectangleShape2D_flkpc")
 
