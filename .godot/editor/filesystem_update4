@@ -1,5 +1,6 @@
 res://source/entities/player/player.tscn
 res://source/entities/entity_base/hitbox.gd
+res://source/entities/player/player.gd
 res://source/interface/side_menu.tscn
 res://source/entities/enemies/enemy_test_h.tscn
 res://source/entities/enemies/enemy_test.tscn
@@ -13,4 +14,5 @@ res://source/entities/enemies/enemy_base.tscn
 res://source/entities/enemies/spikes.tscn
 res://source/levels/main_scene.tscn
 res://source/entities/enemies/moth.gd
+res://source/entities/enemies/enemy_base.gd
 res://source/entities/entity_base/final_torch.gd

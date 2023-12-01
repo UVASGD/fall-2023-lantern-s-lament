@@ -71,7 +71,7 @@ func enemy_in_area():
 	#print(str(upper_angle) + " " + str(lower_angle) + " " + str(angle) + " " + str(distance_to_hull))
 	#print(str(global_position.y) + " " +  str(player.global_position.y) + " " + str(global_position.x) + " " +  str(player.global_position.x))
 	if distance_to_hull <= player.man_cur_range:
-		if lower_angle == upper_angle: #for when the lantern is unfocused
+		if !Input.is_action_pressed("space_bar"): #for when the lantern is unfocused
 			return true
 		if lower_angle > upper_angle: #for when the lantern is asfocused
 			return angle >= lower_angle or angle <= upper_angle

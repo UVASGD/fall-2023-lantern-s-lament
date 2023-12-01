@@ -6,6 +6,7 @@ extends EnemyBase
 @export var range : float = 2000.0
 @onready var randomCords : Vector2 = Vector2.ZERO
 @onready var player_angle
+@onready var num = 0.0
 
 func _ready():
 	speed = 100
@@ -20,8 +21,10 @@ func _physics_process(delta):
 	#player_angle = atan2(-(global_position.y - player.global_position.y), global_position.x - player.global_position.x)
 	#target_pos = Vector2(delta*cos(player_angle)-(0.5*sin(delta)+sin(player_angle)), delta*sin(player_angle)+(0.5*sin(delta)*cos(player_angle))).normalized()
 	if in_aim_area: super.move(target_pos * speed)
-	super.move(Vector2(0, sin(delta)) * 1000)
-	print(delta)
+	num += PI/64
+	if num > 2*PI:
+		num = 0
+	super.move(Vector2(0, sin(num)) * 50)
 
 func _on_timer_timeout():
 	if(enemy_in_area()): 
