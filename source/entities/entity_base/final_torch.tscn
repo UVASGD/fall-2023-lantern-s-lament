@@ -1,35 +1,33 @@
-[gd_scene load_steps=6 format=3 uid="uid://c6pb8bf2xc05a"]
+[gd_scene load_steps=5 format=3 uid="uid://c6pb8bf2xc05a"]
 
-[ext_resource type="PackedScene" uid="uid://b5nwx7lojc88" path="res://source/entities/entity_base/hurtbox.tscn" id="1_s6k7o"]
 [ext_resource type="Script" path="res://source/entities/entity_base/final_torch.gd" id="2_24mbv"]
 [ext_resource type="Texture2D" uid="uid://dfrfd7ilpoyg5" path="res://assets/torchFinal.png" id="3_di8vh"]
-[ext_resource type="Texture2D" uid="uid://nnkf6uinjgkp" path="res://assets/lightTexture.png" id="4_o667p"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_66vh0"]
+size = Vector2(296, 136)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_poff2"]
 size = Vector2(120, 96)
 
-[node name="FinalTorch" instance=ExtResource("1_s6k7o")]
-modulate = Color(1, 1, 1, 1)
+[node name="FinalTorch" type="StaticBody2D"]
 y_sort_enabled = true
-collision_layer = 16
-collision_mask = 6
+collision_mask = 2
 script = ExtResource("2_24mbv")
 
-[node name="CollisionShape2D" parent="." index="0"]
-position = Vector2(0, 33)
-shape = SubResource("RectangleShape2D_poff2")
+[node name="Collision" type="CollisionShape2D" parent="."]
+position = Vector2(0, 150)
+shape = SubResource("RectangleShape2D_66vh0")
 
-[node name="Sprite2D" type="Sprite2D" parent="." index="1"]
+[node name="Area2D" type="Area2D" parent="."]
+collision_layer = 16
+collision_mask = 2
+
+[node name="Sprite2D" type="Sprite2D" parent="Area2D"]
 texture = ExtResource("3_di8vh")
 hframes = 5
 
-[node name="PointLight2D" type="PointLight2D" parent="." index="2"]
-position = Vector2(0, 38)
-blend_mode = 2
-texture = ExtResource("4_o667p")
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+position = Vector2(0, 33)
+shape = SubResource("RectangleShape2D_poff2")
 
-[node name="Timer" type="Timer" parent="." index="3"]
-wait_time = 0.15
-
-[connection signal="area_entered" from="." to="." method="_on_area_entered" flags=18]
-[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
+[connection signal="area_entered" from="Area2D" to="." method="_on_area_2d_area_entered"]

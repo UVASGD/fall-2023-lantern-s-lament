@@ -11,6 +11,7 @@ func _ready():
 func _physics_process(delta):
 	super._physics_process(delta)
 	var distance = player.global_position.distance_to(global_position)
+	move(Vector2(0,0))
 	cooldown -= delta
 	if (distance < sight_range && cooldown <= 0):
 		cast_projectile()
