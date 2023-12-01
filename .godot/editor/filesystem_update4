@@ -5,3 +5,5 @@ res://source/entities/player/player.tscn
 res://source/entities/enemies/spikes.tscn
 res://source/entities/traps/dart_trap.tscn
 res://source/entities/traps/dart_new.tscn
+res://source/entities/enemies/moth.gd
+res://source/entities/enemies/moth.tscn
