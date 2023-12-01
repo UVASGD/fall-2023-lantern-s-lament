@@ -183,7 +183,7 @@ func setup_stats():
 	max_hp = 100
 	super._ready()
 	hitbox.damage = 999
-	global_position = CENTER
+	# global_position = CENTER
 	hurtbox.add_to_group("player")
 	hitbox.add_to_group("player")
 
