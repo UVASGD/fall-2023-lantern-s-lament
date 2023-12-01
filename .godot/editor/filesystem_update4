@@ -1,5 +1,6 @@
-res://source/entities/enemies/enemy_test.tscn
+res://source/levels/SpencerLevel.tscn
 res://source/entities/entity_base/hitbox.gd
+res://source/entities/enemies/enemy_test.tscn
 res://source/entities/enemies/oil_pickup.tscn
 res://source/entities/player/player.tscn
 res://source/entities/enemies/eol_monster.tscn
@@ -9,5 +10,4 @@ res://source/entities/entity_base/final_torch.tscn
 res://source/interface/side_menu.tscn
 res://source/entities/enemies/enemy_base.tscn
 res://source/entities/enemies/spikes.tscn
-res://source/levels/SpencerLevel.tscn
 res://source/entities/player/player.gd
