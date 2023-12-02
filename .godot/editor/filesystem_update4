@@ -1,6 +1,6 @@
-res://source/levels/main_scene.tscn
-res://source/entities/entity_base/hitbox.gd
 res://source/entities/player/player.tscn
+res://source/entities/entity_base/hitbox.gd
+res://source/levels/main_scene.tscn
 res://source/interface/side_menu.tscn
 res://source/entities/enemies/enemy_test_h.tscn
 res://source/entities/enemies/enemy_test.tscn
@@ -12,5 +12,6 @@ res://source/entities/enemies/eol_monster.tscn
 res://source/entities/enemies/lore_bit.tscn
 res://source/entities/enemies/enemy_base.tscn
 res://source/entities/enemies/spikes.tscn
-res://source/entities/enemies/moth.gd
+res://source/interface/main_menu_buttons.tscn
+res://source/entities/player/player.gd
 res://source/interface/side_menu.gd

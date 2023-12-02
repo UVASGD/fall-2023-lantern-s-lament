@@ -19,7 +19,7 @@ func _physics_process(delta):
 	move(speed * dir)
 
 func _on_timer_timeout():
-	if(enemy_in_area()): 
+	if(enemy_in_area()):
 		nav_agent.target_position = player.global_position
 	elif(self.global_position.distance_to(tetherCords) >= range):
 		nav_agent.target_position = tetherCords
