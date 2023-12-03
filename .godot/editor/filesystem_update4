@@ -21,3 +21,7 @@ res://source/entities/enemies/enemy_caster.tscn
 res://source/entities/enemies/enemy_caster.gd
 res://source/entities/enemies/projectile_caster.tscn
 res://source/entities/enemies/projectile_caster.gd
+res://source/entities/traps/dart_trap.tscn
+res://source/entities/traps/dart_trap.gd
+res://source/entities/player/player.gd
+res://source/entities/traps/dart_new.tscn

@@ -2,11 +2,16 @@ extends StaticBody2D
 
 @onready var detection := $DetectionArea
 @export var dart : PackedScene
-@onready var player = get_tree().get_root().get_node("MainScene/Player") as Player
+@onready var player = get_parent().get_node("Player")
 @onready var outlet := $Outlet
 @onready var timer := $Timer
+@onready var bushSprite = $BushSprite
+@onready var barrelSprite = $BarrelSprite
 
 var is_active := false
+
+func _ready():
+	bushSprite.rotation = global_rotation * -1
 
 func shoot() -> void:
 	var dart_instance := dart.instantiate()
@@ -26,6 +31,5 @@ func _on_detection_area_body_exited(body):
 		is_active = false
 
 func _on_timer_timeout():
-	print("timer end")
 	if is_active:
 		shoot()

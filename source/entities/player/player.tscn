@@ -345,7 +345,7 @@ states/Move/position = Vector2(441.5, 99.75)
 states/Roll/node = SubResource("AnimationNodeBlendSpace2D_v3sim")
 states/Roll/position = Vector2(380.1, 195.967)
 transitions = ["Start", "Idle", SubResource("AnimationNodeStateMachineTransition_m4sh5"), "Idle", "Move", SubResource("AnimationNodeStateMachineTransition_3bvch"), "Move", "Idle", SubResource("AnimationNodeStateMachineTransition_s71id"), "Idle", "Roll", SubResource("AnimationNodeStateMachineTransition_ndc72"), "Roll", "Idle", SubResource("AnimationNodeStateMachineTransition_aw8i3"), "Move", "Roll", SubResource("AnimationNodeStateMachineTransition_nwhse"), "Roll", "Move", SubResource("AnimationNodeStateMachineTransition_2tmq5")]
-graph_offset = Vector2(-67.7999, -35.0325)
+graph_offset = Vector2(-93.7949, 35.0325)
 
 [sub_resource type="AnimationNodeStateMachinePlayback" id="AnimationNodeStateMachinePlayback_1i2eb"]
 
@@ -414,7 +414,7 @@ tree_root = SubResource("AnimationNodeStateMachine_enxu5")
 anim_player = NodePath("../AnimationPlayer")
 active = true
 parameters/playback = SubResource("AnimationNodeStateMachinePlayback_1i2eb")
-parameters/Idle/blend_position = Vector2(0.00137925, -0.00239658)
+parameters/Idle/blend_position = Vector2(0.000637293, 0.00239658)
 parameters/Move/blend_position = Vector2(0, 0)
 parameters/Roll/blend_position = Vector2(0, 0)
 
