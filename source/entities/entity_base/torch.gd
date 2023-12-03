@@ -1,36 +1,29 @@
-extends Area2D
+extends StaticBody2D
 
-@onready var sprite = $Sprite2D
-@onready var light = $PointLight2D
-@onready var timer = $Timer
+@onready var sprite = $Area2D/Sprite2D
 @onready var lit = false
 @onready var player = get_parent().get_node("Player")
 @onready var final_torch = get_parent().get_node("FinalTorch")
 @onready var light_scale : float = 0.0
 @onready var flicker_scale : float = 0.0
 
+@onready var animation_offset = 0
+
 func _ready():
 	z_index = 1
-
-func _physics_process(delta):
+	
+func _physics_process(_delta):
 	if lit:
-		var tween = create_tween()
-		tween.tween_property(self, "light_scale", 10*flicker_scale, 0.4)
-	light.texture_scale = light_scale
+		animation_offset += 1
+		if animation_offset >= 10:
+			if sprite.frame >= 4: sprite.frame = 2
+			else: sprite.frame += 1
+			animation_offset = 0
 
-func _on_area_entered(area):
-	var is_player : bool = (area.get_parent() == player)
-	var is_player_ghost : bool = !(area.get_parent().get("glow") == null)
+func _on_area_2d_area_entered(area):
 	if !lit:
-			if(is_player && player.light_dim == 0):
-				lit = true
-				timer.start()
-			if(is_player_ghost):
-				if(area.get_parent().glow == 1):
-					lit = true
-					timer.start()
-					area.get_parent().cur_hp = 0
-		#torch.light()
+		lit = true
+		sprite.frame += 1
 
 func are_lit():
 	if !lit: final_torch.torches_lit = false

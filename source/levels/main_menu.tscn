@@ -1,11 +1,14 @@
-[gd_scene load_steps=3 format=3 uid="uid://b76iovfwu8nl8"]
+[gd_scene load_steps=5 format=3 uid="uid://b76iovfwu8nl8"]
 
 [ext_resource type="PackedScene" uid="uid://bhx0hcjgqq0j7" path="res://source/interface/main_menu_buttons.tscn" id="1_vd7b6"]
 [ext_resource type="Texture2D" uid="uid://da41xvjske7ic" path="res://assets/logo.png" id="1_x2wsk"]
+[ext_resource type="Texture2D" uid="uid://cd62idyplyhcs" path="res://assets/mainmenu.png" id="3_bbrrl"]
+[ext_resource type="Texture2D" uid="uid://bvjoh56laimq2" path="res://assets/menutorch.png" id="4_uxssl"]
 
 [node name="MainMenu" type="Node2D"]
 
 [node name="GameLogo" type="Sprite2D" parent="."]
+visible = false
 position = Vector2(574, 192)
 scale = Vector2(0.547, 0.547)
 texture = ExtResource("1_x2wsk")
@@ -15,13 +18,27 @@ custom_minimum_size = Vector2(50, 0)
 anchors_preset = 0
 anchor_right = 0.0
 anchor_bottom = 0.0
-offset_left = 472.0
-offset_top = 339.0
-offset_right = 522.0
-offset_bottom = 339.0
+offset_left = 650.0
+offset_top = 375.0
+offset_right = 700.0
+offset_bottom = 375.0
 grow_horizontal = 1
 grow_vertical = 1
 scale = Vector2(2.776, 2.776)
 
 [node name="Camera2D" type="Camera2D" parent="."]
 position = Vector2(575, 325)
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+show_behind_parent = true
+position = Vector2(575, 325)
+scale = Vector2(0.45, 0.45)
+texture = ExtResource("3_bbrrl")
+
+[node name="torch" type="Sprite2D" parent="."]
+modulate = Color(1, 0.870588, 0.745098, 1)
+position = Vector2(446, 172)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("4_uxssl")
+hframes = 5
+frame = 2

@@ -1,19 +1,21 @@
-[gd_scene load_steps=2 format=3 uid="uid://badudy5wg1wt4"]
+[gd_scene load_steps=3 format=3 uid="uid://badudy5wg1wt4"]
 
+[ext_resource type="Texture2D" uid="uid://381k3tp5u2o0" path="res://assets/popup.png" id="2_hgoor"]
 [ext_resource type="Script" path="res://source/interface/lore_menu.gd" id="2_m7qop"]
 
 [node name="LoreMenu" type="ColorRect"]
 process_mode = 3
 offset_right = 900.0
 offset_bottom = 650.0
+color = Color(1, 1, 1, 0)
 script = ExtResource("2_m7qop")
 
 [node name="Label" type="Label" parent="."]
 modulate = Color(0, 0, 0, 1)
 layout_mode = 0
-offset_left = 48.0
-offset_top = 40.0
-offset_right = 856.0
+offset_left = 96.0
+offset_top = 200.0
+offset_right = 792.0
 offset_bottom = 648.0
 text = "test text: Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
 autowrap_mode = 2
@@ -25,5 +27,11 @@ offset_top = 512.0
 offset_right = 608.0
 offset_bottom = 552.0
 text = "Click to exit"
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+show_behind_parent = true
+position = Vector2(448, 312)
+scale = Vector2(0.9, 0.9)
+texture = ExtResource("2_hgoor")
 
 [connection signal="pressed" from="Button" to="." method="_on_button_pressed"]

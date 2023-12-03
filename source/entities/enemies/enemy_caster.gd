@@ -15,7 +15,6 @@ func _ready():
 	hitbox.damage = 50
 
 func _physics_process(delta):
-	super._physics_process(delta)
 	distance = player.global_position.distance_to(global_position)
 	cooldown -= delta
 	if (distance < sight_range && cooldown <= 0):

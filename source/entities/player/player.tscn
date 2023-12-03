@@ -238,8 +238,8 @@ _data = {
 }
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_3pykv"]
-radius = 58.0
-height = 210.0
+radius = 28.0
+height = 124.0
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_qgl3e"]
 radius = 58.0
@@ -375,7 +375,8 @@ collision_layer = 2
 collision_mask = 4
 
 [node name="CollisionShape2D" parent="Hurtbox" index="0"]
-position = Vector2(2.08165e-12, 2.08165e-12)
+position = Vector2(-1, 81)
+rotation = 1.59195
 shape = SubResource("CapsuleShape2D_3pykv")
 
 [node name="Hitbox" parent="." instance=ExtResource("4_ce4gw")]
@@ -428,6 +429,10 @@ autostart = true
 
 [node name="RollAnimationTimer" type="Timer" parent="."]
 wait_time = 0.3
+
+[node name="EndTimer" type="Timer" parent="."]
+wait_time = 2.0
+one_shot = true
 
 [connection signal="area_entered" from="Hurtbox" to="." method="_on_hurtbox_area_entered"]
 [connection signal="timeout" from="FlickerTimer" to="." method="_on_flicker_timer_timeout"]

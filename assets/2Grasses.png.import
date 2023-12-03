@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://fmveighusmbr"
-path="res://.godot/imported/sweeperPing.png-9e86fa7f4dc2774ec3efafa830aae440.ctex"
+uid="uid://b0tqkh8uf7hc2"
+path="res://.godot/imported/2Grasses.png-5ae0507640e2776279f2c8a00264999c.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/sweeperPing.png"
-dest_files=["res://.godot/imported/sweeperPing.png-9e86fa7f4dc2774ec3efafa830aae440.ctex"]
+source_file="res://assets/2Grasses.png"
+dest_files=["res://.godot/imported/2Grasses.png-5ae0507640e2776279f2c8a00264999c.ctex"]
 
 [params]
 

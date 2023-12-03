@@ -1,0 +1,22 @@
+[gd_scene load_steps=4 format=3 uid="uid://b3j0chwkrxtym"]
+
+[ext_resource type="Script" path="res://source/entities/enemies/spin_trap_spinner.gd" id="1_fn6o8"]
+[ext_resource type="Texture2D" uid="uid://da41xvjske7ic" path="res://assets/logo.png" id="2_hy4yi"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_bm8c6"]
+size = Vector2(322, 34)
+
+[node name="Hitbox" type="Area2D"]
+modulate = Color(1, 0.0627451, 0, 1)
+collision_layer = 4
+collision_mask = 2
+script = ExtResource("1_fn6o8")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(161, -1)
+shape = SubResource("RectangleShape2D_bm8c6")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(227, 19.5)
+scale = Vector2(0.41375, 0.3075)
+texture = ExtResource("2_hy4yi")
