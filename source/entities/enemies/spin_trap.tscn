@@ -1,0 +1,21 @@
+[gd_scene load_steps=4 format=3 uid="uid://b0mhlv5pix0qn"]
+
+[ext_resource type="Texture2D" uid="uid://bcoxeak4h8moi" path="res://assets/player.png" id="1_3gkhk"]
+[ext_resource type="PackedScene" uid="uid://b3j0chwkrxtym" path="res://source/entities/enemies/spin_trap_spinner.tscn" id="2_yw8b8"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_rfhu7"]
+size = Vector2(133, 142)
+
+[node name="SpinTrap" type="StaticBody2D"]
+collision_mask = 2
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(-1.5, 1)
+shape = SubResource("RectangleShape2D_rfhu7")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(10, 9)
+scale = Vector2(0.239583, 0.205729)
+texture = ExtResource("1_3gkhk")
+
+[node name="Hitbox" parent="." instance=ExtResource("2_yw8b8")]

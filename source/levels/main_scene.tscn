@@ -1,4 +1,4 @@
-[gd_scene load_steps=27 format=3 uid="uid://bq1vjkl6o4vr"]
+[gd_scene load_steps=28 format=3 uid="uid://bq1vjkl6o4vr"]
 
 [ext_resource type="PackedScene" uid="uid://byurxh2xitstp" path="res://source/interface/side_menu.tscn" id="2_opm2i"]
 [ext_resource type="Texture2D" uid="uid://dsjr5ebfaj3xs" path="res://assets/blankIsoBox.png" id="3_207d2"]
@@ -17,6 +17,7 @@
 [ext_resource type="PackedScene" uid="uid://dxyvkmxfplod5" path="res://source/entities/enemies/spikes.tscn" id="14_3viij"]
 [ext_resource type="PackedScene" uid="uid://bueqcuv2y3uwq" path="res://source/entities/enemies/enemy_boo.tscn" id="16_bwgu3"]
 [ext_resource type="PackedScene" uid="uid://7lilj3kx2h2" path="res://source/levels/exit_area.tscn" id="17_hxx67"]
+[ext_resource type="PackedScene" uid="uid://b0mhlv5pix0qn" path="res://source/entities/enemies/spin_trap.tscn" id="18_38hjc"]
 
 [sub_resource type="NavigationPolygon" id="NavigationPolygon_7oxnf"]
 vertices = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
@@ -170,3 +171,6 @@ position = Vector2(300, -300)
 [node name="ExitArea" parent="." instance=ExtResource("17_hxx67")]
 position = Vector2(300, 0)
 next_scene = "res://source/levels/main_menu.tscn"
+
+[node name="SpinTrap" parent="." instance=ExtResource("18_38hjc")]
+position = Vector2(1000, 0)

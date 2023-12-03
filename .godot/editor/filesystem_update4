@@ -8,3 +8,8 @@ res://source/entities/entity_base/final_torch.tscn
 res://source/interface/side_menu.tscn
 res://source/levels/main_menu.tscn
 res://source/entities/enemies/enemy_boo.tscn
+res://source/entities/enemies/spin_trap.tscn
+res://source/entities/enemies/spin_trap_spinner.tscn
+res://source/entities/enemies/spin_trap_spinner.gd
+res://source/levels/exit_area.tscn
+res://source/entities/enemies/projectile_caster.tscn
