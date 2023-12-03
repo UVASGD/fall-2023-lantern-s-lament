@@ -2,16 +2,18 @@
 
 [ext_resource type="PackedScene" uid="uid://6y3pqlr36j2" path="res://source/entities/enemies/enemy_base.tscn" id="1_qbq22"]
 [ext_resource type="Script" path="res://source/entities/enemies/enemy_test.gd" id="2_dbfv1"]
-[ext_resource type="Texture2D" uid="uid://dlt1ce4ltukp7" path="res://assets/testEnemy.png" id="2_qytnj"]
+[ext_resource type="Texture2D" uid="uid://cbx71nh16huy5" path="res://assets/ghost1_spritesheet.png" id="3_7df1c"]
 
 [node name="EnemyTest" instance=ExtResource("1_qbq22")]
 wall_min_slide_angle = 0.0
 script = ExtResource("2_dbfv1")
 tetherCords = Vector2(0, 0)
-range = 2000.0
 
 [node name="Sprite2D" parent="." index="0"]
-texture = ExtResource("2_qytnj")
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("3_7df1c")
+hframes = 4
+vframes = 2
 
 [node name="NavigationAgent2D" type="NavigationAgent2D" parent="." index="5"]
 debug_path_custom_line_width = 4.0
@@ -20,7 +22,12 @@ debug_path_custom_line_width = 4.0
 wait_time = 0.1
 autostart = true
 
+[node name="AnimationTimer" type="Timer" parent="." index="7"]
+wait_time = 0.2
+autostart = true
+
 [connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
+[connection signal="timeout" from="AnimationTimer" to="." method="_on_animation_timer_timeout"]
 
 [editable path="Hurtbox"]
 [editable path="Hitbox"]

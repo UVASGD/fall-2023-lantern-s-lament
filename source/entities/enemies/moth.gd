@@ -3,7 +3,7 @@ extends EnemyBase
 @onready var nav_agent := $NavigationAgent2D as NavigationAgent2D
 @onready var dir : Vector2 = Vector2.ZERO
 @export var tetherCords : Vector2 = Vector2.ZERO
-@export var range : float = 2000.0
+@onready var range : float = 1000.0
 @onready var randomCords : Vector2 = Vector2.ZERO
 
 func _ready():

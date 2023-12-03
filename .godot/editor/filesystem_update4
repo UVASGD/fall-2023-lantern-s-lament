@@ -1,9 +1,9 @@
-res://source/entities/player/player.tscn
+res://source/entities/enemies/enemy_test.tscn
 res://source/entities/entity_base/hitbox.gd
 res://source/levels/main_scene.tscn
+res://source/entities/player/player.tscn
 res://source/interface/side_menu.tscn
 res://source/entities/enemies/enemy_test_h.tscn
-res://source/entities/enemies/enemy_test.tscn
 res://source/entities/entity_base/torch.tscn
 res://source/entities/entity_base/final_torch.tscn
 res://source/entities/enemies/moth.tscn
@@ -13,5 +13,11 @@ res://source/entities/enemies/lore_bit.tscn
 res://source/entities/enemies/enemy_base.tscn
 res://source/entities/enemies/spikes.tscn
 res://source/interface/main_menu_buttons.tscn
-res://source/entities/player/player.gd
+res://source/entities/enemies/enemy_test.gd
 res://source/interface/side_menu.gd
+res://source/entities/enemies/enemy_test_h.gd
+res://source/entities/enemies/moth.gd
+res://source/entities/enemies/enemy_caster.tscn
+res://source/entities/enemies/enemy_caster.gd
+res://source/entities/enemies/projectile_caster.tscn
+res://source/entities/enemies/projectile_caster.gd
