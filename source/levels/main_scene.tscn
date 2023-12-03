@@ -20,8 +20,14 @@
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_ktvy2"]
 texture = ExtResource("3_ll2j8")
 0:0/0 = 0
+0:0/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+0:0/0/physics_layer_0/angular_velocity = 0.0
 1:0/0 = 0
+1:0/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+1:0/0/physics_layer_0/angular_velocity = 0.0
 0:1/0 = 0
+0:1/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+0:1/0/physics_layer_0/angular_velocity = 0.0
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_1srpv"]
 texture = ExtResource("3_yo02d")
@@ -29,6 +35,8 @@ texture_region_size = Vector2i(28, 14)
 0:3/size_in_atlas = Vector2i(3, 3)
 0:3/next_alternative_id = 2
 0:3/0 = 0
+0:3/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+0:3/0/physics_layer_0/angular_velocity = 0.0
 
 [sub_resource type="OccluderPolygon2D" id="OccluderPolygon2D_utcax"]
 polygon = PackedVector2Array(0, -22.5, -13.5, -15.5, 0, -8.5, 13.5, -15.5)

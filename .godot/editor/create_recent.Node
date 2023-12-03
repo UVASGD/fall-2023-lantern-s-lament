@@ -1,12 +1,12 @@
-Node2D
-CollisionShape2D
-PointLight2D
-AnimationTree
+Sprite2D
 StaticBody2D
-Area2D
+CollisionShape2D
 AnimationTree
 Timer
+Area2D
 HitboxClass
+Node2D
+Node
 Button
 Label
 ColorRect
