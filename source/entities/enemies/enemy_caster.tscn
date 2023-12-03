@@ -1,21 +1,39 @@
-[gd_scene load_steps=4 format=3 uid="uid://crd1g0g5yq3bm"]
+[gd_scene load_steps=5 format=3 uid="uid://crd1g0g5yq3bm"]
 
 [ext_resource type="PackedScene" uid="uid://6y3pqlr36j2" path="res://source/entities/enemies/enemy_base.tscn" id="1_1mkbg"]
 [ext_resource type="Script" path="res://source/entities/enemies/enemy_caster.gd" id="2_o2t1t"]
-[ext_resource type="Texture2D" uid="uid://dlt1ce4ltukp7" path="res://assets/testEnemy.png" id="3_iv5f3"]
+[ext_resource type="Texture2D" uid="uid://jquodbrtgta4" path="res://assets/ghost2_spritesheet.png" id="3_ofgkt"]
+[ext_resource type="Texture2D" uid="uid://nnkf6uinjgkp" path="res://assets/lightTexture.png" id="4_0mewc"]
 
 [node name="EnemyCaster" instance=ExtResource("1_1mkbg")]
 script = ExtResource("2_o2t1t")
 
 [node name="Sprite2D" parent="." index="0"]
-scale = Vector2(2, 2)
-texture = ExtResource("3_iv5f3")
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("3_ofgkt")
+hframes = 4
+vframes = 2
+
+[node name="CollisionShape2D" parent="." index="1"]
+position = Vector2(1, 15.5)
 
 [node name="CollisionShape2D" parent="Hurtbox" index="0"]
+position = Vector2(5, 16)
 scale = Vector2(2, 2)
 
 [node name="CollisionShape2D" parent="Hitbox" index="0"]
 scale = Vector2(2, 2)
+
+[node name="Timer" type="Timer" parent="." index="5"]
+wait_time = 0.2
+autostart = true
+
+[node name="PointLight2D" type="PointLight2D" parent="." index="6"]
+position = Vector2(0, -88)
+blend_mode = 2
+texture = ExtResource("4_0mewc")
+
+[connection signal="timeout" from="Timer" to="." method="_on_animation_timer_timeout"]
 
 [editable path="Hurtbox"]
 [editable path="Hitbox"]

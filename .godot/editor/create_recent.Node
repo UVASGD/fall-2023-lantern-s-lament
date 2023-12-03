@@ -1,4 +1,10 @@
 Sprite2D
+PointLight2D
+Timer
+HitboxClass
+Area2D
+CollisionShape2D
+AnimationTree
 StaticBody2D
 CollisionShape2D
 AnimationTree

@@ -11,7 +11,7 @@ extends EnemyBase
 @onready var state_machine = animation_tree.get("parameters/playback")
 
 @export var tetherCords : Vector2 = Vector2.ZERO
-@export var range : float = 2000.0
+@onready var range : float = 2000.0
 @onready var randomCords : Vector2 = Vector2.ZERO
 
 func _ready():

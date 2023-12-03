@@ -9,6 +9,7 @@ class_name Player
 @onready var innermost_light = $InnermostLight
 @onready var timer = $RollTimer
 @onready var flickertimer = $FlickerTimer
+@onready var roll_anim_timer = $RollAnimationTimer
 @onready var animation_tree = $AnimationTree
 
 @onready var side_menu = get_parent().get_node("Menu/SideMenu")
@@ -38,6 +39,7 @@ const CENTER = Vector2(0.0, 0.0)
 @onready var direction : Vector2 = Vector2(0, 0)
 @onready var boost = 0.0
 @onready var state_machine = animation_tree.get("parameters/playback")
+@onready var rolling : float = false
 
 #CAMERA VARIABLES
 @onready var max_zoom : Vector2 = Vector2(0.4, 0.4) #0.4
@@ -71,7 +73,6 @@ func _physics_process(delta):
 			Input.get_action_strength("rotate_right") - Input.get_action_strength("rotate_left"),
 			Input.get_action_strength("move_down") - Input.get_action_strength("move_up")
 		)
-	
 	speed += direction*(50+boost)
 	speed *= 0.875
 	boost *= 0.9
@@ -153,6 +154,8 @@ func _input(event):
 	if game_start and timer.is_stopped() and event.is_action_pressed("roll"):
 		timer.start()
 		boost = 150
+		rolling = true
+		roll_anim_timer.start()
 		#make so that it rolls when stationary
 		if direction.x == 0 and direction.y == 0:
 			if sprite.frame < 4:
@@ -234,8 +237,19 @@ func update_animation():
 	if(direction != Vector2.ZERO):
 		animation_tree.set("parameters/Idle/blend_position", direction)
 		animation_tree.set("parameters/Move/blend_position", direction)
-		state_machine.travel("Move")
+		animation_tree.set("parameters/Roll/blend_position", direction)
+		if(!rolling): state_machine.travel("Move")
+		else: state_machine.travel("Roll")
 	else: state_machine.travel("Idle")
 
 func _on_flicker_timer_timeout():
 	flicker_scale = randf()*0.1+0.95
+
+func _on_roll_animation_timer_timeout():
+	rolling = false
+
+#func _input(event):
+#	if event is InputEventMouseButton:
+#		if event.is_pressed():
+#			if event.button_index == MOUSE_BUTTON_WHEEL_DOWN:
+#				pass

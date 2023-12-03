@@ -1,4 +1,6 @@
 extends StaticBody2D
+
+@onready var sprite = $Sprite2D
 @onready var hitbox = $Hitbox
 @onready var speed = 300
 @onready var target_pos
@@ -20,3 +22,9 @@ func init(target_vector):
 func _on_hitbox_area_entered(area):
 	#print("HIT")
 	queue_free()
+
+func _on_animation_timer_timeout():
+	if(target_pos.x < 0): sprite.flip_h = true
+	else: sprite.flip_h = false
+	if(sprite.frame == 0): sprite.frame = 1
+	else: sprite.frame = 0

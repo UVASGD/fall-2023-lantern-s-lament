@@ -1,42 +1,53 @@
-[gd_scene load_steps=6 format=3 uid="uid://ddomnqqnj7o6o"]
+[gd_scene load_steps=7 format=3 uid="uid://ddomnqqnj7o6o"]
 
-[ext_resource type="Texture2D" uid="uid://dsjr5ebfaj3xs" path="res://assets/blankIsoBox.png" id="1_ai4dw"]
 [ext_resource type="Script" path="res://source/entities/traps/dart_trap.gd" id="1_vxq32"]
 [ext_resource type="PackedScene" uid="uid://b8ycn3jyuosn3" path="res://source/entities/traps/dart_new.tscn" id="2_w5of2"]
+[ext_resource type="Texture2D" uid="uid://dkgmvm67k7ctk" path="res://assets/barrel.png" id="3_fp7ql"]
+[ext_resource type="Texture2D" uid="uid://g8otunw4voyw" path="res://assets/random_bush_lol.png" id="4_vpp4h"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_8l218"]
-size = Vector2(765.422, 19.4)
+size = Vector2(33.6, 11.2)
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_031lg"]
-size = Vector2(28, 30)
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_wjuoh"]
+radius = 14.0
+height = 37.2
 
 [node name="DartTrap" type="StaticBody2D"]
+position = Vector2(24, 2.08165e-12)
 scale = Vector2(5, 5)
 collision_mask = 2
 script = ExtResource("1_vxq32")
 dart = ExtResource("2_w5of2")
 
-[node name="Sprite2D" type="Sprite2D" parent="."]
-texture = ExtResource("1_ai4dw")
+[node name="BarrelSprite" type="Sprite2D" parent="."]
+position = Vector2(22.8, 0)
+rotation = 1.5708
+scale = Vector2(0.5, 1)
+texture = ExtResource("3_fp7ql")
+
+[node name="BushSprite" type="Sprite2D" parent="."]
+scale = Vector2(0.4, 0.4)
+texture = ExtResource("4_vpp4h")
 
 [node name="DetectionArea" type="Area2D" parent="."]
 collision_layer = 0
 collision_mask = 2
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="DetectionArea"]
-position = Vector2(31.2, -0.0999994)
+position = Vector2(51.4, 5.72204e-07)
 shape = SubResource("RectangleShape2D_8l218")
 debug_color = Color(0.960784, 0, 0.517647, 0.419608)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(4.76837e-07, 5.24521e-07)
-shape = SubResource("RectangleShape2D_031lg")
+rotation = 1.5708
+shape = SubResource("CapsuleShape2D_wjuoh")
 
 [node name="Outlet" type="Node2D" parent="."]
-position = Vector2(13.2, 0.2)
+position = Vector2(34.4, 2.38419e-07)
 
 [node name="Timer" type="Timer" parent="."]
-wait_time = 0.75
+wait_time = 1.5
 
 [connection signal="body_entered" from="DetectionArea" to="." method="_on_detection_area_body_entered"]
 [connection signal="body_exited" from="DetectionArea" to="." method="_on_detection_area_body_exited"]
