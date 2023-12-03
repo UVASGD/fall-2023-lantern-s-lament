@@ -7,6 +7,7 @@ extends StaticBody2D
 @onready var timer := $Timer
 @onready var bushSprite = $BushSprite
 @onready var barrelSprite = $BarrelSprite
+@onready var dart_sound = $Dart
 
 var is_active := false
 
@@ -14,6 +15,7 @@ func _ready():
 	bushSprite.rotation = global_rotation * -1
 
 func shoot() -> void:
+	dart_sound.play()
 	var dart_instance := dart.instantiate()
 	dart_instance.position = outlet.global_position
 	dart_instance.rotation = global_rotation

@@ -1,7 +1,9 @@
-[gd_scene load_steps=5 format=3 uid="uid://c6pb8bf2xc05a"]
+[gd_scene load_steps=7 format=3 uid="uid://c6pb8bf2xc05a"]
 
 [ext_resource type="Script" path="res://source/entities/entity_base/final_torch.gd" id="2_24mbv"]
 [ext_resource type="Texture2D" uid="uid://dfrfd7ilpoyg5" path="res://assets/torchFinal.png" id="3_di8vh"]
+[ext_resource type="AudioStream" uid="uid://bhrxygwnjbr45" path="res://assets/LightSound.wav" id="3_pq8b0"]
+[ext_resource type="AudioStream" uid="uid://icg7vfutt8wt" path="res://assets/Roar.wav" id="4_y485e"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_66vh0"]
 size = Vector2(296, 136)
@@ -29,5 +31,12 @@ hframes = 5
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
 position = Vector2(0, 33)
 shape = SubResource("RectangleShape2D_poff2")
+
+[node name="Ignite" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("3_pq8b0")
+volume_db = -5.0
+
+[node name="Roar" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("4_y485e")
 
 [connection signal="area_entered" from="Area2D" to="." method="_on_area_2d_area_entered"]

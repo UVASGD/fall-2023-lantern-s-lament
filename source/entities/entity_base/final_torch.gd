@@ -8,6 +8,8 @@ extends StaticBody2D
 @onready var flicker_scale : float = 0.0
 
 @onready var animation_offset = 0
+@onready var ignite = $Ignite
+@onready var roar = $Roar
 
 @onready var monster : PackedScene = preload("res://source/entities/enemies/eol_monster.tscn")
 
@@ -33,6 +35,8 @@ func _on_area_2d_area_entered(area):
 		get_tree().call_group("torches", "are_lit")
 		if torches_lit:
 			lit = true
+			ignite.play()
+			roar.play()
 			sprite.frame += 1
 			var monster_inst = monster.instantiate()
 			get_tree().current_scene.call_deferred("add_child", monster_inst)

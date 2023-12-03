@@ -1,5 +1,6 @@
-Sprite2D
+AudioStreamPlayer
 AudioStreamPlayer2D
+Sprite2D
 Timer
 CollisionShape2D
 PointLight2D
@@ -29,14 +30,3 @@ TileMap
 DirectionalLight2D
 CanvasModulate
 AnimationPlayer
-VBoxContainer
-RichTextLabel
-CanvasLayer
-OptionButton
-Control
-HBoxContainer
-TextureButton
-CollisionPolygon2D
-Polygon2D
-Camera2D
-MarginContainer

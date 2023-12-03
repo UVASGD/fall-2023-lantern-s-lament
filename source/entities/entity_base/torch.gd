@@ -8,9 +8,11 @@ extends StaticBody2D
 @onready var flicker_scale : float = 0.0
 
 @onready var animation_offset = 0
+@onready var ignite = $Ignite
 
 func _ready():
 	z_index = 1
+	add_to_group("torches")
 	
 func _physics_process(_delta):
 	if lit:
@@ -23,6 +25,7 @@ func _physics_process(_delta):
 func _on_area_2d_area_entered(area):
 	if !lit:
 		lit = true
+		ignite.play()
 		sprite.frame += 1
 
 func are_lit():

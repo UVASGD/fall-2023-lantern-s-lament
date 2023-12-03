@@ -9,6 +9,7 @@ extends EnemyBase
 @onready var frame : int = 0
 @onready var frame_x : int = 0
 @onready var frame_y : int = 0
+@onready var cast = $Cast
 
 func _ready():
 	super._ready()
@@ -22,6 +23,7 @@ func _physics_process(delta):
 	
 func cast_projectile():
 	cooldown = 200
+	cast.play()
 	var projectile_inst = projectile.instantiate()
 	projectile_inst.init(((player.global_position - global_position).normalized()))
 	get_tree().current_scene.add_child(projectile_inst)
