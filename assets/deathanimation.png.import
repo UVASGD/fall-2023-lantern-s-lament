@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://fmveighusmbr"
-path="res://.godot/imported/sweeperPing.png-9e86fa7f4dc2774ec3efafa830aae440.ctex"
+uid="uid://b3barulud6m2t"
+path="res://.godot/imported/deathanimation.png-fb2598043a628d39541672f93b143774.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/sweeperPing.png"
-dest_files=["res://.godot/imported/sweeperPing.png-9e86fa7f4dc2774ec3efafa830aae440.ctex"]
+source_file="res://assets/deathanimation.png"
+dest_files=["res://.godot/imported/deathanimation.png-fb2598043a628d39541672f93b143774.ctex"]
 
 [params]
 

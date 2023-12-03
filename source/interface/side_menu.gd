@@ -8,9 +8,13 @@ extends ColorRect
 @onready var flame_animator = $FlameAnimator
 @onready var flame_sprite = $Flame
 @onready var lamp = $Lamp
+@onready var game_over = $GameOver
+@onready var black_out = $BlackOut
+@onready var woosh = $AudioStreamPlayer2D
 
 @onready var pause_menu : PackedScene = preload("res://source/interface/pause_menu.tscn")
 @onready var lore_menu : PackedScene = preload("res://source/interface/lore_menu.tscn")
+@onready var end_screen : PackedScene = preload("res://source/interface/end_screen.tscn")
 
 @onready var angle = 0.0
 @onready var swing_velocity = 0.2
@@ -58,7 +62,7 @@ func _physics_process(delta):
 	if(angle > PI/12): 
 		angle = PI/12
 		swing_acceleration = 0
-	if(angle < PI/-12):
+	if(angle < PI/-12): 
 		angle = PI/-12
 		swing_acceleration = 0
 	
@@ -68,9 +72,19 @@ func _physics_process(delta):
 	pos_translation_lamp = Vector2((-128*sin(angle)),(-128*sin(angle)*sin(angle/2)/sin((PI-angle)/2)))
 	pos_translation_flame = Vector2(((192 - flame_sprite.global_position.y)*sin(angle)),((192 - flame_sprite.global_position.y)*sin(angle)*sin(angle/2)/sin((PI-angle)/2)))
 	
-	flame_sprite.scale = Vector2(0.2*(player.cur_hp / 100.0), 0.2*(player.cur_hp / 100.0))
-	flame_sprite.global_position = Vector2((128 + (-3.5/95)*(100-player.cur_hp)), (320 + (46.0/95)*(100-player.cur_hp))) + pos_translation_flame
+	#flame_sprite.scale = Vector2(0.2*(100-player.cur_hp), 0.2*(100-player.cur_hp))
+	#flame_sprite.global_position = Vector2((128 + (-3.5/95)*(100-500*flame_sprite.scale.x)), (320 + (46.0/95)*(100-500*flame_sprite.scale.y))) + pos_translation_flame
+	
+	flame_sprite.scale = Vector2(0.0015*player.cur_hp+0.1, 0.0015*player.cur_hp+0.1)
+	flame_sprite.global_position = Vector2((128 + (-3.5/95)*(100-500*flame_sprite.scale.x)), (320 + (46.0/95)*(100-500*flame_sprite.scale.y))) + pos_translation_flame
 	flame_sprite.rotation = angle
 	
 	lamp.global_position = Vector2(128, 320) + pos_translation_lamp
 	lamp.rotation = angle
+	
+	if(flame_sprite.modulate == Color(255, 255, 255, 0)):
+		var end_inst = end_screen.instantiate()
+		add_child(end_inst)
+		end_inst.global_position = self.global_position + Vector2(256, 0)
+		end_inst.modulate.a = 0
+		flame_sprite.modulate = Color(255, 255, 0, 0)

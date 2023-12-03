@@ -1,4 +1,4 @@
-[gd_scene load_steps=21 format=3 uid="uid://cxv4v4rsxsank"]
+[gd_scene load_steps=25 format=3 uid="uid://cxv4v4rsxsank"]
 
 [ext_resource type="PackedScene" uid="uid://byurxh2xitstp" path="res://source/interface/side_menu.tscn" id="1_1ynfk"]
 [ext_resource type="Texture2D" uid="uid://boxhf5e38w71a" path="res://assets/blankIsoBox3.png" id="4_5odrp"]
@@ -7,6 +7,10 @@
 [ext_resource type="Texture2D" uid="uid://cpti5m2efj65o" path="res://assets/deadTree.png" id="6_a582r"]
 [ext_resource type="PackedScene" uid="uid://dlbg8myhg31ys" path="res://source/entities/player/player.tscn" id="6_ax5dv"]
 [ext_resource type="PackedScene" uid="uid://dd6xb02k621ou" path="res://source/entities/enemies/moth.tscn" id="7_lr2nj"]
+[ext_resource type="PackedScene" uid="uid://ots7hvuv3jgc" path="res://source/entities/enemies/enemy_test_h.tscn" id="8_s17py"]
+[ext_resource type="PackedScene" uid="uid://bmcrw2hbt2gdo" path="res://source/entities/enemies/enemy_test.tscn" id="9_4up81"]
+[ext_resource type="PackedScene" uid="uid://crd1g0g5yq3bm" path="res://source/entities/enemies/enemy_caster.tscn" id="10_um1r1"]
+[ext_resource type="PackedScene" uid="uid://ddomnqqnj7o6o" path="res://source/entities/traps/dart_trap.tscn" id="11_os5sw"]
 
 [sub_resource type="OccluderPolygon2D" id="OccluderPolygon2D_utcax"]
 polygon = PackedVector2Array(0, -22.5, -13.5, -15.5, 0, -8.5, 13.5, -15.5)
@@ -115,8 +119,6 @@ sources/7 = SubResource("TileSetAtlasSource_3mob0")
 
 [node name="Level1" type="Node2D"]
 
-[node name="Player" parent="." instance=ExtResource("6_ax5dv")]
-
 [node name="Menu" type="CanvasLayer" parent="."]
 process_mode = 3
 
@@ -140,5 +142,27 @@ layer_1/tile_data = PackedInt32Array(2818034, 3, 0, 2883570, 3, 0, 2949106, 3, 0
 [node name="CanvasModulate" type="CanvasModulate" parent="."]
 color = Color(0, 0, 0, 1)
 
+[node name="Player" parent="." instance=ExtResource("6_ax5dv")]
+position = Vector2(-104, -12)
+
 [node name="Moth" parent="." instance=ExtResource("7_lr2nj")]
 position = Vector2(-454, 1108)
+
+[node name="EnemyTestH" parent="." instance=ExtResource("8_s17py")]
+position = Vector2(171, 1057)
+
+[node name="EnemyTest" parent="." instance=ExtResource("9_4up81")]
+position = Vector2(669, 1091)
+
+[node name="EnemyCaster" parent="." instance=ExtResource("10_um1r1")]
+position = Vector2(-1076, 498)
+
+[node name="DartTrap" parent="." instance=ExtResource("11_os5sw")]
+position = Vector2(1455, 643)
+rotation = -2.87281
+
+[node name="CollisionShape2D" parent="DartTrap/DetectionArea" index="0"]
+position = Vector2(106.437, 0.715607)
+scale = Vector2(1, 1)
+
+[editable path="DartTrap"]
