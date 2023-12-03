@@ -3,13 +3,13 @@ extends StaticBody2D
 @onready var detection := $DetectionArea
 @export var dart : PackedScene
 @onready var player = get_tree().get_root().get_node("MainScene/Player") as Player
-@onready var outlet := $Outlet
-@onready var timer := $Timer
+@onready var outlet = $Outlet
+@onready var timer = $Timer
 
 var is_active := false
 
-func shoot() -> void:
-	var dart_instance := dart.instantiate()
+func shoot():
+	var dart_instance = dart.instantiate()
 	dart_instance.position = outlet.global_position
 	dart_instance.rotation = global_rotation
 	get_tree().root.add_child(dart_instance)

@@ -24,7 +24,6 @@ func _ready():
 	self.scale = Vector2(1, 1)
 
 func _physics_process(delta):
-	super._physics_process(delta)
 	queue_redraw()
 	
 	dir = to_local(nav_agent.get_next_path_position()).normalized()

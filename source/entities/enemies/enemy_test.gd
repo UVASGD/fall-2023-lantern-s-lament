@@ -15,7 +15,6 @@ func _ready():
 	super._ready()
 
 func _physics_process(delta):
-	super._physics_process(delta)
 	dir = to_local(nav_agent.get_next_path_position()).normalized()
 	move(speed * dir)
 

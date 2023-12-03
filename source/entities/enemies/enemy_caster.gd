@@ -23,4 +23,3 @@ func cast_projectile():
 	get_tree().current_scene.add_child(projectile_inst)
 	projectile_inst.global_position = Vector2(global_position.x, global_position.y)
 	projectile_inst.target_pos = ((player.global_position - global_position).normalized())
-	#print("Caster would cast projectile now")

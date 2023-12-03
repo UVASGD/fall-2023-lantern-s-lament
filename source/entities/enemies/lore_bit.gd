@@ -4,14 +4,10 @@ extends Area2D
 @onready var interact = menu.get_node("Interact")
 @export var heal_amount := 10
 var nearby = false
-# Called when the node enters the scene tree for the first time.
-func _ready():
-	pass # Replace with function body.
 
 func write(prop : String):
 	interact.text = prop + "\n"
 
-# Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(_delta):
 	if nearby:
 		interact.text = ""

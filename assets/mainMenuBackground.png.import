@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://csu6rmdlcy77o"
-path="res://.godot/imported/pixel-oil-droplet-isolated-vector-36623654.jpg-dc996591adb38e4b21a25af076a6e116.ctex"
+uid="uid://dvlloynglhwlo"
+path="res://.godot/imported/mainMenuBackground.png-f57f57f7504bb6285540934a0c47349b.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/pixel-oil-droplet-isolated-vector-36623654.jpg"
-dest_files=["res://.godot/imported/pixel-oil-droplet-isolated-vector-36623654.jpg-dc996591adb38e4b21a25af076a6e116.ctex"]
+source_file="res://assets/mainMenuBackground.png"
+dest_files=["res://.godot/imported/mainMenuBackground.png-f57f57f7504bb6285540934a0c47349b.ctex"]
 
 [params]
 

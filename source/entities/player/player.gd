@@ -11,7 +11,7 @@ class_name Player
 @onready var flickertimer = $FlickerTimer
 @onready var animation_tree = $AnimationTree
 
-@onready var side_menu = get_tree().get_root().get_node("MainScene/Menu/SideMenu")
+@onready var side_menu = get_parent().get_node("Menu/SideMenu")
 
 #ALL AIMING RELATED VARIABLES
 const CENTER = Vector2(0.0, 0.0)
@@ -184,7 +184,6 @@ func setup_stats():
 	max_hp = 100
 	super._ready()
 	hitbox.damage = 999
-	global_position = CENTER
 	hurtbox.add_to_group("player")
 	hitbox.add_to_group("player")
 
@@ -221,7 +220,7 @@ func _draw():
 
 	var x = Vector2(sin(back_angle) * 75, cos(back_angle) * 75)
 	
-	var y = Vector2(sin(back_angle + (move_angle/2)) * 200, cos(back_angle + (move_angle/2)) * 200)
+	var _y = Vector2(sin(back_angle + (move_angle/2)) * 200, cos(back_angle + (move_angle/2)) * 200)
 	
 	var occ_points = [CENTER, CENTER, CENTER]
 	if(move_angle > 0.009):
@@ -240,9 +239,3 @@ func update_animation():
 
 func _on_flicker_timer_timeout():
 	flicker_scale = randf()*0.1+0.95
-
-#func _input(event):
-#	if event is InputEventMouseButton:
-#		if event.is_pressed():
-#			if event.button_index == MOUSE_BUTTON_WHEEL_DOWN:
-#				pass

@@ -5,7 +5,7 @@
 [ext_resource type="PackedScene" uid="uid://b8ycn3jyuosn3" path="res://source/entities/traps/dart_new.tscn" id="2_w5of2"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_8l218"]
-size = Vector2(33.6, 19.4)
+size = Vector2(765.422, 19.4)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_031lg"]
 size = Vector2(28, 30)
