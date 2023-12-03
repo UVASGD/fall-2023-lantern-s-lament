@@ -163,6 +163,5 @@ rotation = -2.87281
 
 [node name="CollisionShape2D" parent="DartTrap/DetectionArea" index="0"]
 position = Vector2(106.437, 0.715607)
-scale = Vector2(1, 1)
 
 [editable path="DartTrap"]
