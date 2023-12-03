@@ -1,7 +1,11 @@
+/Users/haseebtahir/Documents/GitHub/lanterns-lament-fork/source/entities/entity_base
+res://source/entities/player
+res://source/entities/entity_base
+res://source/entities/enemies
+res://source/entities/traps
+/Users/haseebtahir/Documents/GitHub/lanterns-lament-fork/source/entities/enemies
+/Users/haseebtahir/Documents/GitHub/lanterns-lament-fork/source/interface
 res://source/levels
 res://source/interface
-res://source/entities/enemies
-res://source/entities/player
 res://
-C:/Users/Public/Downloads/demo folder
 res://assets/flame_animation

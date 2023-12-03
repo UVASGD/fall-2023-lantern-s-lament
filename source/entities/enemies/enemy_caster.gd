@@ -22,11 +22,12 @@ func _physics_process(delta):
 	
 func cast_projectile():
 	cooldown = 200
+	var vector = Vector2(global_position.x + 16 * signf(dir.x), global_position.y - 172)
 	var projectile_inst = projectile.instantiate()
-	projectile_inst.init(((player.global_position - global_position).normalized()))
+	projectile_inst.init(((player.global_position - vector).normalized()))
 	get_tree().current_scene.add_child(projectile_inst)
-	projectile_inst.global_position = Vector2(global_position.x + 16 * signf(dir.x), global_position.y - 172)
-	projectile_inst.target_pos = ((player.global_position - global_position).normalized())
+	projectile_inst.global_position = vector
+	projectile_inst.target_pos = ((player.global_position - vector).normalized())
 	#print("Caster would cast projectile now")
 
 func _on_animation_timer_timeout():

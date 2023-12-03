@@ -1,7 +1,5 @@
 res://source/levels/level_1.tscn
 res://source/entities/entity_base/hitbox.gd
-res://source/levels/main_menu.tscn
-res://source/interface/main_menu_buttons.gd
-res://source/entities/enemies/enemy_caster.gd
-res://source/entities/traps/dart_trap.gd
-res://source/entities/player/player.gd
+res://source/entities/entity_base/torch.tscn
+res://source/entities/entity_base/final_torch.tscn
+res://source/entities/player/player.tscn

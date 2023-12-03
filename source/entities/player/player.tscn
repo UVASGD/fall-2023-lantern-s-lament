@@ -7,7 +7,7 @@
 [ext_resource type="Texture2D" uid="uid://d12gjhsclloe5" path="res://assets/lightMask2.png" id="5_gcsun"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_7f1jp"]
-size = Vector2(50.9999, 89)
+size = Vector2(50.9999, 60)
 
 [sub_resource type="Animation" id="Animation_oraw6"]
 length = 0.001
@@ -238,12 +238,12 @@ _data = {
 }
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_3pykv"]
-radius = 28.0
-height = 124.0
+radius = 36.0
+height = 156.0
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_qgl3e"]
-radius = 58.0
-height = 218.0
+radius = 33.0
+height = 156.0
 
 [sub_resource type="OccluderPolygon2D" id="OccluderPolygon2D_25lge"]
 
@@ -353,6 +353,7 @@ graph_offset = Vector2(-93.7949, 35.0325)
 y_sort_enabled = true
 collision_layer = 2
 script = ExtResource("1_ekmf0")
+metadata/_edit_vertical_guides_ = []
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 position = Vector2(10, 0)
@@ -361,7 +362,7 @@ hframes = 4
 vframes = 8
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(-0.49999, 86.5)
+position = Vector2(-0.999984, 86.5)
 rotation = 1.5708
 shape = SubResource("RectangleShape2D_7f1jp")
 
@@ -375,8 +376,7 @@ collision_layer = 2
 collision_mask = 4
 
 [node name="CollisionShape2D" parent="Hurtbox" index="0"]
-position = Vector2(-1, 81)
-rotation = 1.59195
+position = Vector2(-12, 28)
 shape = SubResource("CapsuleShape2D_3pykv")
 
 [node name="Hitbox" parent="." instance=ExtResource("4_ce4gw")]
@@ -384,7 +384,7 @@ collision_layer = 2
 collision_mask = 4
 
 [node name="CollisionShape2D" parent="Hitbox" index="0"]
-position = Vector2(2.08165e-12, 2.08165e-12)
+position = Vector2(-12, 28)
 shape = SubResource("CapsuleShape2D_qgl3e")
 
 [node name="Camera2D" type="Camera2D" parent="."]

@@ -1,4 +1,4 @@
-[gd_scene load_steps=25 format=3 uid="uid://cxv4v4rsxsank"]
+[gd_scene load_steps=27 format=3 uid="uid://cxv4v4rsxsank"]
 
 [ext_resource type="PackedScene" uid="uid://byurxh2xitstp" path="res://source/interface/side_menu.tscn" id="1_1ynfk"]
 [ext_resource type="Texture2D" uid="uid://boxhf5e38w71a" path="res://assets/blankIsoBox3.png" id="4_5odrp"]
@@ -11,6 +11,8 @@
 [ext_resource type="PackedScene" uid="uid://bmcrw2hbt2gdo" path="res://source/entities/enemies/enemy_test.tscn" id="9_4up81"]
 [ext_resource type="PackedScene" uid="uid://crd1g0g5yq3bm" path="res://source/entities/enemies/enemy_caster.tscn" id="10_um1r1"]
 [ext_resource type="PackedScene" uid="uid://ddomnqqnj7o6o" path="res://source/entities/traps/dart_trap.tscn" id="11_os5sw"]
+[ext_resource type="PackedScene" uid="uid://m5rxa2d6kx6u" path="res://source/entities/entity_base/torch.tscn" id="12_7r4at"]
+[ext_resource type="PackedScene" uid="uid://dwv76wv7w0k7f" path="res://source/entities/entity_base/final_torch.tscn" id="13_8id8y"]
 
 [sub_resource type="OccluderPolygon2D" id="OccluderPolygon2D_utcax"]
 polygon = PackedVector2Array(0, -22.5, -13.5, -15.5, 0, -8.5, 13.5, -15.5)
@@ -163,6 +165,10 @@ rotation = -2.87281
 
 [node name="CollisionShape2D" parent="DartTrap/DetectionArea" index="0"]
 position = Vector2(106.437, 0.715607)
-scale = Vector2(1, 1)
+
+[node name="torch" parent="." instance=ExtResource("12_7r4at")]
+position = Vector2(456, 80)
+
+[node name="FinalTorch" parent="." instance=ExtResource("13_8id8y")]
 
 [editable path="DartTrap"]

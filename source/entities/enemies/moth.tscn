@@ -15,7 +15,13 @@ hframes = 4
 vframes = 2
 
 [node name="CollisionShape2D" parent="." index="1"]
-position = Vector2(0, 2)
+position = Vector2(2.08165e-12, 40)
+
+[node name="CollisionShape2D" parent="Hurtbox" index="0"]
+position = Vector2(2.08165e-12, 20)
+
+[node name="CollisionShape2D" parent="Hitbox" index="0"]
+position = Vector2(2.08165e-12, 20)
 
 [node name="NavigationAgent2D" type="NavigationAgent2D" parent="." index="5"]
 debug_path_custom_line_width = 4.0

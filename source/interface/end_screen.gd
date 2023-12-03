@@ -11,7 +11,7 @@ func _physics_process(_delta):
 
 func _on_restart_pressed():
 	get_tree().paused = false
-	SceneTransition.change_scene("res://source/levels/main_scene.tscn") #change when adding levels
+	SceneTransition.change_scene("res://source/levels/level_1.tscn") #change when adding levels
 	print("restart")
 	
 func _on_main_menu_pressed():

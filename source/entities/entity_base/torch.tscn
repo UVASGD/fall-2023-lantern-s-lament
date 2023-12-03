@@ -1,36 +1,44 @@
-[gd_scene load_steps=5 format=3 uid="uid://bdptq8ft0qci7"]
+[gd_scene load_steps=6 format=3 uid="uid://m5rxa2d6kx6u"]
 
-[ext_resource type="Script" path="res://source/entities/entity_base/torch.gd" id="2_slwni"]
+[ext_resource type="Script" path="res://source/entities/entity_base/torch.gd" id="1_1kbk1"]
 [ext_resource type="Texture2D" uid="uid://baw7wlfn2srrh" path="res://assets/torch.png" id="3_ovtm5"]
+[ext_resource type="Texture2D" uid="uid://nnkf6uinjgkp" path="res://assets/lightTexture.png" id="4_55kma"]
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_j2me5"]
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ejx8t"]
 size = Vector2(122, 52)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_poff2"]
-size = Vector2(99, 96)
+size = Vector2(99, 347.5)
 
 [node name="torch" type="StaticBody2D"]
-y_sort_enabled = true
-collision_mask = 2
-script = ExtResource("2_slwni")
+collision_mask = 6
+script = ExtResource("1_1kbk1")
 
 [node name="Collision" type="CollisionShape2D" parent="."]
 position = Vector2(0, 58)
-shape = SubResource("RectangleShape2D_j2me5")
+shape = SubResource("RectangleShape2D_ejx8t")
 
 [node name="Area2D" type="Area2D" parent="."]
-collision_layer = 16
-collision_mask = 2
+collision_mask = 6
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+position = Vector2(2.08165e-12, -98.25)
+shape = SubResource("RectangleShape2D_poff2")
 
 [node name="Sprite2D" type="Sprite2D" parent="Area2D"]
-position = Vector2(29, -153)
+position = Vector2(2.08165e-12, -180)
 scale = Vector2(0.593156, 0.593156)
 texture = ExtResource("3_ovtm5")
 offset = Vector2(2.08165e-12, 2.08165e-12)
 hframes = 5
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
-position = Vector2(-0.5, -224)
-shape = SubResource("RectangleShape2D_poff2")
+[node name="PointLight2D" type="PointLight2D" parent="Area2D"]
+position = Vector2(2.08165e-12, -400)
+blend_mode = 2
+texture = ExtResource("4_55kma")
+
+[node name="Timer" type="Timer" parent="Area2D"]
+wait_time = 0.15
 
 [connection signal="area_entered" from="Area2D" to="." method="_on_area_2d_area_entered"]
+[connection signal="timeout" from="Area2D/Timer" to="." method="_on_timer_timeout"]
