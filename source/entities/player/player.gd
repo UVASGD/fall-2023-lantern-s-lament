@@ -8,10 +8,13 @@ class_name Player
 @onready var inner_light = $InnerLight
 @onready var innermost_light = $InnermostLight
 @onready var timer = $RollTimer
+@onready var endtimer = $EndTimer
 @onready var flickertimer = $FlickerTimer
 @onready var animation_tree = $AnimationTree
 
+
 @onready var side_menu = get_tree().get_root().get_node("MainScene/Menu/SideMenu")
+@onready var death_sprite = preload("res://assets/deathanimation.png")
 
 #ALL AIMING RELATED VARIABLES
 const CENTER = Vector2(0.0, 0.0)
@@ -55,6 +58,8 @@ const CENTER = Vector2(0.0, 0.0)
 @onready var light_dim : float = 0.0
 @onready var light_energy : float = 0.0
 
+@onready var delay = 0
+
 func _ready():
 	setup_stats()
 	game_start = true
@@ -79,7 +84,7 @@ func _physics_process(delta):
 		invulnerable = false
 		hitbox.damage = 999
 	move(speed)
-	update_animation()
+	if(cur_hp != 0): update_animation()
 	
 	# writing a script into a two-dimensional way of doing this
 
@@ -145,6 +150,24 @@ func _physics_process(delta):
 	innermost_light.texture_scale = min(inner_light_scale, 2.4)
 	innermost_light.energy = light_energy
 	
+	#death
+	if(cur_hp == 0 and !endtimer.is_stopped()):
+		delay += 1
+		if(delay == 7 and sprite.frame != 3):
+			sprite.frame += 1
+			delay = 0
+		if(sprite.frame == 3):
+			side_menu.game_over.modulate.a = 1
+			delay = 0
+	elif(cur_hp == 0):
+		if (delay == 0): side_menu.woosh.play(0)
+		delay += 1
+		if(delay == 10):
+			side_menu.black_out.modulate = Color(0, 0, 0, 255)
+			side_menu.flame_sprite.modulate = Color(255, 255, 255, 0)
+			delay += 1
+			get_tree().paused = true
+	
 
 func _input(event):
 	if game_start and event.is_action_pressed("pause_menu"):
@@ -194,8 +217,13 @@ func receive_damage(base_damage : int):
 		shake_strength = clamp(base_damage / 2.0, 5, 25) #shakes the camera on taking damage
 
 func die():
-	print("game over")
-	get_tree().paused = true
+	invulnerable = true
+	hitbox.damage = 0
+	sprite.texture = death_sprite
+	sprite.hframes = 4
+	sprite.vframes = 1
+	sprite.frame = 0
+	endtimer.start()
 
 func _draw():
 	const WHITE = Color(1, 1, 1, 1)

@@ -1,0 +1,34 @@
+[gd_scene load_steps=3 format=3 uid="uid://c8j8ubvmgaf8r"]
+
+[ext_resource type="Script" path="res://source/interface/end_screen.gd" id="1_7m0cc"]
+[ext_resource type="FontFile" uid="uid://bq2bth53eqerg" path="res://source/interface/IMFellEnglishSC-Regular.ttf" id="2_8j423"]
+
+[node name="EndScreen" type="ColorRect"]
+process_mode = 3
+offset_right = 900.0
+offset_bottom = 650.0
+color = Color(1, 1, 1, 0)
+script = ExtResource("1_7m0cc")
+
+[node name="Restart" type="Button" parent="."]
+layout_mode = 0
+offset_left = 348.0
+offset_top = 436.0
+offset_right = 548.0
+offset_bottom = 501.0
+theme_override_fonts/font = ExtResource("2_8j423")
+theme_override_font_sizes/font_size = 35
+text = "Restart"
+
+[node name="MainMenu" type="Button" parent="."]
+layout_mode = 0
+offset_left = 348.0
+offset_top = 348.0
+offset_right = 548.0
+offset_bottom = 413.0
+theme_override_fonts/font = ExtResource("2_8j423")
+theme_override_font_sizes/font_size = 35
+text = "Main Menu"
+
+[connection signal="pressed" from="Restart" to="." method="_on_restart_pressed"]
+[connection signal="pressed" from="MainMenu" to="." method="_on_main_menu_pressed"]

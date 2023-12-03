@@ -322,6 +322,10 @@ one_shot = true
 wait_time = 0.2
 autostart = true
 
+[node name="EndTimer" type="Timer" parent="."]
+wait_time = 2.0
+one_shot = true
+
 [connection signal="area_entered" from="Hurtbox" to="." method="_on_hurtbox_area_entered"]
 [connection signal="timeout" from="FlickerTimer" to="." method="_on_flicker_timer_timeout"]
 

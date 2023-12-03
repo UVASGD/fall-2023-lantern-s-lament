@@ -1,10 +1,13 @@
-[gd_scene load_steps=10 format=3 uid="uid://byurxh2xitstp"]
+[gd_scene load_steps=14 format=3 uid="uid://byurxh2xitstp"]
 
 [ext_resource type="Script" path="res://source/interface/side_menu.gd" id="1_ie6r4"]
 [ext_resource type="PackedScene" uid="uid://c0o0wepqnbyue" path="res://source/interface/health_bar.tscn" id="2_bmqgy"]
 [ext_resource type="Texture2D" uid="uid://dqtth52tl2t3i" path="res://assets/sidemenu.png" id="2_ki3hs"]
 [ext_resource type="Texture2D" uid="uid://difjv5811v0na" path="res://assets/sidemenu_flame.png" id="4_lmwrv"]
 [ext_resource type="Texture2D" uid="uid://cm1lw34mqlv28" path="res://assets/sidemenu_hinge.png" id="6_q8rvq"]
+[ext_resource type="Texture2D" uid="uid://c83jq67fywpf" path="res://assets/gameover.png" id="7_eo7w3"]
+[ext_resource type="AudioStream" uid="uid://3x7monyqchlw" path="res://assets/blow.wav" id="7_yvrkh"]
+[ext_resource type="Texture2D" uid="uid://da4lf4xqq716t" path="res://assets/pressx.png" id="9_88hb4"]
 [ext_resource type="Texture2D" uid="uid://64g0qmnhsd6w" path="res://assets/sidemenu_lamp.png" id="11_snmjm"]
 
 [sub_resource type="Animation" id="Animation_7n6m0"]
@@ -33,6 +36,8 @@ _data = {
 "flame_animation": SubResource("Animation_vtess")
 }
 
+[sub_resource type="CanvasTexture" id="CanvasTexture_dhwpm"]
+
 [node name="SideMenu" type="ColorRect"]
 offset_right = 256.0
 offset_bottom = 648.0
@@ -57,17 +62,6 @@ offset_left = 24.0
 offset_top = 24.0
 offset_right = 232.0
 offset_bottom = 218.0
-bbcode_enabled = true
-text = "test"
-fit_content = true
-autowrap_mode = 0
-
-[node name="Interact" type="RichTextLabel" parent="."]
-layout_mode = 0
-offset_left = 64.0
-offset_top = 592.0
-offset_right = 264.0
-offset_bottom = 632.0
 bbcode_enabled = true
 text = "test"
 fit_content = true
@@ -104,3 +98,25 @@ texture = ExtResource("11_snmjm")
 position = Vector2(128, 320)
 scale = Vector2(0.2, 0.2)
 texture = ExtResource("6_q8rvq")
+
+[node name="GameOver" type="Sprite2D" parent="."]
+modulate = Color(1, 1, 1, 0)
+position = Vector2(700, 200)
+scale = Vector2(1.3, 1.3)
+texture = ExtResource("7_eo7w3")
+
+[node name="BlackOut" type="Sprite2D" parent="."]
+modulate = Color(0, 0, 0, 0)
+show_behind_parent = true
+position = Vector2(575.75, 323.75)
+scale = Vector2(1152.5, 648.5)
+texture = SubResource("CanvasTexture_dhwpm")
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("7_yvrkh")
+
+[node name="PressX" type="Sprite2D" parent="."]
+modulate = Color(1, 1, 1, 0)
+position = Vector2(128, 324)
+scale = Vector2(0.22, 0.22)
+texture = ExtResource("9_88hb4")

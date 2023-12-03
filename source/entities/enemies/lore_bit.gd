@@ -1,23 +1,14 @@
 extends Area2D
 @onready var player = get_tree().get_root().get_node("MainScene/Player") as Player
 @onready var menu = get_tree().get_root().get_node("MainScene/Menu/SideMenu")
-@onready var interact = menu.get_node("Interact")
+@onready var pressx = menu.get_node("PressX")
 @export var heal_amount := 10
 var nearby = false
-# Called when the node enters the scene tree for the first time.
-func _ready():
-	pass # Replace with function body.
-
-func write(prop : String):
-	interact.text = prop + "\n"
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(_delta):
-	if nearby:
-		interact.text = ""
-		write("Press X to interact")
-	else:
-		write(" ")
+	if nearby: pressx.modulate.a = 1
+	else: pressx.modulate.a = 0
 		
 func _input(event):
 	if player.game_start && event.is_action_pressed("interact") && nearby:

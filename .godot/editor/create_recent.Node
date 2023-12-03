@@ -1,10 +1,12 @@
+Sprite2D
+AudioStreamPlayer2D
+Timer
 CollisionShape2D
 PointLight2D
 AnimationTree
 StaticBody2D
 Area2D
 AnimationTree
-Timer
 HitboxClass
 Button
 Label
