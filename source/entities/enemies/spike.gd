@@ -32,7 +32,7 @@ func _process(_delta):
 			sprite.frame = 2
 			timer.start()
 			timer_running = true
-		if(!playerOver && !collider.disabled):
+		if(!playerOver && collider.disabled):
 			collider.disabled = false
 			timer.stop()
 			timer_running = false
