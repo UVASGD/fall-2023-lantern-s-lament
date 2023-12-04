@@ -28,9 +28,10 @@ func pause_game():
 	add_child(pause_inst)
 	pause_inst.global_position = self.global_position + Vector2(256, 0)
 	
-func pop_up():
+func pop_up(text : String):
 	get_tree().paused = true
 	var lore_inst = lore_menu.instantiate()
+	lore_inst.set_text(text)
 	add_child(lore_inst)
 	lore_inst.global_position = self.global_position + Vector2(256, 0)
 	#lore_inst.scale = Vector2(100, 100)

@@ -117,7 +117,7 @@ texture = SubResource("CanvasTexture_dhwpm")
 stream = ExtResource("7_yvrkh")
 
 [node name="PressX" type="Sprite2D" parent="."]
-modulate = Color(0, 0, 0, 0)
+modulate = Color(1, 1, 1, 0)
 position = Vector2(128, 324)
 scale = Vector2(0.22, 0.22)
 texture = ExtResource("9_88hb4")

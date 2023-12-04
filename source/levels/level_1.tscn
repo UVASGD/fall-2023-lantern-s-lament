@@ -1,4 +1,4 @@
-[gd_scene load_steps=32 format=3 uid="uid://cxv4v4rsxsank"]
+[gd_scene load_steps=33 format=3 uid="uid://cxv4v4rsxsank"]
 
 [ext_resource type="PackedScene" uid="uid://byurxh2xitstp" path="res://source/interface/side_menu.tscn" id="1_1ynfk"]
 [ext_resource type="Texture2D" uid="uid://cir0ja8kxgeoa" path="res://assets/3Grass3.png" id="2_xay88"]
@@ -18,6 +18,7 @@
 [ext_resource type="Texture2D" uid="uid://uillmnccck12" path="res://assets/allStones.png" id="15_bgm7e"]
 [ext_resource type="PackedScene" uid="uid://bdptq8ft0qci7" path="res://source/entities/entity_base/torch.tscn" id="15_pxlgu"]
 [ext_resource type="PackedScene" uid="uid://d3ym8acbmohqx" path="res://source/entities/enemies/oil_pickup.tscn" id="17_47kuy"]
+[ext_resource type="PackedScene" uid="uid://btgm6lqt7vde8" path="res://source/entities/enemies/lore_bit.tscn" id="19_wra5h"]
 
 [sub_resource type="NavigationPolygon" id="NavigationPolygon_butt7"]
 vertices = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
@@ -217,5 +218,9 @@ position = Vector2(-2513, 1098)
 
 [node name="OilPickup" parent="." instance=ExtResource("17_47kuy")]
 position = Vector2(-1467, 607)
+
+[node name="LoreBit" parent="." instance=ExtResource("19_wra5h")]
+position = Vector2(-2910, 4016)
+text = "text test"
 
 [editable path="DartTrap"]

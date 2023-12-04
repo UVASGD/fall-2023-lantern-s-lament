@@ -1,8 +1,9 @@
 extends Area2D
-@onready var player = get_tree().get_root().get_node("MainScene/Player") as Player
-@onready var menu = get_tree().get_root().get_node("MainScene/Menu/SideMenu")
+@onready var player = get_parent().get_node("Player")
+@onready var menu = get_parent().get_node("Menu/SideMenu")
 @onready var pressx = menu.get_node("PressX")
 @export var heal_amount := 10
+@export var text : String
 var nearby = false
 
 func _process(_delta):
@@ -12,7 +13,7 @@ func _process(_delta):
 func _input(event):
 	if player.game_start && event.is_action_pressed("interact") && nearby:
 		nearby = false
-		menu.pop_up()
+		menu.pop_up(text)
 
 func _on_area_entered(_area):
 	nearby = true

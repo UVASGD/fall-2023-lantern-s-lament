@@ -110,6 +110,7 @@ position = Vector2(-2200, 3098)
 [node name="LoreBit" parent="." instance=ExtResource("8_u815n")]
 position = Vector2(8736, 981)
 scale = Vector2(0.5, 0.5)
+text = "I've got a bag of... uh... hamburgers for you. All you have to do is to come out into the dark shadowy part of the woods, where no one can see you."
 
 [node name="torch" parent="." groups=["torches"] instance=ExtResource("11_x3jaj")]
 position = Vector2(-1788, 844)
@@ -3151,6 +3152,17 @@ rotation = -2.6724
 [node name="CollisionShape2D" parent="DartTrap3/DetectionArea" index="0"]
 position = Vector2(316.563, -0.100067)
 
+[node name="LoreBit2" parent="." instance=ExtResource("8_u815n")]
+position = Vector2(-1938, 2826)
+scale = Vector2(0.5, 0.5)
+text = "Hey, kid! Don't lose that lamp! You'll need it to make it out of these woods. Those monsters chasing you? They hate your lamp, and they'll do anything to put it out. Keep away from them, or you'll be left in the dark. And you don't want that to happen."
+
+[node name="LoreBit3" parent="." instance=ExtResource("8_u815n")]
+position = Vector2(10360, -707)
+scale = Vector2(0.5, 0.5)
+text = "There's only one way to get out of this forest. Find torches around the woods, and light them. When you're done, come back here to light this big one. Be ready to run out of here. Fast."
+
+[editable path="Menu/SideMenu"]
 [editable path="DartTrap"]
 [editable path="DartTrap2"]
 [editable path="DartTrap4"]
