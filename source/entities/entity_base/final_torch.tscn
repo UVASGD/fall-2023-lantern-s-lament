@@ -5,10 +5,10 @@
 [ext_resource type="Texture2D" uid="uid://nnkf6uinjgkp" path="res://assets/lightTexture.png" id="4_o667p"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_32gw2"]
-size = Vector2(296, 136)
+size = Vector2(244, 79)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_poff2"]
-size = Vector2(120, 96)
+size = Vector2(378, 212)
 
 [node name="FinalTorch" type="StaticBody2D"]
 y_sort_enabled = true
@@ -16,22 +16,25 @@ collision_mask = 6
 script = ExtResource("1_neha0")
 
 [node name="Collision" type="CollisionShape2D" parent="."]
-position = Vector2(0, 150)
+position = Vector2(0, 40.5)
 shape = SubResource("RectangleShape2D_32gw2")
 
 [node name="Area2D" type="Area2D" parent="."]
 collision_mask = 134
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
-position = Vector2(0, 33)
+position = Vector2(-1, 3)
 shape = SubResource("RectangleShape2D_poff2")
 
 [node name="Sprite2D" type="Sprite2D" parent="Area2D"]
+y_sort_enabled = true
+position = Vector2(2.08165e-12, -150)
 texture = ExtResource("3_di8vh")
 hframes = 5
 
 [node name="PointLight2D" type="PointLight2D" parent="Area2D"]
-position = Vector2(0, 38)
+visible = false
+position = Vector2(2.08165e-12, -112)
 blend_mode = 2
 texture = ExtResource("4_o667p")
 
