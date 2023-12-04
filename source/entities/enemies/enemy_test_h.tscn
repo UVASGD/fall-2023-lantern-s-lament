@@ -233,6 +233,7 @@ graph_offset = Vector2(-67.7999, -35.0325)
 [sub_resource type="AnimationNodeStateMachinePlayback" id="AnimationNodeStateMachinePlayback_w00j8"]
 
 [node name="EnemyTestH" type="CharacterBody2D"]
+z_index = 4
 y_sort_enabled = true
 collision_layer = 4
 script = ExtResource("2_kt7p6")

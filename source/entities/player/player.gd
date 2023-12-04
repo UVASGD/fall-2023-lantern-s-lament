@@ -13,7 +13,8 @@ class_name Player
 @onready var roll_anim_timer = $RollAnimationTimer
 @onready var animation_tree = $AnimationTree
 
-
+@onready var final_torch = get_parent().get_node("FinalTorch")
+@onready var audio_player = get_parent().get_node("AudioStreamPlayer")
 @onready var side_menu = get_parent().get_node("Menu/SideMenu")
 @onready var death_sprite = preload("res://assets/deathanimation.png")
 
@@ -65,6 +66,7 @@ const CENTER = Vector2(0.0, 0.0)
 func _ready():
 	setup_stats()
 	game_start = true
+	#play_music()
 
 func _physics_process(delta):
 	back_angle = man_aim_angle + PI
@@ -168,7 +170,9 @@ func _physics_process(delta):
 			side_menu.flame_sprite.modulate = Color(255, 255, 255, 0)
 			delay += 1
 			get_tree().paused = true
-	
+			
+	if(audio_player.playing == false and final_torch != null and final_torch.lit == false):
+		audio_player.start()
 
 func _input(event):
 	if game_start and event.is_action_pressed("pause_menu"):
@@ -206,7 +210,7 @@ func angle_to_angle(from, to):
 	return fposmod(to-from + PI, PI * 2) - PI
 
 func setup_stats():
-	z_index = 1
+	#z_index = 2
 	max_hp = 100
 	super._ready()
 	hitbox.damage = 999

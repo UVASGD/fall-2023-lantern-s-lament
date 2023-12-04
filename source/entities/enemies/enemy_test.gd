@@ -17,7 +17,7 @@ func _ready():
 	randomCords = tetherCords + Vector2(400*(randf()-0.5), 400*(randf()-0.5))
 	super._ready()
 
-func _physics_process(delta):
+func _physics_process(_delta):
 	dir = to_local(nav_agent.get_next_path_position()).normalized()
 	move(speed * dir)
 

@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dvlloynglhwlo"
-path="res://.godot/imported/mainMenuBackground.png-f57f57f7504bb6285540934a0c47349b.ctex"
+uid="uid://hbwmxye6f1bc"
+path="res://.godot/imported/StoneWall1.png-f31aac777789a22e8f7771a58e996f6d.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/mainMenuBackground.png"
-dest_files=["res://.godot/imported/mainMenuBackground.png-f57f57f7504bb6285540934a0c47349b.ctex"]
+source_file="res://assets/StoneWall1.png"
+dest_files=["res://.godot/imported/StoneWall1.png-f31aac777789a22e8f7771a58e996f6d.ctex"]
 
 [params]
 

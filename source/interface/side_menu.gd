@@ -3,7 +3,6 @@ extends ColorRect
 @onready var player = get_parent().get_parent().get_node("Player")
 
 @onready var property_label = $PropertyLabel
-@onready var interact = $Interact
 @onready var value_label = $ValueLabel
 @onready var flame_animator = $FlameAnimator
 @onready var flame_sprite = $Flame

@@ -23,7 +23,7 @@ func _ready():
 	super._ready()
 	self.scale = Vector2(1, 1)
 
-func _physics_process(delta):
+func _physics_process(_delta):
 	queue_redraw()
 	
 	dir = to_local(nav_agent.get_next_path_position()).normalized()
