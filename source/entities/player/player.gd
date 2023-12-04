@@ -86,8 +86,15 @@ func _physics_process(delta):
 	if hitbox.damage == 0 and boost < 25:
 		invulnerable = false
 		hitbox.damage = 999
-	move(speed)
-	if(cur_hp != 0): update_animation()
+	if(invulnerable):
+		$Hurtbox/CollisionShape2D.disabled = true
+		$Hitbox/CollisionShape2D.disabled = true
+	else:
+		$Hurtbox/CollisionShape2D.disabled = false
+		$Hitbox/CollisionShape2D.disabled = false
+	if(cur_hp != 0): 
+		move(speed)
+		update_animation()
 	
 	# writing a script into a two-dimensional way of doing this
 

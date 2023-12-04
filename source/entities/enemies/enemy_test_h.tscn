@@ -7,7 +7,7 @@
 [ext_resource type="PackedScene" uid="uid://dgnquwxw3gnyx" path="res://source/entities/entity_base/hitbox.tscn" id="4_hgkoe"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_h4fan"]
-size = Vector2(50.9999, 89)
+size = Vector2(50.9999, 65)
 
 [sub_resource type="Animation" id="Animation_db2go"]
 resource_name = "idle_down"
@@ -158,12 +158,12 @@ _data = {
 }
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_o75h6"]
-radius = 58.0
-height = 210.0
+radius = 37.0
+height = 158.0
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_qvqtq"]
-radius = 58.0
-height = 218.0
+radius = 37.0
+height = 158.0
 
 [sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_rrc0q"]
 animation = &"idle_down"
@@ -246,7 +246,7 @@ vframes = 4
 frame = 4
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(-0.49999, 86.5)
+position = Vector2(-3.49999, 86.5)
 rotation = 1.5708
 shape = SubResource("RectangleShape2D_h4fan")
 
@@ -260,7 +260,7 @@ collision_layer = 4
 collision_mask = 2
 
 [node name="CollisionShape2D" parent="Hurtbox" index="0"]
-position = Vector2(2.08165e-12, 2.08165e-12)
+position = Vector2(-12, 28)
 shape = SubResource("CapsuleShape2D_o75h6")
 
 [node name="Hitbox" parent="." instance=ExtResource("4_hgkoe")]
@@ -268,7 +268,7 @@ collision_layer = 4
 collision_mask = 2
 
 [node name="CollisionShape2D" parent="Hitbox" index="0"]
-position = Vector2(2.08165e-12, 2.08165e-12)
+position = Vector2(-12, 28)
 shape = SubResource("CapsuleShape2D_qvqtq")
 
 [node name="PointLight2D" type="PointLight2D" parent="."]

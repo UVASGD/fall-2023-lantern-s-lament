@@ -2,10 +2,10 @@
 
 [ext_resource type="PackedScene" uid="uid://dgnquwxw3gnyx" path="res://source/entities/entity_base/hitbox.tscn" id="1_mjq24"]
 [ext_resource type="Script" path="res://source/entities/traps/dart_new.gd" id="2_06qjq"]
-[ext_resource type="Texture2D" uid="uid://d12gjhsclloe5" path="res://assets/lightMask2.png" id="3_mwfbr"]
+[ext_resource type="Texture2D" uid="uid://cvdtkih0xjr40" path="res://assets/dart.png" id="3_lv3cw"]
 
-[sub_resource type="CircleShape2D" id="CircleShape2D_ilk75"]
-radius = 11.0
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_2hknw"]
+size = Vector2(25, 10)
 
 [node name="Dart" instance=ExtResource("1_mjq24")]
 modulate = Color(1, 1, 1, 1)
@@ -15,10 +15,9 @@ script = ExtResource("2_06qjq")
 speed = 1000.0
 
 [node name="CollisionShape2D" parent="." index="0"]
-position = Vector2(2.08165e-12, 2.08165e-12)
-shape = SubResource("CircleShape2D_ilk75")
+position = Vector2(0.5, 0)
+shape = SubResource("RectangleShape2D_2hknw")
 
 [node name="Sprite2D" type="Sprite2D" parent="." index="1"]
-modulate = Color(0, 0, 0, 1)
-scale = Vector2(0.2, 0.2)
-texture = ExtResource("3_mwfbr")
+position = Vector2(-12, 16)
+texture = ExtResource("3_lv3cw")

@@ -13,10 +13,10 @@
 [ext_resource type="PackedScene" uid="uid://crd1g0g5yq3bm" path="res://source/entities/enemies/enemy_caster.tscn" id="10_um1r1"]
 [ext_resource type="PackedScene" uid="uid://ddomnqqnj7o6o" path="res://source/entities/traps/dart_trap.tscn" id="11_os5sw"]
 [ext_resource type="AudioStream" uid="uid://hco20psake03" path="res://assets/InGameAmbientPiano.mp3" id="12_rtago"]
-[ext_resource type="PackedScene" uid="uid://c6pb8bf2xc05a" path="res://source/entities/entity_base/final_torch.tscn" id="13_afa01"]
+[ext_resource type="PackedScene" uid="uid://dwv76wv7w0k7f" path="res://source/entities/entity_base/final_torch.tscn" id="13_afa01"]
 [ext_resource type="Texture2D" uid="uid://clfryshg6q8ju" path="res://assets/levelTileMap.png" id="14_vfnbi"]
 [ext_resource type="Texture2D" uid="uid://uillmnccck12" path="res://assets/allStones.png" id="15_bgm7e"]
-[ext_resource type="PackedScene" uid="uid://bdptq8ft0qci7" path="res://source/entities/entity_base/torch.tscn" id="15_pxlgu"]
+[ext_resource type="PackedScene" uid="uid://m5rxa2d6kx6u" path="res://source/entities/entity_base/torch.tscn" id="15_pxlgu"]
 [ext_resource type="PackedScene" uid="uid://d3ym8acbmohqx" path="res://source/entities/enemies/oil_pickup.tscn" id="17_47kuy"]
 [ext_resource type="PackedScene" uid="uid://btgm6lqt7vde8" path="res://source/entities/enemies/lore_bit.tscn" id="19_wra5h"]
 
@@ -220,7 +220,7 @@ position = Vector2(-2513, 1098)
 position = Vector2(-1467, 607)
 
 [node name="LoreBit" parent="." instance=ExtResource("19_wra5h")]
-position = Vector2(-2910, 4016)
+position = Vector2(-2896, 4112)
 text = "text test"
 
 [editable path="DartTrap"]

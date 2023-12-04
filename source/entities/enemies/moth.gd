@@ -24,7 +24,7 @@ func _physics_process(_delta):
 	#player_angle = atan2(-(global_position.y - player.global_position.y), global_position.x - player.global_position.x)
 	#target_pos = Vector2(delta*cos(player_angle)-(0.5*sin(delta)+sin(player_angle)), delta*sin(player_angle)+(0.5*sin(delta)*cos(player_angle))).normalized()
 	dir = to_local(nav_agent.get_next_path_position()).normalized()
-	if in_aim_area: super.move(dir * speed)
+	super.move(dir * speed)
 	num += PI/64
 	if num > 2*PI:
 		num = 0

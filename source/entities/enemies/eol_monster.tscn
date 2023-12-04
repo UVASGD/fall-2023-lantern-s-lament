@@ -1,10 +1,11 @@
 [gd_scene load_steps=4 format=3 uid="uid://bp4hmkkancdb0"]
 
 [ext_resource type="Script" path="res://source/entities/enemies/eol_monster.gd" id="1_7ni65"]
+[ext_resource type="Texture2D" uid="uid://cdekbbgjxn8yw" path="res://assets/boss.png" id="2_nc0n0"]
 
-[sub_resource type="CanvasTexture" id="CanvasTexture_m1oeo"]
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_vfvul"]
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_51sin"]
+radius = 58.0
+height = 197.333
 
 [node name="eolMonster" type="Area2D"]
 y_sort_enabled = true
@@ -13,11 +14,18 @@ collision_mask = 2
 script = ExtResource("1_7ni65")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
-scale = Vector2(30, 30)
-texture = SubResource("CanvasTexture_m1oeo")
+texture = ExtResource("2_nc0n0")
+hframes = 3
+vframes = 4
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-scale = Vector2(1.5, 1.5)
-shape = SubResource("RectangleShape2D_vfvul")
+position = Vector2(2.08165e-12, -30)
+scale = Vector2(1.5, 2)
+shape = SubResource("CapsuleShape2D_51sin")
+
+[node name="AnimationTimer" type="Timer" parent="."]
+wait_time = 0.25
+autostart = true
 
 [connection signal="area_entered" from="." to="." method="_on_area_entered"]
+[connection signal="timeout" from="AnimationTimer" to="." method="_on_animation_timer_timeout"]

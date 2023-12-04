@@ -2,52 +2,44 @@ extends StaticBody2D
 
 @onready var hitbox = $Hitbox
 @onready var collider = $Hitbox/CollisionShape2D
+@onready var detector = $Detector/CollisionShape2D
 @onready var sprite = $Sprite2D
+@onready var timer = $Timer
 @onready var playerOver = false
 @onready var timer_running = false
-@onready var spikes_down = load("res://assets/Spikes down.png")
-@onready var spikes_up = load("res://assets/spikes up.png")
-@onready var spikesActive = true
-
-@export var cycleDuration = 0 #set to 0 if you don't want it
+@export var auto_cycle : bool = false
+@export var timer_waitTime : float = 1
 
 func _ready():
 	hitbox.damage = 5
+	timer.connect("timeout", spike_cycle)
+	timer.wait_time = timer_waitTime
 	
-	#create a cycling spikes if we want that
-	if cycleDuration != 0:
-		var timer = Timer.new()
-		timer.set_wait_time(cycleDuration)
-		timer.set_one_shot(false)
-		timer.connect("timeout", spike_cycle)
-		add_child(timer)
+	if auto_cycle:
 		timer.start()
 
 func spike_cycle():
-	if spikesActive:
-		collider.disabled = true
-		sprite.texture = spikes_down
-		spikesActive = false
-	else:
+	if collider.disabled:
 		collider.disabled = false
-		sprite.texture = spikes_up
-		spikesActive = true
+		sprite.frame = 2
+	else: 
+		collider.disabled = true
+		sprite.frame = 0
 
 func _process(_delta):
-	if playerOver and not timer_running:
-		timer_running = true
-		collider.disabled = true
-		await get_tree().create_timer(1.0).timeout
-		timer_running = false
-		if spikesActive:
+	if(!auto_cycle):
+		if playerOver and not timer_running:
+			sprite.frame = 2
+			timer.start()
+			timer_running = true
+		if(!playerOver):
 			collider.disabled = false
+			sprite.frame = 0
+			timer.stop()
+			timer_running = false
 
-func _on_hitbox_area_entered(_area):
-	#assuming the only thing that overlaps is the player
-	#if area.is_in_group("player"):
+func _on_detector_area_entered(_area):
 	playerOver = true
 
-func _on_hitbox_area_exited(_area):
-	#assuming the only thing that overlaps is the player
-	#if area.is_in_group("player"):
+func _on_detector_area_exited(_area):
 	playerOver = false

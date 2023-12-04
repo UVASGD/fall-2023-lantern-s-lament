@@ -17,13 +17,14 @@ hframes = 4
 vframes = 2
 
 [node name="CollisionShape2D" parent="." index="1"]
-position = Vector2(1, 15.5)
+position = Vector2(1, 71.5)
 
 [node name="CollisionShape2D" parent="Hurtbox" index="0"]
-position = Vector2(5, 16)
+position = Vector2(2.08165e-12, 50)
 scale = Vector2(2, 2)
 
 [node name="CollisionShape2D" parent="Hitbox" index="0"]
+position = Vector2(2.08165e-12, 50)
 scale = Vector2(2, 2)
 
 [node name="Timer" type="Timer" parent="." index="5"]

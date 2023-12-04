@@ -1,25 +1,34 @@
 [gd_scene load_steps=5 format=3 uid="uid://dxyvkmxfplod5"]
 
 [ext_resource type="Script" path="res://source/entities/enemies/spike.gd" id="1_3mnhf"]
-[ext_resource type="Texture2D" uid="uid://drsa4hymjj86r" path="res://assets/spikes up.png" id="2_jwjw6"]
 [ext_resource type="PackedScene" uid="uid://dgnquwxw3gnyx" path="res://source/entities/entity_base/hitbox.tscn" id="2_ku6et"]
+[ext_resource type="Texture2D" uid="uid://kkbq6ejdhnx1" path="res://assets/spikes.png" id="2_ppps3"]
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_flkpc"]
-size = Vector2(163, 123)
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_n2q27"]
+radius = 17.0
+height = 59.0
 
 [node name="Spikes" type="StaticBody2D"]
 y_sort_enabled = true
-position = Vector2(-0.218, 12.136)
-rotation = 0.392699
-scale = Vector2(0.557, 0.746385)
-skew = 0.785398
+position = Vector2(2.08165e-12, 2.08165e-12)
+scale = Vector2(1.5, 1.5)
 collision_layer = 4
 collision_mask = 2
 script = ExtResource("1_3mnhf")
 
+[node name="Detector" type="Area2D" parent="."]
+collision_layer = 36
+collision_mask = 2
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Detector"]
+position = Vector2(0.5, 1)
+rotation = 1.5708
+shape = SubResource("CapsuleShape2D_n2q27")
+
 [node name="Sprite2D" type="Sprite2D" parent="."]
 position = Vector2(1, 1)
-texture = ExtResource("2_jwjw6")
+texture = ExtResource("2_ppps3")
+hframes = 3
 
 [node name="Hitbox" parent="." instance=ExtResource("2_ku6et")]
 collision_layer = 36
@@ -27,9 +36,14 @@ collision_mask = 2
 monitoring = true
 
 [node name="CollisionShape2D" parent="Hitbox" index="0"]
-position = Vector2(0.5, 0.5)
-shape = SubResource("RectangleShape2D_flkpc")
+position = Vector2(0.5, 1)
+rotation = 1.5708
+shape = SubResource("CapsuleShape2D_n2q27")
 
+[node name="Timer" type="Timer" parent="."]
+
+[connection signal="area_entered" from="Detector" to="." method="_on_detector_area_entered"]
+[connection signal="area_exited" from="Detector" to="." method="_on_detector_area_exited"]
 [connection signal="area_entered" from="Hitbox" to="." method="_on_hitbox_area_entered"]
 [connection signal="area_exited" from="Hitbox" to="." method="_on_hitbox_area_exited"]
 

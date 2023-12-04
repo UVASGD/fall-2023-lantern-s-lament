@@ -35,16 +35,16 @@ func receive_damage(base_damage : int):
 	if !invulnerable:
 		cur_hp -= actual_damage
 		print(name + " received " + str(actual_damage) + " damage and has " + str(cur_hp) + " health remaining ")
-		if base_damage == 0: 
-			knock_back = true
-			back_speed = player.direction*-750
+#		if base_damage == 0: 
+#			knock_back = true
+#			back_speed = player.direction*-750
 		if cur_hp <= 0 and !has_died:
 			print(name + " has died! ")
 			has_died = true
 			die()
 
 func _on_hurtbox_area_entered(hitbox):
-	receive_damage(hitbox.damage)
+	if(hitbox.get("damage") != null): receive_damage(hitbox.damage)
 
 func set_cur_hp(value):
 	if value != cur_hp:
