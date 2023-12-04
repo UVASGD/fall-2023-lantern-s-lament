@@ -1,6 +1,6 @@
 extends Area2D
-@onready var player = get_tree().get_root().get_node("MainScene/Player") as Player
-@onready var menu = get_tree().get_root().get_node("MainScene/Menu/SideMenu")
+@onready var player = get_parent().get_node("Player")
+@onready var menu = get_parent().get_node("Menu/SideMenu")
 @onready var pressx = menu.get_node("PressX")
 @export var heal_amount := 10
 var nearby = false

@@ -1,4 +1,4 @@
-[gd_scene load_steps=48 format=3 uid="uid://dlbg8myhg31ys"]
+[gd_scene load_steps=49 format=3 uid="uid://dlbg8myhg31ys"]
 
 [ext_resource type="Script" path="res://source/entities/player/player.gd" id="1_ekmf0"]
 [ext_resource type="Texture2D" uid="uid://bcoxeak4h8moi" path="res://assets/player.png" id="2_j4nc6"]
@@ -245,6 +245,10 @@ height = 156.0
 radius = 33.0
 height = 156.0
 
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_oj0tb"]
+radius = 33.0
+height = 156.0
+
 [sub_resource type="OccluderPolygon2D" id="OccluderPolygon2D_25lge"]
 
 [sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_4pdv3"]
@@ -386,6 +390,13 @@ collision_mask = 4
 [node name="CollisionShape2D" parent="Hitbox" index="0"]
 position = Vector2(-12, 28)
 shape = SubResource("CapsuleShape2D_qgl3e")
+
+[node name="Area2D" type="Area2D" parent="."]
+collision_layer = 128
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+position = Vector2(-12, 28)
+shape = SubResource("CapsuleShape2D_oj0tb")
 
 [node name="Camera2D" type="Camera2D" parent="."]
 

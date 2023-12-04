@@ -1,5 +1,5 @@
 extends StaticBody2D
-@onready var player = get_tree().get_root().get_node("MainScene/Player")
+@onready var player = get_parent().get_node("Player")
 @export var heal_amount := 10
 var num = 0
 

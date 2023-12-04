@@ -1,16 +1,14 @@
+CollisionShape2D
 Area2D
 Timer
 StaticBody2D
 PointLight2D
 Sprite2D
 AudioStreamPlayer2D
-CollisionShape2D
 AnimationTree
 AnimationTree
 HitboxClass
-CollisionShape2D
 AnimationTree
-CollisionShape2D
 AnimationTree
 HitboxClass
 Node2D

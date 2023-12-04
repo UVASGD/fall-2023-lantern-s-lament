@@ -13,7 +13,6 @@ class_name Player
 @onready var roll_anim_timer = $RollAnimationTimer
 @onready var animation_tree = $AnimationTree
 
-
 @onready var side_menu = get_parent().get_node("Menu/SideMenu")
 @onready var death_sprite = preload("res://assets/deathanimation.png")
 
@@ -84,6 +83,12 @@ func _physics_process(delta):
 	if hitbox.damage == 0 and boost < 25:
 		invulnerable = false
 		hitbox.damage = 999
+	if(invulnerable):
+		$Hurtbox/CollisionShape2D.disabled = true
+		$Hitbox/CollisionShape2D.disabled = true
+	else:
+		$Hurtbox/CollisionShape2D.disabled = false
+		$Hitbox/CollisionShape2D.disabled = false
 	if(cur_hp != 0): 
 		move(speed)
 		update_animation()

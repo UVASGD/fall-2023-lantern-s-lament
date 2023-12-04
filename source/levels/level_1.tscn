@@ -1,4 +1,4 @@
-[gd_scene load_steps=28 format=3 uid="uid://cxv4v4rsxsank"]
+[gd_scene load_steps=30 format=3 uid="uid://cxv4v4rsxsank"]
 
 [ext_resource type="PackedScene" uid="uid://byurxh2xitstp" path="res://source/interface/side_menu.tscn" id="1_1ynfk"]
 [ext_resource type="Texture2D" uid="uid://boxhf5e38w71a" path="res://assets/blankIsoBox3.png" id="4_5odrp"]
@@ -14,6 +14,8 @@
 [ext_resource type="PackedScene" uid="uid://m5rxa2d6kx6u" path="res://source/entities/entity_base/torch.tscn" id="12_7r4at"]
 [ext_resource type="PackedScene" uid="uid://dwv76wv7w0k7f" path="res://source/entities/entity_base/final_torch.tscn" id="13_8id8y"]
 [ext_resource type="PackedScene" uid="uid://dxyvkmxfplod5" path="res://source/entities/enemies/spikes.tscn" id="14_ysfg2"]
+[ext_resource type="PackedScene" uid="uid://d3ym8acbmohqx" path="res://source/entities/enemies/oil_pickup.tscn" id="15_g0krx"]
+[ext_resource type="PackedScene" uid="uid://btgm6lqt7vde8" path="res://source/entities/enemies/lore_bit.tscn" id="16_hpkci"]
 
 [sub_resource type="OccluderPolygon2D" id="OccluderPolygon2D_utcax"]
 polygon = PackedVector2Array(0, -22.5, -13.5, -15.5, 0, -8.5, 13.5, -15.5)
@@ -175,5 +177,11 @@ position = Vector2(456, 80)
 
 [node name="Spikes" parent="." instance=ExtResource("14_ysfg2")]
 position = Vector2(311, -449)
+
+[node name="OilPickup" parent="." instance=ExtResource("15_g0krx")]
+position = Vector2(-208, -416)
+
+[node name="LoreBit" parent="." instance=ExtResource("16_hpkci")]
+position = Vector2(-580, -427)
 
 [editable path="DartTrap"]
