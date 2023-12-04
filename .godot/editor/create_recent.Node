@@ -1,3 +1,4 @@
+ColorRect
 CollisionShape2D
 Area2D
 Timer
@@ -15,7 +16,6 @@ Node2D
 Node
 Button
 Label
-ColorRect
 Window
 CharacterBody2D
 LightOccluder2D
