@@ -220,7 +220,7 @@ position = Vector2(-2513, 1098)
 position = Vector2(-1467, 607)
 
 [node name="LoreBit" parent="." instance=ExtResource("19_wra5h")]
-position = Vector2(-2896, 4112)
+position = Vector2(-2905, 4143)
 text = "text test"
 
 [editable path="DartTrap"]
