@@ -14,7 +14,7 @@
 [ext_resource type="AudioStream" uid="uid://1hjt8lwq4dox" path="res://assets/Stinger.wav" id="11_gi16p"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_7f1jp"]
-size = Vector2(50.9999, 60)
+size = Vector2(50.9999, 90)
 
 [sub_resource type="Animation" id="Animation_oraw6"]
 length = 0.001
@@ -361,20 +361,19 @@ graph_offset = Vector2(-93.7949, 35.0325)
 [sub_resource type="AnimationNodeStateMachinePlayback" id="AnimationNodeStateMachinePlayback_1i2eb"]
 
 [node name="Player" type="CharacterBody2D"]
-z_index = 4
 y_sort_enabled = true
 collision_layer = 2
 script = ExtResource("1_ekmf0")
 metadata/_edit_vertical_guides_ = []
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
-position = Vector2(10, 0)
+position = Vector2(15, 5)
 texture = ExtResource("2_j4nc6")
 hframes = 4
 vframes = 8
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(-0.999984, 86.5)
+position = Vector2(-16, 86.5)
 rotation = 1.5708
 shape = SubResource("RectangleShape2D_7f1jp")
 

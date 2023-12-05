@@ -11,7 +11,7 @@ diffuse_texture = ExtResource("1_f1lab")
 normal_texture = ExtResource("2_c6mvu")
 
 [node name="Test" type="StaticBody2D"]
-z_index = 4
+z_index = 1
 y_sort_enabled = true
 
 [node name="LightOccluder2D" type="LightOccluder2D" parent="."]

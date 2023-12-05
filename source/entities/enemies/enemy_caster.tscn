@@ -7,7 +7,6 @@
 [ext_resource type="AudioStream" uid="uid://dpvpf5h40sdmt" path="res://assets/Cast.wav" id="5_0hdyl"]
 
 [node name="EnemyCaster" instance=ExtResource("1_1mkbg")]
-z_index = 4
 script = ExtResource("2_o2t1t")
 
 [node name="Sprite2D" parent="." index="0"]

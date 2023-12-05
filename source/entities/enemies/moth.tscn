@@ -6,7 +6,6 @@
 [ext_resource type="AudioStream" uid="uid://ck3dyykdankvv" path="res://assets/WingFlap.wav" id="4_wq4k4"]
 
 [node name="Moth" instance=ExtResource("1_pfu3g")]
-z_index = 4
 script = ExtResource("2_nagws")
 tetherCords = Vector2(0, 0)
 

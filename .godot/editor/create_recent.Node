@@ -1,9 +1,9 @@
+Node2D
 CanvasGroup
 SubViewport
 CanvasModulate
 LightOccluder2D
 Sprite2D
-Node2D
 PointLight2D
 Camera2D
 ColorRect

@@ -109,7 +109,6 @@ position = Vector2(-2200, 3098)
 
 [node name="LoreBit" parent="." instance=ExtResource("8_u815n")]
 position = Vector2(8736, 981)
-scale = Vector2(0.5, 0.5)
 text = "I've got a bag of... uh... hamburgers for you. All you have to do is to come out into the dark shadowy part of the woods, where no one can see you."
 
 [node name="torch" parent="." groups=["torches"] instance=ExtResource("11_x3jaj")]
@@ -160,2543 +159,1254 @@ skew = 0.785398
 
 [node name="Spikes136" parent="MazeSpikes" instance=ExtResource("13_arp2w")]
 position = Vector2(-19.0146, -125.852)
-rotation = -2.98023e-08
-scale = Vector2(1, 1)
-skew = -1.19209e-07
-cycleDuration = 10
 
 [node name="Spikes137" parent="MazeSpikes" instance=ExtResource("13_arp2w")]
 position = Vector2(146.714, -109.488)
-rotation = -2.98023e-08
-scale = Vector2(1, 1)
-skew = -1.19209e-07
-cycleDuration = 10
 
 [node name="Spikes138" parent="MazeSpikes" instance=ExtResource("13_arp2w")]
 position = Vector2(307.35, -99.8257)
-rotation = -2.98023e-08
-scale = Vector2(1, 1)
-skew = -1.19209e-07
-cycleDuration = 10
 
 [node name="Spikes139" parent="MazeSpikes" instance=ExtResource("13_arp2w")]
 position = Vector2(-28.3115, -258.957)
-rotation = -2.98023e-08
-scale = Vector2(1, 1)
-skew = -1.19209e-07
-cycleDuration = 10
 
 [node name="Spikes140" parent="MazeSpikes" instance=ExtResource("13_arp2w")]
 position = Vector2(137.417, -242.593)
-rotation = -2.98023e-08
-scale = Vector2(1, 1)
-skew = -1.19209e-07
-cycleDuration = 10
 
 [node name="Spikes141" parent="MazeSpikes" instance=ExtResource("13_arp2w")]
 position = Vector2(298.053, -232.93)
-rotation = -2.98023e-08
-scale = Vector2(1, 1)
-skew = -1.19209e-07
-cycleDuration = 10
 
 [node name="Spikes142" parent="MazeSpikes" instance=ExtResource("13_arp2w")]
 position = Vector2(-46.1152, -375.208)
-rotation = -2.98023e-08
-scale = Vector2(1, 1)
-skew = -1.19209e-07
-cycleDuration = 10
 
 [node name="Spikes143" parent="MazeSpikes" instance=ExtResource("13_arp2w")]
 position = Vector2(119.613, -358.844)
-rotation = -2.98023e-08
-scale = Vector2(1, 1)
-skew = -1.19209e-07
-cycleDuration = 10
 
 [node name="Spikes144" parent="MazeSpikes" instance=ExtResource("13_arp2w")]
 position = Vector2(280.249, -349.181)
-rotation = -2.98023e-08
-scale = Vector2(1, 1)
-skew = -1.19209e-07
-cycleDuration = 10
 
 [node name="Spikes145" parent="MazeSpikes" instance=ExtResource("13_arp2w")]
 position = Vector2(-65.1299, -501.06)
-rotation = -2.98023e-08
-scale = Vector2(1, 1)
-skew = -1.19209e-07
-cycleDuration = 10
 
 [node name="Spikes146" parent="MazeSpikes" instance=ExtResource("13_arp2w")]
 position = Vector2(100.599, -484.696)
-rotation = -2.98023e-08
-scale = Vector2(1, 1)
-skew = -1.19209e-07
-cycleDuration = 10
 
 [node name="Spikes147" parent="MazeSpikes" instance=ExtResource("13_arp2w")]
 position = Vector2(261.234, -475.033)
-rotation = -2.98023e-08
-scale = Vector2(1, 1)
-skew = -1.19209e-07
-cycleDuration = 10
 
 [node name="Spikes148" parent="MazeSpikes" instance=ExtResource("13_arp2w")]
 position = Vector2(-80.2559, -629.813)
-rotation = -2.98023e-08
-scale = Vector2(1, 1)
-skew = -1.19209e-07
-cycleDuration = 10
 
 [node name="Spikes149" parent="MazeSpikes" instance=ExtResource("13_arp2w")]
 position = Vector2(85.4727, -613.449)
-rotation = -2.98023e-08
-scale = Vector2(1, 1)
-skew = -1.19209e-07
-cycleDuration = 10
 
 [node name="Spikes150" parent="MazeSpikes" instance=ExtResource("13_arp2w")]
 position = Vector2(246.108, -603.786)
-rotation = -2.98023e-08
-scale = Vector2(1, 1)
-skew = -1.19209e-07
-cycleDuration = 10
 
 [node name="Spikes151" parent="MazeSpikes" instance=ExtResource("13_arp2w")]
 position = Vector2(-92.2324, -750.414)
-rotation = -2.98023e-08
-scale = Vector2(1, 1)
-skew = -1.19209e-07
-cycleDuration = 10
 
 [node name="Spikes152" parent="MazeSpikes" instance=ExtResource("13_arp2w")]
 position = Vector2(73.4961, -734.05)
-rotation = -2.98023e-08
-scale = Vector2(1, 1)
-skew = -1.19209e-07
-cycleDuration = 10
 
 [node name="Spikes153" parent="MazeSpikes" instance=ExtResource("13_arp2w")]
 position = Vector2(234.132, -724.387)
-rotation = -2.98023e-08
-scale = Vector2(1, 1)
-skew = -1.19209e-07
-cycleDuration = 10
 
 [node name="Spikes154" parent="MazeSpikes" instance=ExtResource("13_arp2w")]
 position = Vector2(-107.123, -868.84)
-rotation = -2.98023e-08
-scale = Vector2(1, 1)
-skew = -1.19209e-07
-cycleDuration = 10
 
 [node name="Spikes155" parent="MazeSpikes" instance=ExtResource("13_arp2w")]
 position = Vector2(58.6055, -852.477)
-rotation = -2.98023e-08
-scale = Vector2(1, 1)
-skew = -1.19209e-07
-cycleDuration = 10
 
 [node name="Spikes156" parent="MazeSpikes" instance=ExtResource("13_arp2w")]
 position = Vector2(219.241, -842.814)
-rotation = -2.98023e-08
-scale = Vector2(1, 1)
-skew = -1.19209e-07
-cycleDuration = 10
 
 [node name="Spikes157" parent="MazeSpikes" instance=ExtResource("13_arp2w")]
 position = Vector2(-115.213, -992.342)
-rotation = -2.98023e-08
-scale = Vector2(1, 1)
-skew = -1.19209e-07
-cycleDuration = 10
 
 [node name="Spikes158" parent="MazeSpikes" instance=ExtResource("13_arp2w")]
 position = Vector2(50.5156, -975.978)
-rotation = -2.98023e-08
-scale = Vector2(1, 1)
-skew = -1.19209e-07
-cycleDuration = 10
 
 [node name="Spikes159" parent="MazeSpikes" instance=ExtResource("13_arp2w")]
 position = Vector2(211.151, -966.316)
-rotation = -2.98023e-08
-scale = Vector2(1, 1)
-skew = -1.19209e-07
-cycleDuration = 10
 
 [node name="Spikes160" parent="MazeSpikes" instance=ExtResource("13_arp2w")]
 position = Vector2(-134.629, -1121.4)
-rotation = -2.98023e-08
-scale = Vector2(1, 1)
-skew = -1.19209e-07
-cycleDuration = 10
 
 [node name="Spikes161" parent="MazeSpikes" instance=ExtResource("13_arp2w")]
 position = Vector2(31.0996, -1105.03)
-rotation = -2.98023e-08
-scale = Vector2(1, 1)
-skew = -1.19209e-07
-cycleDuration = 10
 
 [node name="Spikes162" parent="MazeSpikes" instance=ExtResource("13_arp2w")]
 position = Vector2(191.735, -1095.37)
-rotation = -2.98023e-08
-scale = Vector2(1, 1)
-skew = -1.19209e-07
-cycleDuration = 10
 
 [node name="Spikes163" parent="MazeSpikes" instance=ExtResource("13_arp2w")]
 position = Vector2(-156.96, -1248.27)
-rotation = -2.98023e-08
-scale = Vector2(1, 1)
-skew = -1.19209e-07
-cycleDuration = 10
 
 [node name="Spikes164" parent="MazeSpikes" instance=ExtResource("13_arp2w")]
 position = Vector2(8.76855, -1231.91)
-rotation = -2.98023e-08
-scale = Vector2(1, 1)
-skew = -1.19209e-07
-cycleDuration = 10
 
 [node name="Spikes165" parent="MazeSpikes" instance=ExtResource("13_arp2w")]
 position = Vector2(169.404, -1222.25)
-rotation = -2.98023e-08
-scale = Vector2(1, 1)
-skew = -1.19209e-07
-cycleDuration = 10
 
 [node name="Spikes166" parent="MazeSpikes" instance=ExtResource("13_arp2w")]
 position = Vector2(-176.375, -1377.33)
-rotation = -2.98023e-08
-scale = Vector2(1, 1)
-skew = -1.19209e-07
-cycleDuration = 10
 
 [node name="Spikes167" parent="MazeSpikes" instance=ExtResource("13_arp2w")]
 position = Vector2(-10.6465, -1360.96)
-rotation = -2.98023e-08
-scale = Vector2(1, 1)
-skew = -1.19209e-07
-cycleDuration = 10
 
 [node name="Spikes168" parent="MazeSpikes" instance=ExtResource("13_arp2w")]
 position = Vector2(149.989, -1351.3)
-rotation = -2.98023e-08
-scale = Vector2(1, 1)
-skew = -1.19209e-07
-cycleDuration = 10
 
 [node name="Spikes169" parent="MazeSpikes" instance=ExtResource("13_arp2w")]
 position = Vector2(-187.547, -1491.53)
-rotation = -2.98023e-08
-scale = Vector2(1, 1)
-skew = -1.19209e-07
-cycleDuration = 10
 
 [node name="Spikes170" parent="MazeSpikes" instance=ExtResource("13_arp2w")]
 position = Vector2(-21.8184, -1475.16)
-rotation = -2.98023e-08
-scale = Vector2(1, 1)
-skew = -1.19209e-07
-cycleDuration = 10
 
 [node name="Spikes171" parent="MazeSpikes" instance=ExtResource("13_arp2w")]
 position = Vector2(138.817, -1465.5)
-rotation = -2.98023e-08
-scale = Vector2(1, 1)
-skew = -1.19209e-07
-cycleDuration = 10
 
 [node name="Spikes172" parent="MazeSpikes" instance=ExtResource("13_arp2w")]
 position = Vector2(-206.962, -1620.58)
-rotation = -2.98023e-08
-scale = Vector2(1, 1)
-skew = -1.19209e-07
-cycleDuration = 10
 
 [node name="Spikes173" parent="MazeSpikes" instance=ExtResource("13_arp2w")]
 position = Vector2(-41.2334, -1604.22)
-rotation = -2.98023e-08
-scale = Vector2(1, 1)
-skew = -1.19209e-07
-cycleDuration = 10
 
 [node name="Spikes174" parent="MazeSpikes" instance=ExtResource("13_arp2w")]
 position = Vector2(119.402, -1594.55)
-rotation = -2.98023e-08
-scale = Vector2(1, 1)
-skew = -1.19209e-07
-cycleDuration = 10
 
 [node name="Spikes175" parent="MazeSpikes" instance=ExtResource("13_arp2w")]
 position = Vector2(-205.267, -1733.88)
-rotation = -2.98023e-08
-scale = Vector2(1, 1)
-skew = -1.19209e-07
-cycleDuration = 10
 
 [node name="Spikes176" parent="MazeSpikes" instance=ExtResource("13_arp2w")]
 position = Vector2(-39.5381, -1717.52)
-rotation = -2.98023e-08
-scale = Vector2(1, 1)
-skew = -1.19209e-07
-cycleDuration = 10
 
 [node name="Spikes177" parent="MazeSpikes" instance=ExtResource("13_arp2w")]
 position = Vector2(121.098, -1707.85)
-rotation = -2.98023e-08
-scale = Vector2(1, 1)
-skew = -1.19209e-07
-cycleDuration = 10
 
 [node name="Spikes178" parent="MazeSpikes" instance=ExtResource("13_arp2w")]
 position = Vector2(425.044, -1682.6)
-rotation = -2.98023e-08
-scale = Vector2(1, 1)
-skew = -1.19209e-07
-cycleDuration = 10
 
 [node name="Spikes179" parent="MazeSpikes" instance=ExtResource("13_arp2w")]
 position = Vector2(590.772, -1666.24)
-rotation = -2.98023e-08
-scale = Vector2(1, 1)
-skew = -1.19209e-07
-cycleDuration = 10
 
 [node name="Spikes180" parent="MazeSpikes" instance=ExtResource("13_arp2w")]
 position = Vector2(751.408, -1656.58)
-rotation = -2.98023e-08
-scale = Vector2(1, 1)
-skew = -1.19209e-07
-cycleDuration = 10
 
 [node name="Spikes181" parent="MazeSpikes" instance=ExtResource("13_arp2w")]
 position = Vector2(440.339, -1560.97)
-rotation = -2.98023e-08
-scale = Vector2(1, 1)
-skew = -1.19209e-07
-cycleDuration = 10
 
 [node name="Spikes182" parent="MazeSpikes" instance=ExtResource("13_arp2w")]
 position = Vector2(606.067, -1544.61)
-rotation = -2.98023e-08
-scale = Vector2(1, 1)
-skew = -1.19209e-07
-cycleDuration = 10
 
 [node name="Spikes183" parent="MazeSpikes" instance=ExtResource("13_arp2w")]
 position = Vector2(766.703, -1534.95)
-rotation = -2.98023e-08
-scale = Vector2(1, 1)
-skew = -1.19209e-07
-cycleDuration = 10
 
 [node name="Spikes184" parent="MazeSpikes" instance=ExtResource("13_arp2w")]
 position = Vector2(478.451, -1435.37)
-rotation = -2.98023e-08
-scale = Vector2(1, 1)
-skew = -1.19209e-07
-cycleDuration = 10
 
 [node name="Spikes185" parent="MazeSpikes" instance=ExtResource("13_arp2w")]
 position = Vector2(644.18, -1419.01)
-rotation = -2.98023e-08
-scale = Vector2(1, 1)
-skew = -1.19209e-07
-cycleDuration = 10
 
 [node name="Spikes186" parent="MazeSpikes" instance=ExtResource("13_arp2w")]
 position = Vector2(804.815, -1409.35)
-rotation = -2.98023e-08
-scale = Vector2(1, 1)
-skew = -1.19209e-07
-cycleDuration = 10
 
 [node name="Spikes187" parent="MazeSpikes" instance=ExtResource("13_arp2w")]
 position = Vector2(489.623, -1321.17)
-rotation = -2.98023e-08
-scale = Vector2(1, 1)
-skew = -1.19209e-07
-cycleDuration = 10
 
 [node name="Spikes188" parent="MazeSpikes" instance=ExtResource("13_arp2w")]
 position = Vector2(655.352, -1304.81)
-rotation = -2.98023e-08
-scale = Vector2(1, 1)
-skew = -1.19209e-07
-cycleDuration = 10
 
 [node name="Spikes189" parent="MazeSpikes" instance=ExtResource("13_arp2w")]
 position = Vector2(815.987, -1295.15)
-rotation = -2.98023e-08
-scale = Vector2(1, 1)
-skew = -1.19209e-07
-cycleDuration = 10
 
 [node name="Spikes190" parent="MazeSpikes" instance=ExtResource("13_arp2w")]
 position = Vector2(497.879, -1204.8)
-rotation = -2.98023e-08
-scale = Vector2(1, 1)
-skew = -1.19209e-07
-cycleDuration = 10
 
 [node name="Spikes191" parent="MazeSpikes" instance=ExtResource("13_arp2w")]
 position = Vector2(663.607, -1188.43)
-rotation = -2.98023e-08
-scale = Vector2(1, 1)
-skew = -1.19209e-07
-cycleDuration = 10
 
 [node name="Spikes192" parent="MazeSpikes" instance=ExtResource("13_arp2w")]
 position = Vector2(824.243, -1178.77)
-rotation = -2.98023e-08
-scale = Vector2(1, 1)
-skew = -1.19209e-07
-cycleDuration = 10
 
 [node name="Spikes193" parent="MazeSpikes" instance=ExtResource("13_arp2w")]
 position = Vector2(516.088, -1085.35)
-rotation = -2.98023e-08
-scale = Vector2(1, 1)
-skew = -1.19209e-07
-cycleDuration = 10
 
 [node name="Spikes194" parent="MazeSpikes" instance=ExtResource("13_arp2w")]
 position = Vector2(681.816, -1068.98)
-rotation = -2.98023e-08
-scale = Vector2(1, 1)
-skew = -1.19209e-07
-cycleDuration = 10
 
 [node name="Spikes195" parent="MazeSpikes" instance=ExtResource("13_arp2w")]
 position = Vector2(842.452, -1059.32)
-rotation = -2.98023e-08
-scale = Vector2(1, 1)
-skew = -1.19209e-07
-cycleDuration = 10
 
 [node name="Spikes196" parent="MazeSpikes" instance=ExtResource("13_arp2w")]
 position = Vector2(531.616, -953.392)
-rotation = -2.98023e-08
-scale = Vector2(1, 1)
-skew = -1.19209e-07
-cycleDuration = 10
 
 [node name="Spikes197" parent="MazeSpikes" instance=ExtResource("13_arp2w")]
 position = Vector2(697.345, -937.029)
-rotation = -2.98023e-08
-scale = Vector2(1, 1)
-skew = -1.19209e-07
-cycleDuration = 10
 
 [node name="Spikes198" parent="MazeSpikes" instance=ExtResource("13_arp2w")]
 position = Vector2(857.98, -927.366)
-rotation = -2.98023e-08
-scale = Vector2(1, 1)
-skew = -1.19209e-07
-cycleDuration = 10
 
 [node name="Spikes199" parent="MazeSpikes" instance=ExtResource("13_arp2w")]
 position = Vector2(1201.17, -885.884)
-rotation = -2.98023e-08
-scale = Vector2(1, 1)
-skew = -1.19209e-07
-cycleDuration = 10
 
 [node name="Spikes200" parent="MazeSpikes" instance=ExtResource("13_arp2w")]
 position = Vector2(1366.9, -869.521)
-rotation = -2.98023e-08
-scale = Vector2(1, 1)
-skew = -1.19209e-07
-cycleDuration = 10
 
 [node name="Spikes201" parent="MazeSpikes" instance=ExtResource("13_arp2w")]
 position = Vector2(1527.53, -859.858)
-rotation = -2.98023e-08
-scale = Vector2(1, 1)
-skew = -1.19209e-07
-cycleDuration = 10
 
 [node name="Spikes202" parent="MazeSpikes" instance=ExtResource("13_arp2w")]
 position = Vector2(1192.68, -1012.59)
-rotation = -2.98023e-08
-scale = Vector2(1, 1)
-skew = -1.19209e-07
-cycleDuration = 10
 
 [node name="Spikes203" parent="MazeSpikes" instance=ExtResource("13_arp2w")]
 position = Vector2(1358.4, -996.222)
-rotation = -2.98023e-08
-scale = Vector2(1, 1)
-skew = -1.19209e-07
-cycleDuration = 10
 
 [node name="Spikes204" parent="MazeSpikes" instance=ExtResource("13_arp2w")]
 position = Vector2(1519.04, -986.56)
-rotation = -2.98023e-08
-scale = Vector2(1, 1)
-skew = -1.19209e-07
-cycleDuration = 10
 
 [node name="Spikes205" parent="MazeSpikes" instance=ExtResource("13_arp2w")]
 position = Vector2(1163.31, -1144.72)
-rotation = -2.98023e-08
-scale = Vector2(1, 1)
-skew = -1.19209e-07
-cycleDuration = 10
 
 [node name="Spikes206" parent="MazeSpikes" instance=ExtResource("13_arp2w")]
 position = Vector2(1329.04, -1128.35)
-rotation = -2.98023e-08
-scale = Vector2(1, 1)
-skew = -1.19209e-07
-cycleDuration = 10
 
 [node name="Spikes207" parent="MazeSpikes" instance=ExtResource("13_arp2w")]
 position = Vector2(1489.67, -1118.69)
-rotation = -2.98023e-08
-scale = Vector2(1, 1)
-skew = -1.19209e-07
-cycleDuration = 10
 
 [node name="Spikes208" parent="MazeSpikes" instance=ExtResource("13_arp2w")]
 position = Vector2(1160.64, -1275.77)
-rotation = -2.98023e-08
-scale = Vector2(1, 1)
-skew = -1.19209e-07
-cycleDuration = 10
 
 [node name="Spikes209" parent="MazeSpikes" instance=ExtResource("13_arp2w")]
 position = Vector2(1326.37, -1259.41)
-rotation = -2.98023e-08
-scale = Vector2(1, 1)
-skew = -1.19209e-07
-cycleDuration = 10
 
 [node name="Spikes210" parent="MazeSpikes" instance=ExtResource("13_arp2w")]
 position = Vector2(1487.01, -1249.74)
-rotation = -2.98023e-08
-scale = Vector2(1, 1)
-skew = -1.19209e-07
-cycleDuration = 10
 
 [node name="Spikes211" parent="MazeSpikes" instance=ExtResource("13_arp2w")]
 position = Vector2(1122.53, -1401.37)
-rotation = -2.98023e-08
-scale = Vector2(1, 1)
-skew = -1.19209e-07
-cycleDuration = 10
 
 [node name="Spikes212" parent="MazeSpikes" instance=ExtResource("13_arp2w")]
 position = Vector2(1288.26, -1385.01)
-rotation = -2.98023e-08
-scale = Vector2(1, 1)
-skew = -1.19209e-07
-cycleDuration = 10
 
 [node name="Spikes213" parent="MazeSpikes" instance=ExtResource("13_arp2w")]
 position = Vector2(1448.9, -1375.35)
-rotation = -2.98023e-08
-scale = Vector2(1, 1)
-skew = -1.19209e-07
-cycleDuration = 10
 
 [node name="Spikes214" parent="MazeSpikes" instance=ExtResource("13_arp2w")]
 position = Vector2(1101.64, -1508.32)
-rotation = -2.98023e-08
-scale = Vector2(1, 1)
-skew = -1.19209e-07
-cycleDuration = 10
 
 [node name="Spikes215" parent="MazeSpikes" instance=ExtResource("13_arp2w")]
 position = Vector2(1267.37, -1491.96)
-rotation = -2.98023e-08
-scale = Vector2(1, 1)
-skew = -1.19209e-07
-cycleDuration = 10
 
 [node name="Spikes216" parent="MazeSpikes" instance=ExtResource("13_arp2w")]
 position = Vector2(1428.01, -1482.29)
-rotation = -2.98023e-08
-scale = Vector2(1, 1)
-skew = -1.19209e-07
-cycleDuration = 10
 
 [node name="Spikes217" parent="MazeSpikes" instance=ExtResource("13_arp2w")]
 position = Vector2(1936.62, -1452.23)
-rotation = -2.98023e-08
-scale = Vector2(1, 1)
-skew = -1.19209e-07
-cycleDuration = 10
 
 [node name="Spikes218" parent="MazeSpikes" instance=ExtResource("13_arp2w")]
 position = Vector2(2102.35, -1435.87)
-rotation = -2.98023e-08
-scale = Vector2(1, 1)
-skew = -1.19209e-07
-cycleDuration = 10
 
 [node name="Spikes219" parent="MazeSpikes" instance=ExtResource("13_arp2w")]
 position = Vector2(2262.98, -1426.2)
-rotation = -2.98023e-08
-scale = Vector2(1, 1)
-skew = -1.19209e-07
-cycleDuration = 10
 
 [node name="Spikes220" parent="MazeSpikes" instance=ExtResource("13_arp2w")]
 position = Vector2(1956.27, -1312.85)
-rotation = -2.98023e-08
-scale = Vector2(1, 1)
-skew = -1.19209e-07
-cycleDuration = 10
 
 [node name="Spikes221" parent="MazeSpikes" instance=ExtResource("13_arp2w")]
 position = Vector2(2122, -1296.49)
-rotation = -2.98023e-08
-scale = Vector2(1, 1)
-skew = -1.19209e-07
-cycleDuration = 10
 
 [node name="Spikes222" parent="MazeSpikes" instance=ExtResource("13_arp2w")]
 position = Vector2(2282.64, -1286.82)
-rotation = -2.98023e-08
-scale = Vector2(1, 1)
-skew = -1.19209e-07
-cycleDuration = 10
 
 [node name="Spikes223" parent="MazeSpikes" instance=ExtResource("13_arp2w")]
 position = Vector2(1960.4, -1203.9)
-rotation = -2.98023e-08
-scale = Vector2(1, 1)
-skew = -1.19209e-07
-cycleDuration = 10
 
 [node name="Spikes224" parent="MazeSpikes" instance=ExtResource("13_arp2w")]
 position = Vector2(2126.13, -1187.54)
-rotation = -2.98023e-08
-scale = Vector2(1, 1)
-skew = -1.19209e-07
-cycleDuration = 10
 
 [node name="Spikes225" parent="MazeSpikes" instance=ExtResource("13_arp2w")]
 position = Vector2(2286.77, -1177.88)
-rotation = -2.98023e-08
-scale = Vector2(1, 1)
-skew = -1.19209e-07
-cycleDuration = 10
 
 [node name="Spikes226" parent="MazeSpikes" instance=ExtResource("13_arp2w")]
 position = Vector2(1987.12, -1101.3)
-rotation = -2.98023e-08
-scale = Vector2(1, 1)
-skew = -1.19209e-07
-cycleDuration = 10
 
 [node name="Spikes227" parent="MazeSpikes" instance=ExtResource("13_arp2w")]
 position = Vector2(2152.85, -1084.94)
-rotation = -2.98023e-08
-scale = Vector2(1, 1)
-skew = -1.19209e-07
-cycleDuration = 10
 
 [node name="Spikes228" parent="MazeSpikes" instance=ExtResource("13_arp2w")]
 position = Vector2(2313.49, -1075.28)
-rotation = -2.98023e-08
-scale = Vector2(1, 1)
-skew = -1.19209e-07
-cycleDuration = 10
 
 [node name="Spikes229" parent="MazeSpikes" instance=ExtResource("13_arp2w")]
 position = Vector2(2015.28, -978.776)
-rotation = -2.98023e-08
-scale = Vector2(1, 1)
-skew = -1.19209e-07
-cycleDuration = 10
 
 [node name="Spikes230" parent="MazeSpikes" instance=ExtResource("13_arp2w")]
 position = Vector2(2181.01, -962.413)
-rotation = -2.98023e-08
-scale = Vector2(1, 1)
-skew = -1.19209e-07
-cycleDuration = 10
 
 [node name="Spikes231" parent="MazeSpikes" instance=ExtResource("13_arp2w")]
 position = Vector2(2341.65, -952.751)
-rotation = -2.98023e-08
-scale = Vector2(1, 1)
-skew = -1.19209e-07
-cycleDuration = 10
 
 [node name="Spikes232" parent="MazeSpikes" instance=ExtResource("13_arp2w")]
 position = Vector2(2030.58, -857.149)
-rotation = -2.98023e-08
-scale = Vector2(1, 1)
-skew = -1.19209e-07
-cycleDuration = 10
 
 [node name="Spikes233" parent="MazeSpikes" instance=ExtResource("13_arp2w")]
 position = Vector2(2196.31, -840.785)
-rotation = -2.98023e-08
-scale = Vector2(1, 1)
-skew = -1.19209e-07
-cycleDuration = 10
 
 [node name="Spikes234" parent="MazeSpikes" instance=ExtResource("13_arp2w")]
 position = Vector2(2356.94, -831.124)
-rotation = -2.98023e-08
-scale = Vector2(1, 1)
-skew = -1.19209e-07
-cycleDuration = 10
 
 [node name="Spikes235" parent="MazeSpikes" instance=ExtResource("13_arp2w")]
 position = Vector2(2029.12, -733.523)
-rotation = -2.98023e-08
-scale = Vector2(1, 1)
-skew = -1.19209e-07
-cycleDuration = 10
 
 [node name="Spikes236" parent="MazeSpikes" instance=ExtResource("13_arp2w")]
 position = Vector2(2194.84, -717.159)
-rotation = -2.98023e-08
-scale = Vector2(1, 1)
-skew = -1.19209e-07
-cycleDuration = 10
 
 [node name="Spikes237" parent="MazeSpikes" instance=ExtResource("13_arp2w")]
 position = Vector2(2355.48, -707.498)
-rotation = -2.98023e-08
-scale = Vector2(1, 1)
-skew = -1.19209e-07
-cycleDuration = 10
 
 [node name="Spikes238" parent="MazeSpikes" instance=ExtResource("13_arp2w")]
 position = Vector2(2048.53, -604.469)
-rotation = -2.98023e-08
-scale = Vector2(1, 1)
-skew = -1.19209e-07
-cycleDuration = 10
 
 [node name="Spikes239" parent="MazeSpikes" instance=ExtResource("13_arp2w")]
 position = Vector2(2214.26, -588.105)
-rotation = -2.98023e-08
-scale = Vector2(1, 1)
-skew = -1.19209e-07
-cycleDuration = 10
 
 [node name="Spikes240" parent="MazeSpikes" instance=ExtResource("13_arp2w")]
 position = Vector2(2374.9, -578.444)
-rotation = -2.98023e-08
-scale = Vector2(1, 1)
-skew = -1.19209e-07
-cycleDuration = 10
 
 [node name="Spikes241" parent="MazeSpikes" instance=ExtResource("13_arp2w")]
 position = Vector2(2065.53, -494.62)
-rotation = -2.98023e-08
-scale = Vector2(1, 1)
-skew = -1.19209e-07
-cycleDuration = 10
 
 [node name="Spikes242" parent="MazeSpikes" instance=ExtResource("13_arp2w")]
 position = Vector2(2231.26, -478.256)
-rotation = -2.98023e-08
-scale = Vector2(1, 1)
-skew = -1.19209e-07
-cycleDuration = 10
 
 [node name="Spikes243" parent="MazeSpikes" instance=ExtResource("13_arp2w")]
 position = Vector2(2391.9, -468.594)
-rotation = -2.98023e-08
-scale = Vector2(1, 1)
-skew = -1.19209e-07
-cycleDuration = 10
 
 [node name="Spikes244" parent="MazeSpikes" instance=ExtResource("13_arp2w")]
 position = Vector2(2096.61, -374.268)
-rotation = -2.98023e-08
-scale = Vector2(1, 1)
-skew = -1.19209e-07
-cycleDuration = 10
 
 [node name="Spikes245" parent="MazeSpikes" instance=ExtResource("13_arp2w")]
 position = Vector2(2262.34, -357.904)
-rotation = -2.98023e-08
-scale = Vector2(1, 1)
-skew = -1.19209e-07
-cycleDuration = 10
 
 [node name="Spikes246" parent="MazeSpikes" instance=ExtResource("13_arp2w")]
 position = Vector2(2422.97, -348.242)
-rotation = -2.98023e-08
-scale = Vector2(1, 1)
-skew = -1.19209e-07
-cycleDuration = 10
 
 [node name="Spikes247" parent="MazeSpikes" instance=ExtResource("13_arp2w")]
 position = Vector2(1567.36, -644.509)
-rotation = -2.98023e-08
-scale = Vector2(1, 1)
-skew = -1.19209e-07
-cycleDuration = 10
 
 [node name="Spikes248" parent="MazeSpikes" instance=ExtResource("13_arp2w")]
 position = Vector2(1733.09, -628.145)
-rotation = -2.98023e-08
-scale = Vector2(1, 1)
-skew = -1.19209e-07
-cycleDuration = 10
 
 [node name="Spikes249" parent="MazeSpikes" instance=ExtResource("13_arp2w")]
 position = Vector2(1893.73, -618.483)
-rotation = -2.98023e-08
-scale = Vector2(1, 1)
-skew = -1.19209e-07
-cycleDuration = 10
 
 [node name="Spikes250" parent="MazeSpikes" instance=ExtResource("13_arp2w")]
 position = Vector2(1565.67, -531.21)
-rotation = -2.98023e-08
-scale = Vector2(1, 1)
-skew = -1.19209e-07
-cycleDuration = 10
 
 [node name="Spikes251" parent="MazeSpikes" instance=ExtResource("13_arp2w")]
 position = Vector2(1731.39, -514.846)
-rotation = -2.98023e-08
-scale = Vector2(1, 1)
-skew = -1.19209e-07
-cycleDuration = 10
 
 [node name="Spikes252" parent="MazeSpikes" instance=ExtResource("13_arp2w")]
 position = Vector2(1892.03, -505.185)
-rotation = -2.98023e-08
-scale = Vector2(1, 1)
-skew = -1.19209e-07
-cycleDuration = 10
 
 [node name="Spikes253" parent="MazeSpikes" instance=ExtResource("13_arp2w")]
 position = Vector2(1580.96, -409.584)
-rotation = -2.98023e-08
-scale = Vector2(1, 1)
-skew = -1.19209e-07
-cycleDuration = 10
 
 [node name="Spikes254" parent="MazeSpikes" instance=ExtResource("13_arp2w")]
 position = Vector2(1746.69, -393.22)
-rotation = -2.98023e-08
-scale = Vector2(1, 1)
-skew = -1.19209e-07
-cycleDuration = 10
 
 [node name="Spikes255" parent="MazeSpikes" instance=ExtResource("13_arp2w")]
 position = Vector2(1907.33, -383.559)
-rotation = -2.98023e-08
-scale = Vector2(1, 1)
-skew = -1.19209e-07
-cycleDuration = 10
 
 [node name="Spikes256" parent="MazeSpikes" instance=ExtResource("13_arp2w")]
 position = Vector2(1607.41, -275.278)
-rotation = -2.98023e-08
-scale = Vector2(1, 1)
-skew = -1.19209e-07
-cycleDuration = 10
 
 [node name="Spikes257" parent="MazeSpikes" instance=ExtResource("13_arp2w")]
 position = Vector2(1773.14, -258.914)
-rotation = -2.98023e-08
-scale = Vector2(1, 1)
-skew = -1.19209e-07
-cycleDuration = 10
 
 [node name="Spikes258" parent="MazeSpikes" instance=ExtResource("13_arp2w")]
 position = Vector2(1933.78, -249.253)
-rotation = -2.98023e-08
-scale = Vector2(1, 1)
-skew = -1.19209e-07
-cycleDuration = 10
 
 [node name="Spikes259" parent="MazeSpikes" instance=ExtResource("13_arp2w")]
 position = Vector2(1631.45, -160.178)
-rotation = -2.98023e-08
-scale = Vector2(1, 1)
-skew = -1.19209e-07
-cycleDuration = 10
 
 [node name="Spikes260" parent="MazeSpikes" instance=ExtResource("13_arp2w")]
 position = Vector2(1797.18, -143.814)
-rotation = -2.98023e-08
-scale = Vector2(1, 1)
-skew = -1.19209e-07
-cycleDuration = 10
 
 [node name="Spikes261" parent="MazeSpikes" instance=ExtResource("13_arp2w")]
 position = Vector2(1957.82, -134.153)
-rotation = -2.98023e-08
-scale = Vector2(1, 1)
-skew = -1.19209e-07
-cycleDuration = 10
 
 [node name="Spikes262" parent="MazeSpikes" instance=ExtResource("13_arp2w")]
 position = Vector2(1650.87, -31.125)
-rotation = -2.98023e-08
-scale = Vector2(1, 1)
-skew = -1.19209e-07
-cycleDuration = 10
 
 [node name="Spikes263" parent="MazeSpikes" instance=ExtResource("13_arp2w")]
 position = Vector2(1816.6, -14.761)
-rotation = -2.98023e-08
-scale = Vector2(1, 1)
-skew = -1.19209e-07
-cycleDuration = 10
 
 [node name="Spikes264" parent="MazeSpikes" instance=ExtResource("13_arp2w")]
 position = Vector2(1977.23, -5.09961)
-rotation = -2.98023e-08
-scale = Vector2(1, 1)
-skew = -1.19209e-07
-cycleDuration = 10
 
 [node name="Spikes265" parent="MazeSpikes" instance=ExtResource("13_arp2w")]
 position = Vector2(1652.09, 79.9995)
-rotation = -2.98023e-08
-scale = Vector2(1, 1)
-skew = -1.19209e-07
-cycleDuration = 10
 
 [node name="Spikes266" parent="MazeSpikes" instance=ExtResource("13_arp2w")]
 position = Vector2(1817.81, 96.3635)
-rotation = -2.98023e-08
-scale = Vector2(1, 1)
-skew = -1.19209e-07
-cycleDuration = 10
 
 [node name="Spikes267" parent="MazeSpikes" instance=ExtResource("13_arp2w")]
 position = Vector2(1978.45, 106.025)
-rotation = -2.98023e-08
-scale = Vector2(1, 1)
-skew = -1.19209e-07
-cycleDuration = 10
 
 [node name="Spikes268" parent="MazeSpikes" instance=ExtResource("13_arp2w")]
 position = Vector2(2154.78, -106.082)
-rotation = -2.98023e-08
-scale = Vector2(1, 1)
-skew = -1.19209e-07
-cycleDuration = 10
 
 [node name="Spikes269" parent="MazeSpikes" instance=ExtResource("13_arp2w")]
 position = Vector2(2320.5, -89.7178)
-rotation = -2.98023e-08
-scale = Vector2(1, 1)
-skew = -1.19209e-07
-cycleDuration = 10
 
 [node name="Spikes270" parent="MazeSpikes" instance=ExtResource("13_arp2w")]
 position = Vector2(2481.14, -80.0564)
-rotation = -2.98023e-08
-scale = Vector2(1, 1)
-skew = -1.19209e-07
-cycleDuration = 10
 
 [node name="Spikes271" parent="MazeSpikes" instance=ExtResource("13_arp2w")]
 position = Vector2(2153.31, 17.5432)
-rotation = -2.98023e-08
-scale = Vector2(1, 1)
-skew = -1.19209e-07
-cycleDuration = 10
 
 [node name="Spikes272" parent="MazeSpikes" instance=ExtResource("13_arp2w")]
 position = Vector2(2319.04, 33.9072)
-rotation = -2.98023e-08
-scale = Vector2(1, 1)
-skew = -1.19209e-07
-cycleDuration = 10
 
 [node name="Spikes273" parent="MazeSpikes" instance=ExtResource("13_arp2w")]
 position = Vector2(2479.68, 43.5686)
-rotation = -2.98023e-08
-scale = Vector2(1, 1)
-skew = -1.19209e-07
-cycleDuration = 10
 
 [node name="Spikes274" parent="MazeSpikes" instance=ExtResource("13_arp2w")]
 position = Vector2(2177.35, 132.644)
-rotation = -2.98023e-08
-scale = Vector2(1, 1)
-skew = -1.19209e-07
-cycleDuration = 10
 
 [node name="Spikes275" parent="MazeSpikes" instance=ExtResource("13_arp2w")]
 position = Vector2(2343.08, 149.008)
-rotation = -2.98023e-08
-scale = Vector2(1, 1)
-skew = -1.19209e-07
-cycleDuration = 10
 
 [node name="Spikes276" parent="MazeSpikes" instance=ExtResource("13_arp2w")]
 position = Vector2(2503.72, 158.67)
-rotation = -2.98023e-08
-scale = Vector2(1, 1)
-skew = -1.19209e-07
-cycleDuration = 10
 
 [node name="Spikes277" parent="MazeSpikes" instance=ExtResource("13_arp2w")]
 position = Vector2(2503.06, 288.698)
-rotation = -2.98023e-08
-scale = Vector2(1, 1)
-skew = -1.19209e-07
-cycleDuration = 10
 
 [node name="Spikes278" parent="MazeSpikes" instance=ExtResource("13_arp2w")]
 position = Vector2(2668.79, 305.062)
-rotation = -2.98023e-08
-scale = Vector2(1, 1)
-skew = -1.19209e-07
-cycleDuration = 10
 
 [node name="Spikes279" parent="MazeSpikes" instance=ExtResource("13_arp2w")]
 position = Vector2(2829.43, 314.724)
-rotation = -2.98023e-08
-scale = Vector2(1, 1)
-skew = -1.19209e-07
-cycleDuration = 10
 
 [node name="Spikes280" parent="MazeSpikes" instance=ExtResource("13_arp2w")]
 position = Vector2(2508.64, 417.576)
-rotation = -2.98023e-08
-scale = Vector2(1, 1)
-skew = -1.19209e-07
-cycleDuration = 10
 
 [node name="Spikes281" parent="MazeSpikes" instance=ExtResource("13_arp2w")]
 position = Vector2(2674.37, 433.94)
-rotation = -2.98023e-08
-scale = Vector2(1, 1)
-skew = -1.19209e-07
-cycleDuration = 10
 
 [node name="Spikes282" parent="MazeSpikes" instance=ExtResource("13_arp2w")]
 position = Vector2(2835, 443.602)
-rotation = -2.98023e-08
-scale = Vector2(1, 1)
-skew = -1.19209e-07
-cycleDuration = 10
 
 [node name="Spikes283" parent="MazeSpikes" instance=ExtResource("13_arp2w")]
 position = Vector2(2533.88, 542.279)
-rotation = -2.98023e-08
-scale = Vector2(1, 1)
-skew = -1.19209e-07
-cycleDuration = 10
 
 [node name="Spikes284" parent="MazeSpikes" instance=ExtResource("13_arp2w")]
 position = Vector2(2699.61, 558.643)
-rotation = -2.98023e-08
-scale = Vector2(1, 1)
-skew = -1.19209e-07
-cycleDuration = 10
 
 [node name="Spikes285" parent="MazeSpikes" instance=ExtResource("13_arp2w")]
 position = Vector2(2860.25, 568.304)
-rotation = -2.98023e-08
-scale = Vector2(1, 1)
-skew = -1.19209e-07
-cycleDuration = 10
 
 [node name="Spikes286" parent="MazeSpikes" instance=ExtResource("13_arp2w")]
 position = Vector2(2545.05, 656.479)
-rotation = -2.98023e-08
-scale = Vector2(1, 1)
-skew = -1.19209e-07
-cycleDuration = 10
 
 [node name="Spikes287" parent="MazeSpikes" instance=ExtResource("13_arp2w")]
 position = Vector2(2710.78, 672.843)
-rotation = -2.98023e-08
-scale = Vector2(1, 1)
-skew = -1.19209e-07
-cycleDuration = 10
 
 [node name="Spikes288" parent="MazeSpikes" instance=ExtResource("13_arp2w")]
 position = Vector2(2871.42, 682.504)
-rotation = -2.98023e-08
-scale = Vector2(1, 1)
-skew = -1.19209e-07
-cycleDuration = 10
 
 [node name="Spikes289" parent="MazeSpikes" instance=ExtResource("13_arp2w")]
 position = Vector2(2550.63, 785.357)
-rotation = -2.98023e-08
-scale = Vector2(1, 1)
-skew = -1.19209e-07
-cycleDuration = 10
 
 [node name="Spikes290" parent="MazeSpikes" instance=ExtResource("13_arp2w")]
 position = Vector2(2716.36, 801.721)
-rotation = -2.98023e-08
-scale = Vector2(1, 1)
-skew = -1.19209e-07
-cycleDuration = 10
 
 [node name="Spikes291" parent="MazeSpikes" instance=ExtResource("13_arp2w")]
 position = Vector2(2877, 811.382)
-rotation = -2.98023e-08
-scale = Vector2(1, 1)
-skew = -1.19209e-07
-cycleDuration = 10
 
 [node name="Spikes292" parent="MazeSpikes" instance=ExtResource("13_arp2w")]
 position = Vector2(2571.76, 902.633)
-rotation = -2.98023e-08
-scale = Vector2(1, 1)
-skew = -1.19209e-07
-cycleDuration = 10
 
 [node name="Spikes293" parent="MazeSpikes" instance=ExtResource("13_arp2w")]
 position = Vector2(2737.48, 918.997)
-rotation = -2.98023e-08
-scale = Vector2(1, 1)
-skew = -1.19209e-07
-cycleDuration = 10
 
 [node name="Spikes294" parent="MazeSpikes" instance=ExtResource("13_arp2w")]
 position = Vector2(2898.12, 928.658)
-rotation = -2.98023e-08
-scale = Vector2(1, 1)
-skew = -1.19209e-07
-cycleDuration = 10
 
 [node name="Spikes295" parent="MazeSpikes" instance=ExtResource("13_arp2w")]
 position = Vector2(2587.05, 1024.26)
-rotation = -2.98023e-08
-scale = Vector2(1, 1)
-skew = -1.19209e-07
-cycleDuration = 10
 
 [node name="Spikes296" parent="MazeSpikes" instance=ExtResource("13_arp2w")]
 position = Vector2(2752.78, 1040.62)
-rotation = -2.98023e-08
-scale = Vector2(1, 1)
-skew = -1.19209e-07
-cycleDuration = 10
 
 [node name="Spikes297" parent="MazeSpikes" instance=ExtResource("13_arp2w")]
 position = Vector2(2913.41, 1050.28)
-rotation = -2.98023e-08
-scale = Vector2(1, 1)
-skew = -1.19209e-07
-cycleDuration = 10
 
 [node name="Spikes298" parent="MazeSpikes" instance=ExtResource("13_arp2w")]
 position = Vector2(2597.01, 1128.86)
-rotation = -2.98023e-08
-scale = Vector2(1, 1)
-skew = -1.19209e-07
-cycleDuration = 10
 
 [node name="Spikes299" parent="MazeSpikes" instance=ExtResource("13_arp2w")]
 position = Vector2(2762.74, 1145.22)
-rotation = -2.98023e-08
-scale = Vector2(1, 1)
-skew = -1.19209e-07
-cycleDuration = 10
 
 [node name="Spikes300" parent="MazeSpikes" instance=ExtResource("13_arp2w")]
 position = Vector2(2923.38, 1154.88)
-rotation = -2.98023e-08
-scale = Vector2(1, 1)
-skew = -1.19209e-07
-cycleDuration = 10
 
 [node name="Spikes301" parent="MazeSpikes" instance=ExtResource("13_arp2w")]
 position = Vector2(2592.64, 1254.66)
-rotation = -2.98023e-08
-scale = Vector2(1, 1)
-skew = -1.19209e-07
-cycleDuration = 10
 
 [node name="Spikes302" parent="MazeSpikes" instance=ExtResource("13_arp2w")]
 position = Vector2(2758.37, 1271.02)
-rotation = -2.98023e-08
-scale = Vector2(1, 1)
-skew = -1.19209e-07
-cycleDuration = 10
 
 [node name="Spikes303" parent="MazeSpikes" instance=ExtResource("13_arp2w")]
 position = Vector2(2919, 1280.68)
-rotation = -2.98023e-08
-scale = Vector2(1, 1)
-skew = -1.19209e-07
-cycleDuration = 10
 
 [node name="Spikes304" parent="MazeSpikes" instance=ExtResource("13_arp2w")]
 position = Vector2(2083.39, 1211.07)
-rotation = -2.98023e-08
-scale = Vector2(1, 1)
-skew = -1.19209e-07
-cycleDuration = 10
 
 [node name="Spikes305" parent="MazeSpikes" instance=ExtResource("13_arp2w")]
 position = Vector2(2249.12, 1227.43)
-rotation = -2.98023e-08
-scale = Vector2(1, 1)
-skew = -1.19209e-07
-cycleDuration = 10
 
 [node name="Spikes306" parent="MazeSpikes" instance=ExtResource("13_arp2w")]
 position = Vector2(2409.75, 1237.09)
-rotation = -2.98023e-08
-scale = Vector2(1, 1)
-skew = -1.19209e-07
-cycleDuration = 10
 
 [node name="Spikes307" parent="MazeSpikes" instance=ExtResource("13_arp2w")]
 position = Vector2(2105.39, 1107.12)
-rotation = -2.98023e-08
-scale = Vector2(1, 1)
-skew = -1.19209e-07
-cycleDuration = 10
 
 [node name="Spikes308" parent="MazeSpikes" instance=ExtResource("13_arp2w")]
 position = Vector2(2271.12, 1123.48)
-rotation = -2.98023e-08
-scale = Vector2(1, 1)
-skew = -1.19209e-07
-cycleDuration = 10
 
 [node name="Spikes309" parent="MazeSpikes" instance=ExtResource("13_arp2w")]
 position = Vector2(2431.76, 1133.15)
-rotation = -2.98023e-08
-scale = Vector2(1, 1)
-skew = -1.19209e-07
-cycleDuration = 10
 
 [node name="Spikes310" parent="MazeSpikes" instance=ExtResource("13_arp2w")]
 position = Vector2(2090.1, 985.494)
-rotation = -2.98023e-08
-scale = Vector2(1, 1)
-skew = -1.19209e-07
-cycleDuration = 10
 
 [node name="Spikes311" parent="MazeSpikes" instance=ExtResource("13_arp2w")]
 position = Vector2(2255.83, 1001.86)
-rotation = -2.98023e-08
-scale = Vector2(1, 1)
-skew = -1.19209e-07
-cycleDuration = 10
 
 [node name="Spikes312" parent="MazeSpikes" instance=ExtResource("13_arp2w")]
 position = Vector2(2416.46, 1011.52)
-rotation = -2.98023e-08
-scale = Vector2(1, 1)
-skew = -1.19209e-07
-cycleDuration = 10
 
 [node name="Spikes313" parent="MazeSpikes" instance=ExtResource("13_arp2w")]
 position = Vector2(2091.79, 872.195)
-rotation = -2.98023e-08
-scale = Vector2(1, 1)
-skew = -1.19209e-07
-cycleDuration = 10
 
 [node name="Spikes314" parent="MazeSpikes" instance=ExtResource("13_arp2w")]
 position = Vector2(2257.52, 888.559)
-rotation = -2.98023e-08
-scale = Vector2(1, 1)
-skew = -1.19209e-07
-cycleDuration = 10
 
 [node name="Spikes315" parent="MazeSpikes" instance=ExtResource("13_arp2w")]
 position = Vector2(2418.16, 898.22)
-rotation = -2.98023e-08
-scale = Vector2(1, 1)
-skew = -1.19209e-07
-cycleDuration = 10
 
 [node name="Spikes316" parent="MazeSpikes" instance=ExtResource("13_arp2w")]
 position = Vector2(1884.47, 736.328)
-rotation = -2.98023e-08
-scale = Vector2(1, 1)
-skew = -1.19209e-07
-cycleDuration = 10
 
 [node name="Spikes317" parent="MazeSpikes" instance=ExtResource("13_arp2w")]
 position = Vector2(2050.2, 752.692)
-rotation = -2.98023e-08
-scale = Vector2(1, 1)
-skew = -1.19209e-07
-cycleDuration = 10
 
 [node name="Spikes318" parent="MazeSpikes" instance=ExtResource("13_arp2w")]
 position = Vector2(2210.83, 762.353)
-rotation = -2.98023e-08
-scale = Vector2(1, 1)
-skew = -1.19209e-07
-cycleDuration = 10
 
 [node name="Spikes319" parent="MazeSpikes" instance=ExtResource("13_arp2w")]
 position = Vector2(1866.26, 616.876)
-rotation = -2.98023e-08
-scale = Vector2(1, 1)
-skew = -1.19209e-07
-cycleDuration = 10
 
 [node name="Spikes320" parent="MazeSpikes" instance=ExtResource("13_arp2w")]
 position = Vector2(2031.99, 633.24)
-rotation = -2.98023e-08
-scale = Vector2(1, 1)
-skew = -1.19209e-07
-cycleDuration = 10
 
 [node name="Spikes321" parent="MazeSpikes" instance=ExtResource("13_arp2w")]
 position = Vector2(2192.62, 642.902)
-rotation = -2.98023e-08
-scale = Vector2(1, 1)
-skew = -1.19209e-07
-cycleDuration = 10
 
 [node name="Spikes322" parent="MazeSpikes" instance=ExtResource("13_arp2w")]
 position = Vector2(1846.84, 487.823)
-rotation = -2.98023e-08
-scale = Vector2(1, 1)
-skew = -1.19209e-07
-cycleDuration = 10
 
 [node name="Spikes323" parent="MazeSpikes" instance=ExtResource("13_arp2w")]
 position = Vector2(2012.57, 504.187)
-rotation = -2.98023e-08
-scale = Vector2(1, 1)
-skew = -1.19209e-07
-cycleDuration = 10
 
 [node name="Spikes324" parent="MazeSpikes" instance=ExtResource("13_arp2w")]
 position = Vector2(2173.21, 513.848)
-rotation = -2.98023e-08
-scale = Vector2(1, 1)
-skew = -1.19209e-07
-cycleDuration = 10
 
 [node name="Spikes325" parent="MazeSpikes" instance=ExtResource("13_arp2w")]
 position = Vector2(1838.35, 361.121)
-rotation = -2.98023e-08
-scale = Vector2(1, 1)
-skew = -1.19209e-07
-cycleDuration = 10
 
 [node name="Spikes326" parent="MazeSpikes" instance=ExtResource("13_arp2w")]
 position = Vector2(2004.08, 377.485)
-rotation = -2.98023e-08
-scale = Vector2(1, 1)
-skew = -1.19209e-07
-cycleDuration = 10
 
 [node name="Spikes327" parent="MazeSpikes" instance=ExtResource("13_arp2w")]
 position = Vector2(2164.72, 387.146)
-rotation = -2.98023e-08
-scale = Vector2(1, 1)
-skew = -1.19209e-07
-cycleDuration = 10
 
 [node name="Spikes328" parent="MazeSpikes" instance=ExtResource("13_arp2w")]
 position = Vector2(1360.8, 349.887)
-rotation = -2.98023e-08
-scale = Vector2(1, 1)
-skew = -1.19209e-07
-cycleDuration = 10
 
 [node name="Spikes329" parent="MazeSpikes" instance=ExtResource("13_arp2w")]
 position = Vector2(1526.53, 366.251)
-rotation = -2.98023e-08
-scale = Vector2(1, 1)
-skew = -1.19209e-07
-cycleDuration = 10
 
 [node name="Spikes330" parent="MazeSpikes" instance=ExtResource("13_arp2w")]
 position = Vector2(1687.17, 375.913)
-rotation = -2.98023e-08
-scale = Vector2(1, 1)
-skew = -1.19209e-07
-cycleDuration = 10
 
 [node name="Spikes331" parent="MazeSpikes" instance=ExtResource("13_arp2w")]
 position = Vector2(1402.47, 486.843)
-rotation = -2.98023e-08
-scale = Vector2(1, 1)
-skew = -1.19209e-07
-cycleDuration = 10
 
 [node name="Spikes332" parent="MazeSpikes" instance=ExtResource("13_arp2w")]
 position = Vector2(1568.2, 503.207)
-rotation = -2.98023e-08
-scale = Vector2(1, 1)
-skew = -1.19209e-07
-cycleDuration = 10
 
 [node name="Spikes333" parent="MazeSpikes" instance=ExtResource("13_arp2w")]
 position = Vector2(1728.83, 512.869)
-rotation = -2.98023e-08
-scale = Vector2(1, 1)
-skew = -1.19209e-07
-cycleDuration = 10
 
 [node name="Spikes334" parent="MazeSpikes" instance=ExtResource("13_arp2w")]
 position = Vector2(1423.36, 593.792)
-rotation = -2.98023e-08
-scale = Vector2(1, 1)
-skew = -1.19209e-07
-cycleDuration = 10
 
 [node name="Spikes335" parent="MazeSpikes" instance=ExtResource("13_arp2w")]
 position = Vector2(1589.09, 610.156)
-rotation = -2.98023e-08
-scale = Vector2(1, 1)
-skew = -1.19209e-07
-cycleDuration = 10
 
 [node name="Spikes336" parent="MazeSpikes" instance=ExtResource("13_arp2w")]
 position = Vector2(1749.72, 619.818)
-rotation = -2.98023e-08
-scale = Vector2(1, 1)
-skew = -1.19209e-07
-cycleDuration = 10
 
 [node name="Spikes337" parent="MazeSpikes" instance=ExtResource("13_arp2w")]
 position = Vector2(1222.83, 697.926)
-rotation = -2.98023e-08
-scale = Vector2(1, 1)
-skew = -1.19209e-07
-cycleDuration = 10
 
 [node name="Spikes338" parent="MazeSpikes" instance=ExtResource("13_arp2w")]
 position = Vector2(1388.56, 714.29)
-rotation = -2.98023e-08
-scale = Vector2(1, 1)
-skew = -1.19209e-07
-cycleDuration = 10
 
 [node name="Spikes339" parent="MazeSpikes" instance=ExtResource("13_arp2w")]
 position = Vector2(1549.19, 723.952)
-rotation = -2.98023e-08
-scale = Vector2(1, 1)
-skew = -1.19209e-07
-cycleDuration = 10
 
 [node name="Spikes340" parent="MazeSpikes" instance=ExtResource("13_arp2w")]
 position = Vector2(1239.83, 807.776)
-rotation = -2.98023e-08
-scale = Vector2(1, 1)
-skew = -1.19209e-07
-cycleDuration = 10
 
 [node name="Spikes341" parent="MazeSpikes" instance=ExtResource("13_arp2w")]
 position = Vector2(1405.56, 824.14)
-rotation = -2.98023e-08
-scale = Vector2(1, 1)
-skew = -1.19209e-07
-cycleDuration = 10
 
 [node name="Spikes342" parent="MazeSpikes" instance=ExtResource("13_arp2w")]
 position = Vector2(1566.19, 833.802)
-rotation = -2.98023e-08
-scale = Vector2(1, 1)
-skew = -1.19209e-07
-cycleDuration = 10
 
 [node name="Spikes343" parent="MazeSpikes" instance=ExtResource("13_arp2w")]
 position = Vector2(1251, 921.976)
-rotation = -2.98023e-08
-scale = Vector2(1, 1)
-skew = -1.19209e-07
-cycleDuration = 10
 
 [node name="Spikes344" parent="MazeSpikes" instance=ExtResource("13_arp2w")]
 position = Vector2(1416.73, 938.34)
-rotation = -2.98023e-08
-scale = Vector2(1, 1)
-skew = -1.19209e-07
-cycleDuration = 10
 
 [node name="Spikes345" parent="MazeSpikes" instance=ExtResource("13_arp2w")]
 position = Vector2(1577.37, 948.001)
-rotation = -2.98023e-08
-scale = Vector2(1, 1)
-skew = -1.19209e-07
-cycleDuration = 10
 
 [node name="Spikes346" parent="MazeSpikes" instance=ExtResource("13_arp2w")]
 position = Vector2(1251, 921.976)
-rotation = -2.98023e-08
-scale = Vector2(1, 1)
-skew = -1.19209e-07
-cycleDuration = 10
 
 [node name="Spikes400" parent="MazeSpikes" instance=ExtResource("13_arp2w")]
 position = Vector2(1211.9, 348.978)
-rotation = -2.98023e-08
-scale = Vector2(1, 1)
-skew = -1.19209e-07
-cycleDuration = 10
 
 [node name="Spikes401" parent="MazeSpikes" instance=ExtResource("13_arp2w")]
 position = Vector2(1228.9, 458.827)
-rotation = -2.98023e-08
-scale = Vector2(1, 1)
-skew = -1.19209e-07
-cycleDuration = 10
 
 [node name="Spikes402" parent="MazeSpikes" instance=ExtResource("13_arp2w")]
 position = Vector2(1240.07, 573.027)
-rotation = -2.98023e-08
-scale = Vector2(1, 1)
-skew = -1.19209e-07
-cycleDuration = 10
 
 [node name="Spikes403" parent="MazeSpikes" instance=ExtResource("13_arp2w")]
 position = Vector2(1211.9, 348.978)
-rotation = -2.98023e-08
-scale = Vector2(1, 1)
-skew = -1.19209e-07
-cycleDuration = 10
 
 [node name="Spikes404" parent="MazeSpikes" instance=ExtResource("13_arp2w")]
 position = Vector2(1228.9, 458.827)
-rotation = -2.98023e-08
-scale = Vector2(1, 1)
-skew = -1.19209e-07
-cycleDuration = 10
 
 [node name="Spikes405" parent="MazeSpikes" instance=ExtResource("13_arp2w")]
 position = Vector2(1240.07, 573.027)
-rotation = -2.98023e-08
-scale = Vector2(1, 1)
-skew = -1.19209e-07
-cycleDuration = 10
 
 [node name="Spikes406" parent="MazeSpikes" instance=ExtResource("13_arp2w")]
 position = Vector2(581.093, 665.678)
-rotation = -2.98023e-08
-scale = Vector2(1, 1)
-skew = -1.19209e-07
-cycleDuration = 10
 
 [node name="Spikes407" parent="MazeSpikes" instance=ExtResource("13_arp2w")]
 position = Vector2(598.095, 775.528)
-rotation = -2.98023e-08
-scale = Vector2(1, 1)
-skew = -1.19209e-07
-cycleDuration = 10
 
 [node name="Spikes408" parent="MazeSpikes" instance=ExtResource("13_arp2w")]
 position = Vector2(609.267, 889.728)
-rotation = -2.98023e-08
-scale = Vector2(1, 1)
-skew = -1.19209e-07
-cycleDuration = 10
 
 [node name="Spikes409" parent="MazeSpikes" instance=ExtResource("13_arp2w")]
 position = Vector2(1893.6, 876.558)
-rotation = -2.98023e-08
-scale = Vector2(1, 1)
-skew = -1.19209e-07
-cycleDuration = 10
 
 [node name="Spikes410" parent="MazeSpikes" instance=ExtResource("13_arp2w")]
 position = Vector2(1910.6, 986.408)
-rotation = -2.98023e-08
-scale = Vector2(1, 1)
-skew = -1.19209e-07
-cycleDuration = 10
 
 [node name="Spikes411" parent="MazeSpikes" instance=ExtResource("13_arp2w")]
 position = Vector2(1921.77, 1100.61)
-rotation = -2.98023e-08
-scale = Vector2(1, 1)
-skew = -1.19209e-07
-cycleDuration = 10
 
 [node name="Spikes412" parent="MazeSpikes" instance=ExtResource("13_arp2w")]
 position = Vector2(1013.9, -1124.25)
-rotation = -2.98023e-08
-scale = Vector2(1, 1)
-skew = -1.19209e-07
-cycleDuration = 10
 
 [node name="Spikes413" parent="MazeSpikes" instance=ExtResource("13_arp2w")]
 position = Vector2(1030.9, -1014.4)
-rotation = -2.98023e-08
-scale = Vector2(1, 1)
-skew = -1.19209e-07
-cycleDuration = 10
 
 [node name="Spikes414" parent="MazeSpikes" instance=ExtResource("13_arp2w")]
 position = Vector2(1042.07, -900.196)
-rotation = -2.98023e-08
-scale = Vector2(1, 1)
-skew = -1.19209e-07
-cycleDuration = 10
 
 [node name="Spikes415" parent="MazeSpikes" instance=ExtResource("13_arp2w")]
 position = Vector2(1013.9, -1124.25)
-rotation = -2.98023e-08
-scale = Vector2(1, 1)
-skew = -1.19209e-07
-cycleDuration = 10
 
 [node name="Spikes416" parent="MazeSpikes" instance=ExtResource("13_arp2w")]
 position = Vector2(1030.9, -1014.4)
-rotation = -2.98023e-08
-scale = Vector2(1, 1)
-skew = -1.19209e-07
-cycleDuration = 10
 
 [node name="Spikes417" parent="MazeSpikes" instance=ExtResource("13_arp2w")]
 position = Vector2(1042.07, -900.196)
-rotation = -2.98023e-08
-scale = Vector2(1, 1)
-skew = -1.19209e-07
-cycleDuration = 10
 
 [node name="Spikes418" parent="MazeSpikes" instance=ExtResource("13_arp2w")]
 position = Vector2(272.988, -1691.66)
-rotation = -2.98023e-08
-scale = Vector2(1, 1)
-skew = -1.19209e-07
-cycleDuration = 10
 
 [node name="Spikes419" parent="MazeSpikes" instance=ExtResource("13_arp2w")]
 position = Vector2(289.99, -1581.81)
-rotation = -2.98023e-08
-scale = Vector2(1, 1)
-skew = -1.19209e-07
-cycleDuration = 10
 
 [node name="Spikes420" parent="MazeSpikes" instance=ExtResource("13_arp2w")]
 position = Vector2(301.162, -1467.61)
-rotation = -2.98023e-08
-scale = Vector2(1, 1)
-skew = -1.19209e-07
-cycleDuration = 10
 
 [node name="Spikes421" parent="MazeSpikes" instance=ExtResource("13_arp2w")]
 position = Vector2(1607.34, -1476.08)
-rotation = -2.98023e-08
-scale = Vector2(1, 1)
-skew = -1.19209e-07
-cycleDuration = 10
 
 [node name="Spikes422" parent="MazeSpikes" instance=ExtResource("13_arp2w")]
 position = Vector2(1624.34, -1366.23)
-rotation = -2.98023e-08
-scale = Vector2(1, 1)
-skew = -1.19209e-07
-cycleDuration = 10
 
 [node name="Spikes423" parent="MazeSpikes" instance=ExtResource("13_arp2w")]
 position = Vector2(1635.51, -1252.03)
-rotation = -2.98023e-08
-scale = Vector2(1, 1)
-skew = -1.19209e-07
-cycleDuration = 10
 
 [node name="Spikes424" parent="MazeSpikes" instance=ExtResource("13_arp2w")]
 position = Vector2(1768.95, -1467.14)
-rotation = -2.98023e-08
-scale = Vector2(1, 1)
-skew = -1.19209e-07
-cycleDuration = 10
 
 [node name="Spikes425" parent="MazeSpikes" instance=ExtResource("13_arp2w")]
 position = Vector2(1785.95, -1357.29)
-rotation = -2.98023e-08
-scale = Vector2(1, 1)
-skew = -1.19209e-07
-cycleDuration = 10
 
 [node name="Spikes426" parent="MazeSpikes" instance=ExtResource("13_arp2w")]
 position = Vector2(1797.12, -1243.09)
-rotation = -2.98023e-08
-scale = Vector2(1, 1)
-skew = -1.19209e-07
-cycleDuration = 10
 
 [node name="Spikes347" parent="MazeSpikes" instance=ExtResource("13_arp2w")]
 position = Vector2(1416.73, 938.34)
-rotation = -2.98023e-08
-scale = Vector2(1, 1)
-skew = -1.19209e-07
-cycleDuration = 10
 
 [node name="Spikes348" parent="MazeSpikes" instance=ExtResource("13_arp2w")]
 position = Vector2(1577.37, 948.001)
-rotation = -2.98023e-08
-scale = Vector2(1, 1)
-skew = -1.19209e-07
-cycleDuration = 10
 
 [node name="Spikes349" parent="MazeSpikes" instance=ExtResource("13_arp2w")]
 position = Vector2(756.465, 902.414)
-rotation = -2.98023e-08
-scale = Vector2(1, 1)
-skew = -1.19209e-07
-cycleDuration = 10
 
 [node name="Spikes350" parent="MazeSpikes" instance=ExtResource("13_arp2w")]
 position = Vector2(922.193, 918.778)
-rotation = -2.98023e-08
-scale = Vector2(1, 1)
-skew = -1.19209e-07
-cycleDuration = 10
 
 [node name="Spikes351" parent="MazeSpikes" instance=ExtResource("13_arp2w")]
 position = Vector2(1082.83, 928.44)
-rotation = -2.98023e-08
-scale = Vector2(1, 1)
-skew = -1.19209e-07
-cycleDuration = 10
 
 [node name="Spikes352" parent="MazeSpikes" instance=ExtResource("13_arp2w")]
 position = Vector2(748.209, 786.039)
-rotation = -2.98023e-08
-scale = Vector2(1, 1)
-skew = -1.19209e-07
-cycleDuration = 10
 
 [node name="Spikes353" parent="MazeSpikes" instance=ExtResource("13_arp2w")]
 position = Vector2(913.938, 802.403)
-rotation = -2.98023e-08
-scale = Vector2(1, 1)
-skew = -1.19209e-07
-cycleDuration = 10
 
 [node name="Spikes354" parent="MazeSpikes" instance=ExtResource("13_arp2w")]
 position = Vector2(1074.57, 812.064)
-rotation = -2.98023e-08
-scale = Vector2(1, 1)
-skew = -1.19209e-07
-cycleDuration = 10
 
 [node name="Spikes355" parent="MazeSpikes" instance=ExtResource("13_arp2w")]
 position = Vector2(742.867, 667.489)
-rotation = -2.98023e-08
-scale = Vector2(1, 1)
-skew = -1.19209e-07
-cycleDuration = 10
 
 [node name="Spikes356" parent="MazeSpikes" instance=ExtResource("13_arp2w")]
 position = Vector2(908.596, 683.853)
-rotation = -2.98023e-08
-scale = Vector2(1, 1)
-skew = -1.19209e-07
-cycleDuration = 10
 
 [node name="Spikes357" parent="MazeSpikes" instance=ExtResource("13_arp2w")]
 position = Vector2(1069.23, 693.514)
-rotation = -2.98023e-08
-scale = Vector2(1, 1)
-skew = -1.19209e-07
-cycleDuration = 10
 
 [node name="Spikes358" parent="MazeSpikes" instance=ExtResource("13_arp2w")]
 position = Vector2(76.4678, 608.133)
-rotation = -2.98023e-08
-scale = Vector2(1, 1)
-skew = -1.19209e-07
-cycleDuration = 10
 
 [node name="Spikes359" parent="MazeSpikes" instance=ExtResource("13_arp2w")]
 position = Vector2(242.196, 624.497)
-rotation = -2.98023e-08
-scale = Vector2(1, 1)
-skew = -1.19209e-07
-cycleDuration = 10
 
 [node name="Spikes360" parent="MazeSpikes" instance=ExtResource("13_arp2w")]
 position = Vector2(402.832, 634.158)
-rotation = -2.98023e-08
-scale = Vector2(1, 1)
-skew = -1.19209e-07
-cycleDuration = 10
 
 [node name="Spikes361" parent="MazeSpikes" instance=ExtResource("13_arp2w")]
 position = Vector2(77.9219, 729.583)
-rotation = -2.98023e-08
-scale = Vector2(1, 1)
-skew = -1.19209e-07
-cycleDuration = 10
 
 [node name="Spikes362" parent="MazeSpikes" instance=ExtResource("13_arp2w")]
 position = Vector2(243.65, 745.947)
-rotation = -2.98023e-08
-scale = Vector2(1, 1)
-skew = -1.19209e-07
-cycleDuration = 10
 
 [node name="Spikes363" parent="MazeSpikes" instance=ExtResource("13_arp2w")]
 position = Vector2(404.286, 755.608)
-rotation = -2.98023e-08
-scale = Vector2(1, 1)
-skew = -1.19209e-07
-cycleDuration = 10
 
 [node name="Spikes364" parent="MazeSpikes" instance=ExtResource("13_arp2w")]
 position = Vector2(93.4512, 861.537)
-rotation = -2.98023e-08
-scale = Vector2(1, 1)
-skew = -1.19209e-07
-cycleDuration = 10
 
 [node name="Spikes365" parent="MazeSpikes" instance=ExtResource("13_arp2w")]
 position = Vector2(259.18, 877.901)
-rotation = -2.98023e-08
-scale = Vector2(1, 1)
-skew = -1.19209e-07
-cycleDuration = 10
 
 [node name="Spikes366" parent="MazeSpikes" instance=ExtResource("13_arp2w")]
 position = Vector2(419.815, 887.563)
-rotation = -2.98023e-08
-scale = Vector2(1, 1)
-skew = -1.19209e-07
-cycleDuration = 10
 
 [node name="Spikes367" parent="MazeSpikes" instance=ExtResource("13_arp2w")]
 position = Vector2(53.165, 481.979)
-rotation = -2.98023e-08
-scale = Vector2(1, 1)
-skew = -1.19209e-07
-cycleDuration = 10
 
 [node name="Spikes368" parent="MazeSpikes" instance=ExtResource("13_arp2w")]
 position = Vector2(218.894, 498.344)
-rotation = -2.98023e-08
-scale = Vector2(1, 1)
-skew = -1.19209e-07
-cycleDuration = 10
 
 [node name="Spikes369" parent="MazeSpikes" instance=ExtResource("13_arp2w")]
 position = Vector2(379.529, 508.005)
-rotation = -2.98023e-08
-scale = Vector2(1, 1)
-skew = -1.19209e-07
-cycleDuration = 10
 
 [node name="Spikes370" parent="MazeSpikes" instance=ExtResource("13_arp2w")]
 position = Vector2(33.749, 352.926)
-rotation = -2.98023e-08
-scale = Vector2(1, 1)
-skew = -1.19209e-07
-cycleDuration = 10
 
 [node name="Spikes371" parent="MazeSpikes" instance=ExtResource("13_arp2w")]
 position = Vector2(199.478, 369.29)
-rotation = -2.98023e-08
-scale = Vector2(1, 1)
-skew = -1.19209e-07
-cycleDuration = 10
 
 [node name="Spikes372" parent="MazeSpikes" instance=ExtResource("13_arp2w")]
 position = Vector2(360.113, 378.951)
-rotation = -2.98023e-08
-scale = Vector2(1, 1)
-skew = -1.19209e-07
-cycleDuration = 10
 
 [node name="Spikes373" parent="MazeSpikes" instance=ExtResource("13_arp2w")]
 position = Vector2(26.9365, 256.48)
-rotation = -2.98023e-08
-scale = Vector2(1, 1)
-skew = -1.19209e-07
-cycleDuration = 10
 
 [node name="Spikes374" parent="MazeSpikes" instance=ExtResource("13_arp2w")]
 position = Vector2(192.665, 272.844)
-rotation = -2.98023e-08
-scale = Vector2(1, 1)
-skew = -1.19209e-07
-cycleDuration = 10
 
 [node name="Spikes375" parent="MazeSpikes" instance=ExtResource("13_arp2w")]
 position = Vector2(353.301, 282.506)
-rotation = -2.98023e-08
-scale = Vector2(1, 1)
-skew = -1.19209e-07
-cycleDuration = 10
 
 [node name="Spikes376" parent="MazeSpikes" instance=ExtResource("13_arp2w")]
 position = Vector2(4.60547, 129.602)
-rotation = -2.98023e-08
-scale = Vector2(1, 1)
-skew = -1.19209e-07
-cycleDuration = 10
 
 [node name="Spikes377" parent="MazeSpikes" instance=ExtResource("13_arp2w")]
 position = Vector2(170.334, 145.966)
-rotation = -2.98023e-08
-scale = Vector2(1, 1)
-skew = -1.19209e-07
-cycleDuration = 10
 
 [node name="Spikes378" parent="MazeSpikes" instance=ExtResource("13_arp2w")]
 position = Vector2(330.97, 155.627)
-rotation = -2.98023e-08
-scale = Vector2(1, 1)
-skew = -1.19209e-07
-cycleDuration = 10
 
 [node name="Spikes379" parent="MazeSpikes" instance=ExtResource("13_arp2w")]
 position = Vector2(499.141, 149.164)
-rotation = -2.98023e-08
-scale = Vector2(1, 1)
-skew = -1.19209e-07
-cycleDuration = 10
 
 [node name="Spikes380" parent="MazeSpikes" instance=ExtResource("13_arp2w")]
 position = Vector2(664.869, 165.528)
-rotation = -2.98023e-08
-scale = Vector2(1, 1)
-skew = -1.19209e-07
-cycleDuration = 10
 
 [node name="Spikes381" parent="MazeSpikes" instance=ExtResource("13_arp2w")]
 position = Vector2(825.505, 175.189)
-rotation = -2.98023e-08
-scale = Vector2(1, 1)
-skew = -1.19209e-07
-cycleDuration = 10
 
 [node name="Spikes382" parent="MazeSpikes" instance=ExtResource("13_arp2w")]
 position = Vector2(497.682, 272.789)
-rotation = -2.98023e-08
-scale = Vector2(1, 1)
-skew = -1.19209e-07
-cycleDuration = 10
 
 [node name="Spikes383" parent="MazeSpikes" instance=ExtResource("13_arp2w")]
 position = Vector2(663.41, 289.153)
-rotation = -2.98023e-08
-scale = Vector2(1, 1)
-skew = -1.19209e-07
-cycleDuration = 10
 
 [node name="Spikes384" parent="MazeSpikes" instance=ExtResource("13_arp2w")]
 position = Vector2(824.046, 298.815)
-rotation = -2.98023e-08
-scale = Vector2(1, 1)
-skew = -1.19209e-07
-cycleDuration = 10
 
 [node name="Spikes385" parent="MazeSpikes" instance=ExtResource("13_arp2w")]
 position = Vector2(541.389, 383.716)
-rotation = -2.98023e-08
-scale = Vector2(1, 1)
-skew = -1.19209e-07
-cycleDuration = 10
 
 [node name="Spikes386" parent="MazeSpikes" instance=ExtResource("13_arp2w")]
 position = Vector2(707.117, 400.08)
-rotation = -2.98023e-08
-scale = Vector2(1, 1)
-skew = -1.19209e-07
-cycleDuration = 10
 
 [node name="Spikes387" parent="MazeSpikes" instance=ExtResource("13_arp2w")]
 position = Vector2(867.753, 409.741)
-rotation = -2.98023e-08
-scale = Vector2(1, 1)
-skew = -1.19209e-07
-cycleDuration = 10
 
 [node name="Spikes388" parent="MazeSpikes" instance=ExtResource("13_arp2w")]
 position = Vector2(485.057, 37.1394)
-rotation = -2.98023e-08
-scale = Vector2(1, 1)
-skew = -1.19209e-07
-cycleDuration = 10
 
 [node name="Spikes389" parent="MazeSpikes" instance=ExtResource("13_arp2w")]
 position = Vector2(650.785, 53.5034)
-rotation = -2.98023e-08
-scale = Vector2(1, 1)
-skew = -1.19209e-07
-cycleDuration = 10
 
 [node name="Spikes390" parent="MazeSpikes" instance=ExtResource("13_arp2w")]
 position = Vector2(811.421, 63.1648)
-rotation = -2.98023e-08
-scale = Vector2(1, 1)
-skew = -1.19209e-07
-cycleDuration = 10
 
 [node name="Spikes391" parent="MazeSpikes" instance=ExtResource("13_arp2w")]
 position = Vector2(469.762, -84.4878)
-rotation = -2.98023e-08
-scale = Vector2(1, 1)
-skew = -1.19209e-07
-cycleDuration = 10
 
 [node name="Spikes392" parent="MazeSpikes" instance=ExtResource("13_arp2w")]
 position = Vector2(635.49, -68.1238)
-rotation = -2.98023e-08
-scale = Vector2(1, 1)
-skew = -1.19209e-07
-cycleDuration = 10
 
 [node name="Spikes393" parent="MazeSpikes" instance=ExtResource("13_arp2w")]
 position = Vector2(796.126, -58.4624)
-rotation = -2.98023e-08
-scale = Vector2(1, 1)
-skew = -1.19209e-07
-cycleDuration = 10
 
 [node name="Spikes394" parent="MazeSpikes" instance=ExtResource("13_arp2w")]
 position = Vector2(450.347, -213.541)
-rotation = -2.98023e-08
-scale = Vector2(1, 1)
-skew = -1.19209e-07
-cycleDuration = 10
 
 [node name="Spikes395" parent="MazeSpikes" instance=ExtResource("13_arp2w")]
 position = Vector2(616.075, -197.177)
-rotation = -2.98023e-08
-scale = Vector2(1, 1)
-skew = -1.19209e-07
-cycleDuration = 10
 
 [node name="Spikes396" parent="MazeSpikes" instance=ExtResource("13_arp2w")]
 position = Vector2(776.711, -187.516)
-rotation = -2.98023e-08
-scale = Vector2(1, 1)
-skew = -1.19209e-07
-cycleDuration = 10
 
 [node name="Spikes397" parent="MazeSpikes" instance=ExtResource("13_arp2w")]
 position = Vector2(415.148, -341.32)
-rotation = -2.98023e-08
-scale = Vector2(1, 1)
-skew = -1.19209e-07
-cycleDuration = 10
 
 [node name="Spikes398" parent="MazeSpikes" instance=ExtResource("13_arp2w")]
 position = Vector2(580.877, -324.956)
-rotation = -2.98023e-08
-scale = Vector2(1, 1)
-skew = -1.19209e-07
-cycleDuration = 10
 
 [node name="Spikes399" parent="MazeSpikes" instance=ExtResource("13_arp2w")]
 position = Vector2(741.513, -315.295)
-rotation = -2.98023e-08
-scale = Vector2(1, 1)
-skew = -1.19209e-07
-cycleDuration = 10
 
 [node name="AllSpikes" type="Node2D" parent="."]
 position = Vector2(-5, -9)
 
 [node name="Spike13" parent="AllSpikes" instance=ExtResource("13_arp2w")]
 position = Vector2(4174, 1687)
-cycleDuration = 2
 
 [node name="Spike14" parent="AllSpikes" instance=ExtResource("13_arp2w")]
 position = Vector2(4327, 1618)
-cycleDuration = 2
 
 [node name="Spike15" parent="AllSpikes" instance=ExtResource("13_arp2w")]
 position = Vector2(4253, 1652)
-cycleDuration = 2
 
 [node name="Spike16" parent="AllSpikes" instance=ExtResource("13_arp2w")]
 position = Vector2(4408, 1580)
-cycleDuration = 2
 
 [node name="Spike17" parent="AllSpikes" instance=ExtResource("13_arp2w")]
 position = Vector2(4014, 1765)
-cycleDuration = 2
 
 [node name="Spike18" parent="AllSpikes" instance=ExtResource("13_arp2w")]
 position = Vector2(4092, 1724)
-cycleDuration = 2
 
 [node name="Spike19" parent="AllSpikes" instance=ExtResource("13_arp2w")]
 position = Vector2(3940, 1803)
-cycleDuration = 2
 
 [node name="Spike20" parent="AllSpikes" instance=ExtResource("13_arp2w")]
 position = Vector2(3864, 1840)
-cycleDuration = 2
 
 [node name="Spike21" parent="AllSpikes" instance=ExtResource("13_arp2w")]
 position = Vector2(3708, 1916)
-cycleDuration = 2
 
 [node name="Spike22" parent="AllSpikes" instance=ExtResource("13_arp2w")]
 position = Vector2(3633, 1956)
-cycleDuration = 2
 
 [node name="Spike23" parent="AllSpikes" instance=ExtResource("13_arp2w")]
 position = Vector2(3547, 1992)
-cycleDuration = 2
 
 [node name="Spike24" parent="AllSpikes" instance=ExtResource("13_arp2w")]
 position = Vector2(3785, 1880)
-cycleDuration = 2
 
 [node name="Spike" parent="AllSpikes" instance=ExtResource("13_arp2w")]
 position = Vector2(4088, 1651)
-cycleDuration = 2
 
 [node name="Spike2" parent="AllSpikes" instance=ExtResource("13_arp2w")]
 position = Vector2(4241, 1582)
-cycleDuration = 2
 
 [node name="Spike3" parent="AllSpikes" instance=ExtResource("13_arp2w")]
 position = Vector2(4167, 1616)
-cycleDuration = 2
 
 [node name="Spike4" parent="AllSpikes" instance=ExtResource("13_arp2w")]
 position = Vector2(4322, 1544)
-cycleDuration = 2
 
 [node name="Spike5" parent="AllSpikes" instance=ExtResource("13_arp2w")]
 position = Vector2(3928, 1729)
-cycleDuration = 2
 
 [node name="Spike6" parent="AllSpikes" instance=ExtResource("13_arp2w")]
 position = Vector2(4006, 1688)
-cycleDuration = 2
 
 [node name="Spike7" parent="AllSpikes" instance=ExtResource("13_arp2w")]
 position = Vector2(3854, 1767)
-cycleDuration = 2
 
 [node name="Spike8" parent="AllSpikes" instance=ExtResource("13_arp2w")]
 position = Vector2(3778, 1804)
-cycleDuration = 2
 
 [node name="Spike10" parent="AllSpikes" instance=ExtResource("13_arp2w")]
 position = Vector2(3622, 1880)
-cycleDuration = 2
 
 [node name="Spike11" parent="AllSpikes" instance=ExtResource("13_arp2w")]
 position = Vector2(3547, 1920)
-cycleDuration = 2
 
 [node name="Spike12" parent="AllSpikes" instance=ExtResource("13_arp2w")]
 position = Vector2(3461, 1956)
-cycleDuration = 2
 
 [node name="Spike9" parent="AllSpikes" instance=ExtResource("13_arp2w")]
 position = Vector2(3699, 1844)
-cycleDuration = 2
 
 [node name="Spike25" parent="AllSpikes" instance=ExtResource("13_arp2w")]
 position = Vector2(4781, 1990)
-cycleDuration = 4
 
 [node name="Spike26" parent="AllSpikes" instance=ExtResource("13_arp2w")]
 position = Vector2(4934, 1921)
-cycleDuration = 4
 
 [node name="Spike27" parent="AllSpikes" instance=ExtResource("13_arp2w")]
 position = Vector2(4860, 1955)
-cycleDuration = 4
 
 [node name="Spike28" parent="AllSpikes" instance=ExtResource("13_arp2w")]
 position = Vector2(5015, 1883)
-cycleDuration = 4
 
 [node name="Spike29" parent="AllSpikes" instance=ExtResource("13_arp2w")]
 position = Vector2(4621, 2068)
-cycleDuration = 4
 
 [node name="Spike30" parent="AllSpikes" instance=ExtResource("13_arp2w")]
 position = Vector2(4699, 2027)
-cycleDuration = 4
 
 [node name="Spike31" parent="AllSpikes" instance=ExtResource("13_arp2w")]
 position = Vector2(4547, 2106)
-cycleDuration = 4
 
 [node name="Spike32" parent="AllSpikes" instance=ExtResource("13_arp2w")]
 position = Vector2(4471, 2143)
-cycleDuration = 4
 
 [node name="Spike33" parent="AllSpikes" instance=ExtResource("13_arp2w")]
 position = Vector2(4315, 2219)
-cycleDuration = 4
 
 [node name="Spike34" parent="AllSpikes" instance=ExtResource("13_arp2w")]
 position = Vector2(4240, 2259)
-cycleDuration = 4
 
 [node name="Spike35" parent="AllSpikes" instance=ExtResource("13_arp2w")]
 position = Vector2(4154, 2295)
-cycleDuration = 4
 
 [node name="Spike36" parent="AllSpikes" instance=ExtResource("13_arp2w")]
 position = Vector2(4392, 2183)
-cycleDuration = 4
 
 [node name="Spike37" parent="AllSpikes" instance=ExtResource("13_arp2w")]
 position = Vector2(4695, 1954)
-cycleDuration = 4
 
 [node name="Spike38" parent="AllSpikes" instance=ExtResource("13_arp2w")]
 position = Vector2(4848, 1885)
-cycleDuration = 4
 
 [node name="Spike39" parent="AllSpikes" instance=ExtResource("13_arp2w")]
 position = Vector2(4774, 1919)
-cycleDuration = 4
 
 [node name="Spike40" parent="AllSpikes" instance=ExtResource("13_arp2w")]
 position = Vector2(4929, 1847)
-cycleDuration = 4
 
 [node name="Spike41" parent="AllSpikes" instance=ExtResource("13_arp2w")]
 position = Vector2(4535, 2032)
-cycleDuration = 4
 
 [node name="Spike42" parent="AllSpikes" instance=ExtResource("13_arp2w")]
 position = Vector2(4613, 1991)
-cycleDuration = 4
 
 [node name="Spike43" parent="AllSpikes" instance=ExtResource("13_arp2w")]
 position = Vector2(4461, 2070)
-cycleDuration = 4
 
 [node name="Spike44" parent="AllSpikes" instance=ExtResource("13_arp2w")]
 position = Vector2(4385, 2107)
-cycleDuration = 4
 
 [node name="Spike45" parent="AllSpikes" instance=ExtResource("13_arp2w")]
 position = Vector2(4229, 2183)
-cycleDuration = 4
 
 [node name="Spike46" parent="AllSpikes" instance=ExtResource("13_arp2w")]
 position = Vector2(4154, 2223)
-cycleDuration = 4
 
 [node name="Spike47" parent="AllSpikes" instance=ExtResource("13_arp2w")]
 position = Vector2(4068, 2259)
-cycleDuration = 4
 
 [node name="Spike48" parent="AllSpikes" instance=ExtResource("13_arp2w")]
 position = Vector2(4306, 2147)
-cycleDuration = 4
 
 [node name="Spike49" parent="AllSpikes" instance=ExtResource("13_arp2w")]
 position = Vector2(4951, 2066)
-cycleDuration = 4
 
 [node name="Spike50" parent="AllSpikes" instance=ExtResource("13_arp2w")]
 position = Vector2(5104, 1997)
-cycleDuration = 4
 
 [node name="Spike51" parent="AllSpikes" instance=ExtResource("13_arp2w")]
 position = Vector2(5030, 2031)
-cycleDuration = 4
 
 [node name="Spike52" parent="AllSpikes" instance=ExtResource("13_arp2w")]
 position = Vector2(5185, 1959)
-cycleDuration = 4
 
 [node name="Spike53" parent="AllSpikes" instance=ExtResource("13_arp2w")]
 position = Vector2(4791, 2144)
-cycleDuration = 4
 
 [node name="Spike54" parent="AllSpikes" instance=ExtResource("13_arp2w")]
 position = Vector2(4869, 2103)
-cycleDuration = 4
 
 [node name="Spike55" parent="AllSpikes" instance=ExtResource("13_arp2w")]
 position = Vector2(4717, 2182)
-cycleDuration = 4
 
 [node name="Spike56" parent="AllSpikes" instance=ExtResource("13_arp2w")]
 position = Vector2(4641, 2219)
-cycleDuration = 4
 
 [node name="Spike57" parent="AllSpikes" instance=ExtResource("13_arp2w")]
 position = Vector2(4485, 2295)
-cycleDuration = 4
 
 [node name="Spike58" parent="AllSpikes" instance=ExtResource("13_arp2w")]
 position = Vector2(4410, 2335)
-cycleDuration = 4
 
 [node name="Spike59" parent="AllSpikes" instance=ExtResource("13_arp2w")]
 position = Vector2(4324, 2371)
-cycleDuration = 4
 
 [node name="Spike60" parent="AllSpikes" instance=ExtResource("13_arp2w")]
 position = Vector2(4562, 2259)
-cycleDuration = 4
 
 [node name="Spike61" parent="AllSpikes" instance=ExtResource("13_arp2w")]
 position = Vector2(4865, 2030)
-cycleDuration = 4
 
 [node name="Spike62" parent="AllSpikes" instance=ExtResource("13_arp2w")]
 position = Vector2(5018, 1961)
-cycleDuration = 4
 
 [node name="Spike63" parent="AllSpikes" instance=ExtResource("13_arp2w")]
 position = Vector2(4944, 1995)
-cycleDuration = 4
 
 [node name="Spike64" parent="AllSpikes" instance=ExtResource("13_arp2w")]
 position = Vector2(5099, 1923)
-cycleDuration = 4
 
 [node name="Spike65" parent="AllSpikes" instance=ExtResource("13_arp2w")]
 position = Vector2(4705, 2108)
-cycleDuration = 4
 
 [node name="Spike66" parent="AllSpikes" instance=ExtResource("13_arp2w")]
 position = Vector2(4783, 2067)
-cycleDuration = 4
 
 [node name="Spike67" parent="AllSpikes" instance=ExtResource("13_arp2w")]
 position = Vector2(4631, 2146)
-cycleDuration = 4
 
 [node name="Spike68" parent="AllSpikes" instance=ExtResource("13_arp2w")]
 position = Vector2(4555, 2183)
-cycleDuration = 4
 
 [node name="Spike69" parent="AllSpikes" instance=ExtResource("13_arp2w")]
 position = Vector2(4399, 2259)
-cycleDuration = 4
 
 [node name="Spike70" parent="AllSpikes" instance=ExtResource("13_arp2w")]
 position = Vector2(4324, 2299)
-cycleDuration = 4
 
 [node name="Spike71" parent="AllSpikes" instance=ExtResource("13_arp2w")]
 position = Vector2(4238, 2335)
-cycleDuration = 4
 
 [node name="Spike72" parent="AllSpikes" instance=ExtResource("13_arp2w")]
 position = Vector2(4476, 2223)
-cycleDuration = 4
 
 [node name="Spike73" parent="AllSpikes" instance=ExtResource("13_arp2w")]
 position = Vector2(5616, 2416)
-cycleDuration = 3
 
 [node name="Spike74" parent="AllSpikes" instance=ExtResource("13_arp2w")]
 position = Vector2(5769, 2347)
-cycleDuration = 3
 
 [node name="Spike75" parent="AllSpikes" instance=ExtResource("13_arp2w")]
 position = Vector2(5695, 2381)
-cycleDuration = 3
 
 [node name="Spike76" parent="AllSpikes" instance=ExtResource("13_arp2w")]
 position = Vector2(5850, 2309)
-cycleDuration = 3
 
 [node name="Spike77" parent="AllSpikes" instance=ExtResource("13_arp2w")]
 position = Vector2(5456, 2494)
-cycleDuration = 3
 
 [node name="Spike78" parent="AllSpikes" instance=ExtResource("13_arp2w")]
 position = Vector2(5534, 2453)
-cycleDuration = 3
 
 [node name="Spike79" parent="AllSpikes" instance=ExtResource("13_arp2w")]
 position = Vector2(5382, 2532)
-cycleDuration = 3
 
 [node name="Spike80" parent="AllSpikes" instance=ExtResource("13_arp2w")]
 position = Vector2(5306, 2569)
-cycleDuration = 3
 
 [node name="Spike81" parent="AllSpikes" instance=ExtResource("13_arp2w")]
 position = Vector2(5150, 2645)
-cycleDuration = 3
 
 [node name="Spike82" parent="AllSpikes" instance=ExtResource("13_arp2w")]
 position = Vector2(5075, 2685)
-cycleDuration = 3
 
 [node name="Spike83" parent="AllSpikes" instance=ExtResource("13_arp2w")]
 position = Vector2(4989, 2721)
-cycleDuration = 3
 
 [node name="Spike84" parent="AllSpikes" instance=ExtResource("13_arp2w")]
 position = Vector2(5227, 2609)
-cycleDuration = 3
 
 [node name="Spike85" parent="AllSpikes" instance=ExtResource("13_arp2w")]
 position = Vector2(5530, 2380)
-cycleDuration = 3
 
 [node name="Spike86" parent="AllSpikes" instance=ExtResource("13_arp2w")]
 position = Vector2(5683, 2311)
-cycleDuration = 3
 
 [node name="Spike87" parent="AllSpikes" instance=ExtResource("13_arp2w")]
 position = Vector2(5609, 2345)
-cycleDuration = 3
 
 [node name="Spike88" parent="AllSpikes" instance=ExtResource("13_arp2w")]
 position = Vector2(5764, 2273)
-cycleDuration = 3
 
 [node name="Spike89" parent="AllSpikes" instance=ExtResource("13_arp2w")]
 position = Vector2(5370, 2458)
-cycleDuration = 3
 
 [node name="Spike90" parent="AllSpikes" instance=ExtResource("13_arp2w")]
 position = Vector2(5448, 2417)
-cycleDuration = 3
 
 [node name="Spike91" parent="AllSpikes" instance=ExtResource("13_arp2w")]
 position = Vector2(5296, 2496)
-cycleDuration = 3
 
 [node name="Spike92" parent="AllSpikes" instance=ExtResource("13_arp2w")]
 position = Vector2(5220, 2533)
-cycleDuration = 3
 
 [node name="Spike93" parent="AllSpikes" instance=ExtResource("13_arp2w")]
 position = Vector2(5064, 2609)
-cycleDuration = 3
 
 [node name="Spike94" parent="AllSpikes" instance=ExtResource("13_arp2w")]
 position = Vector2(4989, 2649)
-cycleDuration = 3
 
 [node name="Spike95" parent="AllSpikes" instance=ExtResource("13_arp2w")]
 position = Vector2(4903, 2685)
-cycleDuration = 3
 
 [node name="Spike96" parent="AllSpikes" instance=ExtResource("13_arp2w")]
 position = Vector2(5141, 2573)
-cycleDuration = 3
 
 [node name="Spike97" parent="AllSpikes" instance=ExtResource("13_arp2w")]
 position = Vector2(5786, 2492)
-cycleDuration = 3
 
 [node name="Spike98" parent="AllSpikes" instance=ExtResource("13_arp2w")]
 position = Vector2(5939, 2423)
-cycleDuration = 3
 
 [node name="Spike99" parent="AllSpikes" instance=ExtResource("13_arp2w")]
 position = Vector2(5865, 2457)
-cycleDuration = 3
 
 [node name="Spike100" parent="AllSpikes" instance=ExtResource("13_arp2w")]
 position = Vector2(6020, 2385)
-cycleDuration = 3
 
 [node name="Spike101" parent="AllSpikes" instance=ExtResource("13_arp2w")]
 position = Vector2(5626, 2570)
-cycleDuration = 3
 
 [node name="Spike102" parent="AllSpikes" instance=ExtResource("13_arp2w")]
 position = Vector2(5704, 2529)
-cycleDuration = 3
 
 [node name="Spike103" parent="AllSpikes" instance=ExtResource("13_arp2w")]
 position = Vector2(5552, 2608)
-cycleDuration = 3
 
 [node name="Spike104" parent="AllSpikes" instance=ExtResource("13_arp2w")]
 position = Vector2(5476, 2645)
-cycleDuration = 3
 
 [node name="Spike105" parent="AllSpikes" instance=ExtResource("13_arp2w")]
 position = Vector2(5320, 2721)
-cycleDuration = 3
 
 [node name="Spike106" parent="AllSpikes" instance=ExtResource("13_arp2w")]
 position = Vector2(5245, 2761)
-cycleDuration = 3
 
 [node name="Spike107" parent="AllSpikes" instance=ExtResource("13_arp2w")]
 position = Vector2(5159, 2797)
-cycleDuration = 3
 
 [node name="Spike108" parent="AllSpikes" instance=ExtResource("13_arp2w")]
 position = Vector2(5397, 2685)
-cycleDuration = 3
 
 [node name="Spike109" parent="AllSpikes" instance=ExtResource("13_arp2w")]
 position = Vector2(5700, 2456)
-cycleDuration = 3
 
 [node name="Spike110" parent="AllSpikes" instance=ExtResource("13_arp2w")]
 position = Vector2(5853, 2387)
-cycleDuration = 3
 
 [node name="Spike111" parent="AllSpikes" instance=ExtResource("13_arp2w")]
 position = Vector2(5779, 2421)
-cycleDuration = 3
 
 [node name="Spike112" parent="AllSpikes" instance=ExtResource("13_arp2w")]
 position = Vector2(5934, 2349)
-cycleDuration = 3
 
 [node name="Spike113" parent="AllSpikes" instance=ExtResource("13_arp2w")]
 position = Vector2(5540, 2534)
-cycleDuration = 3
 
 [node name="Spike114" parent="AllSpikes" instance=ExtResource("13_arp2w")]
 position = Vector2(5618, 2493)
-cycleDuration = 3
 
 [node name="Spike115" parent="AllSpikes" instance=ExtResource("13_arp2w")]
 position = Vector2(5466, 2572)
-cycleDuration = 3
 
 [node name="Spike116" parent="AllSpikes" instance=ExtResource("13_arp2w")]
 position = Vector2(5390, 2609)
-cycleDuration = 3
 
 [node name="Spike117" parent="AllSpikes" instance=ExtResource("13_arp2w")]
 position = Vector2(5234, 2685)
-cycleDuration = 3
 
 [node name="Spike118" parent="AllSpikes" instance=ExtResource("13_arp2w")]
 position = Vector2(5159, 2725)
-cycleDuration = 3
 
 [node name="Spike119" parent="AllSpikes" instance=ExtResource("13_arp2w")]
 position = Vector2(5073, 2761)
-cycleDuration = 3
 
 [node name="Spike121" parent="AllSpikes" instance=ExtResource("13_arp2w")]
 position = Vector2(5321, 2959)
-cycleDuration = 1
 
 [node name="Spike122" parent="AllSpikes" instance=ExtResource("13_arp2w")]
 position = Vector2(5399, 2997)
-cycleDuration = 1
 
 [node name="Spike123" parent="AllSpikes" instance=ExtResource("13_arp2w")]
 position = Vector2(5482, 3035)
-cycleDuration = 1
 
 [node name="Spike124" parent="AllSpikes" instance=ExtResource("13_arp2w")]
 position = Vector2(5557, 3077)
-cycleDuration = 1
 
 [node name="Spike125" parent="AllSpikes" instance=ExtResource("13_arp2w")]
 position = Vector2(5633, 3108)
-cycleDuration = 1
 
 [node name="Spike120" parent="AllSpikes" instance=ExtResource("13_arp2w")]
 position = Vector2(5311, 2649)
-cycleDuration = 3
 
 [node name="Spikes6" parent="AllSpikes" instance=ExtResource("13_arp2w")]
 position = Vector2(10466, 1153)
@@ -3154,12 +1864,10 @@ position = Vector2(316.563, -0.100067)
 
 [node name="LoreBit2" parent="." instance=ExtResource("8_u815n")]
 position = Vector2(-1938, 2826)
-scale = Vector2(0.5, 0.5)
 text = "Hey, kid! Don't lose that lamp! You'll need it to make it out of these woods. Those monsters chasing you? They hate your lamp, and they'll do anything to put it out. Keep away from them, or you'll be left in the dark. And you don't want that to happen."
 
 [node name="LoreBit3" parent="." instance=ExtResource("8_u815n")]
 position = Vector2(10360, -707)
-scale = Vector2(0.5, 0.5)
 text = "There's only one way to get out of this forest. Find torches around the woods, and light them. When you're done, come back here to light this big one. Be ready to run out of here. Fast."
 
 [editable path="Menu/SideMenu"]

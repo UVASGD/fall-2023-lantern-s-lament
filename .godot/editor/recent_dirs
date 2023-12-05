@@ -1,13 +1,13 @@
+res://source/entities/enemies
+res://source
 res://assets
 res://source/levels
-res://source
-res://
-res://source/entities/enemies
-res://source/entities/traps
-/Users/haseebtahir/Documents/GitHub/lanterns-lament-fork/source/entities/entity_base
-res://source/entities/player
 res://source/entities/entity_base
-/Users/haseebtahir/Documents/GitHub/lanterns-lament-fork/source/entities/enemies
+res://source/levels
 /Users/haseebtahir/Documents/GitHub/lanterns-lament-fork/source/interface
+/Users/haseebtahir/Documents/GitHub/lanterns-lament-fork/source/entities/entity_base
+res://source/entities/traps
+res://source/entities/player
+/Users/haseebtahir/Documents/GitHub/lanterns-lament-fork/source/entities/enemies
 res://source/interface
-C:/Users/Public/Downloads/demo folder
+res://
