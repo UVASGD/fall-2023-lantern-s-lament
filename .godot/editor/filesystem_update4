@@ -1,2 +1,10 @@
 res://source/levels/level_1.tscn
 res://source/entities/entity_base/hitbox.gd
+res://source/entities/player/player.tscn
+res://source/entities/entity_base/torch.tscn
+res://source/entities/enemies/lore_bit.tscn
+res://source/levels/main_menu.tscn
+res://source/tilemap.tscn
+res://source/interface/main_menu_buttons.gd
+res://source/entities/player/player.gd
+res://source/entities/entity_base/torch.gd

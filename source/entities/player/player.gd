@@ -178,8 +178,8 @@ func _physics_process(delta):
 			delay += 1
 			get_tree().paused = true
 			
-	if(audio_player.playing == false and final_torch != null and final_torch.lit == false):
-		audio_player.start()
+#	if(audio_player.playing == false and final_torch != null and final_torch.lit == false):
+#		audio_player.start()
 
 func _input(event):
 	if game_start and event.is_action_pressed("pause_menu"):

@@ -11,13 +11,12 @@ size = Vector2(122, 52)
 size = Vector2(183, 156)
 
 [node name="torch" type="StaticBody2D"]
-z_index = 5
 y_sort_enabled = true
 collision_mask = 134
 script = ExtResource("1_1kbk1")
 
 [node name="Collision" type="CollisionShape2D" parent="."]
-position = Vector2(0, 58)
+position = Vector2(2.08165e-12, 58)
 shape = SubResource("RectangleShape2D_ejx8t")
 
 [node name="Area2D" type="Area2D" parent="."]

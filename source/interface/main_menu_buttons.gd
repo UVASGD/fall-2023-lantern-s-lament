@@ -17,4 +17,5 @@ func _on_settings_pressed():
 	SceneTransition.change_scene("res://source/levels/settings_menu.tscn")
 
 func _on_quit_pressed():
-	get_tree().quit()
+#	get_tree().quit()
+	SceneTransition.change_scene("res://source/tilemap.tscn")

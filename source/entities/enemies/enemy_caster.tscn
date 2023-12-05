@@ -6,7 +6,6 @@
 [ext_resource type="Texture2D" uid="uid://nnkf6uinjgkp" path="res://assets/lightTexture.png" id="4_0mewc"]
 
 [node name="EnemyCaster" instance=ExtResource("1_1mkbg")]
-z_index = 4
 script = ExtResource("2_o2t1t")
 
 [node name="Sprite2D" parent="." index="0"]
