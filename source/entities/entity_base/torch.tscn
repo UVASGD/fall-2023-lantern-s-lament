@@ -1,9 +1,9 @@
-[gd_scene load_steps=6 format=3 uid="uid://bdptq8ft0qci7"]
+[gd_scene load_steps=7 format=3 uid="uid://bdptq8ft0qci7"]
 
 [ext_resource type="Script" path="res://source/entities/entity_base/torch.gd" id="1_1kbk1"]
 [ext_resource type="Texture2D" uid="uid://baw7wlfn2srrh" path="res://assets/torch.png" id="3_ovtm5"]
-[ext_resource type="Texture2D" uid="uid://nnkf6uinjgkp" path="res://assets/lightTexture.png" id="4_55kma"]
 [ext_resource type="AudioStream" uid="uid://bhrxygwnjbr45" path="res://assets/LightSound.wav" id="3_ukhfu"]
+[ext_resource type="Texture2D" uid="uid://nnkf6uinjgkp" path="res://assets/lightTexture.png" id="4_55kma"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ejx8t"]
 size = Vector2(122, 52)
@@ -45,6 +45,7 @@ wait_time = 0.15
 
 [node name="Ignite" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("3_ukhfu")
+volume_db = -20.0
 
 [connection signal="area_entered" from="Area2D" to="." method="_on_area_2d_area_entered"]
 [connection signal="timeout" from="Area2D/Timer" to="." method="_on_timer_timeout"]

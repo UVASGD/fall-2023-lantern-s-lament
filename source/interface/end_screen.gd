@@ -1,11 +1,11 @@
 extends ColorRect
 
-#@onready var player = get_tree().get_root().get_node("MainScene/Player")
+@onready var player = get_parent().get_parent().get_parent().get_node("Player")
 #@onready var side_menu = get_tree().get_root().get_node("MainScene/Menu/SideMenu")
 @onready var opacity: float = -0.25
 
 func _physics_process(_delta):
-	if (opacity < 1):
+	if (player.endtimer.is_stopped() and opacity < 1):
 		opacity += 0.01
 		if (opacity > 0): modulate.a = opacity
 

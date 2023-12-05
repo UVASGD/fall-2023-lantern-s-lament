@@ -38,6 +38,7 @@ autostart = true
 
 [node name="Flap" type="AudioStreamPlayer" parent="." index="8"]
 stream = ExtResource("4_wq4k4")
+volume_db = -15.0
 
 [connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
 [connection signal="timeout" from="AnimationTimer" to="." method="_on_animation_timer_timeout"]

@@ -62,6 +62,8 @@ const CENTER = Vector2(0.0, 0.0)
 @onready var light_energy : float = 0.0
 
 @onready var delay = 0
+@onready var cur_frame: int = 0
+@onready var black_screen = false
 
 #SOUND VARIABLES
 @onready var damage_sound = $DamageSound
@@ -91,7 +93,7 @@ func _physics_process(delta):
 	speed += direction*(50+boost)
 	speed *= 0.875
 	boost *= 0.9
-	if hitbox.damage == 0 and boost < 25:
+	if hitbox.damage == 0 and boost < 25 and !has_died:
 		invulnerable = false
 		hitbox.damage = 999
 	if(invulnerable):
@@ -100,7 +102,7 @@ func _physics_process(delta):
 	else:
 		$Hurtbox/CollisionShape2D.disabled = false
 		$Hitbox/CollisionShape2D.disabled = false
-	if(cur_hp != 0): 
+	if(!has_died): 
 		move(speed)
 		update_animation()
 	
@@ -172,21 +174,25 @@ func _physics_process(delta):
 	innermost_light.energy = light_energy
 	
 	#death
-	if(cur_hp == 0 and !endtimer.is_stopped()):
-		delay += 1
-		#print(sprite.frame)
-		if(delay == 15 and sprite.frame != 3):
-			sprite.frame += 1
-			delay = 0
-		if(sprite.frame == 3):
+	if(has_died and !endtimer.is_stopped()):
+		print(str(cur_frame) + " " + str(sprite.frame))
+		if(cur_frame == 3):
+			sprite.frame = cur_frame
 			side_menu.game_over.modulate.a = 1
 			delay = 0
-	elif(cur_hp == 0):
+		else:
+			delay += 1
+			if(delay == 15):
+				cur_frame += 1
+				sprite.frame = cur_frame
+				delay = 0
+	elif(has_died):
 		if (delay == 0): side_menu.woosh.play()
 		delay += 1
 		if(delay == 10):
 			side_menu.black_out.modulate = Color(0, 0, 0, 255)
 			side_menu.flame_sprite.modulate = Color(255, 255, 255, 0)
+			black_screen = true
 			delay += 1
 			get_tree().paused = true
 	
@@ -307,3 +313,5 @@ func _on_flicker_timer_timeout():
 
 func _on_roll_animation_timer_timeout():
 	rolling = false
+
+

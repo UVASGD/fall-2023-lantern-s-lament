@@ -16,7 +16,7 @@ func _ready():
 
 func _physics_process(delta):
 	dir = (player.global_position - global_position).normalized()
-	global_position += dir * (speed + boost) 
+	if(!player.has_died): global_position += dir * (speed + boost) 
 	boost *= 0.95
 	
 	match frame_y:

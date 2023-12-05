@@ -32,13 +32,13 @@ func die():
 
 func receive_damage(base_damage : int):
 	var actual_damage = base_damage - defense
-	if !invulnerable:
+	if !invulnerable and !has_died:
 		cur_hp -= actual_damage
 		print(name + " received " + str(actual_damage) + " damage and has " + str(cur_hp) + " health remaining ")
 #		if base_damage == 0: 
 #			knock_back = true
 #			back_speed = player.direction*-750
-		if cur_hp <= 0 and !has_died:
+		if cur_hp <= 0:
 			print(name + " has died! ")
 			has_died = true
 			die()

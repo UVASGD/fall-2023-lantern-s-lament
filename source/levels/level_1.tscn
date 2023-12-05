@@ -212,7 +212,7 @@ rotation = -2.66512
 position = Vector2(241.561, 2.72931)
 
 [node name="FinalTorch" parent="." instance=ExtResource("13_afa01")]
-position = Vector2(15930, -876)
+position = Vector2(-2400, 4000)
 
 [node name="torch" parent="." instance=ExtResource("15_pxlgu")]
 position = Vector2(-2513, 1098)

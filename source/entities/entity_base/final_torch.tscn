@@ -48,17 +48,20 @@ wait_time = 0.15
 
 [node name="Ignite" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("3_pq8b0")
-volume_db = -5.0
+volume_db = -20.0
 
 [node name="Roar" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("4_y485e")
+volume_db = -10.0
 
 [node name="AmbientMusic" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("6_im0sv")
+volume_db = -20.0
 autoplay = true
 
 [node name="ChaseMusic" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("6_o2jh8")
+volume_db = -20.0
 
 [connection signal="area_entered" from="Area2D" to="." method="_on_area_2d_area_entered"]
 [connection signal="timeout" from="Area2D/Timer" to="." method="_on_timer_timeout"]
