@@ -1,8 +1,15 @@
-[gd_scene load_steps=6 format=3 uid="uid://ix6iqw3tgtop"]
+[gd_scene load_steps=10 format=3 uid="uid://ix6iqw3tgtop"]
 
 [ext_resource type="PackedScene" uid="uid://bd81oyt6gw3f3" path="res://source/test.tscn" id="1_mv3u0"]
 [ext_resource type="PackedScene" uid="uid://dlbg8myhg31ys" path="res://source/entities/player/player.tscn" id="2_7t4er"]
+[ext_resource type="Texture2D" uid="uid://c5hpm2206cmu2" path="res://assets/StoneWall2.png" id="2_af3ew"]
 [ext_resource type="Texture2D" uid="uid://d12gjhsclloe5" path="res://assets/lightMask2.png" id="2_guqcl"]
+[ext_resource type="Texture2D" uid="uid://b302bdfc75vj1" path="res://assets/normalCube.png" id="3_fqiu3"]
+[ext_resource type="Texture2D" uid="uid://bwo1sg3swugjf" path="res://assets/LampPickupSprite.png" id="3_vichm"]
+
+[sub_resource type="CanvasTexture" id="CanvasTexture_b00i6"]
+diffuse_texture = ExtResource("2_af3ew")
+normal_texture = ExtResource("3_fqiu3")
 
 [sub_resource type="AnimationNodeStateMachinePlayback" id="AnimationNodeStateMachinePlayback_fwc4b"]
 
@@ -11,7 +18,16 @@ polygon = PackedVector2Array(-296, 56, -296, 56, -264, 128, -240, 56, -296, 56, 
 
 [node name="Node2D" type="Node2D"]
 
+[node name="Test2" parent="." instance=ExtResource("1_mv3u0")]
+position = Vector2(-24, -8)
+
+[node name="Sprite2D" parent="Test2" index="2"]
+position = Vector2(-11.173, -8)
+
 [node name="Test" parent="." instance=ExtResource("1_mv3u0")]
+
+[node name="Sprite2D" parent="Test" index="2"]
+texture = SubResource("CanvasTexture_b00i6")
 
 [node name="ColorRect" type="ColorRect" parent="."]
 light_mask = 2
@@ -21,15 +37,17 @@ offset_right = 104.0
 offset_bottom = 96.0
 color = Color(1, 0.443137, 0.478431, 1)
 
+[node name="CanvasModulate" type="CanvasModulate" parent="."]
+color = Color(0, 0, 0, 1)
+
+[node name="SubViewport" type="CanvasGroup" parent="."]
+
 [node name="Camera2D" type="Camera2D" parent="."]
 position = Vector2(-64, 8)
 
 [node name="Player" parent="." instance=ExtResource("2_7t4er")]
 visible = false
 position = Vector2(-128, -32)
-
-[node name="Sprite2D" parent="Player" index="0"]
-frame = 0
 
 [node name="InnerLight" parent="Player" index="9"]
 position = Vector2(144, 64)
@@ -43,28 +61,32 @@ range_item_cull_mask = 2
 [node name="AnimationTree" parent="Player" index="13"]
 parameters/playback = SubResource("AnimationNodeStateMachinePlayback_fwc4b")
 
-[node name="Node2D" type="Sprite2D" parent="."]
-position = Vector2(200, -48)
-scale = Vector2(1.9375, 2.0625)
-
-[node name="Shadow" type="PointLight2D" parent="Node2D"]
-position = Vector2(-28.9032, 38.7879)
-scale = Vector2(1.4375, 1.4375)
-range_item_cull_mask = 2
-shadow_enabled = true
-texture = ExtResource("2_guqcl")
-
-[node name="Light" type="PointLight2D" parent="Node2D"]
-position = Vector2(-45.4193, 38.7879)
-scale = Vector2(1.4375, 1.4375)
-blend_mode = 2
-texture = ExtResource("2_guqcl")
-
-[node name="LightOccluder2D" type="LightOccluder2D" parent="."]
-position = Vector2(320, -80)
+[node name="LightOccluder2D2" type="LightOccluder2D" parent="."]
+position = Vector2(296, -64)
 occluder = SubResource("OccluderPolygon2D_8khav")
 sdf_collision = false
 
+[node name="Node2D" type="Sprite2D" parent="."]
+position = Vector2(160, 48)
+scale = Vector2(0.269375, 0.251126)
+texture = ExtResource("3_vichm")
+
+[node name="Light" type="PointLight2D" parent="Node2D"]
+position = Vector2(-30.1695, 12.0047)
+scale = Vector2(6.76328, 6.76328)
+blend_mode = 2
+texture = ExtResource("2_guqcl")
+
+[node name="Shadow" type="PointLight2D" parent="Node2D"]
+position = Vector2(13.2204, 39.8793)
+scale = Vector2(8.27922, 8.27922)
+blend_mode = 2
+range_item_cull_mask = 2
+shadow_enabled = true
+shadow_color = Color(0, 0, 0, 0.54902)
+texture = ExtResource("2_guqcl")
+
+[editable path="Test2"]
 [editable path="Test"]
 [editable path="Player"]
 [editable path="Player/Hurtbox"]

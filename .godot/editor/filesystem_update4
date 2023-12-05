@@ -1,10 +1,7 @@
-res://source/entities/player/player.tscn
-res://source/entities/entity_base/hitbox.gd
 res://source/levels/main_menu.tscn
-res://source/entities/enemies/enemy_caster.tscn
-res://source/entities/entity_base/final_torch.tscn
+res://source/entities/entity_base/hitbox.gd
 res://source/levels/level_1.tscn
 res://source/test.tscn
-res://source/entities/entity_base/torch.tscn
 res://source/test2.tscn
+res://source/entities/player/player.tscn
 res://source/entities/player/player.gd

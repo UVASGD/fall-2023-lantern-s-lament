@@ -165,14 +165,16 @@ func _physics_process(delta):
 	camera.offset.y = randi_range(-shake_strength, shake_strength)
 	
 	point_light.global_position = global_position + Vector2(sin(man_aim_angle) * point_light_offset, cos(man_aim_angle) * point_light_offset)
-	point_light.texture_scale = point_light_scale
+	point_light.texture_scale = point_light_scale / 4
 	inner_light.texture_scale = inner_light_scale
 	point_light.energy = light_energy
 	inner_light.energy = light_energy
 	
 	point_shadow.global_position = point_light.global_position
-	point_shadow.texture_scale = point_light_scale
+	point_shadow.texture_scale = point_light_scale / 4
 	point_shadow.energy = light_energy
+	point_light.rotation = -man_aim_angle + (PI/2)
+	point_shadow.rotation = -man_aim_angle + (PI/2)
 	inner_shadow.texture_scale = inner_light_scale
 	inner_shadow.energy = light_energy
 	

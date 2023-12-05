@@ -1,10 +1,11 @@
-[gd_scene load_steps=55 format=3 uid="uid://dlbg8myhg31ys"]
+[gd_scene load_steps=56 format=3 uid="uid://dlbg8myhg31ys"]
 
 [ext_resource type="Script" path="res://source/entities/player/player.gd" id="1_ekmf0"]
 [ext_resource type="Texture2D" uid="uid://bcoxeak4h8moi" path="res://assets/player.png" id="2_j4nc6"]
 [ext_resource type="PackedScene" uid="uid://b5nwx7lojc88" path="res://source/entities/entity_base/hurtbox.tscn" id="3_fxgss"]
 [ext_resource type="PackedScene" uid="uid://dgnquwxw3gnyx" path="res://source/entities/entity_base/hitbox.tscn" id="4_ce4gw"]
 [ext_resource type="Texture2D" uid="uid://d12gjhsclloe5" path="res://assets/lightMask2.png" id="5_gcsun"]
+[ext_resource type="Texture2D" uid="uid://dblqgjx4vp1v3" path="res://assets/newerCone.png" id="5_p5h18"]
 [ext_resource type="AudioStream" uid="uid://c4obwdygnk2xj" path="res://assets/DamageSound.mp3" id="6_4gy18"]
 [ext_resource type="AudioStream" uid="uid://4addhjvwh3ox" path="res://assets/FocusSound.wav" id="7_dwgqs"]
 [ext_resource type="AudioStream" uid="uid://d22radrwxgcc8" path="res://assets/UnfocusSound.wav" id="8_lkelm"]
@@ -371,7 +372,6 @@ position = Vector2(10, 0)
 texture = ExtResource("2_j4nc6")
 hframes = 4
 vframes = 8
-frame = 4
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(-0.999984, 86.5)
@@ -411,14 +411,13 @@ shape = SubResource("CapsuleShape2D_oj0tb")
 [node name="OuterLight" type="PointLight2D" parent="."]
 blend_mode = 2
 shadow_item_cull_mask = 6
-texture = ExtResource("5_gcsun")
+texture = ExtResource("5_p5h18")
 
 [node name="OuterShadow" type="PointLight2D" parent="."]
 blend_mode = 2
-range_item_cull_mask = 6
+range_item_cull_mask = 4
 shadow_enabled = true
-shadow_item_cull_mask = 3
-texture = ExtResource("5_gcsun")
+texture = ExtResource("5_p5h18")
 
 [node name="InnerLight" type="PointLight2D" parent="."]
 position = Vector2(2.08165e-12, 2.08165e-12)
