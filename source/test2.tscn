@@ -1,0 +1,71 @@
+[gd_scene load_steps=6 format=3 uid="uid://ix6iqw3tgtop"]
+
+[ext_resource type="PackedScene" uid="uid://bd81oyt6gw3f3" path="res://source/test.tscn" id="1_mv3u0"]
+[ext_resource type="PackedScene" uid="uid://dlbg8myhg31ys" path="res://source/entities/player/player.tscn" id="2_7t4er"]
+[ext_resource type="Texture2D" uid="uid://d12gjhsclloe5" path="res://assets/lightMask2.png" id="2_guqcl"]
+
+[sub_resource type="AnimationNodeStateMachinePlayback" id="AnimationNodeStateMachinePlayback_fwc4b"]
+
+[sub_resource type="OccluderPolygon2D" id="OccluderPolygon2D_8khav"]
+polygon = PackedVector2Array(-296, 56, -296, 56, -264, 128, -240, 56, -296, 56, -296, 56)
+
+[node name="Node2D" type="Node2D"]
+
+[node name="Test" parent="." instance=ExtResource("1_mv3u0")]
+
+[node name="ColorRect" type="ColorRect" parent="."]
+light_mask = 2
+offset_left = -88.0
+offset_top = -96.0
+offset_right = 104.0
+offset_bottom = 96.0
+color = Color(1, 0.443137, 0.478431, 1)
+
+[node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2(-64, 8)
+
+[node name="Player" parent="." instance=ExtResource("2_7t4er")]
+visible = false
+position = Vector2(-128, -32)
+
+[node name="Sprite2D" parent="Player" index="0"]
+frame = 0
+
+[node name="InnerLight" parent="Player" index="9"]
+position = Vector2(144, 64)
+scale = Vector2(1.8125, 1.8125)
+
+[node name="InnerShadow" parent="Player" index="10"]
+position = Vector2(144, 64)
+scale = Vector2(1.4375, 1.5)
+range_item_cull_mask = 2
+
+[node name="AnimationTree" parent="Player" index="13"]
+parameters/playback = SubResource("AnimationNodeStateMachinePlayback_fwc4b")
+
+[node name="Node2D" type="Sprite2D" parent="."]
+position = Vector2(200, -48)
+scale = Vector2(1.9375, 2.0625)
+
+[node name="Shadow" type="PointLight2D" parent="Node2D"]
+position = Vector2(-28.9032, 38.7879)
+scale = Vector2(1.4375, 1.4375)
+range_item_cull_mask = 2
+shadow_enabled = true
+texture = ExtResource("2_guqcl")
+
+[node name="Light" type="PointLight2D" parent="Node2D"]
+position = Vector2(-45.4193, 38.7879)
+scale = Vector2(1.4375, 1.4375)
+blend_mode = 2
+texture = ExtResource("2_guqcl")
+
+[node name="LightOccluder2D" type="LightOccluder2D" parent="."]
+position = Vector2(320, -80)
+occluder = SubResource("OccluderPolygon2D_8khav")
+sdf_collision = false
+
+[editable path="Test"]
+[editable path="Player"]
+[editable path="Player/Hurtbox"]
+[editable path="Player/Hitbox"]

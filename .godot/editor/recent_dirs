@@ -1,5 +1,7 @@
-res://assets
+res://source/levels
 res://source
+res://
+res://assets
 res://source/entities/enemies
 res://source/entities/traps
 /Users/haseebtahir/Documents/GitHub/lanterns-lament-fork/source/entities/entity_base
@@ -7,7 +9,5 @@ res://source/entities/player
 res://source/entities/entity_base
 /Users/haseebtahir/Documents/GitHub/lanterns-lament-fork/source/entities/enemies
 /Users/haseebtahir/Documents/GitHub/lanterns-lament-fork/source/interface
-res://source/levels
 res://source/interface
-res://
 C:/Users/Public/Downloads/demo folder

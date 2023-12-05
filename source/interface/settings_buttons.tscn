@@ -1,6 +1,7 @@
-[gd_scene load_steps=2 format=3 uid="uid://cqvhn76u02ecf"]
+[gd_scene load_steps=3 format=3 uid="uid://cqvhn76u02ecf"]
 
 [ext_resource type="Script" path="res://source/interface/settings_buttons.gd" id="1_gxhi0"]
+[ext_resource type="FontFile" uid="uid://bq2bth53eqerg" path="res://source/interface/IMFellEnglishSC-Regular.ttf" id="2_0plhh"]
 
 [node name="SettingsButtons" type="Control"]
 layout_mode = 3
@@ -13,18 +14,16 @@ script = ExtResource("1_gxhi0")
 
 [node name="MarginContainer" type="MarginContainer" parent="."]
 layout_mode = 0
-offset_right = 40.0
-offset_bottom = 40.0
+offset_right = 167.0
+offset_bottom = 53.0
 
 [node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer"]
 layout_mode = 2
 
-[node name="Button" type="Button" parent="MarginContainer/VBoxContainer"]
-layout_mode = 2
-text = "Nothing here yet"
-
 [node name="Back" type="Button" parent="MarginContainer/VBoxContainer"]
 layout_mode = 2
+theme_override_fonts/font = ExtResource("2_0plhh")
+theme_override_font_sizes/font_size = 35
 text = "Back"
 
 [connection signal="pressed" from="MarginContainer/VBoxContainer/Back" to="." method="_on_back_pressed"]

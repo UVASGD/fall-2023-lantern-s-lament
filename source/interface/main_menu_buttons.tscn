@@ -14,8 +14,8 @@ script = ExtResource("1_8jhjy")
 
 [node name="MarginContainer" type="MarginContainer" parent="."]
 layout_mode = 0
-offset_right = 68.0
-offset_bottom = 62.0
+offset_right = 175.0
+offset_bottom = 167.0
 
 [node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer"]
 layout_mode = 2
@@ -23,13 +23,23 @@ layout_mode = 2
 [node name="Play" type="Button" parent="MarginContainer/VBoxContainer"]
 layout_mode = 2
 theme_override_fonts/font = ExtResource("2_tp32v")
+theme_override_font_sizes/font_size = 35
 text = "Play"
+
+[node name="Credits" type="Button" parent="MarginContainer/VBoxContainer"]
+layout_mode = 2
+tooltip_text = "We are so sorry to see you go!"
+theme_override_fonts/font = ExtResource("2_tp32v")
+theme_override_font_sizes/font_size = 35
+text = "Credits"
 
 [node name="Quit" type="Button" parent="MarginContainer/VBoxContainer"]
 layout_mode = 2
 tooltip_text = "We are so sorry to see you go!"
 theme_override_fonts/font = ExtResource("2_tp32v")
+theme_override_font_sizes/font_size = 35
 text = "Quit"
 
 [connection signal="pressed" from="MarginContainer/VBoxContainer/Play" to="." method="_on_play_pressed"]
+[connection signal="pressed" from="MarginContainer/VBoxContainer/Credits" to="." method="_on_credits_pressed"]
 [connection signal="pressed" from="MarginContainer/VBoxContainer/Quit" to="." method="_on_quit_pressed"]

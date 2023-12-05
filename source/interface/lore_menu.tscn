@@ -24,18 +24,20 @@ text = "Hey, kid! Don't lose that lamp! You'll need it to make it out of these w
 do anything to put it out. Generic text."
 autowrap_mode = 2
 
-[node name="Button" type="Button" parent="."]
-layout_mode = 0
-offset_left = 288.0
-offset_top = 512.0
-offset_right = 608.0
-offset_bottom = 552.0
-text = "Click to exit"
-
 [node name="Sprite2D" type="Sprite2D" parent="."]
 show_behind_parent = true
 position = Vector2(448, 312)
 scale = Vector2(0.9, 0.9)
 texture = ExtResource("2_hgoor")
+
+[node name="Button" type="Button" parent="."]
+layout_mode = 0
+offset_left = 291.0
+offset_top = 522.0
+offset_right = 611.0
+offset_bottom = 575.0
+theme_override_fonts/font = ExtResource("2_65rx3")
+theme_override_font_sizes/font_size = 35
+text = "Click to exit"
 
 [connection signal="pressed" from="Button" to="." method="_on_button_pressed"]

@@ -1,0 +1,25 @@
+[gd_scene load_steps=5 format=3 uid="uid://bd81oyt6gw3f3"]
+
+[ext_resource type="Texture2D" uid="uid://c5hpm2206cmu2" path="res://assets/StoneWall2.png" id="1_f1lab"]
+[ext_resource type="Texture2D" uid="uid://b302bdfc75vj1" path="res://assets/normalCube.png" id="2_c6mvu"]
+
+[sub_resource type="OccluderPolygon2D" id="OccluderPolygon2D_uf0py"]
+polygon = PackedVector2Array(-28, 0, 0, 14, 28, 0, 0, -14)
+
+[sub_resource type="CanvasTexture" id="CanvasTexture_6v0fq"]
+diffuse_texture = ExtResource("1_f1lab")
+normal_texture = ExtResource("2_c6mvu")
+
+[node name="Test" type="StaticBody2D"]
+z_index = 4
+y_sort_enabled = true
+
+[node name="LightOccluder2D" type="LightOccluder2D" parent="."]
+occluder = SubResource("OccluderPolygon2D_uf0py")
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
+build_mode = 1
+polygon = PackedVector2Array(-28, 0, 0, 14, 28, 0, 0, -14)
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = SubResource("CanvasTexture_6v0fq")

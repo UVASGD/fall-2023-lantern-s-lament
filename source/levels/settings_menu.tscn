@@ -1,15 +1,54 @@
-[gd_scene load_steps=2 format=3 uid="uid://cqgkrfmquwqgk"]
+[gd_scene load_steps=4 format=3 uid="uid://cqgkrfmquwqgk"]
 
 [ext_resource type="PackedScene" uid="uid://cqvhn76u02ecf" path="res://source/interface/settings_buttons.tscn" id="1_iixiv"]
+[ext_resource type="Texture2D" uid="uid://381k3tp5u2o0" path="res://assets/popup.png" id="1_mhwwj"]
+[ext_resource type="FontFile" uid="uid://bq2bth53eqerg" path="res://source/interface/IMFellEnglishSC-Regular.ttf" id="3_e511c"]
 
 [node name="SettingsMenu" type="Node2D"]
 
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(578.5, 310)
+scale = Vector2(1.19922, 1.07111)
+texture = ExtResource("1_mhwwj")
+
 [node name="SettingsButtons" parent="." instance=ExtResource("1_iixiv")]
-offset_left = 450.0
-offset_top = 270.0
-offset_right = 450.0
-offset_bottom = 270.0
-scale = Vector2(2, 2)
+offset_left = 513.0
+offset_top = 573.0
+offset_right = 513.0
+offset_bottom = 573.0
 
 [node name="Camera2D" type="Camera2D" parent="."]
 position = Vector2(575, 325)
+
+[node name="Label" type="Label" parent="."]
+offset_left = 318.0
+offset_top = 68.0
+offset_right = 878.0
+offset_bottom = 562.0
+theme_override_fonts/font = ExtResource("3_e511c")
+theme_override_font_sizes/font_size = 27
+text = "
+Spencer Portuese - Programmer, Level Designer
+Haseeb Tahir - Programmer
+Via Miller - Programmer
+Alissa Emond - Artist
+Colin Chandel - Programmer
+Matt Gemmill - Programmer, Level Designer
+Jungtaek Hong - Programmer
+Kedrick Fudala - Programmer, Game Director
+Tyler Peduzzi - Programmer
+Eric Weng - Programmer
+William Kaiser - Programmer
+Nipin Hennings - Artist
+"
+horizontal_alignment = 1
+
+[node name="Label2" type="Label" parent="."]
+offset_left = 460.0
+offset_top = 15.0
+offset_right = 710.0
+offset_bottom = 114.0
+theme_override_fonts/font = ExtResource("3_e511c")
+theme_override_font_sizes/font_size = 75
+text = "Credits"
+horizontal_alignment = 1

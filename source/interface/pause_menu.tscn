@@ -1,6 +1,7 @@
-[gd_scene load_steps=2 format=3 uid="uid://c6612map8ntad"]
+[gd_scene load_steps=3 format=3 uid="uid://c6612map8ntad"]
 
 [ext_resource type="Script" path="res://source/interface/pause_menu.gd" id="1_1xwka"]
+[ext_resource type="FontFile" uid="uid://bq2bth53eqerg" path="res://source/interface/IMFellEnglishSC-Regular.ttf" id="2_x7uf2"]
 
 [node name="PauseMenu" type="ColorRect"]
 offset_left = 256.0
@@ -12,18 +13,33 @@ script = ExtResource("1_1xwka")
 [node name="Label" type="Label" parent="."]
 layout_mode = 0
 offset_left = 192.0
-offset_top = 96.0
+offset_top = 120.0
 offset_right = 704.0
-offset_bottom = 160.0
+offset_bottom = 184.0
+theme_override_fonts/font = ExtResource("2_x7uf2")
+theme_override_font_sizes/font_size = 35
 text = "Paused"
 horizontal_alignment = 1
 
-[node name="Button" type="Button" parent="."]
+[node name="Resume" type="Button" parent="."]
 layout_mode = 2
 offset_left = 256.0
-offset_top = 208.0
+offset_top = 256.0
 offset_right = 640.0
-offset_bottom = 304.0
+offset_bottom = 352.0
+theme_override_fonts/font = ExtResource("2_x7uf2")
+theme_override_font_sizes/font_size = 35
 text = "Resume"
 
-[connection signal="pressed" from="Button" to="." method="_on_button_pressed"]
+[node name="MainMenu" type="Button" parent="."]
+layout_mode = 2
+offset_left = 256.0
+offset_top = 384.0
+offset_right = 640.0
+offset_bottom = 480.0
+theme_override_fonts/font = ExtResource("2_x7uf2")
+theme_override_font_sizes/font_size = 35
+text = "Main Menu"
+
+[connection signal="pressed" from="Resume" to="." method="_on_resume_pressed"]
+[connection signal="pressed" from="MainMenu" to="." method="_on_main_menu_pressed"]

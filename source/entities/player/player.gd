@@ -4,8 +4,10 @@ class_name Player
 @onready var hitbox = $Hitbox
 @onready var camera = $Camera2D
 @onready var light_occluder = $LightOccluder2D
-@onready var point_light = $PointLight2D
+@onready var point_light = $OuterLight
 @onready var inner_light = $InnerLight
+@onready var point_shadow = $OuterShadow
+@onready var inner_shadow = $InnerShadow
 @onready var innermost_light = $InnermostLight
 @onready var timer = $RollTimer
 @onready var endtimer = $EndTimer
@@ -14,7 +16,7 @@ class_name Player
 @onready var animation_tree = $AnimationTree
 
 @onready var final_torch = get_parent().get_node("FinalTorch")
-@onready var audio_player = get_parent().get_node("AudioStreamPlayer")
+@onready var audio_player = final_torch.get_node("AudioStreamPlayer")
 @onready var side_menu = get_parent().get_node("Menu/SideMenu")
 @onready var death_sprite = preload("res://assets/deathanimation.png")
 
@@ -167,6 +169,12 @@ func _physics_process(delta):
 	inner_light.texture_scale = inner_light_scale
 	point_light.energy = light_energy
 	inner_light.energy = light_energy
+	
+	point_shadow.global_position = point_light.global_position
+	point_shadow.texture_scale = point_light_scale
+	point_shadow.energy = light_energy
+	inner_shadow.texture_scale = inner_light_scale
+	inner_shadow.energy = light_energy
 	
 	innermost_light.texture_scale = min(inner_light_scale, 2.4)
 	innermost_light.energy = light_energy

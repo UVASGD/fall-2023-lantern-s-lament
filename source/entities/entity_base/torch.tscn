@@ -1,9 +1,9 @@
-[gd_scene load_steps=6 format=3 uid="uid://bdptq8ft0qci7"]
+[gd_scene load_steps=7 format=3 uid="uid://bdptq8ft0qci7"]
 
 [ext_resource type="Script" path="res://source/entities/entity_base/torch.gd" id="1_1kbk1"]
 [ext_resource type="Texture2D" uid="uid://baw7wlfn2srrh" path="res://assets/torch.png" id="3_ovtm5"]
-[ext_resource type="Texture2D" uid="uid://nnkf6uinjgkp" path="res://assets/lightTexture.png" id="4_55kma"]
 [ext_resource type="AudioStream" uid="uid://bhrxygwnjbr45" path="res://assets/LightSound.wav" id="3_ukhfu"]
+[ext_resource type="Texture2D" uid="uid://d12gjhsclloe5" path="res://assets/lightMask2.png" id="3_vjjd7"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ejx8t"]
 size = Vector2(122, 52)
@@ -36,9 +36,9 @@ offset = Vector2(2.08165e-12, 2.08165e-12)
 hframes = 5
 
 [node name="PointLight2D" type="PointLight2D" parent="Area2D"]
-position = Vector2(2.08165e-12, -400)
+position = Vector2(0, -220)
 blend_mode = 2
-texture = ExtResource("4_55kma")
+texture = ExtResource("3_vjjd7")
 
 [node name="Timer" type="Timer" parent="Area2D"]
 wait_time = 0.15

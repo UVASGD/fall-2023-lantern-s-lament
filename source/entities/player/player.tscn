@@ -371,6 +371,7 @@ position = Vector2(10, 0)
 texture = ExtResource("2_j4nc6")
 hframes = 4
 vframes = 8
+frame = 4
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(-0.999984, 86.5)
@@ -407,16 +408,29 @@ shape = SubResource("CapsuleShape2D_oj0tb")
 
 [node name="Camera2D" type="Camera2D" parent="."]
 
-[node name="PointLight2D" type="PointLight2D" parent="."]
+[node name="OuterLight" type="PointLight2D" parent="."]
 blend_mode = 2
+shadow_item_cull_mask = 6
+texture = ExtResource("5_gcsun")
+
+[node name="OuterShadow" type="PointLight2D" parent="."]
+blend_mode = 2
+range_item_cull_mask = 6
 shadow_enabled = true
+shadow_item_cull_mask = 3
 texture = ExtResource("5_gcsun")
 
 [node name="InnerLight" type="PointLight2D" parent="."]
 position = Vector2(2.08165e-12, 2.08165e-12)
 blend_mode = 2
+shadow_item_cull_mask = 4
+texture = ExtResource("5_gcsun")
+
+[node name="InnerShadow" type="PointLight2D" parent="."]
+position = Vector2(2.08165e-12, 2.08165e-12)
+blend_mode = 2
+range_item_cull_mask = 4
 shadow_enabled = true
-shadow_item_cull_mask = 2
 texture = ExtResource("5_gcsun")
 
 [node name="InnermostLight" type="PointLight2D" parent="."]
@@ -427,6 +441,7 @@ texture_scale = 0.4
 
 [node name="LightOccluder2D" type="LightOccluder2D" parent="."]
 occluder = SubResource("OccluderPolygon2D_25lge")
+occluder_light_mask = 2
 
 [node name="AnimationTree" type="AnimationTree" parent="."]
 tree_root = SubResource("AnimationNodeStateMachine_enxu5")

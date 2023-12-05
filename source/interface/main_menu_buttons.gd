@@ -14,12 +14,11 @@ func _physics_process(_delta):
 func _on_play_pressed():
 	SceneTransition.change_scene("res://source/levels/level_1.tscn")
 
-func _on_settings_pressed():
+func _on_credits_pressed():
 	SceneTransition.change_scene("res://source/levels/settings_menu.tscn")
 
 func _on_quit_pressed():
 	get_tree().quit()
-
 
 func _on_flame_finished():
 	flame.play()
