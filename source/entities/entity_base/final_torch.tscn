@@ -1,9 +1,9 @@
 [gd_scene load_steps=10 format=3 uid="uid://c6pb8bf2xc05a"]
 
 [ext_resource type="Script" path="res://source/entities/entity_base/final_torch.gd" id="1_neha0"]
+[ext_resource type="Texture2D" uid="uid://d12gjhsclloe5" path="res://assets/lightMask2.png" id="3_0wsm1"]
 [ext_resource type="Texture2D" uid="uid://dfrfd7ilpoyg5" path="res://assets/torchFinal.png" id="3_di8vh"]
 [ext_resource type="AudioStream" uid="uid://bhrxygwnjbr45" path="res://assets/LightSound.wav" id="3_pq8b0"]
-[ext_resource type="Texture2D" uid="uid://nnkf6uinjgkp" path="res://assets/lightTexture.png" id="4_o667p"]
 [ext_resource type="AudioStream" uid="uid://icg7vfutt8wt" path="res://assets/Roar.wav" id="4_y485e"]
 [ext_resource type="AudioStream" uid="uid://cd5rhfnt7k0qm" path="res://assets/InGameAmbientPiano.mp3" id="6_im0sv"]
 [ext_resource type="AudioStream" uid="uid://b7ipyp1wagl6u" path="res://assets/ChaseMusicWar2.mp3" id="6_o2jh8"]
@@ -37,11 +37,10 @@ texture = ExtResource("3_di8vh")
 hframes = 5
 
 [node name="PointLight2D" type="PointLight2D" parent="Area2D"]
-visible = false
 position = Vector2(2.08165e-12, -112)
 blend_mode = 2
 range_item_cull_mask = 5
-texture = ExtResource("4_o667p")
+texture = ExtResource("3_0wsm1")
 
 [node name="Timer" type="Timer" parent="Area2D"]
 wait_time = 0.15

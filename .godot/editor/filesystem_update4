@@ -28,3 +28,4 @@ res://source/interface/end_screen.tscn
 res://source/levels/settings_menu.tscn
 res://source/entities/enemies/spike.gd
 res://source/entities/entity_base/final_torch.gd
+res://source/entities/entity_base/torch.tscn

@@ -92,7 +92,7 @@ func _physics_process(delta):
 			Input.get_action_strength("rotate_right") - Input.get_action_strength("rotate_left"),
 			Input.get_action_strength("move_down") - Input.get_action_strength("move_up")
 		)
-	speed += direction*(250+boost)
+	speed += direction*(75+boost)
 	speed *= 0.875
 	boost *= 0.9
 	if hitbox.damage == 0 and boost < 25 and !has_died:
@@ -253,7 +253,7 @@ func angle_to_angle(from, to):
 
 func setup_stats():
 	#z_index = 2
-	max_hp = 500
+	max_hp = 125
 	super._ready()
 	hitbox.damage = 999
 	hurtbox.add_to_group("player")

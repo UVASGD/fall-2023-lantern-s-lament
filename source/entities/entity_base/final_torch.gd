@@ -41,6 +41,7 @@ func _on_area_2d_area_entered(area):
 				torches_lit = true
 		
 		get_tree().call_group("torches", "are_lit")
+		#torches_lit = true #comment out 
 		if torches_lit:
 			lit = true
 			timer.start()
@@ -56,7 +57,7 @@ func _on_area_2d_area_entered(area):
 			get_tree().current_scene.call_deferred("add_child", monster_inst)
 			monster_inst.scale = Vector2(2, 2)
 			monster_inst.global_position = spawn_point
-			canvas_mod.color = Color(0.25, 0, 0, 0.25)
+			canvas_mod.color = Color(0.25, 0, 0, 1)
 
 func _on_timer_timeout():
 	if(sprite.frame == 4): sprite.frame = 1
