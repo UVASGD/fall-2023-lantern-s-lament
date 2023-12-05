@@ -15,12 +15,12 @@
 [ext_resource type="PackedScene" uid="uid://dxyvkmxfplod5" path="res://source/entities/enemies/spikes.tscn" id="13_arp2w"]
 [ext_resource type="PackedScene" uid="uid://ddomnqqnj7o6o" path="res://source/entities/traps/dart_trap.tscn" id="15_d4bbv"]
 
-[sub_resource type="NavigationPolygon" id="NavigationPolygon_7oxnf"]
+[sub_resource type="NavigationPolygon" id="NavigationPolygon_butt7"]
 vertices = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
 polygons = Array[PackedInt32Array]([PackedInt32Array(0, 1, 2, 3)])
 outlines = Array[PackedVector2Array]([PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)])
 
-[sub_resource type="OccluderPolygon2D" id="OccluderPolygon2D_fq83y"]
+[sub_resource type="OccluderPolygon2D" id="OccluderPolygon2D_f3hci"]
 polygon = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_ktvy2"]
@@ -28,9 +28,9 @@ texture = ExtResource("2_1ypl2")
 0:0/0 = 0
 0:0/0/physics_layer_0/linear_velocity = Vector2(0, 0)
 0:0/0/physics_layer_0/angular_velocity = 0.0
-0:0/0/navigation_layer_0/polygon = SubResource("NavigationPolygon_7oxnf")
+0:0/0/navigation_layer_0/polygon = SubResource("NavigationPolygon_butt7")
 1:0/0 = 0
-1:0/0/occlusion_layer_0/polygon = SubResource("OccluderPolygon2D_fq83y")
+1:0/0/occlusion_layer_0/polygon = SubResource("OccluderPolygon2D_f3hci")
 1:0/0/physics_layer_0/linear_velocity = Vector2(0, 0)
 1:0/0/physics_layer_0/angular_velocity = 0.0
 1:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
@@ -38,32 +38,32 @@ texture = ExtResource("2_1ypl2")
 0:1/0/physics_layer_0/linear_velocity = Vector2(0, 0)
 0:1/0/physics_layer_0/angular_velocity = 0.0
 
-[sub_resource type="OccluderPolygon2D" id="OccluderPolygon2D_cgumc"]
+[sub_resource type="OccluderPolygon2D" id="OccluderPolygon2D_dr57s"]
 polygon = PackedVector2Array(0, 7, 14, 0, 14, -16, 0, -23, -13.5, -16.5, -14, 0)
 
-[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_r0wh7"]
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_pjd4g"]
 texture = ExtResource("3_3k2ca")
 texture_region_size = Vector2i(32, 16)
 0:0/size_in_atlas = Vector2i(1, 3)
 0:0/0 = 0
-0:0/0/occlusion_layer_0/polygon = SubResource("OccluderPolygon2D_cgumc")
+0:0/0/occlusion_layer_0/polygon = SubResource("OccluderPolygon2D_dr57s")
 0:0/0/physics_layer_0/linear_velocity = Vector2(0, 0)
 0:0/0/physics_layer_0/angular_velocity = 0.0
 0:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(0, -7, -14, 0, 0, 7, 14, 0)
 
-[sub_resource type="NavigationPolygon" id="NavigationPolygon_81saj"]
+[sub_resource type="NavigationPolygon" id="NavigationPolygon_gwt4t"]
 vertices = PackedVector2Array(14, 0, 0, 7, -14, 0, 0, -7)
 polygons = Array[PackedInt32Array]([PackedInt32Array(0, 1, 2, 3)])
 outlines = Array[PackedVector2Array]([PackedVector2Array(0, -7, -14, 0, 0, 7, 14, 0)])
 
-[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_gfocc"]
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_rsc5v"]
 texture = ExtResource("4_byugp")
 texture_region_size = Vector2i(32, 16)
 0:0/size_in_atlas = Vector2i(1, 3)
 0:0/0 = 0
 0:0/0/physics_layer_0/linear_velocity = Vector2(0, 0)
 0:0/0/physics_layer_0/angular_velocity = 0.0
-0:0/0/navigation_layer_0/polygon = SubResource("NavigationPolygon_81saj")
+0:0/0/navigation_layer_0/polygon = SubResource("NavigationPolygon_gwt4t")
 
 [sub_resource type="TileSet" id="TileSet_y4rry"]
 tile_shape = 1
@@ -73,8 +73,8 @@ physics_layer_0/collision_layer = 1
 physics_layer_0/collision_mask = 6
 navigation_layer_0/layers = 1
 sources/0 = SubResource("TileSetAtlasSource_ktvy2")
-sources/3 = SubResource("TileSetAtlasSource_r0wh7")
-sources/6 = SubResource("TileSetAtlasSource_gfocc")
+sources/3 = SubResource("TileSetAtlasSource_pjd4g")
+sources/6 = SubResource("TileSetAtlasSource_rsc5v")
 
 [node name="MainScene" type="Node2D"]
 
@@ -110,6 +110,7 @@ position = Vector2(-2200, 3098)
 [node name="LoreBit" parent="." instance=ExtResource("8_u815n")]
 position = Vector2(8736, 981)
 scale = Vector2(0.5, 0.5)
+text = "I've got a bag of... uh... hamburgers for you. All you have to do is to come out into the dark shadowy part of the woods, where no one can see you."
 
 [node name="torch" parent="." groups=["torches"] instance=ExtResource("11_x3jaj")]
 position = Vector2(-1788, 844)
@@ -3127,18 +3128,12 @@ heal_amount = 25
 position = Vector2(1083, 1953)
 rotation = -2.6724
 
-[node name="Sprite2D" parent="DartTrap" index="0"]
-rotation = 2.70375
-
 [node name="CollisionShape2D" parent="DartTrap/DetectionArea" index="0"]
 position = Vector2(316.563, -0.100067)
 
 [node name="DartTrap2" parent="." instance=ExtResource("15_d4bbv")]
 position = Vector2(4148, 412)
 rotation = -3.60253
-
-[node name="Sprite2D" parent="DartTrap2" index="0"]
-rotation = 3.53875
 
 [node name="CollisionShape2D" parent="DartTrap2/DetectionArea" index="0"]
 position = Vector2(239.702, -1.99161)
@@ -3147,9 +3142,6 @@ position = Vector2(239.702, -1.99161)
 position = Vector2(6778, -1679)
 rotation = -3.60253
 
-[node name="Sprite2D" parent="DartTrap4" index="0"]
-rotation = 3.53875
-
 [node name="CollisionShape2D" parent="DartTrap4/DetectionArea" index="0"]
 position = Vector2(406.899, -1.70346)
 
@@ -3157,11 +3149,18 @@ position = Vector2(406.899, -1.70346)
 position = Vector2(1237, 1880)
 rotation = -2.6724
 
-[node name="Sprite2D" parent="DartTrap3" index="0"]
-rotation = 2.70375
-
 [node name="CollisionShape2D" parent="DartTrap3/DetectionArea" index="0"]
 position = Vector2(316.563, -0.100067)
+
+[node name="LoreBit2" parent="." instance=ExtResource("8_u815n")]
+position = Vector2(-1938, 2826)
+scale = Vector2(0.5, 0.5)
+text = "Hey, kid! Don't lose that lamp! You'll need it to make it out of these woods. Those monsters chasing you? They hate your lamp, and they'll do anything to put it out. Keep away from them, or you'll be left in the dark. And you don't want that to happen."
+
+[node name="LoreBit3" parent="." instance=ExtResource("8_u815n")]
+position = Vector2(10360, -707)
+scale = Vector2(0.5, 0.5)
+text = "There's only one way to get out of this forest. Find torches around the woods, and light them. When you're done, come back here to light this big one. Be ready to run out of here. Fast."
 
 [editable path="Menu/SideMenu"]
 [editable path="DartTrap"]

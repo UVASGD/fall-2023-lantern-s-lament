@@ -18,7 +18,7 @@ func _ready():
 	nav_agent.target_position = player.global_position
 	super._ready()
 
-func _physics_process(delta):
+func _physics_process(_delta):
 	in_aim_area = enemy_in_area()
 	target_pos = (player.global_position - global_position).normalized()
 	#player_angle = atan2(-(global_position.y - player.global_position.y), global_position.x - player.global_position.x)

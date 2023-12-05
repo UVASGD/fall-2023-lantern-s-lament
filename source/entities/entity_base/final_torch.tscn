@@ -11,6 +11,7 @@ size = Vector2(244, 79)
 size = Vector2(378, 212)
 
 [node name="FinalTorch" type="StaticBody2D"]
+z_index = 4
 y_sort_enabled = true
 collision_mask = 6
 script = ExtResource("1_neha0")

@@ -6,13 +6,14 @@
 [ext_resource type="Texture2D" uid="uid://g8otunw4voyw" path="res://assets/random_bush_lol.png" id="4_vpp4h"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_8l218"]
-size = Vector2(33.6, 11.2)
+size = Vector2(413.922, 38.4903)
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_wjuoh"]
 radius = 14.0
 height = 37.2
 
 [node name="DartTrap" type="StaticBody2D"]
+z_index = 4
 position = Vector2(24, 2.08165e-12)
 scale = Vector2(5, 5)
 collision_mask = 2

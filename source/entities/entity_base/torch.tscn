@@ -11,6 +11,7 @@ size = Vector2(122, 52)
 size = Vector2(183, 156)
 
 [node name="torch" type="StaticBody2D"]
+z_index = 5
 y_sort_enabled = true
 collision_mask = 134
 script = ExtResource("1_1kbk1")

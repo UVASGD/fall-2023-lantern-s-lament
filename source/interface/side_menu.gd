@@ -3,7 +3,6 @@ extends ColorRect
 @onready var player = get_parent().get_parent().get_node("Player")
 
 @onready var property_label = $PropertyLabel
-@onready var interact = $Interact
 @onready var value_label = $ValueLabel
 @onready var flame_animator = $FlameAnimator
 @onready var flame_sprite = $Flame
@@ -29,9 +28,10 @@ func pause_game():
 	add_child(pause_inst)
 	pause_inst.global_position = self.global_position + Vector2(256, 0)
 	
-func pop_up():
+func pop_up(text : String):
 	get_tree().paused = true
 	var lore_inst = lore_menu.instantiate()
+	lore_inst.set_text(text)
 	add_child(lore_inst)
 	lore_inst.global_position = self.global_position + Vector2(256, 0)
 	#lore_inst.scale = Vector2(100, 100)

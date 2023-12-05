@@ -354,6 +354,7 @@ graph_offset = Vector2(-93.7949, 35.0325)
 [sub_resource type="AnimationNodeStateMachinePlayback" id="AnimationNodeStateMachinePlayback_1i2eb"]
 
 [node name="Player" type="CharacterBody2D"]
+z_index = 4
 y_sort_enabled = true
 collision_layer = 2
 script = ExtResource("1_ekmf0")

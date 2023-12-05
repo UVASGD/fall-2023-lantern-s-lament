@@ -9,6 +9,7 @@ radius = 18.0
 height = 36.0
 
 [node name="EnemyTest" instance=ExtResource("1_qbq22")]
+z_index = 4
 wall_min_slide_angle = 0.0
 script = ExtResource("2_dbfv1")
 tetherCords = Vector2(0, 0)

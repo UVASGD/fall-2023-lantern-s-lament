@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://7lm7f3kflga0"
-path="res://.godot/imported/flame6.png-b2f8b6239e7e276a2e74693e6343d2a4.ctex"
+uid="uid://jf4j7kkuvole"
+path="res://.godot/imported/TileBase.png-8216e59600d290438961e1a33b7bb6ef.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/flame_animation/flame6.png"
-dest_files=["res://.godot/imported/flame6.png-b2f8b6239e7e276a2e74693e6343d2a4.ctex"]
+source_file="res://assets/TileBase.png"
+dest_files=["res://.godot/imported/TileBase.png-8216e59600d290438961e1a33b7bb6ef.ctex"]
 
 [params]
 

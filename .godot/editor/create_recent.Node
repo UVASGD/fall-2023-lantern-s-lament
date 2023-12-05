@@ -21,6 +21,5 @@ CharacterBody2D
 LightOccluder2D
 TileMap
 DirectionalLight2D
-CanvasModulate
 AnimationPlayer
 VBoxContainer

@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bpauxhngacy6v"
-path="res://.godot/imported/flame2.png-61c174f24b5fa0b079b2781d49d262a7.ctex"
+uid="uid://cfym5r2b7xpvf"
+path="res://.godot/imported/testGrassLayout.png-de307a4d231d465d540456add6d3476e.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/flame_animation/flame2.png"
-dest_files=["res://.godot/imported/flame2.png-61c174f24b5fa0b079b2781d49d262a7.ctex"]
+source_file="res://assets/testGrassLayout.png"
+dest_files=["res://.godot/imported/testGrassLayout.png-de307a4d231d465d540456add6d3476e.ctex"]
 
 [params]
 
