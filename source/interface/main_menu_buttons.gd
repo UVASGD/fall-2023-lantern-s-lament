@@ -1,6 +1,7 @@
 extends Control
 
 @onready var torch = get_parent().get_node("torch")
+@onready var flame = get_parent().get_node("Flame")
 @onready var delay = 0
 
 func _physics_process(_delta):
@@ -18,3 +19,7 @@ func _on_settings_pressed():
 
 func _on_quit_pressed():
 	get_tree().quit()
+
+
+func _on_flame_finished():
+	flame.play()

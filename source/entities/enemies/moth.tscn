@@ -1,8 +1,9 @@
-[gd_scene load_steps=4 format=3 uid="uid://dd6xb02k621ou"]
+[gd_scene load_steps=5 format=3 uid="uid://dd6xb02k621ou"]
 
 [ext_resource type="PackedScene" uid="uid://6y3pqlr36j2" path="res://source/entities/enemies/enemy_base.tscn" id="1_pfu3g"]
 [ext_resource type="Script" path="res://source/entities/enemies/moth.gd" id="2_nagws"]
 [ext_resource type="Texture2D" uid="uid://76dhiyimnn4c" path="res://assets/moth_spritesheet.png" id="3_kb0v4"]
+[ext_resource type="AudioStream" uid="uid://ck3dyykdankvv" path="res://assets/WingFlap.wav" id="4_wq4k4"]
 
 [node name="Moth" instance=ExtResource("1_pfu3g")]
 z_index = 4
@@ -34,6 +35,9 @@ autostart = true
 [node name="AnimationTimer" type="Timer" parent="." index="7"]
 wait_time = 0.2
 autostart = true
+
+[node name="Flap" type="AudioStreamPlayer" parent="." index="8"]
+stream = ExtResource("4_wq4k4")
 
 [connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
 [connection signal="timeout" from="AnimationTimer" to="." method="_on_animation_timer_timeout"]

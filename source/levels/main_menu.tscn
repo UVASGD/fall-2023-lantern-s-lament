@@ -1,9 +1,10 @@
-[gd_scene load_steps=6 format=3 uid="uid://b76iovfwu8nl8"]
+[gd_scene load_steps=7 format=3 uid="uid://b76iovfwu8nl8"]
 
 [ext_resource type="PackedScene" uid="uid://bhx0hcjgqq0j7" path="res://source/interface/main_menu_buttons.tscn" id="1_vd7b6"]
 [ext_resource type="Texture2D" uid="uid://cd62idyplyhcs" path="res://assets/mainmenu.png" id="3_bbrrl"]
 [ext_resource type="Texture2D" uid="uid://bvjoh56laimq2" path="res://assets/menutorch.png" id="4_uxssl"]
 [ext_resource type="Texture2D" uid="uid://d12gjhsclloe5" path="res://assets/lightMask2.png" id="5_225ma"]
+[ext_resource type="AudioStream" uid="uid://0vyaegdvhac0" path="res://assets/MenuFire.wav" id="5_q24w5"]
 [ext_resource type="AudioStream" uid="uid://cutt1knrh24nh" path="res://assets/TitleScreenGhostWalk.mp3" id="6_tcq64"]
 
 [node name="MainMenu" type="Node2D"]
@@ -63,3 +64,9 @@ scale = Vector2(2.776, 2.776)
 stream = ExtResource("6_tcq64")
 volume_db = -15.0
 autoplay = true
+
+[node name="Flame" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("5_q24w5")
+autoplay = true
+
+[connection signal="finished" from="Flame" to="MainMenuButtons" method="_on_flame_finished"]

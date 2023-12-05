@@ -63,6 +63,14 @@ const CENTER = Vector2(0.0, 0.0)
 
 @onready var delay = 0
 
+#SOUND VARIABLES
+@onready var damage_sound = $DamageSound
+@onready var focus = $Focus
+@onready var unfocus = $Unfocus
+@onready var walk = $Walk
+@onready var roll_sound = $RollSound
+@onready var stinger = $Stinger
+
 func _ready():
 	setup_stats()
 	game_start = true
@@ -105,6 +113,9 @@ func _physics_process(delta):
 	man_aim_right = Vector2(sin(back_angle - move_angle) * man_cur_range, cos(back_angle - move_angle) * man_cur_range)
 	
 	man_aim_back = Vector2(sin(back_angle) * man_cur_range, cos(back_angle) * man_cur_range)
+	if(Input.is_action_just_pressed("space_bar") && light_dim == 0): focus.play()
+	if(Input.is_action_just_released("space_bar") && light_dim == 0): unfocus.play()
+	
 	
 	if (Input.is_action_pressed("space_bar") && light_dim == 0):
 		var tween1 = create_tween()
@@ -163,26 +174,37 @@ func _physics_process(delta):
 	#death
 	if(cur_hp == 0 and !endtimer.is_stopped()):
 		delay += 1
-		if(delay == 7 and sprite.frame != 3):
+		#print(sprite.frame)
+		if(delay == 15 and sprite.frame != 3):
 			sprite.frame += 1
 			delay = 0
 		if(sprite.frame == 3):
 			side_menu.game_over.modulate.a = 1
 			delay = 0
 	elif(cur_hp == 0):
-		if (delay == 0): side_menu.woosh.play(0)
+		if (delay == 0): side_menu.woosh.play()
 		delay += 1
 		if(delay == 10):
 			side_menu.black_out.modulate = Color(0, 0, 0, 255)
 			side_menu.flame_sprite.modulate = Color(255, 255, 255, 0)
 			delay += 1
 			get_tree().paused = true
+	
+	#print(str())
+	if((abs(speed.x) > 10 or abs(speed.y) > 10)): 
+		if(walk.stream_paused): walk.stream_paused = false
+	else:
+		if(!walk.stream_paused): walk.stream_paused = true
+	
+func _on_walk_finished():
+	walk.play()
 
 func _input(event):
 	if game_start and event.is_action_pressed("pause_menu"):
 		side_menu.pause_game()
 		
 	if game_start and timer.is_stopped() and event.is_action_pressed("roll"):
+		roll_sound.play()
 		timer.start()
 		boost = 150
 		rolling = true
@@ -225,14 +247,16 @@ func receive_damage(base_damage : int):
 	super.receive_damage(base_damage)
 	if !invulnerable:
 		shake_strength = clamp(base_damage / 2.0, 5, 25) #shakes the camera on taking damage
+		damage_sound.play()
 
 func die():
+	stinger.play()
 	invulnerable = true
 	hitbox.damage = 0
 	sprite.texture = death_sprite
+	sprite.frame = 0
 	sprite.hframes = 4
 	sprite.vframes = 1
-	sprite.frame = 0
 	endtimer.start()
 
 func _draw():

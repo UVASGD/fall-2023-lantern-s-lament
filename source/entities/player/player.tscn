@@ -1,10 +1,16 @@
-[gd_scene load_steps=49 format=3 uid="uid://dlbg8myhg31ys"]
+[gd_scene load_steps=55 format=3 uid="uid://dlbg8myhg31ys"]
 
 [ext_resource type="Script" path="res://source/entities/player/player.gd" id="1_ekmf0"]
 [ext_resource type="Texture2D" uid="uid://bcoxeak4h8moi" path="res://assets/player.png" id="2_j4nc6"]
 [ext_resource type="PackedScene" uid="uid://b5nwx7lojc88" path="res://source/entities/entity_base/hurtbox.tscn" id="3_fxgss"]
 [ext_resource type="PackedScene" uid="uid://dgnquwxw3gnyx" path="res://source/entities/entity_base/hitbox.tscn" id="4_ce4gw"]
 [ext_resource type="Texture2D" uid="uid://d12gjhsclloe5" path="res://assets/lightMask2.png" id="5_gcsun"]
+[ext_resource type="AudioStream" uid="uid://c4obwdygnk2xj" path="res://assets/DamageSound.mp3" id="6_4gy18"]
+[ext_resource type="AudioStream" uid="uid://4addhjvwh3ox" path="res://assets/FocusSound.wav" id="7_dwgqs"]
+[ext_resource type="AudioStream" uid="uid://d22radrwxgcc8" path="res://assets/UnfocusSound.wav" id="8_lkelm"]
+[ext_resource type="AudioStream" uid="uid://dthsat3tlxunb" path="res://assets/WalkingSound.wav" id="9_ms5vv"]
+[ext_resource type="AudioStream" uid="uid://dlmjo4rfu2h6s" path="res://assets/RollSound.wav" id="10_tnfyr"]
+[ext_resource type="AudioStream" uid="uid://1hjt8lwq4dox" path="res://assets/Stinger.wav" id="11_gi16p"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_7f1jp"]
 size = Vector2(50.9999, 60)
@@ -443,12 +449,33 @@ autostart = true
 wait_time = 0.3
 
 [node name="EndTimer" type="Timer" parent="."]
-wait_time = 2.0
+wait_time = 2.5
 one_shot = true
+
+[node name="DamageSound" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("6_4gy18")
+
+[node name="Focus" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("7_dwgqs")
+
+[node name="Unfocus" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("8_lkelm")
+
+[node name="Walk" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("9_ms5vv")
+volume_db = -5.0
+autoplay = true
+
+[node name="RollSound" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("10_tnfyr")
+
+[node name="Stinger" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("11_gi16p")
 
 [connection signal="area_entered" from="Hurtbox" to="." method="_on_hurtbox_area_entered"]
 [connection signal="timeout" from="FlickerTimer" to="." method="_on_flicker_timer_timeout"]
 [connection signal="timeout" from="RollAnimationTimer" to="." method="_on_roll_animation_timer_timeout"]
+[connection signal="finished" from="Walk" to="." method="_on_walk_finished"]
 
 [editable path="Hurtbox"]
 [editable path="Hitbox"]

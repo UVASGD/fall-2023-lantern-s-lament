@@ -2,7 +2,7 @@
 
 importer="mp3"
 type="AudioStreamMP3"
-uid="uid://hco20psake03"
+uid="uid://cd5rhfnt7k0qm"
 path="res://.godot/imported/InGameAmbientPiano.mp3-f1bca848c48c00b87f71bd8ee70a6159.mp3str"
 
 [deps]
@@ -12,7 +12,7 @@ dest_files=["res://.godot/imported/InGameAmbientPiano.mp3-f1bca848c48c00b87f71bd
 
 [params]
 
-loop=true
+loop=false
 loop_offset=0
 bpm=0
 beat_count=0
