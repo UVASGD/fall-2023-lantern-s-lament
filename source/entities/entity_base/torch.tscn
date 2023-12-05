@@ -37,6 +37,7 @@ hframes = 5
 [node name="PointLight2D" type="PointLight2D" parent="Area2D"]
 position = Vector2(0, -220)
 blend_mode = 2
+range_item_cull_mask = 5
 texture = ExtResource("3_vjjd7")
 
 [node name="Timer" type="Timer" parent="Area2D"]

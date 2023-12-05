@@ -19,7 +19,7 @@ func shoot() -> void:
 	var dart_instance := dart.instantiate()
 	dart_instance.position = outlet.global_position
 	dart_instance.rotation = global_rotation
-	get_tree().current_scene.add_child(dart_instance)
+	get_tree().current_scene.call_deferred("add_child", dart_instance)
 
 func _on_detection_area_body_entered(body):
 	if (body.name == "Player"):

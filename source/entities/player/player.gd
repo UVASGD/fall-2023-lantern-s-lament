@@ -92,7 +92,7 @@ func _physics_process(delta):
 			Input.get_action_strength("rotate_right") - Input.get_action_strength("rotate_left"),
 			Input.get_action_strength("move_down") - Input.get_action_strength("move_up")
 		)
-	speed += direction*(50+boost)
+	speed += direction*(250+boost)
 	speed *= 0.875
 	boost *= 0.9
 	if hitbox.damage == 0 and boost < 25 and !has_died:
@@ -253,7 +253,7 @@ func angle_to_angle(from, to):
 
 func setup_stats():
 	#z_index = 2
-	max_hp = 100
+	max_hp = 500
 	super._ready()
 	hitbox.damage = 999
 	hurtbox.add_to_group("player")
@@ -277,7 +277,7 @@ func die():
 
 func _draw():
 	const WHITE = Color(1, 1, 1, 1)
-	const BLUE = Color(0, 0, 1, 1)
+	#const BLUE = Color(0, 0, 1, 1)
 	#const GRAY = Color(0.80, 0.80, 0.80, 1)
 	#const DGRAY = Color(0.20, 0.20, 0.20, 1)
 	if man_aim_angle > TAU:

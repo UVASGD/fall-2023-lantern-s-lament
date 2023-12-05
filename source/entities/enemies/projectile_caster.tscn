@@ -34,6 +34,7 @@ autostart = true
 [node name="PointLight2D" type="PointLight2D" parent="."]
 scale = Vector2(2, 2)
 blend_mode = 2
+range_item_cull_mask = 5
 texture = ExtResource("4_eudbj")
 
 [connection signal="area_entered" from="Hitbox" to="." method="_on_hitbox_area_entered"]

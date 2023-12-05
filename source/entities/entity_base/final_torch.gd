@@ -8,12 +8,14 @@ extends StaticBody2D
 @onready var player = get_parent().get_node("Player")
 @onready var light_scale : float = 0.0
 @onready var flicker_scale : float = 0.0
+@onready var canvas_mod = get_parent().get_node("CanvasModulate")
 
 @onready var animation_offset = 0
 @onready var ignite = $Ignite
 @onready var roar = $Roar
 @onready var ambient = $AmbientMusic
 @onready var chase = $ChaseMusic
+@export var spawn_point : Vector2
 
 @onready var monster : PackedScene = preload("res://source/entities/enemies/eol_monster.tscn")
 
@@ -38,7 +40,7 @@ func _on_area_2d_area_entered(area):
 			if(area.get_parent().glow == 1):
 				torches_lit = true
 		
-		#get_tree().call_group("torches", "are_lit")
+		get_tree().call_group("torches", "are_lit")
 		if torches_lit:
 			lit = true
 			timer.start()
@@ -53,7 +55,8 @@ func _on_area_2d_area_entered(area):
 			var monster_inst = monster.instantiate()
 			get_tree().current_scene.call_deferred("add_child", monster_inst)
 			monster_inst.scale = Vector2(2, 2)
-			monster_inst.global_position = self.global_position - 2*player.speed
+			monster_inst.global_position = spawn_point
+			canvas_mod.color = Color(0.25, 0, 0, 0.25)
 
 func _on_timer_timeout():
 	if(sprite.frame == 4): sprite.frame = 1

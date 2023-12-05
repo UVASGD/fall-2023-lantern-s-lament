@@ -3,7 +3,7 @@ extends Area2D
 @onready var player = get_parent().get_node("Player")
 @onready var sprite = $Sprite2D
 @onready var hitbox = $CollisionShape2D
-@onready var speed = 5
+@onready var speed = 10
 @onready var damage = 50
 @onready var boost = 0
 @onready var dir : Vector2 = Vector2.ZERO
@@ -14,7 +14,7 @@ extends Area2D
 func _ready():
 	pass
 
-func _physics_process(delta):
+func _physics_process(_delta):
 	dir = (player.global_position - global_position).normalized()
 	if(!player.has_died): global_position += dir * (speed + boost) 
 	boost *= 0.95

@@ -20,12 +20,12 @@ heal_amount = 0
 text = ""
 
 [node name="CollisionShape2D" parent="." index="0"]
-position = Vector2(-2.49999, -46.0625)
+position = Vector2(0.500061, -0.0625)
 scale = Vector2(1.25, 1.25)
 shape = SubResource("RectangleShape2D_n1sxp")
 
 [node name="Sprite" type="Sprite2D" parent="." index="1"]
-position = Vector2(-22, -7)
+position = Vector2(-19, 39)
 texture = ExtResource("3_v6l3m")
 
 [connection signal="area_entered" from="." to="." method="_on_area_entered"]

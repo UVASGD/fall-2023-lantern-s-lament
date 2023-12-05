@@ -93,7 +93,7 @@ func _physics_process(delta):
 		end_inst.modulate.a = 0
 		run = false
 		
-func _input(event):
-	if event.is_action_pressed("interact"):
-		woosh.play()
-		print("runs")
+#func _input(event):
+#	if event.is_action_pressed("interact"):
+#		woosh.play()
+#		print("runs")

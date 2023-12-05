@@ -1,0 +1,14 @@
+[gd_scene load_steps=5 format=3 uid="uid://deh4rhkfx07rr"]
+
+[ext_resource type="PackedScene" uid="uid://bd81oyt6gw3f3" path="res://source/test.tscn" id="1_l2nmc"]
+[ext_resource type="Texture2D" uid="uid://hbwmxye6f1bc" path="res://assets/StoneWall1.png" id="2_f73fd"]
+[ext_resource type="Texture2D" uid="uid://b302bdfc75vj1" path="res://assets/normalCube.png" id="3_x6v17"]
+
+[sub_resource type="CanvasTexture" id="CanvasTexture_1n6sj"]
+diffuse_texture = ExtResource("2_f73fd")
+normal_texture = ExtResource("3_x6v17")
+
+[node name="Test" instance=ExtResource("1_l2nmc")]
+
+[node name="Sprite2D" parent="." index="2"]
+texture = SubResource("CanvasTexture_1n6sj")

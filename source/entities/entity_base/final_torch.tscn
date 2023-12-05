@@ -40,6 +40,7 @@ hframes = 5
 visible = false
 position = Vector2(2.08165e-12, -112)
 blend_mode = 2
+range_item_cull_mask = 5
 texture = ExtResource("4_o667p")
 
 [node name="Timer" type="Timer" parent="Area2D"]

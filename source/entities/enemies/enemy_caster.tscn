@@ -34,6 +34,7 @@ autostart = true
 [node name="PointLight2D" type="PointLight2D" parent="." index="6"]
 position = Vector2(0, -101)
 blend_mode = 2
+range_item_cull_mask = 5
 texture = ExtResource("4_0mewc")
 
 [node name="Cast" type="AudioStreamPlayer" parent="." index="7"]

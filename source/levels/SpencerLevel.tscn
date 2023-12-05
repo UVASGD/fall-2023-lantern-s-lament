@@ -1808,23 +1808,18 @@ position = Vector2(8530, 1967)
 
 [node name="OilPickup" parent="Oil" instance=ExtResource("7_sbq3n")]
 position = Vector2(5482, 306)
-heal_amount = 15
 
 [node name="OilPickup6" parent="Oil" instance=ExtResource("7_sbq3n")]
 position = Vector2(8404, -321)
-heal_amount = 15
 
 [node name="OilPickup4" parent="Oil" instance=ExtResource("7_sbq3n")]
 position = Vector2(-1085, 498)
-heal_amount = 20
 
 [node name="OilPickup5" parent="Oil" instance=ExtResource("7_sbq3n")]
 position = Vector2(2247, 1301)
-heal_amount = 20
 
 [node name="OilPickup7" parent="Oil" instance=ExtResource("7_sbq3n")]
 position = Vector2(5992, 2729)
-heal_amount = 20
 
 [node name="OilPickup2" parent="Oil" instance=ExtResource("7_sbq3n")]
 position = Vector2(10837.9, 1145.44)

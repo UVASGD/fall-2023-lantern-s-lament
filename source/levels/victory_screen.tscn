@@ -1,0 +1,22 @@
+[gd_scene load_steps=3 format=3 uid="uid://cm8lau3ilt38b"]
+
+[ext_resource type="Texture2D" uid="uid://381k3tp5u2o0" path="res://assets/popup.png" id="1_5l088"]
+[ext_resource type="FontFile" uid="uid://bq2bth53eqerg" path="res://source/interface/IMFellEnglishSC-Regular.ttf" id="2_ig60o"]
+
+[node name="VictoryScreen" type="Node2D"]
+position = Vector2(451, 267)
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(129.25, 46)
+scale = Vector2(1.23164, 1.12222)
+texture = ExtResource("1_5l088")
+
+[node name="Label" type="Label" parent="Sprite2D"]
+offset_left = -263.106
+offset_top = -128.317
+offset_right = 296.894
+offset_bottom = 365.683
+theme_override_fonts/font = ExtResource("2_ig60o")
+theme_override_font_sizes/font_size = 100
+text = "You escaped!"
+horizontal_alignment = 1

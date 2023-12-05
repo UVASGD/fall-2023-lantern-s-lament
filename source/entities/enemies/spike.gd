@@ -11,7 +11,7 @@ extends StaticBody2D
 @export var timer_waitTime : float = 1
 
 func _ready():
-	hitbox.damage = 5
+	hitbox.damage = 3
 	timer.connect("timeout", spike_cycle)
 	timer.wait_time = timer_waitTime
 	

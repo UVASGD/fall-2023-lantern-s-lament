@@ -14,7 +14,7 @@
 [ext_resource type="AudioStream" uid="uid://1hjt8lwq4dox" path="res://assets/Stinger.wav" id="11_gi16p"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_7f1jp"]
-size = Vector2(50.9999, 90)
+size = Vector2(84, 151)
 
 [sub_resource type="Animation" id="Animation_oraw6"]
 length = 0.001
@@ -371,9 +371,10 @@ position = Vector2(15, 5)
 texture = ExtResource("2_j4nc6")
 hframes = 4
 vframes = 8
+frame = 4
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(-16, 86.5)
+position = Vector2(-10.5, 83)
 rotation = 1.5708
 shape = SubResource("RectangleShape2D_7f1jp")
 
@@ -408,11 +409,13 @@ shape = SubResource("CapsuleShape2D_oj0tb")
 [node name="Camera2D" type="Camera2D" parent="."]
 
 [node name="OuterLight" type="PointLight2D" parent="."]
+position = Vector2(0, 45)
 blend_mode = 2
 shadow_item_cull_mask = 6
 texture = ExtResource("5_p5h18")
 
 [node name="OuterShadow" type="PointLight2D" parent="."]
+position = Vector2(0, 45)
 blend_mode = 2
 range_item_cull_mask = 4
 shadow_enabled = true
@@ -420,20 +423,20 @@ shadow_item_cull_mask = 3
 texture = ExtResource("5_p5h18")
 
 [node name="InnerLight" type="PointLight2D" parent="."]
-position = Vector2(2.08165e-12, 2.08165e-12)
+position = Vector2(0, 59)
 blend_mode = 2
 shadow_item_cull_mask = 4
 texture = ExtResource("5_gcsun")
 
 [node name="InnerShadow" type="PointLight2D" parent="."]
-position = Vector2(2.08165e-12, 2.08165e-12)
+position = Vector2(0, 59)
 blend_mode = 2
 range_item_cull_mask = 4
 shadow_enabled = true
 texture = ExtResource("5_gcsun")
 
 [node name="InnermostLight" type="PointLight2D" parent="."]
-position = Vector2(2.08165e-12, 2.08165e-12)
+position = Vector2(0, 48)
 blend_mode = 2
 texture = ExtResource("5_gcsun")
 texture_scale = 0.4

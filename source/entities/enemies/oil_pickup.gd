@@ -1,6 +1,6 @@
 extends StaticBody2D
 @onready var player = get_parent().get_node("Player")
-@export var heal_amount := 10
+@export var heal_amount := 30
 var num = 0
 
 func _process(_delta):
