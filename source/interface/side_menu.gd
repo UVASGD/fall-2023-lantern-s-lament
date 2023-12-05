@@ -22,6 +22,8 @@ extends ColorRect
 @onready var pos_translation_lamp = Vector2.ZERO
 @onready var pos_translation_flame = Vector2.ZERO
 
+@onready var run = true #makes game over screen only happen once
+
 func pause_game():
 	get_tree().paused = true
 	var pause_inst = pause_menu.instantiate()
@@ -82,9 +84,16 @@ func _physics_process(delta):
 	lamp.global_position = Vector2(128, 320) + pos_translation_lamp
 	lamp.rotation = angle
 	
-	if(flame_sprite.modulate == Color(255, 255, 255, 0)):
+	if(player.has_died and run):
+		print("runs")
+		woosh.play()
 		var end_inst = end_screen.instantiate()
 		add_child(end_inst)
 		end_inst.global_position = self.global_position + Vector2(256, 0)
 		end_inst.modulate.a = 0
-		flame_sprite.modulate = Color(255, 255, 0, 0)
+		run = false
+		
+func _input(event):
+	if event.is_action_pressed("interact"):
+		woosh.play()
+		print("runs")

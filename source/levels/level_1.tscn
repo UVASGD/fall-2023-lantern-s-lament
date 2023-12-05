@@ -196,10 +196,6 @@ layer_2/tile_data = PackedInt32Array(4784114, 7, 65536, 4718578, 7, 65536, 46530
 [node name="CanvasModulate" type="CanvasModulate" parent="."]
 color = Color(0, 0, 0, 1)
 
-[node name="Test2" parent="." instance=ExtResource("9_33lkx")]
-position = Vector2(-2616, 4286)
-scale = Vector2(4, 4)
-
 [node name="Player" parent="." instance=ExtResource("6_ax5dv")]
 position = Vector2(-2791, 4331)
 

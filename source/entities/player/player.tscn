@@ -417,6 +417,7 @@ texture = ExtResource("5_p5h18")
 blend_mode = 2
 range_item_cull_mask = 4
 shadow_enabled = true
+shadow_item_cull_mask = 3
 texture = ExtResource("5_p5h18")
 
 [node name="InnerLight" type="PointLight2D" parent="."]
@@ -463,28 +464,33 @@ autostart = true
 wait_time = 0.3
 
 [node name="EndTimer" type="Timer" parent="."]
-wait_time = 2.5
+wait_time = 3.0
 one_shot = true
 
 [node name="DamageSound" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("6_4gy18")
+volume_db = -10.0
 
 [node name="Focus" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("7_dwgqs")
+volume_db = -5.0
 
 [node name="Unfocus" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("8_lkelm")
+volume_db = -5.0
 
 [node name="Walk" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("9_ms5vv")
-volume_db = -5.0
+volume_db = -25.0
 autoplay = true
 
 [node name="RollSound" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("10_tnfyr")
+volume_db = -22.0
 
 [node name="Stinger" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("11_gi16p")
+volume_db = -5.0
 
 [connection signal="area_entered" from="Hurtbox" to="." method="_on_hurtbox_area_entered"]
 [connection signal="timeout" from="FlickerTimer" to="." method="_on_flicker_timer_timeout"]

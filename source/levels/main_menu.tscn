@@ -61,11 +61,12 @@ grow_vertical = 1
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("6_tcq64")
-volume_db = -15.0
+volume_db = -25.0
 autoplay = true
 
 [node name="Flame" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("5_q24w5")
+volume_db = -10.0
 autoplay = true
 
 [connection signal="finished" from="Flame" to="MainMenuButtons" method="_on_flame_finished"]

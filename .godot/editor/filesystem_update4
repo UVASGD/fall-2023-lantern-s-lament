@@ -1,7 +1,6 @@
 res://source/levels/main_menu.tscn
 res://source/entities/entity_base/hitbox.gd
-res://source/levels/level_1.tscn
-res://source/test.tscn
-res://source/test2.tscn
 res://source/entities/player/player.tscn
 res://source/entities/player/player.gd
+res://source/levels/level_1.tscn
+res://source/test.tscn

@@ -38,7 +38,7 @@ func _on_area_2d_area_entered(area):
 			if(area.get_parent().glow == 1):
 				torches_lit = true
 		
-		get_tree().call_group("torches", "are_lit")
+		#get_tree().call_group("torches", "are_lit")
 		if torches_lit:
 			lit = true
 			timer.start()
