@@ -1,9 +1,11 @@
-[gd_scene load_steps=7 format=3 uid="uid://c6pb8bf2xc05a"]
+[gd_scene load_steps=9 format=3 uid="uid://c6pb8bf2xc05a"]
 
 [ext_resource type="Script" path="res://source/entities/entity_base/final_torch.gd" id="2_24mbv"]
 [ext_resource type="Texture2D" uid="uid://dfrfd7ilpoyg5" path="res://assets/torchFinal.png" id="3_di8vh"]
 [ext_resource type="AudioStream" uid="uid://bhrxygwnjbr45" path="res://assets/LightSound.wav" id="3_pq8b0"]
 [ext_resource type="AudioStream" uid="uid://icg7vfutt8wt" path="res://assets/Roar.wav" id="4_y485e"]
+[ext_resource type="AudioStream" uid="uid://4mnsfc78h7mv" path="res://assets/InGameAmbientPiano.mp3" id="5_sl6ag"]
+[ext_resource type="AudioStream" uid="uid://b7ipyp1wagl6u" path="res://assets/ChaseMusicWar2.mp3" id="6_o2jh8"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_66vh0"]
 size = Vector2(296, 136)
@@ -39,4 +41,13 @@ volume_db = -5.0
 [node name="Roar" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("4_y485e")
 
+[node name="AmbientMusic" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("5_sl6ag")
+autoplay = true
+
+[node name="ChaseMusic" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("6_o2jh8")
+
 [connection signal="area_entered" from="Area2D" to="." method="_on_area_2d_area_entered"]
+[connection signal="finished" from="AmbientMusic" to="." method="_on_ambient_music_finished"]
+[connection signal="finished" from="ChaseMusic" to="." method="_on_chase_music_finished"]
