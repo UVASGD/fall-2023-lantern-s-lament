@@ -11,6 +11,7 @@ size = Vector2(300, 356.7)
 modulate = Color(1, 1, 1, 1)
 z_index = 4
 y_sort_enabled = true
+scale = Vector2(0.5, 0.5)
 collision_layer = 16
 collision_mask = 2
 monitoring = true

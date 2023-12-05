@@ -1,4 +1,4 @@
-[gd_scene load_steps=33 format=3 uid="uid://cxv4v4rsxsank"]
+[gd_scene load_steps=32 format=3 uid="uid://cxv4v4rsxsank"]
 
 [ext_resource type="PackedScene" uid="uid://byurxh2xitstp" path="res://source/interface/side_menu.tscn" id="1_1ynfk"]
 [ext_resource type="Texture2D" uid="uid://cir0ja8kxgeoa" path="res://assets/3Grass3.png" id="2_xay88"]
@@ -12,7 +12,6 @@
 [ext_resource type="PackedScene" uid="uid://bmcrw2hbt2gdo" path="res://source/entities/enemies/enemy_test.tscn" id="9_4up81"]
 [ext_resource type="PackedScene" uid="uid://crd1g0g5yq3bm" path="res://source/entities/enemies/enemy_caster.tscn" id="10_um1r1"]
 [ext_resource type="PackedScene" uid="uid://ddomnqqnj7o6o" path="res://source/entities/traps/dart_trap.tscn" id="11_os5sw"]
-[ext_resource type="AudioStream" uid="uid://hco20psake03" path="res://assets/InGameAmbientPiano.mp3" id="12_rtago"]
 [ext_resource type="PackedScene" uid="uid://dwv76wv7w0k7f" path="res://source/entities/entity_base/final_torch.tscn" id="13_afa01"]
 [ext_resource type="Texture2D" uid="uid://clfryshg6q8ju" path="res://assets/levelTileMap.png" id="14_vfnbi"]
 [ext_resource type="Texture2D" uid="uid://uillmnccck12" path="res://assets/allStones.png" id="15_bgm7e"]
@@ -149,6 +148,13 @@ sources/5 = SubResource("TileSetAtlasSource_cr2di")
 [node name="Level1" type="Node2D"]
 y_sort_enabled = true
 
+[node name="ColorRect" type="ColorRect" parent="."]
+offset_left = -5798.0
+offset_top = -5104.0
+offset_right = 18436.0
+offset_bottom = 6296.0
+color = Color(0.305882, 0.329412, 0.286275, 1)
+
 [node name="Menu" type="CanvasLayer" parent="."]
 process_mode = 3
 
@@ -205,13 +211,8 @@ rotation = -2.66512
 [node name="CollisionShape2D" parent="DartTrap/DetectionArea" index="0"]
 position = Vector2(241.561, 2.72931)
 
-[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
-stream = ExtResource("12_rtago")
-volume_db = -5.0
-autoplay = true
-
 [node name="FinalTorch" parent="." instance=ExtResource("13_afa01")]
-position = Vector2(15813, -879)
+position = Vector2(15930, -876)
 
 [node name="torch" parent="." instance=ExtResource("15_pxlgu")]
 position = Vector2(-2513, 1098)
