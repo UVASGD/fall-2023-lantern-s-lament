@@ -207,7 +207,7 @@ func _physics_process(delta):
 			get_tree().paused = true
 	
 	#print(str())
-	if((abs(speed.x) > 10 or abs(speed.y) > 10)): 
+	if((abs(speed.x) > 10 or abs(speed.y) > 10) and !has_died): 
 		if(walk.stream_paused): walk.stream_paused = false
 	else:
 		if(!walk.stream_paused): walk.stream_paused = true

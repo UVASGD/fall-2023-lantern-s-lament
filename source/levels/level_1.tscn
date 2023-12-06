@@ -399,7 +399,6 @@ rotation = -3.62679
 
 [node name="CollisionShape2D" parent="DartTrap4/DetectionArea" index="0"]
 position = Vector2(390.342, 2.72931)
-scale = Vector2(1, 1)
 
 [node name="FinalTorch" parent="." instance=ExtResource("13_afa01")]
 position = Vector2(15902, -899)
