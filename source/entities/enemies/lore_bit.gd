@@ -6,10 +6,6 @@ extends Area2D
 @export var text : String
 var nearby = false
 
-func _process(_delta):
-	if nearby: pressx.modulate.a = 1
-	else: pressx.modulate.a = 0
-		
 func _input(event):
 	if player.game_start && event.is_action_pressed("interact") && nearby:
 		nearby = false
@@ -17,6 +13,8 @@ func _input(event):
 
 func _on_area_entered(_area):
 	nearby = true
+	pressx.modulate.a = 1 
 
 func _on_area_exited(_area):
 	nearby = false
+	pressx.modulate.a = 0
