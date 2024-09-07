@@ -1,4 +1,4 @@
-[gd_scene load_steps=56 format=3 uid="uid://dlbg8myhg31ys"]
+[gd_scene load_steps=55 format=3 uid="uid://dlbg8myhg31ys"]
 
 [ext_resource type="Script" path="res://source/entities/player/player.gd" id="1_ekmf0"]
 [ext_resource type="Texture2D" uid="uid://bcoxeak4h8moi" path="res://assets/player.png" id="2_j4nc6"]
@@ -358,8 +358,6 @@ states/Roll/position = Vector2(380.1, 195.967)
 transitions = ["Start", "Idle", SubResource("AnimationNodeStateMachineTransition_m4sh5"), "Idle", "Move", SubResource("AnimationNodeStateMachineTransition_3bvch"), "Move", "Idle", SubResource("AnimationNodeStateMachineTransition_s71id"), "Idle", "Roll", SubResource("AnimationNodeStateMachineTransition_ndc72"), "Roll", "Idle", SubResource("AnimationNodeStateMachineTransition_aw8i3"), "Move", "Roll", SubResource("AnimationNodeStateMachineTransition_nwhse"), "Roll", "Move", SubResource("AnimationNodeStateMachineTransition_2tmq5")]
 graph_offset = Vector2(-93.7949, 35.0325)
 
-[sub_resource type="AnimationNodeStateMachinePlayback" id="AnimationNodeStateMachinePlayback_1i2eb"]
-
 [node name="Player" type="CharacterBody2D"]
 y_sort_enabled = true
 collision_layer = 2
@@ -371,7 +369,6 @@ position = Vector2(15, 5)
 texture = ExtResource("2_j4nc6")
 hframes = 4
 vframes = 8
-frame = 4
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(-10.5, 83)
@@ -448,8 +445,6 @@ occluder_light_mask = 2
 [node name="AnimationTree" type="AnimationTree" parent="."]
 tree_root = SubResource("AnimationNodeStateMachine_enxu5")
 anim_player = NodePath("../AnimationPlayer")
-active = true
-parameters/playback = SubResource("AnimationNodeStateMachinePlayback_1i2eb")
 parameters/Idle/blend_position = Vector2(0.000637293, 0.00239658)
 parameters/Move/blend_position = Vector2(0, 0)
 parameters/Roll/blend_position = Vector2(0, 0)

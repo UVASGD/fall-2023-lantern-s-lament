@@ -1,5 +1,6 @@
-[gd_scene load_steps=5 format=3 uid="uid://bd81oyt6gw3f3"]
+[gd_scene load_steps=6 format=3 uid="uid://bd81oyt6gw3f3"]
 
+[ext_resource type="Script" path="res://source/test.gd" id="1_bvs4x"]
 [ext_resource type="Texture2D" uid="uid://c5hpm2206cmu2" path="res://assets/StoneWall2.png" id="1_f1lab"]
 [ext_resource type="Texture2D" uid="uid://b302bdfc75vj1" path="res://assets/normalCube.png" id="2_c6mvu"]
 
@@ -13,6 +14,7 @@ normal_texture = ExtResource("2_c6mvu")
 [node name="Test" type="StaticBody2D"]
 z_index = 1
 y_sort_enabled = true
+script = ExtResource("1_bvs4x")
 
 [node name="LightOccluder2D" type="LightOccluder2D" parent="."]
 occluder = SubResource("OccluderPolygon2D_uf0py")

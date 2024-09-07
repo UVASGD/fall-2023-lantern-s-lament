@@ -9,6 +9,7 @@ var nearby = false
 func _process(_delta):
 	if nearby: pressx.modulate.a = 1
 	else: pressx.modulate.a = 0
+	print(pressx.modulate.a)
 		
 func _input(event):
 	if player.game_start && event.is_action_pressed("interact") && nearby:
