@@ -1,2 +1,4 @@
-res://source/levels/level_1.tscn
 res://source/entities/entity_base/hitbox.gd
+res://source/levels/world.tscn
+res://source/levels/world.gd
+res://source/entities/player/player.tscn

@@ -4,7 +4,7 @@ cc-by-nc-sa-4.0.txt::TextFile::-1::1694838709::0::1::::<><>::
 export_presets.cfg::TextFile::-1::1701827511::0::1::::<><>::
 icon.svg::CompressedTexture2D::42030989769038341::1687813450::1694841125::1::::<><>::
 README.md::TextFile::-1::1698357517::0::1::::<><>::
-::res://assets/::1713644327
+::res://assets/::1725683169
 2Grass1.png::CompressedTexture2D::3152618364292334882::1701573292::1701573341::1::::<><>::
 2Grass2.png::CompressedTexture2D::7811500740454063787::1701574331::1701574343::1::::<><>::
 2Grasses2.png::CompressedTexture2D::7033537197650850831::1701582245::1701582246::1::::<><>::
@@ -86,6 +86,8 @@ trees.png::CompressedTexture2D::2448462108125159191::1701736559::1701736914::1::
 UnfocusSound.wav::AudioStreamWAV::9111131402405100173::1701738491::1701739321::1::::<><>::
 WalkingSound.wav::AudioStreamWAV::8508394672427209939::1701738491::1701739322::1::::<><>::
 WingFlap.wav::AudioStreamWAV::5532758667057493711::1701738491::1701739321::1::::<><>::
+::res://assets/sfx/::1725683163
+::res://assets/sprites/::1725683169
 ::res://source/::1724899714
 test.gd::GDScript::-1::1701828479::0::1::::<>StaticBody2D<>::
 test.tscn::PackedScene::2666716614746868198::1724899714::0::1::::<><>::res://source/test.gd<>uid://c5hpm2206cmu2::::res://assets/StoneWall2.png<>uid://b302bdfc75vj1::::res://assets/normalCube.png
